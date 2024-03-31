@@ -1,0 +1,70 @@
+.mainWrapper{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    position: absolute;
+    z-index: 1;
+}
+
+.headWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    font-size: 18px;
+    color: white;
+}
+
+.brand{
+    position: relative;
+    width: 120px;
+    height: 56px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-top: 5.5px;
+    letter-spacing: 0.5px;
+    margin-left: 130px;
+    cursor: default;
+    width: 541px;
+    font-weight: 200;
+}
+
+.cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5.5px;
+}
+
+.currency{
+    background-color: transparent;
+    padding: 5.5px 15.3px;
+    border-radius: 20px;
+    cursor: default;
+}
+
+.currency:hover{
+    background-color: white;
+    color: #1E2C70;
+}
+
+.account{
+    border: 1px solid white;
+    padding: 8.3px 19.8px;
+    border-radius: 100px;
+    margin-left: 20px;
+    cursor: default;
+}
+
+.account:hover{
+    background-color: white;
+    color: #1E2C70;
+}
+
