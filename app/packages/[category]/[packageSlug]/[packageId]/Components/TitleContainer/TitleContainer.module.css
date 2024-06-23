@@ -1,0 +1,140 @@
+.titleCont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.innerTag{
+    background-color: #EBF7F3;
+    border: 1px solid #C1E7DA;
+    color: #38B089;
+    border-radius: 50px;
+    padding: 8.5px 15px;
+    font-size: 15px;
+}
+
+.shareLink{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #1E2C70;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.shareLink:hover{
+    text-decoration: underline;
+}
+
+.shareLink svg{
+    margin-left: 10px;
+}
+
+.title{
+    margin-top: 17px;
+    font-weight: 400;
+}
+
+.title h1{
+    font-weight: 600;
+    letter-spacing: -.7px;
+}
+
+.infosec{
+    margin-top: 21px;
+}
+
+.infoSecValue{
+    font-size: 18px;
+}
+
+.lable{
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.duration svg{
+    width: 34px;
+    margin-right: 18px;
+}
+
+.duration, .ptv{
+    display: flex;
+    align-items: center;
+}
+
+.duration{
+    margin-bottom: 13px;
+}
+
+.ptv svg{
+    width: 32px;
+    margin-right: 18px;
+}
+
+.pricePart{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 189px;
+    width: 285px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    padding: 27px;
+    box-sizing: border-box;
+}
+
+.saleTag{
+    height: fit-content;
+    width: fit-content;
+    background-color: #F54029;
+    outline: 1px solid #f5412934;
+    border-radius: 8px;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 7px 19px;
+}
+
+.pricelabel1{
+    margin-top: 17px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+}
+
+.bop{
+    font-size: 31px;
+}
+
+.mrp{
+    position: relative;
+    margin-left: 11px;
+    font-size: 21.5px;
+    margin-top: -2px;
+    color: #989898;
+}
+
+.cross{
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 1px;
+    background-color: #989898;
+}
+
+.pricelabel2{
+    font-size: 18px;
+    color: #4C4C4C;
+}

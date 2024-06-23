@@ -1,0 +1,16 @@
+.mainWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 0;
+}
+
+.subWrapper{
+    width: 1170px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px 38px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.03);
+    user-select: text !important;
+}

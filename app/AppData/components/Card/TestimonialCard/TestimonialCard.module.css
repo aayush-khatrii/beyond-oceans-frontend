@@ -1,0 +1,90 @@
+.imgWrapper{
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.GoogleIcon{
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.cardWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+    padding: 37px 32px;
+    height: 307px;
+    width: 313px;
+    border-radius: 17px;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.048);
+}
+
+.nameCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.userName{
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    padding-left: 18px;
+    font-size: 21.5px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.userName span{
+    margin-bottom: 6px;
+}
+
+.starWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 137px;
+}
+
+.quoteIcon{
+    padding-bottom: 6px;
+}
+
+.quoteIcon svg{
+    height: 35px;
+    width: 35px;
+}
+
+.descCont{
+    font-size: 18px;
+    color: #696969;
+    margin-top: 13px;
+    width: 100%;
+    height: 125px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.googleCont{
+    display: flex;
+    align-items: center;
+    margin-bottom: -9px;
+}
+
+.Trust{
+    display: flex;
+    flex-direction: column;
+    margin-left: 11px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #696969;
+}
+
+.Trust span:nth-child(2){
+    color: #1E2C70;
+}

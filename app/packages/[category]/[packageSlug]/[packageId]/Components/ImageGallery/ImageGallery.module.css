@@ -1,0 +1,74 @@
+.mainWrapper{
+    margin-top: 39px;
+    height: 427px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.subWrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 427px;
+    width: 100%;
+}
+
+.imgWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.leftimgs{
+    position: relative;
+    height: 100%;
+    width: 56.9%;
+}
+
+.rightimgs{
+    width: 43.1%;
+}
+
+.rightTopimg{
+    position: relative;
+    height: 50%;
+    width: 100%;
+}
+
+.rightBotimg{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.rightBotLeft{
+    position: relative;
+    height: 50%;
+    width: 50%;
+}
+
+.rightBotRight{
+    position: relative;
+    height: 50%;
+    width: 50%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.788) 0%, #0000009c 20%, rgba(255,255,255,0) 65%);
+}
+
+.seeAllBtn{
+    position: absolute;
+    bottom: 18px;
+    right: 27px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8.5px 21px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.seeAllBtn:hover{
+    background-color: #fff;
+    color: #1E2C70;
+}

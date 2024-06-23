@@ -1,0 +1,16 @@
+.containerItem{
+    margin-top: 11px;
+    letter-spacing: 0px;
+}
+
+.containerItem svg{
+    margin-left: 8px;
+}
+
+.containerItem:hover{
+    color: #1E2C70;
+}
+
+.containerItem:hover > svg path{
+    stroke: #33A07D;
+}

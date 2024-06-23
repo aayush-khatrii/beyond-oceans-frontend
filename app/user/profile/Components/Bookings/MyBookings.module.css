@@ -1,0 +1,44 @@
+.container{
+    margin-top: 45px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headLeft{
+    display: flex;
+}
+
+.decorative{
+    background-color: #38B089;
+    height: 53px;
+    width: 6px;
+    border-radius: 50px;
+    margin-right: 21px;
+}
+
+.headContent{
+    margin-top: -4px;
+}
+
+.headContent span{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.headContent p{
+    margin-top: 1px;
+    font-size: 17.5px;
+    letter-spacing: .25px;
+    color: #696969;
+}
+
+.dataContainer{
+    margin-top: 27px;
+
+}
+
+

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+html{
+    background-color: #FAFBFC;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+  
+::-webkit-scrollbar {
+    width: 0;
+    -webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.react-datepicker-wrapper, .react-datepicker__input-container{
+    height: 100% !important;
+    overflow: hidden;
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+}
+
+input{
+    font-family: 'DM Sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a:hover, a:active, a:focus, button:hover, button:active, button:focus{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.iconify--flag{
+    min-width: 30px;
+    height: 30px;
+}
+
+.listFlags .iconify--flag{
+    min-width: 20px;
+}

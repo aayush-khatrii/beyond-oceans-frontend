@@ -1,0 +1,147 @@
+
+
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.titleNbtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle h2{
+    font-size: 30.8px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.sectionTitle p{
+    font-size: 18.3px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.accentBtn{
+    border: none;
+    outline: none;
+    background-color: #38B089;
+    color: white;
+    border: 2px solid #A3DBC9;
+    padding: 7.6px 15px 7px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 17.7px;
+    border-radius: 20px;
+    letter-spacing: .4px;
+}
+
+.accentBtn:hover, .accentBtn:active, .accentBtn:focus{
+    background-color: #33A07D;
+    border-color: #7ACAB0;
+}
+
+.categoryLayout{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+}
+
+.imgWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+
+.subLeft{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.subLeft .imgWrapper, .subBottom .imgWrapper{
+    height: 286px;
+    width: 278px;
+}
+
+.topImg, .bottomImg, .bottomLeftImg, .bottomRightImg{
+    position: absolute;
+    height: 286px;
+    width: 278px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 54%, rgba(0,0,0,0.6) 100%);
+}
+
+.leftLayout{
+    display: flex;
+    justify-content: space-between;
+    width: 575px;
+}
+
+.subRight .imgWrapper{
+    height: 591px;
+    width: 278px;
+}
+
+.VerticalImg{
+    position: absolute;
+    height: 591px;
+    width: 278px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 54%, rgba(0,0,0,0.6) 100%);
+}
+
+.rightLayout{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 575px;
+}
+
+.subTop .imgWrapper{
+    width: 575px;
+    height: 286px;
+}
+
+.horizontelImg{
+    position: absolute;
+    width: 575px;
+    height: 286px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 54%, rgba(0,0,0,0.6) 100%);
+}
+
+.subBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgWrapper span, .imgWrapper svg{
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+.imgWrapper span{
+    font-size: 21.5px;
+    letter-spacing: .3px;
+}
+
+.imgWrapper svg{
+    width: 28px;
+    height: 28px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+}

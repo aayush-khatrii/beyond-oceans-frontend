@@ -1,0 +1,57 @@
+
+
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.titleNbtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle h2{
+    font-size: 30.8px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.sectionTitle p{
+    font-size: 18.3px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.accentBtn{
+    border: none;
+    outline: none;
+    background-color: #38B089;
+    color: white;
+    border: 2px solid #A3DBC9;
+    padding: 7.6px 15px 7px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 17.7px;
+    border-radius: 20px;
+    letter-spacing: .4px;
+}
+
+.accentBtn:hover, .accentBtn:active, .accentBtn:focus{
+    background-color: #33A07D;
+    border-color: #7ACAB0;
+}
+
+.cardWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+}

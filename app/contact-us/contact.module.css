@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.mainWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.heroImgSec{
+    height: 485px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImg{
+    position: absolute;
+    top: 74px;
+    left: 0;
+    height: 485px;
+    width: 100%;
+    z-index: -1;
+}
+
+.imageOverlay{
+    height: 100%;
+    background-color: #1b286640;
+}
+
+.heroCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    cursor: default;
+    margin-top: -120px;
+}
+
+.heroTitle{
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.heroDesc{
+    font-size: 22px;
+    font-weight: 300;
+    padding-top: 9px;
+}
+
+.breadcrumbCU{
+    margin-top: 55px;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 1170px;
+}
+
+.contactCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.03);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #E9E9E9;
+    margin-top: -124px;
+    background-color: #fff;
+}
+
+.left{
+    background-color: #e9eaf166;
+    position: relative;
+    width: 40.5%;
+    padding: 31px 37px;
+}
+
+.right{
+    width: 46.78%;
+    padding: 31px 37.5px;
+}
+
+.contactContTitle{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 21px;
+}
+
+.descGIT{
+    font-size: 12px;
+    font-weight: 500;
+    color: #696969;
+    letter-spacing: .15px;
+}
+
+.addressGIT{
+    height: 252px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 24px 0;
+}
+
+.addressGIT address{
+    display: flex;
+    align-items: center;
+    font-style: normal;
+}
+
+.compIcon{
+    background-color: #1E2C70;
+    height: 59px;
+    width: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 26.5px;
+}
+
+.compContent span{
+    font-size: 18px;
+    color: #1E2C70;
+    font-weight: 600;
+    height: 20px;
+}
+
+.compContent p, .compContent p a{
+    font-size: 15px;
+    color: #4C4C4C;
+}
+
+.leftSepretorLine{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0px;
+    background-color: #D7DBEA;
+    margin-top: 12px;
+}
+
+.ContactSocial{
+    margin-top: 56px;
+    margin-bottom: 7px;
+}
+
+.ContactSocial span{
+    font-size: 17.7px;
+    font-weight: 600;
+}
+
+.ContactSocial div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4.5px;
+    width: 190px;
+
+}
+
+.ContactSocial div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2C70;
+    height: 33px;
+    width: 33px;
+    border-radius: 30px;
+}
+
+.InputFrame{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+.InputBox{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0 20px;
+    padding-top: 6px;
+    height: 38px;
+    width: 217px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    transition: all .2s cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+    resize: none;
+    z-index: 1;
+}
+
+.InputPlace{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-weight: 400;
+    pointer-events: none;
+    transition: color .2s cubic-bezier(0.4, 0, 0.2, 1), top .2s cubic-bezier(0.4, 0, 0.2, 1), font-size .2s cubic-bezier(0.4, 0, 0.2, 1),left .2s cubic-bezier(0.4, 0, 0.2, 1),opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 15px;
+    background-color: white;
+    padding: 0 5px;
+    z-index: 1;
+    color: #696969;
+}
+
+.InputBox:focus, .InputBox:hover, .InputBoxValue{
+    border-color: #1E2C70;
+}
+
+.InputBox:hover ~ .InputPlace{
+    color: #1E2C70;
+}
+
+.InputBox:focus ~ .InputPlace, .InputPlaceValue{
+    top: -8px;
+    left: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1E2C70;
+}
+
+.InputBox:not(:placeholder-shown) ~ .InputPlace{
+    top: -8px;
+    left: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1E2C70;
+}
+
+.InputBox:not(:placeholder-shown){
+    border-color: #1E2C70;
+}
+
+.ContactForm{
+    position: relative;
+}
+
+.formRow{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    width: 100%;
+}
+
+.formRowSpace{
+    margin-top: 29px;
+}
+
+.Tarea{
+    width: 505px;
+    height: 118px;
+    padding-top: 15px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.formBtn{
+    outline: none;
+    background-color: #1E2C70;
+    color: #fff;
+    border: 2px solid #989EBD;
+    margin-top: 38px;
+    font-size: 21px;
+    height: 44px;
+    width: 173px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.formBtn:hover, .formBtn:focus, .formBtn:active{
+    background-color: #38B089;
+    border-color: #A3DBC9;
+}
+
+.mapsContainer iframe{
+    border: none;
+}
+
+.mapsContainer{
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 93px;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 476px;
+}

@@ -1,0 +1,252 @@
+.mainWrapper{
+    background-color: #1E2C70;
+    margin-top: 203px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subWrapper{
+    height: 570px;
+    width: 1170px;
+}
+
+.footerCTA{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: #38b089;
+    position: relative;
+    top: -82px;
+    margin-bottom: -23px;
+    border-radius: 15px;
+    width: 100%;
+    height: 246px;
+    padding: 0 80px;
+}
+
+.ctaLeft svg{
+    margin-top: -90px;
+    margin-left: 7px;
+    width: 339px;
+}
+
+.ctaRight{
+    margin-top: 30px;
+    color: #fff;
+}
+
+.ctaRight span{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ctaRight address{
+    margin-top: 17px;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 25.5px;
+    font-weight: 400;
+    letter-spacing: .6px;
+    font-style: normal;
+}
+
+.ctaRight address a{
+    text-decoration: none;
+    color: #1E2C70;
+    font-weight: 700;
+}
+
+.contentWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footSec{
+    color: #B9BED3;
+    margin-top: 3px;
+}
+
+.footSec span{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .2px;
+}
+
+.footSec ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 23px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .4px;
+    height: 190px;
+    cursor: pointer;
+}
+
+.footSec ul li:hover{
+    color: #fff;
+}
+
+.footLogoSec{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 3px;
+    width: 236px;
+}
+
+.footLogoSec svg{
+    height: auto;
+    width: 157px;
+}
+
+.footLogoSec p{
+    color: #B9BED3;
+    font-size: 12.5px;
+    font-weight: 300;
+    margin-top: 12px;
+    margin-left: -2px;
+}
+
+.footerSubForm{
+    display: flex;
+    justify-content: space-between;
+    height: 126px;
+    flex-direction: column;
+    margin-top: 13px;
+    margin-left: -2px;
+    box-sizing: border-box;
+}
+
+.footerSubForm input{
+    outline: none;
+    border: 1px solid #68729F;
+    border-radius: 7px;
+    background-color: #4B568D;
+    color: #B9BED3;
+    font-size: 14.5px;
+    letter-spacing: .5px;
+    font-weight: 100;
+    padding: 8.5px 13px;
+}
+
+.footerSubForm input:hover, .footerSubForm input:focus, .footerSubForm input:active{
+    border-color: #ffffffc2;
+}
+
+.footerSubForm input::placeholder{
+    color: #B9BED3;
+}
+
+.footerSubForm button{
+    font-size: 15.5px;
+    font-weight: 300;
+    margin-top: 1px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    width: fit-content;
+    padding: 6.5px 19px;
+}
+
+.footerSubForm button:hover, .footerSubForm button:active, .footerSubForm button:focus{
+    background-color: #fff;
+    color: #1E2C70;
+}
+
+.packageSec{
+    margin-left: 10px;
+}
+
+.footContactSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 213px;
+    height: 232px;
+}
+
+.footContactSec address{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 117px;
+    font-style: normal;
+    color: #B9BED3;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .3px;
+}
+
+.footContactSec address a{
+    text-decoration: none;
+    color: #B9BED3;
+}
+
+.footContactSec address a:hover, .footContactSec address a:active, .footContactSec address a:focus{
+    color: #fff;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+}
+
+.socialMedia div a svg{
+    height: 20px;
+    width: 20px;
+}
+
+.socialMedia div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 38px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.copyrightWrapper{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ffffff2a;
+    width: 100%;
+}
+
+.copySubWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    height: 65px;
+    font-size: 12px;
+    color: #B9BED3;
+    font-weight: 300;
+    letter-spacing: .2px;
+}
+
+.footNavList ul li a{
+    text-decoration: none;
+    color: #B9BED3;
+}
+
+.footNavList ul li a:hover, .footNavList ul li a:focus, .footNavList ul li a:active{
+    color: #fff;
+}
+
+.footNavList ul{
+    display: flex;
+    justify-content: space-between;
+    width: 579px;
+}

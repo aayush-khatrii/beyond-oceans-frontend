@@ -1,0 +1,133 @@
+.bookingCard{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 27px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.cardTitle{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 0;
+}
+
+.bookingDesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85px;
+    margin-top: 12px;
+    margin-bottom: 13px;
+}
+
+.descTitle{
+    font-size: 15px;
+    font-weight: 600;
+    color: #4C4C4C;
+}
+
+.descValue{
+    margin-left: 10px;
+    font-size: 15px;
+    color: #696969;
+}
+
+.bookContList{
+    display: flex;
+    align-items: center;
+}
+
+.bookContList svg{
+    width: 21.5px;
+    margin-right: 14px;
+}
+
+.cnfAmt{
+    display: flex;
+    align-items: center;
+}
+
+.amt{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cnfSts{
+    background-color: #EBF7F3;
+    margin-left: 16px;
+    height: 31px;
+    width: 138px;
+    border: 1px solid #C1E7DA;
+    color: #38B089;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+.imageWrapper{
+    position: relative;
+    height: 92%;
+    width: 210px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px;
+}
+
+.bookingDetails{
+    margin-top: 1px;
+    font-size: 15px;
+
+
+}
+
+.bookingDetails span:nth-child(1){
+    color: #4C4C4C;
+    font-weight: 500;
+}
+
+.bookingDetails span:nth-child(2){
+    color: #1F1F1F;
+    font-weight: 700;
+}
+
+.downBtn{
+    margin-right: 30px;
+}
+
+.footRight button{
+    border: 1px solid #1E2C70;
+    background-color: #fff;
+    padding: 10.5px 14px;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #1E2C70;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.footRight button:hover{
+    border-color: #7ACAB0;
+    background-color: #38B089;
+    color: #fff;
+}

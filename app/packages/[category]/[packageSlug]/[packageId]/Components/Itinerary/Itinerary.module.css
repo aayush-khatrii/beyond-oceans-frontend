@@ -1,0 +1,135 @@
+.mainWrapper{
+    margin-top: 39px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.title{
+    height: 71px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 21.5px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.contentSubWrapper{
+    padding: 29px;
+    padding-top: 25px;
+    position: relative;
+}
+
+.dotedBorder{
+    position: absolute;
+    margin-top: 6px;
+    height: calc(100% - 25px - 29px - 14px);
+    border-width: 1px;
+    border-style: solid;
+    border-image: repeating-linear-gradient(
+        to bottom,
+        #C1E7DA 0,
+        #C1E7DA 8px,
+        transparent 8px,
+        transparent 12px
+      ) 1;
+    left: 46.5px;
+}
+
+.firstSvg, .lastSvg{
+    background-color: #38B089;
+    min-height: 37px;
+    min-width: 37px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1;
+}
+
+.midSvg{
+    display: none;
+    justify-content: center;
+    width: 40px;
+    /* height: 40px; */
+    z-index: 1;
+}
+
+.midCircle{
+    background-color: #fff;
+    border: 2px solid #38B089;
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 50px;
+}
+
+.listTitle{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+.listTitlewrp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.listTitleCont{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.listTitleDay{
+    color: #1E2C70;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.firstSvg svg{
+    height: 20px;
+    width: 20px;
+}
+
+.itineraryList{
+    cursor: pointer;
+}
+
+.itineraryList:not(:last-of-type){
+    margin-bottom: 20px;
+}
+
+.contentSubWrapper .itineraryList:first-of-type .firstSvg{
+    display: flex;
+}
+
+.contentSubWrapper .itineraryList:last-of-type .lastSvg{
+    display: flex;
+}
+
+.contentSubWrapper .itineraryList:not(:first-of-type):not(:last-of-type) .midSvg{
+    display: flex;
+}
+
+.itineraryListMDX{
+    padding: 0 13px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.contentSubWrapper ul{
+    list-style: disc !important;
+    color: #696969;
+    font-size: 14px;
+    padding-left: 20px;
+}
+

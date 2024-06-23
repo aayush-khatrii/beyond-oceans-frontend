@@ -1,0 +1,58 @@
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 509px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.068);
+}
+
+.slideWrapper{
+    position: relative;
+    height: 509px;
+    width: 1170px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.slideImgWrapper{
+    position: absolute;
+    height: 509px;
+    width: 1170px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.navButton{
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    position: absolute;
+    z-index: 1;
+}
+
+.leftNav, .rightNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #1E2C70;
+    padding: 13px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.leftNav svg, .rightNav svg{
+    height: 22px;
+    width: 22px;
+}

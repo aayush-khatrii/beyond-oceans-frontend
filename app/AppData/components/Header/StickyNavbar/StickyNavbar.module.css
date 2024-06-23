@@ -1,0 +1,253 @@
+.mainWrapper{
+    background-color: white;
+    display: flex;
+    height: 74px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    bottom: 74px;
+    z-index: 5;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.068);
+}
+
+.menu a{
+    color: #000;
+}
+
+.headWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    color: black;
+    font-size: 15px;
+}
+
+.brand{
+    width: 95px;
+    height: 44.5px;
+}
+
+.menu .menuList{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-top: 5.5px;
+    margin-left: 130px;
+    cursor: default;
+    font-weight: 500;
+    letter-spacing: .1px;
+    width: 570px;
+    padding-left: 10px;
+}
+
+.menuLv1{
+    position: relative;
+    cursor: pointer;
+    color: #1C1C1C;
+    padding: 7px 14.5px;
+    border-radius: 20px;
+}
+
+.menuLv1:hover{
+    background-color: #F6F6F6;
+    color: #1E2C70;
+}
+
+.megaMenuWrapper{
+    position: absolute;
+    background-color: white;
+    color: black;
+    display: flex;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.075);
+    border: 1px solid #E9E9E9;
+}
+
+.packageMenuWrapper{
+    margin-left: -165px;
+}
+
+.actMenuWrapper{
+    margin-left: -175px;
+}
+
+.destMenuWrapper{
+    margin-left: -55px;
+}
+
+.servMenuWrapper{
+    margin-left: -65px;
+}
+
+.moreMenuWrapper{
+    margin-left: -77px;
+}
+
+.menuTooltip{
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: 100px;
+    margin-top: -9px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+.menuTooltip::before {
+    content: '';
+    position: absolute;
+    margin-left: -13px;
+    margin-top: -1px;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 13px solid #E9E9E9;
+    z-index: -1;
+}
+
+.packageMenuWrapper .menuTooltip{
+    margin-left: 200px;
+}
+
+.actMenuWrapper .menuTooltip{
+    margin-left: 210px;
+}
+
+.menuContainer{
+    box-shadow: 0.5px 0 0 0 #B9BED3;
+}
+
+.menuContainer, .secMenuCont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.secMenuCont ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.packageSecMenu{
+    height: 265px;
+}
+
+.actSecMenu{
+    height: 295px;
+}
+
+.destSecMenu{
+    height: 420px;
+}
+
+.servSecMenu{
+    height: 376px;
+}
+
+.moreSecMenu{
+    height: 205px;
+}
+
+.menuContTitle svg{
+    height: 21px;
+    width: 21px;
+    margin-right: 8px;
+}
+
+.menuContTitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    width: 150px;
+    padding: 9px 15px;
+}
+
+.menuContTitle:hover{
+    background-color: #F6F6F6;
+    color: #1E2C70;
+}
+
+.menuContainer ul{
+    font-size: 15px;
+    padding-left: 14px;
+    color: #4C4C4C;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.cta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2px;
+}
+
+.currency{
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 7px 15.3px;
+    padding-top: 9px;
+    border-radius: 20px;
+    letter-spacing: .2px;
+    cursor: pointer;
+}
+
+.currency:hover{
+    background-color: #F6F6F6;
+    color: #1E2C70;
+}
+
+.account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #38B089;
+    color: white;
+    font-size: 18px;
+    letter-spacing: .4px;
+    font-weight: 200;
+    border: 2px solid #A3DBC9;
+    padding: 6.5px 14px;
+    padding-top: 7px;
+    border-radius: 100px;
+    margin-left: 19px;
+    cursor: pointer;
+    width: 160px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.userAccount{
+    width: 115px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+.userAccount span{
+    font-size: 15px;
+}
+
+.userAccount svg{
+    margin-right: 8px;
+    margin-bottom: -4.5px;
+}
+
+.account:hover, .account:focus, .account:active{
+    outline: none;
+    background-color: #33A07D;
+    border-color: #7ACAB0;
+    color: white
+}

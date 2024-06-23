@@ -1,0 +1,47 @@
+.mainWrapper{
+    height: 223px;
+}
+
+.OTPlable span{
+    color: #696969;
+    font-size: 14px;
+    padding-left: 2px;
+    letter-spacing: .2px;
+}
+
+.OTPlable span:nth-child(2){
+    color: #4C4C4C;
+    font-weight: 600;
+}
+
+
+.actionBTN{
+    margin-top: 31px;
+    height: 48px;
+    width: 100%;
+    color: #fff;
+    background-color: #1E2C70;
+    border: 2px solid #989EBD;
+    outline: none;
+    border-radius: 8px;
+    font-size: 20px;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.actionBTN:focus, .actionBTN:active, .actionBTN:hover{
+    background-color: #38B089;
+    border-color: #A3DBC9;
+}
+
+.reSendtimer{
+    margin-top: 19px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reSendtimer span{
+    font-size: 14px;
+    color: #989898;
+}

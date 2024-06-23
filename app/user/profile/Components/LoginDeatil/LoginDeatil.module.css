@@ -1,0 +1,112 @@
+.container{
+    margin-top: 45px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headLeft{
+    display: flex;
+}
+
+.decorative{
+    background-color: #38B089;
+    height: 53px;
+    width: 6px;
+    border-radius: 50px;
+    margin-right: 21px;
+}
+
+.headContent{
+    margin-top: -4px;
+}
+
+.headContent span{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.headContent p{
+    margin-top: 1px;
+    font-size: 17.5px;
+    letter-spacing: .25px;
+    color: #696969;
+}
+
+.dataContainer{
+    margin-top: 27px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 18px;
+}
+
+.dataField{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 28px;
+    box-sizing: border-box;
+}
+
+.dataField span{
+    color: #4C4C4C;
+    font-size: 15px;
+}
+
+.sepretor{
+    width: 100%;
+    height: 1px;
+    background-color: #F4F4F4;
+}
+
+.listContainer{
+    width: 524px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listContainer button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #BB2124;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.listContainer p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.addButton{
+    color: #1E2C70 !important;
+}
+
+.phoneCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoneCont svg{
+    margin-left: 15px;
+}
+
+.notEmail{
+    margin-top: 23px;
+    background-color: #FFF7E6;
+    border: 1px solid #FFE6B3;
+    border-radius: 18px;
+    color: #FFAD01;
+    width: 100%;
+    padding: 20px 26px;
+    box-sizing: border-box;
+}
