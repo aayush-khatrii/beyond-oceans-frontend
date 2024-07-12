@@ -1,0 +1,95 @@
+.mainWrapper{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(1.5px);
+    background-color: #0d0d0db6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 5;
+    /* padding: 6px 0; */
+}
+
+.subWrapper{
+    background-color: #fff;
+    width: 1108px;
+    height: fit-content;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px 18px;
+}
+
+.topTitleSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20.8px;
+    font-weight: 600;
+}
+
+.topTitleSection svg path{
+    stroke: #989898 !important;
+}
+
+.middleColIdentifier{
+    background-color: #1E2C70;
+    display: flex;
+    align-items: center;
+    padding: 0 55px;
+    color: #fff;
+    margin-top: 21px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.scheduleList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    gap: 9px;
+    min-height: fit-content;
+    max-height: 420px;
+    overflow-y: scroll;
+    padding-right: 8px;
+}
+
+.scheduleList::-webkit-scrollbar{
+    display: block;
+    width: 12px;
+    background-color: #ced2e0;
+    border-radius: 20px;
+}
+
+.scheduleList::-webkit-scrollbar-thumb{
+    display: block;
+    width: 10px;
+    background-color: #1E2C70;
+    border-radius: 20px;
+}
+
+.schedulelistItem{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    min-height: 36px;
+    background-color: #E9E9E9;
+    padding: 0 56px;
+    font-size: 14.5px;
+    color: #4C4C4C;
+}
+
+.ferryOperatorID, .ferryOperator{
+    width: 252px;
+}
+
+.ferryDPTimeID, .ferryDPTime{
+    width: 281px;
+}
+
+.ferryArrivalTimeID, .ferryArrivalTime{
+    width: 250px;
+}

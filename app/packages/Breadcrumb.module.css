@@ -23,7 +23,7 @@
     height: 12px;
 }
 
-.left svg:last-of-type{
+.left svg:last-child{
     display: none;
 }
 

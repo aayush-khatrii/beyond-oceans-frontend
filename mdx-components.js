@@ -14,4 +14,4 @@ export function useMDXComponents(components) {
         ),
         ...components,
     }
-  }
+}

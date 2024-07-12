@@ -1,0 +1,61 @@
+.mainWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 47px;
+}
+
+.filterLeft{
+    display: flex;
+    align-items: center;
+}
+
+.locationBox{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 56px;
+    padding: 0 18px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 8px;
+    gap: 30px;
+}
+
+.dept, .dest{
+    font-size: 21.5px;
+    font-weight: 600;
+}
+
+.infoNote{
+    margin-left: 57.5px;
+    font-size: 15px;
+    color: #696969;
+}
+
+.infoNote span{
+    color: #000;
+    font-weight: 600;
+}
+
+.filterRight{
+    display: flex;
+    gap: 19px;
+}
+
+.filterBtn, .editTripBtn{
+    background-color: transparent;
+    border: 1px solid #989898;
+    border-radius: 8px;
+    width: 98px;
+    height: 39px;
+    font-size: 18px;
+    color: #4C4C4C;
+    cursor: pointer;
+}
+
+.filterBtn:hover, .editTripBtn:hover{
+    background-color: #1E2C70;
+    border-color: #1E2C70;
+    color: #fff;
+}

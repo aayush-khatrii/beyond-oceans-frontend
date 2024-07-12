@@ -65,7 +65,7 @@ export default function PlanTrip() {
                 onBlur={setDPoff} 
                 selected={planDate} 
                 onChange={selectDatefn}
-                dateFormat="dd-MM-YYYY"
+                dateFormat="dd-MM-yyyy"
                 minDate={new Date()}
                 icon={
                     <svg className={styles.dtPickerICO} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 526.12 504.98">

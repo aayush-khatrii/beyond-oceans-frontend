@@ -1,0 +1,195 @@
+[
+    {
+        "scheduleId": 1,
+        "rootTitle": "Port Blair to Havelock",
+        "scheduleList":[
+            {
+                "ferryOpp": "Makruzz Pearl",
+                "DPTime": "06:00 AM",
+                "ArrivalTime": "07:30 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika Lite",
+                "DPTime": "06:30 AM",
+                "ArrivalTime": "08:15 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "06:40 AM",
+                "ArrivalTime": "09:00 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 1",
+                "DPTime": "07:00 AM",
+                "ArrivalTime": "09:15 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "07:30 AM",
+                "ArrivalTime": "08:45 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz",
+                "DPTime": "08:00 AM",
+                "ArrivalTime": "09:30 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika Lite",
+                "DPTime": "11:15 AM",
+                "ArrivalTime": "01:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz Pearl",
+                "DPTime": "11:15 AM",
+                "ArrivalTime": "12:45 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "12:45 AM",
+                "ArrivalTime": "02:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "01:00 PM",
+                "ArrivalTime": "03:00 PM",
+                "BookWindow": "31st March 2024"
+            }
+        ]
+    },
+    {
+        "scheduleId": 2,
+        "rootTitle": "Havelock to Port Blair",
+        "scheduleList":[
+            {
+                "ferryOpp": "Makruzz Pearl",
+                "DPTime": "08:00 AM",
+                "ArrivalTime": "09:30 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika Lite",
+                "DPTime": "09:00 AM",
+                "ArrivalTime": "10:45 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 1",
+                "DPTime": "09:45 AM",
+                "ArrivalTime": "12:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 1",
+                "DPTime": "03:45 PM",
+                "ArrivalTime": "06:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika Lite",
+                "DPTime": "03:45 PM",
+                "ArrivalTime": "04:30 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "04:00 PM",
+                "ArrivalTime": "05:30 PM",
+                "BookWindow": "31st March 2024"
+            }
+        ]
+    },
+    {
+        "scheduleId": 3,
+        "rootTitle": "Havelock to Neil Island",
+        "scheduleList":[
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "09:15 AM",
+                "ArrivalTime": "10:45 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "09:20 AM",
+                "ArrivalTime": "10:20 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz",
+                "DPTime": "10:00 AM",
+                "ArrivalTime": "11:00 AM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz Pearl",
+                "DPTime": "02:00 PM",
+                "ArrivalTime": "03:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "02:30 PM",
+                "ArrivalTime": "03:30 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "03:15 PM",
+                "ArrivalTime": "04:30 PM",
+                "BookWindow": "31st March 2024"
+            }
+        ]
+    },
+    {
+        "scheduleId": 4,
+        "rootTitle": "Neil Island to Port Blair",
+        "scheduleList":[
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "10:45 AM",
+                "ArrivalTime": "12:00 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "11:00 AM",
+                "ArrivalTime": "12:45 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz",
+                "DPTime": "11.30 AM",
+                "ArrivalTime": "12:30 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Makruzz Pearl",
+                "DPTime": "03.30 PM",
+                "ArrivalTime": "04:30 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Nautika",
+                "DPTime": "04:00 PM",
+                "ArrivalTime": "05:15 PM",
+                "BookWindow": "31st March 2024"
+            },
+            {
+                "ferryOpp": "Green Ocean 2",
+                "DPTime": "04:45 PM",
+                "ArrivalTime": "06:00 PM",
+                "BookWindow": "31st March 2024"
+            }
+        ]
+    }
+
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Dax Suthar",
+        "img": "Profile.png",
+        "rating": 1,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 2,
+        "name": "Aayush Khatri",
+        "img": "Profile.png",
+        "rating": 4,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 3,
+        "name": "Deep Tholiya",
+        "img": "Profile.png",
+        "rating": 3,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 4,
+        "name": "Dax Suthar",
+        "img": "Profile.png",
+        "rating": 1,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 5,
+        "name": "Aayush Khatri",
+        "img": "Profile.png",
+        "rating": 4,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 6,
+        "name": "Deep Tholiya",
+        "img": "Profile.png",
+        "rating": 3,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 7,
+        "name": "Dax Suthar",
+        "img": "Profile.png",
+        "rating": 1,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 8,
+        "name": "Aayush Khatri",
+        "img": "Profile.png",
+        "rating": 4,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    },
+    {
+        "id": 9,
+        "name": "Deep Tholiya",
+        "img": "Profile.png",
+        "rating": 3,
+        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+    }
+]

@@ -11,6 +11,7 @@ import Transport from './Components/Transport/Transport'
 import Incl from './Components/Incl/Incl'
 import Pricing from './Components/Pricing/Pricing'
 import AsideInfo from './Components/AsideInfo/AsideInfo'
+import Policy from './Components/Policy/Policy'
 
 export const metadata = {
     title: "Hello Andamand"
@@ -40,6 +41,7 @@ export default function page({params}) {
                         <Hotels />
                         <Transport />
                         <Incl />
+                        <Policy />
                     </div>
                     <aside className={styles.aside}>
                         <Pricing />

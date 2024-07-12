@@ -22,7 +22,7 @@ export default function layoutextended({ children }) {
 
     const pathName = usePathname();
     const nonBreadcrumbPages = ["/", "/contact-us", /^\/payment-varifyer\/.*/]
-    const nonStickyNavBar = ["/"]
+    const nonStickyNavBar = ["/", "/book-ferry"]
     
 
     return (

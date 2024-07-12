@@ -1,0 +1,145 @@
+.inpFields{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 42px;
+}
+
+.fieldLabel{
+    color: #696969;
+    font-size: 12px;
+    letter-spacing: .1px;
+    margin-bottom: 5px;
+}
+
+.selectBox{
+    height: 44px;
+    width: 241px;
+}
+
+.dateSelectBox svg{
+    position: absolute;
+    right: 14px;
+}
+
+.dateSelectBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 44px;
+    width: 207px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #696969;
+    height: 46px;
+    cursor: pointer;
+}
+
+.dpINPbox{
+    display: flex;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 0 18px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    caret-color: transparent;
+}
+
+.adultSelectBox, .infantSelectBox{
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    width: 126px;
+    overflow: hidden;
+    margin-left: -1px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+}
+
+.personMinus, .personPlus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 42px;
+    background-color: #E9E9E9;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.personMinus svg, .personPlus svg{
+    width: 15px;
+    height: 15px;
+}
+
+.personMinus svg path, .personPlus svg path{
+    fill: #989898;
+}
+
+.personValue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: #696969;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 28px;
+    gap: 12px;
+}
+
+.searchFerryBtn{
+    height: 47px;
+    width: 167px;
+    border: 2px solid #989EBD;
+    background-color: #1E2C70;
+    border-radius: 8px;
+    margin-right: -3px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    cursor: pointer;
+}
+
+.searchFerryBtn:hover{
+    background-color: #38B089;
+    border-color: #A3DBC9;
+}
+
+.addTripBtn svg path{
+    fill: #1E2C70;
+}
+
+.addTripBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: none;
+    height: 45px;
+    width: 180px;
+    border-radius: 8px;
+    font-size: 15px;
+    letter-spacing: .1px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.addTripBtn:hover{
+    background-color: #F6F6F6;
+    color: #1E2C70;
+}

@@ -123,7 +123,7 @@ export default function BookFerry() {
                 onBlur={setDPoff} 
                 selected={departureDate} 
                 onChange={selectDatefn}
-                dateFormat="dd-MM-YYYY"
+                dateFormat="dd-MM-yyyy"
                 minDate={new Date()}
                 icon={
                     <svg className={styles.dtPickerICO} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +145,7 @@ export default function BookFerry() {
                 <path d="M5.25 9L12 15.75L18.75 9" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>              
         </div>
-        <button onClick={handleSearchFerry} className={styles.SearchFerryButton}>Search Ferry</button>
+        <button className={styles.SearchFerryButton}>Search Ferry</button>
     </>
   )
 }

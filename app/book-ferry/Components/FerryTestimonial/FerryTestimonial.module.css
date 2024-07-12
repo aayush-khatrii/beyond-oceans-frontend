@@ -1,0 +1,75 @@
+.mainWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 95px;
+}
+
+.secTitle{
+    text-align: center;
+}
+
+.mainTitle h2{
+    font-size: 31.5px;
+    font-weight: 500;
+}
+
+.secondTitle h3{
+    font-size: 18.3px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.testimonialList{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 49px;
+    height: 464px;
+    position: relative;
+}
+
+.customPagination{
+    background-color: #1E2C70;
+    height: 14px;
+    width: 14px;
+}
+
+.customSwipperArrow{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -2px;
+    width: 213px;
+}
+
+.customSwipperArrow button{
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid #696969;
+    height: 41px;
+    width: 41px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.customSwipperArrow button svg{
+    margin-top: 5px;
+}
+
+.customSwipperArrow .arrowLeft svg{
+    margin-left: 1px;
+}
+
+.customSwipperArrow .arrowRight svg{
+    margin-right: -1px;
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+    background-color: #1E2C70;
+}
+
+.arrowLeft:hover > svg path, .arrowRight:hover > svg path{
+    stroke: #fff;
+}

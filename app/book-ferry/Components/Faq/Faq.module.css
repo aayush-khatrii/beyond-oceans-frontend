@@ -1,0 +1,129 @@
+.mainWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 95px;
+}
+
+.secTitle{
+    text-align: center;
+}
+
+.mainTitle h2{
+    font-size: 31.5px;
+    font-weight: 500;
+}
+
+.secondTitle h3{
+    font-size: 18.3px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.faqContent{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.faqTabList{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+}
+
+.faqCategoryTab{
+    background-color: #E9E9E9;
+    color: #1C1C1C;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 17.3px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    cursor: pointer;
+}
+
+.faqCategoryTab:hover{
+    background-color: #1E2C70;
+    color: #fff;
+}
+
+.selectedFaqCat{
+    background-color: #1E2C70;
+    color: #fff;
+}
+
+.faqDataList{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 43px;
+}
+
+.faqCard{
+    display: flex;
+    flex-direction: column;
+    padding: 18px 24px;
+    font-size: 18px;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.faqCardTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.downArrowSvg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9E9E9;
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+}
+
+.downArrowSvg svg{
+    transition: all .2s ease-in-out;
+}
+
+.faqCardContent{
+    margin-top: 16px;
+    margin-left: 2px;
+    font-size: 15px;
+    width: 1090px;
+    color: #696969;
+    display: none;
+}
+
+
+.faqCardOppen{
+    background-color: #fff;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.02);
+}
+
+.faqCardOppen .faqCardContent{
+    display: block;
+}
+
+.faqCardOppen .downArrowSvg{
+    background-color: #38B089;
+}
+
+.faqCardOppen .downArrowSvg svg path{
+    stroke: #fff;
+}
+
+.faqCardOppen .downArrowSvg svg{
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+ 

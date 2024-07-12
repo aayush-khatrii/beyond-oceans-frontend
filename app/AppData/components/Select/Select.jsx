@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import IconList from '../IconComponent/IconList'
 import styles from './Select.module.css'
 
-export default function Select({datalist, placeholder, onData}) {
+export default function Select({datalist, placeholder, onData, isEmpty = false}) {
 
     const selectBtnRef = useRef()
     const [selected, setSelected] = useState(placeholder ? placeholder : "")
@@ -41,8 +41,8 @@ export default function Select({datalist, placeholder, onData}) {
 
     return (
         <div onClick={handleToggle} ref={selectBtnRef} className={styles.mainWrapper}>
-            <div style={{borderColor: isDropdown ? "#1E2C70" : ""}} className={styles.value}>
-                <span style={{color: isDropdown ? "#1E2C70" : ""}} className={styles.valueSpan}>{selected}</span>
+            <div style={{borderColor: isDropdown ? "#1E2C70" : "", borderColor: isEmpty ? "#e00000" : ""}} className={styles.value}>
+                <span style={{color: isDropdown ? "#1E2C70" : "", color: isEmpty ? "#e00000" : ""}} className={styles.valueSpan}>{selected}</span>
                 <div className={isDropdown ? styles.dropedSvg : styles.dropSvg} style={dropIconStyle}><IconList Icon="downArrowThin"/></div>
             </div>
             <ul style={{display: isDropdown ? "block" : ""}} className={styles.optionMenu}>

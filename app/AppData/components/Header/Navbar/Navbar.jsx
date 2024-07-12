@@ -155,7 +155,7 @@ export default function Navbar() {
                             </div>
                         </div>
                     </li>
-                    <li><span className={styles.menuLv1}>Book Ferry</span></li>
+                    <Link href="/book-ferry"><li><span className={styles.menuLv1}>Book Ferry</span></li></Link>
                     <li>
                         <span className={styles.menuLv1} onClick={() => setActivityToggle(!activityToggle)} ref={actBtnRef}>Activities</span>
                         <div className={`${styles.megaMenuWrapper} ${styles.actMenuWrapper}`} style={{ display: activityToggle ? 'flex' : 'none' }}>

@@ -1,0 +1,94 @@
+.mainWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secTitle{
+    text-align: center;
+}
+
+.mainTitle h2{
+    font-size: 31.5px;
+    font-weight: 500;
+}
+
+.secondTitle h3{
+    font-size: 18.3px;
+    font-weight: 300;
+    margin-top: 6.5px;
+}
+
+.infoCardList{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 98px;
+}
+
+.infoCard{
+    width: 278px;
+    background-color: #fff;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.027);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 31px;
+}
+
+.infoCardIcon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2C70;
+    height: 95px;
+    width: 95px;
+    border-radius: 50px;
+    bottom: 45px;
+    margin-bottom: -23px;
+}
+
+.infoCardIcon svg{
+    width: 55px;
+    height: 55px;
+}
+
+.infoCardLFN .infoCardIcon svg{
+    margin-top: 3px;
+    margin-left: -1px;
+    width: 60px;
+    height: 60px;
+}
+
+.infoCardEBP .infoCardIcon svg{
+    margin-top: 3px;
+    margin-left: 9px;
+}
+
+.infoCardPrice .infoCardIcon svg{
+    margin-top: 2px;
+    margin-right: 7px;
+}
+
+.infoCardSupport .infoCardIcon svg{
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.infoCardTitle{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    letter-spacing: -.4px;
+}
+
+.infoCardDesc{
+    text-align: center;
+    color: #696969;
+    width: 230px;
+    font-size: 15px;
+}

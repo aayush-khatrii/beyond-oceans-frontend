@@ -1,0 +1,76 @@
+.mainWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 95px;
+}
+
+.secTitle{
+    text-align: center;
+}
+
+.mainTitle h2{
+    font-size: 31.5px;
+    font-weight: 500;
+}
+
+.secondTitle h3{
+    font-size: 18.3px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.ferryOprCardList{
+    display: flex;
+    width: 100%;
+    margin-top: 52px;
+    justify-content: space-between;
+}
+
+.ferryOprCard{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 285px;
+    width: 278px;
+}
+
+.imgWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 54%, rgba(0,0,0,0.6) 100%);
+}
+
+.cardContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 1;
+    padding-bottom: 19px;
+    letter-spacing: .2px;
+    width: 230px;
+}
+
+.cardContent span:nth-child(1) {
+    font-size: 21.7px;
+    text-align: center;
+}
+
+.cardContent span:nth-child(2) {
+    font-size: 12.5px;
+    font-weight: 200;
+    margin-top: 6px;
+}
+
+.cardContentMak span:nth-child(2) {
+    font-size: 11.5px;
+    font-weight: 200;
+    margin-top: 6px;
+}

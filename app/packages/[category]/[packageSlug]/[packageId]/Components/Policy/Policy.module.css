@@ -1,0 +1,45 @@
+.mainWrapper{
+    margin-top: 39px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.policyList{
+    position: relative;
+    border: 1px solid #E9E9E9;
+    border-radius: 14px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+
+.policyTitle{
+    font-size: 18px;
+}
+
+.policyData{
+    display: none;
+    margin-top: 24px;
+    color: #696969;
+    font-size: 14px;
+}
+
+.policyData ul{
+    list-style: disc !important;
+    color: #696969;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.toggleBtn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9E9E9;
+    top: 18px;
+    right: 15px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+}
