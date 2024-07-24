@@ -6,7 +6,7 @@ import { useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function Pricing() {
+export default function Pricing(props) {
     const varients = ["The Essential Package", "The Elite Package", "The Signature Package"]
     const [selectedVer, setSelectedVer] = useState(0)
     const [roomSelectBox, setRoomSelectBox] = useState(false)
@@ -15,8 +15,6 @@ export default function Pricing() {
     const [adults, setAdults] = useState(1)
     const [child, setChild] = useState(0)
     const [infant, setInfant] = useState(0)
-
-    const mdxSource = "https://my-assets-bkt.s3.ap-south-1.amazonaws.com/daydata.mdx"
 
     const [travelDate, setTravelDate] = useState()
 
@@ -83,6 +81,7 @@ export default function Pricing() {
 
     function handleVariantSelect(index){
         setSelectedVer(index)
+        props.optionChange(index)
     }
 
     function handleTravelDate(date){
@@ -187,7 +186,7 @@ export default function Pricing() {
                             <div className={styles.radioBtnOut}><div className={styles.radioBtnInn}></div></div>
                             <div className={styles.variantTitle}>{item}</div>
                             <div className={styles.variantDesc}>
-                                <MDXComp source={mdxSource} />
+                                <MDXComp source={"https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/3e142f17-dc88-435c-98a0-bf542836f961/options/option_1.mdx"} />
                             </div>
                             <div className={styles.variantPrice}>
                                 <span className={styles.variantPriceTxt}>₹25,000</span>

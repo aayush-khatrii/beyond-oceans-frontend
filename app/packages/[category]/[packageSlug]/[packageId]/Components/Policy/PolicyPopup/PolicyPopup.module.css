@@ -1,0 +1,82 @@
+.mainWrapper{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.subWrapper{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 800px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    height: 65px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1E2C70;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.CloseBTN{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+    border-radius: 50px;
+    background-color: #E9E9E9;
+    cursor: pointer;
+}
+
+.CloseBTN svg{
+    margin-top: .1px;
+    margin-left: -.5px;
+    width: 11px;
+    height: 11px;
+}
+
+.CloseBTN svg path{
+    stroke: #989898;
+}
+
+.mdxWrapper{
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.mdxContent{
+    padding: 15px 30px;
+    height: fit-content;
+    max-height: 80vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.mdxContent::-webkit-scrollbar{
+    display: block;
+    width: 12px;
+    background-color: #ced2e0;
+    border-radius: 20px;
+}
+
+.mdxContent::-webkit-scrollbar-thumb{
+    display: block;
+    width: 10px;
+    background-color: #1E2C70;
+    border-radius: 20px;
+}

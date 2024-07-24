@@ -4,6 +4,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import { useEffect, useState } from 'react';
 import MDXLoader from "./MDXLoader";
+import styles from './MDXComponent.module.css'
 
 
 export default function MDXComp({source}) {
@@ -22,7 +23,7 @@ export default function MDXComp({source}) {
   return (
     <>
         {!mdxData && <MDXLoader />}
-        {mdxData && <MDXRemote {...mdxData} lazy />}  
+        {mdxData && <div className={styles.mainMDX}><MDXRemote {...mdxData} lazy /></div>}  
     </>
   )
 }

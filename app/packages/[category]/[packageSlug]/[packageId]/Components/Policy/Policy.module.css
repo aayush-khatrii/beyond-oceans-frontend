@@ -6,29 +6,53 @@
 }
 
 .policyList{
-    position: relative;
     border: 1px solid #E9E9E9;
     border-radius: 14px;
     padding: 20px 25px;
+}
+
+.readMoreBtn{
+    background-color: transparent;
+    border: none;
+    color: #1E2C70;
     cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
 }
 
 .policyTitle{
     font-size: 18px;
+    font-weight: 600;
 }
 
 .policyData{
     display: none;
+    position: relative;
     margin-top: 24px;
+    height: 120px;
+    overflow: hidden;
     color: #696969;
     font-size: 14px;
 }
 
-.policyData ul{
-    list-style: disc !important;
-    color: #696969;
+.policyData p{
     font-size: 14px;
-    padding-left: 20px;
+}
+
+.policyData strong{
+    color: #000;
+}
+
+.contentOverlay{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, #fafbfc 0%, #fafbfc00 40%);
+}
+
+.policyData ul{
+    font-size: 14px;
 }
 
 .toggleBtn{

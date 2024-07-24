@@ -55,14 +55,14 @@
     gap: 20px;
 }
 
-.LocationList, .RatingList, .DurationList{
+.LocationList, .RatingList, .DurationList, .MealPlanList{
     display: flex;
     align-items: center;
     font-size: 15px;
     color: #696969;
 }
 
-.LocationList svg, .RatingList svg, .DurationList svg{
+.LocationList svg, .RatingList svg, .DurationList svg, .MealPlanList svg{
     margin-right: 9px;
 }
 
@@ -71,7 +71,7 @@
     margin-top: -2px;
 }
 
-.DurationList svg{
+.DurationList svg, .MealPlanList svg{
     height: 25px;
     width: 25px;
     margin-top: -1px

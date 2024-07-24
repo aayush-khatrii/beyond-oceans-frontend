@@ -1,8 +1,10 @@
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import styles from './Hotels.module.css'
 import Image from 'next/image'
+import FETIconList from '@/app/AppData/components/IconComponent/FETIconList'
 
-export default function Hotels() {
+export default function Hotels({selectedOption}) {
+    const isMealPlan = false
   return (
     <div className={styles.mainWrapper}>
         <div className={styles.title}>
@@ -21,12 +23,18 @@ export default function Hotels() {
                             </div>
                             <div className={styles.RatingList}>
                                 <IconList Icon="StayRating"/>
-                                <span>3 Star Hotel</span>
+                                <span>Superior Ocean View</span>
                             </div>
                             <div className={styles.DurationList}>
                                 <IconList Icon="StayDuration"/>
-                                <span>Day 1 and 2</span>
+                                <span>Day 1</span>
                             </div>
+                            {   isMealPlan &&
+                                <div className={styles.MealPlanList}>
+                                    <FETIconList Icon="MealsFET"/>
+                                    <span>MAP</span>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -77,7 +85,7 @@ export default function Hotels() {
                     </div>
                 </div>
             </div>
-
+            {selectedOption}
             <div className={styles.hotelList}>
                 <div className={styles.hotelInfoCont}>
                     <div className={styles.hotelIcon}><IconList Icon="ResortStay"/></div>

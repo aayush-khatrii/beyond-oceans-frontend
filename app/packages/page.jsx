@@ -1,9 +1,12 @@
 "use client"
 import styles from './packages.module.css'
 import IconList from '../AppData/components/IconComponent/IconList'
-import Link from 'next/link'
 import Select from '../AppData/components/Select/Select'
 import PackageCard from '../AppData/components/Card/PackageCard/PackageCard'
+import { useEffect, useState } from 'react'
+import { getAllPackages } from '../AppData/http/packages'
+
+
 
 export default function page() {
     const sortbyDL = ["Low to High", "High to Low", "Top Relevent", "Newest First"]
@@ -13,21 +16,38 @@ export default function page() {
     const TheamDL = ["Advanture", "Advanture", "Advanture", "Advanture"]
     const PackTypeDL = ["Essential", "Elite", "Signature"]
 
-    const packTitle = "The tour package title will write here and max two line only..."
-    const featureslist = ["Hotel", "Meals", "Activities", "Transfer", "Sightseeing"]
-    const destinations = [
-        { Days: 1, Dest: "Port Blair" },
-        { Days: 1, Dest: "Havelock" },
-        { Days: 1, Dest: "Neil Island" },
-        { Days: 1, Dest: "Baratang" },
-        { Days: 1, Dest: "Port Blair" }
-    ]
+
+    const [sortBy, setSortBy] = useState()
+    const [packData, setPackData] = useState()
 
     const handleSortBy = (data) =>{
         console.log(data)
+        setSortBy(data)
     }
 
-  return (
+    useEffect(()=>{
+        async function fetchAllPackages(){
+            const {data} = await getAllPackages()
+            const packagesData = data
+            setPackData(packagesData)
+        }
+        fetchAllPackages()
+    },[])
+
+    function handleFilterSearch(){
+        if(sortBy === "Low to High"){
+            const LTHPackList = [...packData].sort((a, b) => a.Price.BOP - b.Price.BOP);
+            setPackData(LTHPackList)
+
+        }
+
+        if(sortBy === "High to Low"){
+            const LTHPackList = [...packData].sort((a, b) => b.Price.BOP - a.Price.BOP);
+            setPackData(LTHPackList)
+        }
+    }
+
+    return (
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.contWrapper}>
@@ -73,14 +93,16 @@ export default function page() {
                         </div>
                     </div>
                     <div>
-                        <button className={styles.filterSearch}><IconList Icon="SearchIcon2" /></button>
+                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="SearchIcon2" /></button>
                     </div>
                 </div>
                 <div className={styles.packageCardGrid}>
-                    <PackageCard featuresList={featureslist} destDuration={destinations} title={packTitle}/>
-                    <PackageCard featuresList={featureslist} destDuration={destinations} title={packTitle}/>
-                    <PackageCard featuresList={featureslist} destDuration={destinations} title={packTitle}/>
-                    <PackageCard featuresList={featureslist} destDuration={destinations} title={packTitle}/>
+                    {
+                        packData &&
+                        packData.map((item, index) => (
+                            <PackageCard key={index} data={item}/>
+                        ))
+                    }
                 </div>
             </div>
         </div>

@@ -48,10 +48,3 @@
     box-sizing: border-box;
     padding: 20px 20px;
 }
-
-.mdxContent ul{
-    list-style: disc !important;
-    color: #696969;
-    font-size: 15px;
-    padding-left: 20px;
-}

@@ -1,29 +1,23 @@
 "use client"
 import { useRef, useState } from 'react'
 import styles from './PackageOverview.module.css'
-import DemoData from '@/app/AppData/mdx/demodata.mdx'
+import MDXComp from '@/app/AppData/components/MDXLoader/MDXComp';
 
-export default function PackageOverview() {
-
-    const mdxRef = useRef()
-
-    const [isExtended, setIsExtended] = useState(false)
+export default function PackageOverview({packOverviewSrc}) {
 
     
-    const extendedStyle = {
-        height: isExtended ? "fit-content" : ""
-    }
-
-    const extendedStyleMdx = {
-        height: isExtended ? "fit-content" : ""
-    }
-
+    const mdxRef = useRef()
+    
+    const [isExtended, setIsExtended] = useState(false)
+    
+    
     function handleReadMore(){
         setIsExtended(!isExtended)
         const element = mdxRef.current;
-
-        !isExtended ? element.style.height = `${element.scrollHeight}px` : element.style.height = "169px"
+        
+        !isExtended ? element.style.height = `${element.scrollHeight}px` : element.style.height = "100px"
     }
+
 
   return (
     <div className={styles.mainWrapper}>
@@ -33,7 +27,7 @@ export default function PackageOverview() {
         <div className={styles.overviewContent}>
             <div ref={mdxRef} style={{marginBottom: isExtended ? "15px" :  ""}} className={styles.mdxContent}>
                 <div style={{background: isExtended ? "transparent" : ""}} className={styles.gradient}></div>
-                <DemoData />
+                <MDXComp source={packOverviewSrc} />
             </div>
             <span onClick={handleReadMore} className={styles.readmoreBtn}>{isExtended ? "Read Less" : "Read More"}</span>
         </div>
