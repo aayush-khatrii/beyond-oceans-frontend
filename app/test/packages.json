@@ -1,0 +1,218 @@
+{
+    "Package_Id": "3e142f17-dc88-435c-98a0-bf542836f961",
+    "Package_Title": "Unwind in Andaman's Beauty with Bliss",
+    "Img_Path": [
+        "https://images.unsplash.com/photo-1641719538787-9e392e5dd4d3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "Pack_Duration":{
+        "Day": 4,
+        "Night": 3
+    },
+    "Featurs": [
+        "Activities",
+        "Hotel",
+        "Meals",
+        "Sightseeing",
+        "Transfer"
+    ],
+    "Destination": [
+        "Port Blair",
+        "Havelock"
+    ],
+    "Pack_Schedule":[
+        {
+            "Days": 2,
+            "Dest": "Port Blair"
+        },
+        {
+            "Days": 1,
+            "Dest": "Havelock"
+        }
+    ],
+    "Tags": {
+        "Card_Tag": {
+            "Priority": 1,
+            "Value": "Recommended"
+        },
+        "Pack_Tag": [
+            "Best Seller",
+            "4.5 Star Rated"
+        ],
+        "Filter_Tag": "Best Seller"
+    },
+    "Price": {
+        "BOP": 9999,
+        "MRP": 24998
+    },
+    "Tour_Type": {
+        "URL_Value": "family-package",
+        "Value": "Family Package"
+    },
+    "Theam": "Adventure",
+    "Package_Overview": "package_overview.mdx",
+    "DW_Itinerary": [
+        {
+            "Day": 1,
+            "Day_Title": "Port Blair - Carbyns Cove Beach - Cellular Jail - Light & Sound Show",
+            "Day_Descreption": "day_1.mdx"
+        },
+        {
+            "Day": 2,
+            "Day_Title": "Port Blair - Havelock(Swaraj Dweep) Island-Radhanagar Beach",
+            "Day_Descreption": "day_2.mdx"
+        },
+        {
+            "Day": 3,
+            "Day_Title": "Havelock (Swaraj Dweep) Island to Port Blair",
+            "Day_Descreption": "day_3.mdx"
+        },
+        {
+            "Day": 4,
+            "Day_Title": "Port Blair",
+            "Day_Descreption": "day_4.mdx"
+        }
+    ],
+    "Package_Options": [
+        {
+            "Option_Id": 1,
+            "Option_Title": "Standard",
+            "Option_Price": 9999,
+            "Option_Overview": "option_1.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "40856dd4-de66-41cc-87e4-ae21dfbf8416",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "14645f64-9c09-4f6a-8c68-c1c3dcf9006e",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        },
+        {
+            "Option_Id": 2,
+            "Option_Title": "Premium",
+            "Option_Price": 11400,
+            "Option_Overview": "option_2.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "e2cec803-d222-4927-ae5c-0f6ecc9dc2f1",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "a6ce98a7-1674-4e31-b517-c427bcde7899",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        },
+        {
+            "Option_Id": 3,
+            "Option_Title": "Deluxe",
+            "Option_Price": 12500,
+            "Option_Overview": "option_3.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "29cd1c7f-020b-46c4-ab9f-69bb1e121ce8",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "082cd39a-6988-4a27-a6c5-86998f29b475",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        },
+        {
+            "Option_Id": 4,
+            "Option_Title": "Luxury",
+            "Option_Price": 15600,
+            "Option_Overview": "option_4.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "e3113192-d75c-48ea-8eee-0c2c4c0110db",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "964cdc23-3df4-4c5c-8737-21c18e55a5de",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        },
+        {
+            "Option_Id": 5,
+            "Option_Title": "Royal",
+            "Option_Price": 17400,
+            "Option_Overview": "option_5.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "e3113192-d75c-48ea-8eee-0c2c4c0110db",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "964cdc23-3df4-4c5c-8737-21c18e55a5de",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        },
+        {
+            "Option_Id": 6,
+            "Option_Title": "Sea View",
+            "Option_Price": 16300,
+            "Option_Overview": "option_6.mdx",
+            "Option_Stay": [
+                {
+                    "Hotel": "d23ce868-95fb-4a04-b7eb-071749e43608",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "1,2",
+                    "Hotel_Meal_Plan": "N/A"
+                },
+                {
+                    "Hotel": "a1a887a5-87e2-4cee-bc33-9bfde20f1031",
+                    "Room_Type": "Delux",
+                    "Stay_Duration": "3",
+                    "Hotel_Meal_Plan": "N/A"
+                }
+            ]
+        }
+    ],
+    "Trasnport": [
+        {
+            "Transport_ID": "TransportID",
+            "Transport_Location": "Havelock Sightseeing",
+            "Transport_Feature": "Premium Class",
+            "Transport_Day": 1
+        },
+        {
+            "Transport_ID": "TransportID",
+            "Transport_Location": "Havelock Sightseeing",
+            "Transport_Feature": "Premium Class",
+            "Transport_Day": 1
+        }
+    ],
+    "Inclusions": "inclusions.mdx",
+    "Exclusions": "exclusions.mdx",
+    "Policys": {
+        "Departure": "MDX URL",
+        "Payment": "MDX URL",
+        "Cancellation": "MDX URL"
+    }
+}

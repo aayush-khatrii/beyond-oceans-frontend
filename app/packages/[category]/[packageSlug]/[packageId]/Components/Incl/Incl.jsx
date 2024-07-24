@@ -2,7 +2,9 @@ import MDXComp from '@/app/AppData/components/MDXLoader/MDXComp'
 import styles from './Incl.module.css'
 
 export default function Incl() {
-    const mdxSource = "https://my-assets-bkt.s3.ap-south-1.amazonaws.com/daydata.mdx"
+    const mdxSourceINC = "https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/3e142f17-dc88-435c-98a0-bf542836f961/inclusions.mdx"
+    const mdxSourceEXC = "https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/3e142f17-dc88-435c-98a0-bf542836f961/exclusions.mdx"
+
   return (
     <div className={styles.mainWrapper}>
         <div className={styles.inclusions}>
@@ -10,7 +12,7 @@ export default function Incl() {
                 <span>Inclusions</span>
             </div>
             <div className={styles.mdxContent}>
-                <MDXComp source={mdxSource} />
+                <MDXComp source={mdxSourceINC} />
             </div>
         </div>
         <div className={styles.Exclusions}>
@@ -18,7 +20,7 @@ export default function Incl() {
                 <span>Exclusions</span>
             </div>
             <div className={styles.mdxContent}>
-                <MDXComp source={mdxSource} />
+                <MDXComp source={mdxSourceEXC} />
             </div>
         </div>
     </div>

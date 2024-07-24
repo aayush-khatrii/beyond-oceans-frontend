@@ -10,10 +10,9 @@ export const metadata = {
     title: 'Beyond Oceans'
 }
 
-
 export default function RootLayout({ children }) {
     //To activate site change from DEV to PROD
-    const mode = "DEV"
+    const mode = "PROD"
   return (
     <html lang="en">
         <head>

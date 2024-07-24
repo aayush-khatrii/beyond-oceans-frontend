@@ -85,11 +85,12 @@
 
 .listTitleCont{
     display: flex;
-    align-items: center;
+    width: 515px;
     font-weight: 600;
 }
 
 .listTitleDay{
+    width: 57px;
     color: #1E2C70;
     font-size: 18px;
     margin-right: 10px;

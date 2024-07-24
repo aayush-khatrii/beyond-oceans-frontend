@@ -1,5 +1,6 @@
-import IconList from '@/app/AppData/components/IconComponent/IconList'
+
 import styles from './PackageInc.module.css'
+import FETIconList from '@/app/AppData/components/IconComponent/FETIconList'
 
 export default function PackageInc({featureList}) {
   return (
@@ -12,7 +13,7 @@ export default function PackageInc({featureList}) {
                 {
                     featureList.map((item, index) => (
                         <div key={index} className={styles.itemContainer}>
-                            <IconList Icon={`${item}FET`} />
+                            <FETIconList Icon={`${item}FET`}/>
                             <span>{item}</span>
                         </div>
                     ))

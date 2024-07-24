@@ -9,7 +9,6 @@ import FerryOperator from "./Components/FerryOperator/FerryOperator";
 import BookingGuide from "./Components/BookingGuide/BookingGuide";
 import FerryTestimonial from "./Components/FerryTestimonial/FerryTestimonial";
 import FerrySchedule from "./Components/FerrySchedule/FerrySchedule";
-import FerryScheduleList from "./Components/FerrySchedule/FerryScheduleList/FerryScheduleList";
 import GroupBooking from "./Components/GroupBooking/GroupBooking";
 import Faq from "./Components/Faq/Faq";
 

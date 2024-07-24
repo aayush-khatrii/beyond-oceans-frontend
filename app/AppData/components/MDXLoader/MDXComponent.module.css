@@ -1,0 +1,22 @@
+.mainMDX p{
+    color: #696969;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .06px;
+}
+
+.mainMDX ul{
+    list-style: disc !important;
+    color: #696969;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.mainMDX a{
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.mainMDX{
+    user-select: auto;
+}

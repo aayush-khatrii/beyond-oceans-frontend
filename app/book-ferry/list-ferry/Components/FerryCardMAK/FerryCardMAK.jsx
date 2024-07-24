@@ -1,17 +1,46 @@
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import styles from './FerryCardMAK.module.css'
 import Lottie from 'lottie-react'
-import styles from './FerryCard.module.css'
 import FerryAni from '../../../../AppData/ani/ferry_ani.json'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
+import FerrySelectPopUp from './FerrySelectPopUp/FerrySelectPopUp'
 
-export default function FerryCard({tripData}) {
+export default function FerryCardMAK({data, tripData}) {
+
+    const [ferrySelectPop, setFerrySelectPop] = useState(false)
 
     const lottiFerryRef = useRef(null)
+
+    function convertTo12HourFormat(timeString) {
+        let [hours, minutes, seconds] = timeString.split(':');
+        hours = parseInt(hours, 10);
+        const ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12 || 12;
+        return `${hours}:${minutes}${ampm}`;
+    }
+
+    function parseTimeString(timeString) {
+        const [hours, minutes, seconds] = timeString.split(':').map(Number);
+        return new Date(0, 0, 0, hours, minutes, seconds);
+      }
+      
+      function getTimeDifference(time1, time2) {
+        const time1Date = parseTimeString(time1);
+        const time2Date = parseTimeString(time2);
+      
+        const diffMilliseconds = time2Date - time1Date;
+        const diffMinutes = Math.floor(diffMilliseconds / 1000 / 60);
+        const hours = Math.floor(diffMinutes / 60);
+        const minutes = diffMinutes % 60;
+      
+        return `${hours}h ${minutes}m`;
+      }
 
     useEffect(() => {
         lottiFerryRef.current.setSpeed(.6)
     },[])
 
+    const ticketStartingPrice = Intl.NumberFormat('en-IN').format(data && data.Classes[0].ship_class_price)
     
     const IslandName = {
         1: "Port Blair",
@@ -19,21 +48,26 @@ export default function FerryCard({tripData}) {
         3: "Shaheed Dweep"
     }
 
-  return (
+    function handleFerrySelectPopup(){
+        setFerrySelectPop(!ferrySelectPop)
+    }
+
+    return (
     <div className={styles.mainWrapper}>
+        {ferrySelectPop && data && <FerrySelectPopUp ferryData={data} tripData={tripData} handleClose={handleFerrySelectPopup} />}
         <div className={styles.ferryListCard}>
             <div className={styles.left}></div>
             <div className={styles.right}></div>
             <div className={styles.ferryCardWrapper}>
                 <div className={styles.ferryCardLeft}>
                     <div className={styles.cardTitle}>
-                        <div className={styles.mainTitle}><span>Nautika Lite</span></div>
+                        <div className={styles.mainTitle}><span>{data && data.ship_title}</span></div>
                         <div className={styles.opratorInfo}><span>Oprated by Sea Link India</span></div>
                     </div>
                     <div className={styles.ferryDetaildSec}>
                         <div className={styles.cardFromInfo}>
-                            <div className={styles.fromTimeing}>6:30am</div>
-                            <div className={styles.fromLocation}>{IslandName[tripData.dept]}</div>
+                            <div className={styles.fromTimeing}>{data && convertTo12HourFormat(data.departure_time)}</div>
+                            <div className={styles.fromLocation}>{IslandName[data.source_location_id]}</div>
                         </div>
                         <div className={styles.middleIconSec}>
                             <div className={styles.leftDot}></div>
@@ -43,12 +77,12 @@ export default function FerryCard({tripData}) {
                                 <div className={styles.ferryAnimationICO}>
                                     <Lottie lottieRef={lottiFerryRef} animationData={FerryAni} />
                                 </div>
-                                <div className={styles.tripDuration}><span>1h 30m</span></div>
+                                <div className={styles.tripDuration}><span>{data && getTimeDifference(data.departure_time, data.arrival_time)}</span></div>
                             </div>
                         </div>
                         <div className={styles.cardToInfo}>
-                            <div className={styles.toTimeing}>8:30am</div>
-                            <div className={styles.toLocation}>{IslandName[tripData.dest]}</div>
+                            <div className={styles.toTimeing}>{data && convertTo12HourFormat(data.arrival_time)}</div>
+                            <div className={styles.toLocation}>{IslandName[data.destination_location_id]}</div>
                         </div>
                     </div>
                     <div className={styles.ferryFeatures}>
@@ -71,18 +105,18 @@ export default function FerryCard({tripData}) {
                     <div className={styles.ratting}>
                         <div className={styles.starsList}>
                         {
-                            Array(5).fill().map((index) => (
-                                <IconList key={index} Icon={"Star"} />
+                            Array(5).fill().map((item, index) => (
+                                <IconList key={index} Icon="Star" />
                             ))
                         }
                         </div>
                         <div className={styles.rattingCount}><span>(1024)</span></div>
                     </div>
                     <div className={styles.pricingCont}>
-                        <div className={styles.tripPrice}><span>₹ 1,400</span></div>
+                        <div className={styles.tripPrice}><span>₹ {data && ticketStartingPrice}</span></div>
                         <div className={styles.tripPriceNote}><span>per ticket</span></div>
                     </div>
-                    <button className={styles.bookingBTN}>Select Seats</button>
+                    <button className={styles.bookingBTN} onClick={() => {handleFerrySelectPopup()}}>Select Ferry</button>
                 </div>
             </div>
         </div>

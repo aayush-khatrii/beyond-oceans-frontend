@@ -21,7 +21,7 @@ export default function FilterHead({tripData}) {
             <div className={styles.infoNote}>
                 Showing result for 
                 <span> {tripData.travelerAdu > 1 ? `${tripData.travelerAdu} Adults` : `${tripData.travelerAdu} Adult`} {tripData.travelerInf !== 0 && tripData.travelerInf === 1 ? `and ${tripData.travelerInf} Infant` : ""} {tripData.travelerInf !== 0 && tripData.travelerInf > 1 ? `and ${tripData.travelerInf} Infants` : ""}</span> on 
-                <span> {tripData.travelDateTS.day} {tripData.travelDateTS.month}, {tripData.travelDateTS.year}</span>
+                <span> {tripData.travelDate.day} {tripData.travelDate.month}, {tripData.travelDate.year}</span>
             </div>
         </div>
         <div className={styles.filterRight}>

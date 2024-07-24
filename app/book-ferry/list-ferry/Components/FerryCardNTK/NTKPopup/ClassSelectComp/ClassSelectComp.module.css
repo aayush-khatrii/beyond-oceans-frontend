@@ -1,0 +1,204 @@
+.secTitle span:nth-child(1){
+    color: #1E2C70;
+}
+
+.secTitle{
+    font-size: 22px;
+    font-weight: 700;
+    color: #1F1F1F;
+}
+
+.ferryImagesSlider, .slideWrapper{
+    width: 422px;
+    height: 258px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.leftIcon, .rightIcon{
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    top: 118px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.leftIcon{
+    left: 19px;
+}
+
+.rightIcon{
+    right: 19px;
+}
+
+.leftIcon svg, .rightIcon svg{
+    width: 14px;
+}
+
+.leftIcon svg path, .rightIcon svg path{
+    stroke: #fff;
+}
+
+.leftIcon:hover, .rightIcon:hover{
+    background-color: #1E2C70;
+    border-color: #1E2C70;
+}
+
+.imgWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ferryClass input[type="radio"]{
+    display: none;
+}
+
+.ferryClassList{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 420px;
+    gap: 27px;
+    padding-right: 10px;
+}
+
+.ferryClass{
+    cursor: pointer;
+}
+
+.radioBGWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 21px 19px;
+}
+
+.ferryClassContent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.ferryClassContentWrapper{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.radioBorder{
+    border: 1px solid #BABABA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.radioSelected{
+    height: 9px;
+    width: 9px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.ferryClass input:checked ~ .radioBGWrapper{
+    border-color: #38B089;
+    background-color: #EBF7F3;
+}
+
+.ferryClass input:disabled ~ .radioBGWrapper{
+    border-color: #BABABA;
+    background-color: #E9E9E9;
+    cursor: not-allowed;
+}
+
+.ferryClass input:checked ~ .radioBGWrapper .ferryClassContent .radioBorder{
+    border-color: #38B089;
+}
+
+.ferryClass input:checked ~ .radioBGWrapper .ferryClassContent .radioBorder .radioSelected{
+    background-color: #38B089;
+}
+
+.downArrowICO{
+    transition: all .2s ease-in-out;
+}
+
+.downArrowICO svg path{
+    stroke: #1F1F1F;
+}
+
+.ferryClassName{
+    margin-left: 18px;
+    margin-bottom: -1px;
+    font-weight: 570;
+    color: #1F1F1F;
+}
+
+.TextHyp, .ferryClassPrice{
+    margin-bottom: -1px;
+    font-weight: 570;
+    color: #1F1F1F;
+}
+
+.TextHyp{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.ferryClassPrice{
+    font-weight: 700;
+}
+
+.priceNote{
+    margin-left: 5px;
+    margin-bottom: -1px;
+    font-size: 12px;
+    color: #696969;
+}
+
+
+.classDescContent{
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+    margin-left: 40px;
+}
+
+.classFeature{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.classFeature li{
+    font-size: 14px;
+    color: #696969;
+}
+
+.classFeature{
+    display: flex;
+    flex-direction: column;
+}

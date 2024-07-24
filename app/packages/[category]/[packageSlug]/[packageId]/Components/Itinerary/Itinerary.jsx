@@ -29,7 +29,7 @@ export default function Itinerary({scheduleData}) {
                                 <div className={styles.lastSvg}><IconList Icon="PlanFlag" /></div>
                                 <div className={styles.listTitlewrp}>
                                     <div className={styles.listTitleCont}>
-                                        <p className={styles.listTitleDay}>Day {item.day} -</p>
+                                        <p className={styles.listTitleDay}>Day {item.day}</p>
                                         <p className={styles.listTitleText}>{item.title}</p>
                                     </div>
                                     <div className={styles.drpArrow}><IconList Icon="downArrowThin" /></div>
