@@ -2,18 +2,24 @@
 import styles from './TitleContainer.module.css'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 
-export default function TitleContainer() {
+export default function TitleContainer({data, params}) {
 
     function handleShare(){
         if(navigator.share){
             navigator.share({
-                title:"Hello",
-                url:"https://localhost:3000/packages/family-packages/andaman-nicobar-island"
+                title: params.packageSlug,
+                url:`http://localhost:3000/packages/${data.Tour_Type.URL_Value}/${params.packageSlug}/${data.Package_Id}`
             })
         }else{
             alert("web sharing not supported")
         }
     }
+
+    function intPrice(price){
+        return Intl.NumberFormat('en-IN').format(price)
+    }
+
+    const discountPercent = Math.floor((data.Price.BOP * 100) / data.Price.MRP)
 
     return (
         <div className={styles.titleCont}>
@@ -24,31 +30,41 @@ export default function TitleContainer() {
                     <div onClick={handleShare} className={styles.shareLink}>Share Trip <IconList Icon="TRArrow"/></div>
                 </div>
                 <div className={styles.title}>
-                    <h1>Andaman and Nicobar Family Tour Package</h1>
+                    <h1>{data.Package_Title}</h1>
                 </div>
                 <div className={styles.infosec}>
                     <div className={styles.duration}>
                         <IconList Icon="DurationCalender" />
                         <span className={styles.lable}>Duration:</span>
-                        <span className={styles.infoSecValue}>6 Nights and 7 Days</span>
+                        <span className={styles.infoSecValue}>{data.Pack_Duration.Night} Nights and {data.Pack_Duration.Day} Days</span>
                     </div>
                     <div className={styles.ptv}>
                         <IconList Icon="PTVMapSearch" />
                         <span className={styles.lable}>Place To Visit:</span>
-                        <span className={styles.infoSecValue}>2N Port Blair | 2N Havelock | 2N Neil Island</span>
+                        <div className={styles.infoSecValue}>
+                        {
+                                data.Pack_Schedule.map((item, index)=>(
+                                    <div key={index} className={styles.scheduleList}>
+                                        <span className={styles.scheduleDay}>{item.Days}N&nbsp;</span>
+                                        <span className={styles.scheduleDest}>{item.Dest}</span>
+                                        <div className={styles.scheduleSep}>&nbsp;|&nbsp;</div>
+                                    </div>
+                                ) )
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
             <div className={styles.pricePart}>
                 <div className={styles.saleTag}>
-                    50% Off
+                    {discountPercent}% Off
                 </div>
                 <div className={styles.pricelabel1}>Starting From</div>
                 <div className={styles.pricing}>
-                    <h2 className={styles.bop}>₹25,000</h2>
+                    <h2 className={styles.bop}>₹{intPrice(data.Price.BOP)}</h2>
                     <div className={styles.mrp}>
                         <div className={styles.cross}></div>
-                        <span>₹50,000</span>
+                        <span>₹{intPrice(data.Price.MRP)}</span>
                     </div>
                 </div>
                 <div className={styles.pricelabel2}>/per person</div>

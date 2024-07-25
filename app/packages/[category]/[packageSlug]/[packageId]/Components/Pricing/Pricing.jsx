@@ -7,6 +7,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function Pricing(props) {
+
+    const packageData = props.data
+
     const varients = ["The Essential Package", "The Elite Package", "The Signature Package"]
     const [selectedVer, setSelectedVer] = useState(0)
     const [roomSelectBox, setRoomSelectBox] = useState(false)
@@ -88,6 +91,14 @@ export default function Pricing(props) {
         setTravelDate(date)
     }
 
+    function intPrice(price){
+        return Intl.NumberFormat('en-IN').format(price)
+    }
+
+    function awsUrlGen(fileSrc){
+        return `https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/${packageData.Package_Id}/options/${fileSrc}`
+    }
+
   return (
     <div className={styles.mainWrapper}>
         <div className={styles.title}>
@@ -97,9 +108,9 @@ export default function Pricing(props) {
             <div className={styles.priceCont}>
                 <div className={styles.priceInfo}><span>Total price of 1 Adults</span></div>
                 <div className={styles.mrpCont}>
-                    <span className={styles.bop}>₹25,000</span>
+                    <span className={styles.bop}>₹{intPrice(packageData.Package_Options[selectedVer].Option_Price)}</span>
                     <div className={styles.mrpCut}>
-                        <span className={styles.mrp}>₹50,000</span>
+                        <span className={styles.mrp}>₹{intPrice(packageData.Price.MRP)}</span>
                         <div className={styles.mrpCutline}></div>
                     </div>
                 </div>
@@ -181,15 +192,15 @@ export default function Pricing(props) {
                 <div className={styles.packOptionContTitle}><span>Select Package Option</span></div>
                 <div className={styles.packVariantCont}>
                     {
-                        varients.map((item, index) => (
+                        packageData.Package_Options.map((item, index) => (
                             <div key={index} className={`${styles.variantList} ${index === selectedVer ? styles.selectedVariantList : ""}`} onClick={() => {handleVariantSelect(index)}}>
                             <div className={styles.radioBtnOut}><div className={styles.radioBtnInn}></div></div>
-                            <div className={styles.variantTitle}>{item}</div>
+                            <div className={styles.variantTitle}>{item.Option_Title}</div>
                             <div className={styles.variantDesc}>
-                                <MDXComp source={"https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/3e142f17-dc88-435c-98a0-bf542836f961/options/option_1.mdx"} />
+                                <MDXComp source={awsUrlGen(item.Option_Overview)} />
                             </div>
                             <div className={styles.variantPrice}>
-                                <span className={styles.variantPriceTxt}>₹25,000</span>
+                                <span className={styles.variantPriceTxt}>₹{intPrice(item.Option_Price)}</span>
                                 <span className={styles.variantPriceDesc}>per person</span>
                             </div>
                             </div>

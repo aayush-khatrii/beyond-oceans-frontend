@@ -49,8 +49,17 @@
     margin-top: 21px;
 }
 
-.infoSecValue{
+.infoSecValue, .scheduleList{
+    display: flex;
     font-size: 18px;
+}
+
+.scheduleDay{
+    letter-spacing: 2px;
+}
+
+.scheduleList:last-child .scheduleSep{
+    display: none;
 }
 
 .lable{

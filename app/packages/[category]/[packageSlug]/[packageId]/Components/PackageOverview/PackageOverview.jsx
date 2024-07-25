@@ -3,14 +3,14 @@ import { useRef, useState } from 'react'
 import styles from './PackageOverview.module.css'
 import MDXComp from '@/app/AppData/components/MDXLoader/MDXComp';
 
-export default function PackageOverview({packOverviewSrc}) {
+export default function PackageOverview({packageId}) {
 
     
     const mdxRef = useRef()
     
     const [isExtended, setIsExtended] = useState(false)
     
-    
+    const overviewMdxURLAWS = `https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/${packageId}/package_overview.mdx`
     function handleReadMore(){
         setIsExtended(!isExtended)
         const element = mdxRef.current;
@@ -27,7 +27,7 @@ export default function PackageOverview({packOverviewSrc}) {
         <div className={styles.overviewContent}>
             <div ref={mdxRef} style={{marginBottom: isExtended ? "15px" :  ""}} className={styles.mdxContent}>
                 <div style={{background: isExtended ? "transparent" : ""}} className={styles.gradient}></div>
-                <MDXComp source={packOverviewSrc} />
+                <MDXComp source={overviewMdxURLAWS} />
             </div>
             <span onClick={handleReadMore} className={styles.readmoreBtn}>{isExtended ? "Read Less" : "Read More"}</span>
         </div>

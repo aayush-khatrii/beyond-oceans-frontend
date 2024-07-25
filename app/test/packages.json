@@ -2,7 +2,10 @@
     "Package_Id": "3e142f17-dc88-435c-98a0-bf542836f961",
     "Package_Title": "Unwind in Andaman's Beauty with Bliss",
     "Img_Path": [
-        "https://images.unsplash.com/photo-1641719538787-9e392e5dd4d3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "img_01.jpg",
+        "img_02.jpg",
+        "img_03.webp",
+        "img_04.jpg"
     ],
     "Pack_Duration":{
         "Day": 4,
