@@ -9,6 +9,7 @@ const api = axios.create({
     headers: {
         'Content-type': 'application/json',
         Accept: 'application/json',
+        referer: 'https://www.beyondoceans.in/'
     },
 });
 
