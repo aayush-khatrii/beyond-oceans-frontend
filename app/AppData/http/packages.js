@@ -4,7 +4,7 @@ const aws = "https://gyc8effc56.execute-api.ap-south-1.amazonaws.com/devstag/v1/
 
 
 const api = axios.create({
-    baseURL: aws,
+    baseURL: local,
     withCredentials: true,
     headers: {
         'Content-type': 'application/json',
