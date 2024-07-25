@@ -15,18 +15,22 @@ export default function PackageCard({data}) {
 
     console.log(data)
 
-    const boPrice = Intl.NumberFormat('en-IN').format(data.Price.BOP)
-    const mrPrice = Intl.NumberFormat('en-IN').format(data.Price.MRP)
+    function intPrice(price){
+        return Intl.NumberFormat('en-IN').format(price)
+    }
+
+    const imgURL = `https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/${data.Package_Id}/images/${data.Img_Path[0]}`
 
     return (
         <Link href={`/packages/${data.Tour_Type.URL_Value}/${packageTitleURLFormat}/${data.Package_Id}`} className={styles.mainWrapper}>
             <div className={styles.cardImgWrapper}>
                 <Image
-                    src={data.Img_Path[0]}
+                    src={data.Img_Path[0] === "img_01.jpg" ? imgURL : data.Img_Path[0]}
                     fill={true}
                     sizes='100%'
                     alt="Picture of the author"
                     priority
+                    unoptimized
                     style={{objectFit:"cover"}}
                 />
                 <div className={styles.durationTag}>{data.Pack_Duration.Day}D/{data.Pack_Duration.Night}N</div>
@@ -74,9 +78,9 @@ export default function PackageCard({data}) {
                     <div className={styles.prices}>
                         <div className={styles.mrp}>
                             <div className={styles.cross}></div>
-                            <span>₹{mrPrice}</span>
+                            <span>₹{intPrice(data.Price.MRP)}</span>
                         </div>
-                        <span className={styles.bop}>₹{boPrice}</span>
+                        <span className={styles.bop}>₹{intPrice(data.Price.BOP)}</span>
                     </div>
                     <div className={styles.priceQty}>
                         <span>/price per person</span>

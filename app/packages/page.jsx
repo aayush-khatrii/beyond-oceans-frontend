@@ -28,7 +28,7 @@ export default function page() {
     useEffect(()=>{
         async function fetchAllPackages(){
             const {data} = await getAllPackages()
-            const packagesData = data
+            const packagesData = data.data
             setPackData(packagesData)
         }
         fetchAllPackages()
