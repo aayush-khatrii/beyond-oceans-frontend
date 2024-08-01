@@ -10,10 +10,19 @@ export default function PackageCard({data}) {
         2: {br: "FFE6B3", bg: "FFF7E6", tx: "FFAD01"},
         3: {br: "B9BED3", bg: "E9EAF1", tx: "1E2C70"},
     }
+
+    const iconListMap = {
+        "AC Cab": "RoadTransfer",
+        "Stay": "Hotel",
+        "Meal": "Meals",
+        "Sightseeing": "Sightseeing",
+        "Water Activity": "WaterActivity",
+        "Coordinator": "Coordinator",
+        "Ferry Transfer": "FerryTransfer",
+        "Island Tour": "IslandTour"
+    }
     
     const packageTitleURLFormat = data.Package_Title.toLowerCase().replace(/\s+/g, '-');
-
-    console.log(data)
 
     function intPrice(price){
         return Intl.NumberFormat('en-IN').format(price)
@@ -28,9 +37,8 @@ export default function PackageCard({data}) {
                     src={data.Img_Path[0] === "img_01.jpg" ? imgURL : data.Img_Path[0]}
                     fill={true}
                     sizes='100%'
-                    alt="Picture of the author"
+                    alt={data.Package_Title}
                     priority
-                    unoptimized
                     style={{objectFit:"cover"}}
                 />
                 <div className={styles.durationTag}>{data.Pack_Duration.Day}D/{data.Pack_Duration.Night}N</div>
@@ -43,7 +51,7 @@ export default function PackageCard({data}) {
                     {
                         data.Featurs.map((item, index) => (
                             <div key={index} className={styles.featureCont}>
-                                <FETIconList Icon={`${item}FET`}/>
+                                <FETIconList Icon={iconListMap[item]}/>
                                 <span>{item}</span>
                             </div>
                         ))

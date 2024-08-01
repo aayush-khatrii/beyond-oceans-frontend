@@ -1,0 +1,191 @@
+.mainWrapper{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000007e;
+    backdrop-filter: blur(1.5px);
+    z-index: 5;
+}
+
+.subWrapper{
+    height: 550px;
+    width: 790px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.inqPopupleft{
+    height: 100%;
+    width: 405px;
+}
+
+.imgWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.inqPopupRight{
+    box-sizing: border-box;
+    padding: 32px 30px;
+    position: relative;
+}
+
+.leftPopupSectitle{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.inputList{
+    margin-top: 18px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inpBox input{
+    box-sizing: border-box;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+
+
+.inpBox input:hover, .inpBox input:active, .inpBox input:focus{
+    outline-color: #1E2C70;
+    color: #1E2C70;
+}
+
+.inpBox{
+    width: 100%;
+    height: 44px;
+}
+
+.dateSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #BABABA;
+    height: 44px;
+    cursor: pointer;
+}
+
+.dpINPbox{
+    display: flex;
+    height: 100%;
+    width: 320px;
+    padding: 0 18px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    caret-color: transparent;
+}
+
+.paxSelector{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.fieldLabel{
+    color: #4C4C4C;
+    font-size: 14px;
+    letter-spacing: .1px;
+    margin-bottom: 6px;
+}
+
+.adultSelectBox, .infantSelectBox{
+    display: flex;
+    justify-content: space-between;
+    height: 31px;
+    width: 90px;
+    overflow: hidden;
+    margin-left: -1px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+}
+
+.personMinus, .personPlus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30px;
+    background-color: #E9E9E9;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.personMinus svg, .personPlus svg{
+    width: 15px;
+    height: 15px;
+}
+
+.personMinus svg path, .personPlus svg path{
+    fill: #989898;
+}
+
+.personValue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: #696969;
+}
+
+.callBtn{
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    background-color: #38B089;
+    color: #fff;
+    border: 2px solid #C1E7DA;
+    border-radius: 8px;
+    margin-top: 27px;
+    cursor: pointer;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+    border-radius: 50px;
+    background-color: #E9E9E9;
+    cursor: pointer;
+}
+
+.closeBtn svg{
+    margin-top: .7px;
+    margin-left: -1px;
+    width: 11px;
+    height: 11px;
+}
+
+.closeBtn svg path{
+    stroke: #989898;
+}

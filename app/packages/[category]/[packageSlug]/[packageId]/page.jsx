@@ -1,5 +1,5 @@
-import React from 'react'
-import PackagesLayout from './PackagesLayout'
+import React, { Suspense } from 'react'
+import PackageLayout from './PackageLayout'
 import { notFound } from 'next/navigation'
 import { getSinglePackage } from '@/app/AppData/http/packages'
 
@@ -19,7 +19,9 @@ export default async function page({params}) {
 
   return (
     <div>
-        <PackagesLayout data={packageData} params={params}/>
+        <Suspense fallback={<p>Loading feed...</p>}>
+            <PackageLayout data={packageData} params={params}/>
+        </Suspense>
     </div>
   )
 }

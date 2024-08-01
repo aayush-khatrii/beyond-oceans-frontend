@@ -6,42 +6,41 @@ import { autoLogin } from "./AppData/http/auth";
 
 export default function AutoAuth({children}) {
 
-    // const dispatch = useAppDispatch()
-    // const isUserAuth = useAppSelector((state) => state.user.userData.auth)
+    const dispatch = useAppDispatch()
+    const isUserAuth = useAppSelector((state) => state.user.userData.auth)
 
-    // useLayoutEffect(() => {
-    //     if(isUserAuth) return
-    //     const fetchAuth = async() => {
+    useLayoutEffect(() => {
+        if(isUserAuth) return
+        const fetchAuth = async() => {
 
-    //         let responseData
+            let responseData
 
-    //         try {
-    //             const {data} = await autoLogin()
-    //             responseData = data
-    //         } catch (error) {
-    //             if(error) console.log(error)
-    //                 return
-    //         }
+            try {
+                const {data} = await autoLogin()
+                responseData = data
+            } catch (error) {
+                if(error)
+                return
+            }
 
-
-    //         const user = responseData.data
-    //         const userAuth = responseData.ststus === 'success' && responseData.ststusCode === "200" && Boolean(user.User_Id)
+            const user = responseData.data
+            const userAuth = responseData.ststus === 'success' && responseData.ststusCode === "200" && Boolean(user.User_Id)
     
-    //         const userdata = {
-    //             auth: userAuth || false,
-    //             userId: user.User_Id || '',
-    //             phone: user.User_Phone || '',
-    //             email: user.User_Email || '',
-    //             name: user.User_Name || '',
-    //             address: user.User_Address || {}
-    //         }
-    //         console.log(userdata)
-    //         dispatch(setUserData(userdata))
+            const userdata = {
+                auth: userAuth || false,
+                userId: user.User_Id || '',
+                phone: user.User_Phone || '',
+                email: user.User_Email || '',
+                name: user.User_Name || '',
+                address: user.User_Address || {}
+            }
+            console.log(userdata)
+            dispatch(setUserData(userdata))
 
-    //     }
-    //     fetchAuth()
+        }
+        fetchAuth()
 
-    // }, [])
+    }, [])
     
     return (
         <div>{children}</div>
