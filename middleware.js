@@ -9,6 +9,7 @@ export async function middleware(request) {
     const fullPrevURL = request.headers.get('referer')
     const prevURLPath = fullPrevURL?.replace(origin, "")
     const url = "https://rrucc6gtnvp7ldakroqqedhcae0hguqh.lambda-url.ap-south-1.on.aws/devstag/v1/api/user/auth/route-protector"
+    const url2 = "http://[::1]:3300/devstag/v1/api/user/auth/route-protector"
     
     
 
@@ -29,7 +30,7 @@ export async function middleware(request) {
     let data
 
     try {
-        data = await fetch(url, {
+        data = await fetch(url2, {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +48,7 @@ export async function middleware(request) {
 
     const isAuth = await data.json()
 
-    if(isAuth){
+    if(!isAuth){
         if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
             return NextResponse.redirect(new URL('/', request.url))
         }

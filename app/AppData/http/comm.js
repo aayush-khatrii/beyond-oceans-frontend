@@ -3,7 +3,7 @@ const local = "http://localhost:3300/devstag/v1/api";
 const aws = "https://rrucc6gtnvp7ldakroqqedhcae0hguqh.lambda-url.ap-south-1.on.aws/devstag/v1/api";
 // axios.defaults.withCredentials = true;
 const api = axios.create({
-    baseURL: aws,
+    baseURL: local,
     withCredentials: true,
     headers: {
         'Content-type': 'application/json',
