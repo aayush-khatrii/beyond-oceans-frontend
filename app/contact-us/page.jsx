@@ -77,10 +77,10 @@ export default function page() {
                         <div className={styles.ContactSocial}>
                             <span>Follow our social media</span>
                             <div>
-                                <Link href="instagram.com"><IconList Icon="InstaThin" /></Link>
-                                <Link href="facebook.com"><IconList Icon="FBThin" /></Link>
-                                <Link href="youtube.com"><IconList Icon="YTThin" /></Link>
-                                <Link href="whatsapp.com"><IconList Icon="WPThin" /></Link>
+                                <Link href="https://www.instagram.com/beyondoceansandaman/" target='_blank'><IconList Icon="InstaThin" /></Link>
+                                <Link href="https://www.facebook.com/profile.php?id=61561083504785" target='_blank'><IconList Icon="FBThin" /></Link>
+                                <Link href="https://www.youtube.com/@beyondoceansandaman" target='_blank'><IconList Icon="YTThin" /></Link>
+                                <Link href="https://wa.me/917908671247" target='_blank'><IconList Icon="WPThin" /></Link>
                             </div>
                         </div>
                     </div>
