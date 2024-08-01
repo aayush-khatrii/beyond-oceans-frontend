@@ -1,23 +1,58 @@
 [
     {
         "id": 1,
-        "name": "Dax Suthar",
+        "name": "Tejas Sorte",
         "img": "Profile.png",
-        "rating": 1,
-        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+        "rating": 4,
+        "desc": "My recent Andaman Islands trip organized by Beyond Ocean was fantastic. Accommodations were excellent with stunning sea views and all amenities. Our guide, Mr. Kumar, was knowledgeable and made the tour insightful and enjoyable. I highly recommend Beyond Ocean for a hassle-free Andaman experience!"
     },
     {
         "id": 2,
-        "name": "Aayush Khatri",
+        "name": "Ashna Ashu",
         "img": "Profile.png",
-        "rating": 4,
-        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+        "rating": 5,
+        "desc": "I had an awesome experience with Beyond Oceans. So professional in arranging everything throughout my trip to Andaman. If you want to enjoy your vacation in the beautiful Andaman Islands, you should definitely try their service. I had a memorable trip that I can cherish for the rest of my life."
     },
     {
         "id": 3,
-        "name": "Deep Tholiya",
+        "name": "Anurag Verma",
         "img": "Profile.png",
-        "rating": 3,
-        "desc": "Absolutely incredible experience! From booking to exploring, everything was seamless. Highly recommend this tour company for hassle-free travel adventures!"
+        "rating": 5,
+        "desc": "We got to know about Beyond Oceans with my friend. The feedback always works as word of mouth is a strong promotion and reliability, The package was super pocket-friendly, Even at every destination island the staff was super supportive, Mr Shakir at Portblair is an interesting person."
+    },
+    {
+        "id": 4,
+        "name": "Balamurgan Rajgopal",
+        "img": "Profile.png",
+        "rating": 4,
+        "desc": "Beyond Oceans were very impressive with their planning and arrangements throughout our trip. The itinerary was well thought out; the facilities were much better than promised and the overall experience was very pleasant and professional. I would definitely recommend trying them out for any trip to the Andaman Islands."
+    },
+    {
+        "id": 5,
+        "name": "Saravan Kumar S",
+        "img": "Profile.png",
+        "rating": 5,
+        "desc": "We had a great trip to the Andaman Islands organized by Beyond Oceans. It was a very nicely planned itinerary to accommodate all our requirements. Though the trip was adventurous, we felt very safe and relaxed. We had a wonderful time and look forward to many such tours in the future as well."
+    },
+    {
+        "id": 6,
+        "name": "Febin Kunnath",
+        "img": "Profile.png",
+        "rating": 5,
+        "desc": "We chose Beyond Oceans after a lot of discussions and changes in our itinerary. finally thank Beyond Oceans for making this possible in the way we liked it to be and it's a great gesture from ur side by gifting us a family photo on the final day!! keep up the good work."
+    },
+    {
+        "id": 7,
+        "name": "Febin Kunnath",
+        "img": "Profile.png",
+        "rating": 5,
+        "desc": "Memorable experience with Beyond Oceans. My trip to Andaman Island was beyond expectations with Beyond Oceans 😊. The entire team was professional having local knowledge and connections. They are the best guides and are truly passionate. Every minute detail was taken care of."
+    },
+    {
+        "id": 8,
+        "name": "Mohit Yaduvanshi",
+        "img": "Profile.png",
+        "rating": 5,
+        "desc": "Thank you team Beyond Oceans for your excellent service and making my honeymoon trip a memorable. one The entire trip was seamless and well planned, their recommended resorts were awesome, all transportation in three Islands Port Blair, Havelock and Neil Island were smooth and flawless, Truly exceeded expectations."
     }
 ]

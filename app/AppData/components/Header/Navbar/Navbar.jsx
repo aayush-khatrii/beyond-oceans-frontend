@@ -132,7 +132,7 @@ export default function Navbar() {
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
-                                <div className={styles.menuContTitle}><IconList Icon="IslandPackages" /><span>Island Packages</span></div>
+                                <div className={styles.menuContTitle}><IconList Icon="SightseeingCat" /><span>Sightseeing</span></div>
                                 <ul>
                                     <ListItem>Port Blair Island</ListItem>
                                     <ListItem>Havelock Island</ListItem>
@@ -140,8 +140,8 @@ export default function Navbar() {
                                     <ListItem>Baratang Island</ListItem>
                                     <ListItem>Diglipur Island</ListItem>
                                     <ListItem>Rangat Island</ListItem>
-                                    <ListItem>Long Island</ListItem>
-                                    <ListItem>Little Andaman</ListItem>
+                                    <ListItem>Jolly Buoy Island</ListItem>
+                                    <ListItem>Best Sellers</ListItem>
                                 </ul>
                             </div>
                             <div className={styles.secMenuCont}>

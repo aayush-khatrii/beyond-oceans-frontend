@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import styles from './Category.module.css'
+import PackageBreadcrumb from '../PackageBreadcrumb'
 
 export default function page({params}) {
     if(params.category !== "family-packages"){
@@ -9,6 +10,7 @@ export default function page({params}) {
 
     return (
         <div>
+            <PackageBreadcrumb />
             Hello
         </div>
     )

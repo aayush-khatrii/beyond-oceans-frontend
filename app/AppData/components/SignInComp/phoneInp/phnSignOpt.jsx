@@ -16,7 +16,7 @@ export default function phnSignOpt(props) {
                 <div className={styles.signOptSapline}></div>
             </div>
             <div className={styles.authOptionBtnwrp}>
-                <button>
+                <button disabled>
                     <div className={styles.GoogleIcon}>
                         <Image
                             src='/assets/GoogleLogo.png'
@@ -29,7 +29,6 @@ export default function phnSignOpt(props) {
                     </div>
                 </button>
                 <button onClick={handleOptionChange}><IconList Icon="EmailSignin" /></button>
-
             </div>
         </div>
     </div>
