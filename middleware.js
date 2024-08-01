@@ -8,7 +8,7 @@ export async function middleware(request) {
     const origin = request.nextUrl.origin
     const fullPrevURL = request.headers.get('referer')
     const prevURLPath = fullPrevURL?.replace(origin, "")
-    const url = "http://[::1]:3300/devstag/v1/api/user/auth/route-protector"
+    const url = "https://rrucc6gtnvp7ldakroqqedhcae0hguqh.lambda-url.ap-south-1.on.aws/devstag/v1/api/user/auth/route-protector"
     
     
 
@@ -26,27 +26,28 @@ export async function middleware(request) {
         return NextResponse.redirect(new URL(prevURLPath, request.url))
     }
 
-    // let data
+    let data
 
-    // try {
-    //     data = await fetch(url, {
-    //         method: 'POST', 
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({cookie: refreshToken}) 
-    //       });
+    try {
+        data = await fetch(url, {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json',
+                'referer': 'https://www.beyondoceans.in/'
+            },
+            body: JSON.stringify({cookie: refreshToken}) 
+          });
 
-    // } catch (error) {
-    //     if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
-    //         return NextResponse.redirect(new URL('/', request.url))
-    //     }
-    //     return NextResponse.redirect(new URL(prevURLPath, request.url))
-    // }
+    } catch (error) {
+        if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
+            return NextResponse.redirect(new URL('/', request.url))
+        }
+        return NextResponse.redirect(new URL(prevURLPath, request.url))
+    }
 
-    // const isAuth = await data.json()
+    const isAuth = await data.json()
 
-    if(!true){
+    if(isAuth){
         if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
             return NextResponse.redirect(new URL('/', request.url))
         }

@@ -17,7 +17,8 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
 
     const ferryMidSection = {
         0: <FerrySelectComp ferryData={ferryData} onFerryClass={handleClassSelect} />,
-        1: <FerrySelectLoad ferryId={ferryData.id} onSeatChecked={onSeatChecked} tripData={{...tripData, ferryClass: selectedFerryClass}}/>,
+        // 1: <FerrySelectLoad ferryId={ferryData.id} onSeatChecked={onSeatChecked} tripData={{...tripData, ferryClass: selectedFerryClass}}/>,
+        1: <>loading</>,
     }
 
     const ferryPopUpTitle = {
@@ -26,6 +27,7 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
     }
 
     function onSeatChecked(data){
+        toast.error(`Seat(s) not available in ${selectedFerryClass.ferryClassName} Class`)
         if(data === 0){
             setFerrySection(data)
             toast.error(`Seat(s) not available in ${selectedFerryClass.ferryClassName} Class`)
@@ -33,6 +35,7 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
     }
 
     function handleCheckoutClick(){
+        return
         if(ferrySection === 0){
             setFerrySection(1)
         }

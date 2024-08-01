@@ -67,7 +67,7 @@ export default function FerryListLayout({tripData}) {
                 ferryListData.map((item, index) => (
                     <React.Fragment key={index}>
                         {item.ferryOPR === "MAK" ? <FerryCardMAK key={index} data={item} tripData={tripData} /> : ""}
-                        {item.ferryOPR === "NTK" ? <FerryCardNTK key={index} data={item} /> : ""}
+                        {/* {item.ferryOPR === "NTK" ? <FerryCardNTK key={index} data={item} /> : ""} */}
                     </React.Fragment>
                 )) :
                 Array(3).fill().map((item, index) => (

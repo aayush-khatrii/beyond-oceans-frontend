@@ -46,6 +46,10 @@ input{
     font-family: 'DM Sans', sans-serif;
 }
 
+textarea{
+    font-family: 'DM Sans', sans-serif;
+}
+
 ul{
     list-style-type: none;
 }

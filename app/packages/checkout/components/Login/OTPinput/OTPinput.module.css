@@ -1,0 +1,27 @@
+.OtpInpContainer{
+    display: flex;
+    gap: 5px;
+}
+
+.otpInput{
+    border: 1px solid #bababa9a;
+    background-color: #E9E9E9;
+    outline: none;
+    width: 49px;
+    height: 49px;
+    border-radius: 7px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.otpInput:focus{
+    border-color: #000;
+}
+
+.filledInput{
+    outline: auto;
+    outline-color: #A3DBC9 !important;
+}
+

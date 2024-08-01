@@ -14,37 +14,43 @@ import Pricing from './Components/Pricing/Pricing'
 import AsideInfo from './Components/AsideInfo/AsideInfo'
 import Policy from './Components/Policy/Policy'
 import { useState } from 'react'
+import InqPopup from './Components/InqPopup/InqPopup'
 
 
 
-
-export default function PackagesLayout({data, params}) {
+export default function PackageLayout({data, params}) {
     
     const packageData = data
-    const [selectedOPT, setSelectedOPT] = useState(0)
+    const [selectedOPT, setSelectedOPT] = useState(packageData.Package_Options[0].Option_Id)
+    const packageOptions = packageData.Package_Options
+    const [isInq, setIsInq] = useState(false)
 
     function handleOptionChange(id){
         setSelectedOPT(id)
     }
 
-    const featureList = ["Hotel", "Meals", "Sightseeing", "Island", "Boat", "Transfer", "Activities", "Guide"]
+    function handleIsInquiry(){
+        setIsInq(!isInq)
+    }
+
     return (
         <div className={styles.mainWrapper}>
+            {isInq && <InqPopup onPopupClose={handleIsInquiry} packageId={packageData.Package_Id} packageOptionId={selectedOPT} />}
             <div className={styles.subWrapper}>
                 <TitleContainer data={packageData} params={params}/>
                 <ImageGallery data={packageData}/>
                 <div className={styles.contContainer}>
                     <div className={styles.mainContent}>
                         <PackageOverview packageId={packageData.Package_Id}/>
-                        <PackageInc featureList={featureList} />
+                        <PackageInc featureList={packageData.Featurs} />
                         <Itinerary scheduleData={packageData.DW_Itinerary} packageId={packageData.Package_Id}/>
-                        <Hotels selectedOption={selectedOPT}/>
+                        <Hotels selectedOption={selectedOPT} pacakgeOptions={packageOptions}/>
                         {/* <Transport /> */}
                         <Incl excl={packageData.Exclusions} incl={packageData.Inclusions} packageId={packageData.Package_Id}/>
                         <Policy />
                     </div>
                     <aside className={styles.aside}>
-                        <Pricing optionChange={handleOptionChange} data={packageData} />
+                        <Pricing optionChange={handleOptionChange} data={packageData} handleInquiry={handleIsInquiry}/>
                         <AsideInfo />
                     </aside>
                 </div>
