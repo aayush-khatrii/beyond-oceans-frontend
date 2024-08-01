@@ -8,6 +8,19 @@
     background-color: #1e2c7000;
 }
 
+.selectFrame{
+    height: 100%;
+    width: 207px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    cursor: pointer;
+    background-color: #1e2c7000;
+    box-sizing: border-box;
+}
+
 .InputFrame select{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -87,8 +100,6 @@
     border: 1px solid #1E2C70;
 }
 
-
-
 .dpINPframe:hover > .dpPlaceholder{
    color: #1E2C70;
 }
@@ -138,9 +149,124 @@
 .dtPickerICO{
     position: absolute;
     right: 6px;
-    top: 2px;
+    top: 4px;
     width: 25px;
     height: auto;
+}
+
+.paxSelector{
+    position: relative;
+    height: 100%;
+    width: 207px;
+}
+
+.personSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 0 17px;
+    color: #696969;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.personSelect:hover{
+    border-color: #1E2C70;
+}
+
+.personSelect span{
+    font-size: 14.5px;
+}
+
+.personSelectBox{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 22px 0;
+    gap: 24px;
+    z-index: 1;
+}
+
+
+.adultSelect, .childSelect, .infantSelect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 303px;
+    padding: 0 29px;
+    box-sizing: border-box;
+}
+
+.personSelectBoxLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.personSelectBoxLeft span:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 2px;
+}
+
+.personSelectBoxLeft span:nth-child(2){
+    font-size: 12.4px;
+    color: #696969;
+    margin-top: 0px;
+}
+
+.personSelectBoxRight{
+    display: flex;
+    align-items: center;
+    margin-right: -1px;
+    gap: 11px;
+}
+
+.personValue{
+    font-size: 19px;
+    font-weight: 600;
+    color: #000;
+    width: 13px;
+    text-align: center;
+}
+
+.personMinus, .personPlus{
+    background-color: #38B089;
+    height: 38px;
+    width: 38px;
+    margin-top: 1px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.personPlusLight, .personMinusLight{
+    background-color: #EBF7F3;
+}
+
+.personPlusLight svg path, .personMinusLight svg path{
+    fill: #C1E7DA;
+}
+
+.personSelect svg{
+    height: 15px;
+    width: 15px;
 }
 
 .SearchFerryButton{

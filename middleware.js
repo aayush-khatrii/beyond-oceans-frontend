@@ -48,6 +48,8 @@ export async function middleware(request) {
 
     const isAuth = await data.json()
 
+    //   if(!true){ change true to isAuth
+
     if(!isAuth){
         if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
             return NextResponse.redirect(new URL('/', request.url))

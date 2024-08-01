@@ -73,10 +73,10 @@ export default function Footer() {
                         <p className={styles.address}>Address: <Link href="mailto:info@beyondoceans.in">No.1637/2, Ground Floor, Phoenix Bay, Port Blair - 744102</Link></p>
                     </address>
                     <div className={styles.socialMedia}>
-                        <div><Link href="https://instagram.com" target='_blank'><IconList Icon="Insta" /></Link></div>
-                        <div><Link href="https://facebook.com" target='_blank'><IconList Icon="FB" /></Link></div>
-                        <div><Link href="https://youtube.com" target='_blank'><IconList Icon="YT" /></Link></div>
-                        <div><Link href="https://wa.me/6351861713" target='_blank'><IconList Icon="WP" /></Link></div>
+                        <div><Link href="https://www.instagram.com/beyondoceansandaman/" target='_blank'><IconList Icon="Insta" /></Link></div>
+                        <div><Link href="https://www.facebook.com/profile.php?id=61561083504785" target='_blank'><IconList Icon="FB" /></Link></div>
+                        <div><Link href="https://www.youtube.com/@beyondoceansandaman" target='_blank'><IconList Icon="YT" /></Link></div>
+                        <div><Link href="https://wa.me/917908671247" target='_blank'><IconList Icon="WP" /></Link></div>
                     </div>
                 </div>
             </div>

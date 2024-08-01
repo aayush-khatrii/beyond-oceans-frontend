@@ -10,6 +10,7 @@
 .titleNbtn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sectionTitle{
@@ -40,7 +41,6 @@
     cursor: pointer;
     font-size: 17px;
     font-weight: 300;
-    margin-top: 17.7px;
     border-radius: 20px;
     letter-spacing: .4px;
 }

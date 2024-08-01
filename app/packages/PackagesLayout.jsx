@@ -5,6 +5,7 @@ import Select from '../AppData/components/Select/Select'
 import PackageCard from '../AppData/components/Card/PackageCard/PackageCard'
 import { useEffect, useState } from 'react'
 import { getAllPackages } from '../AppData/http/packages'
+import PackageBreadcrumb from './PackageBreadcrumb'
 
 
 
@@ -41,6 +42,7 @@ export default function page({data}) {
     return (
     <>
         <div className={styles.mainWrapper}>
+            <PackageBreadcrumb />
             <div className={styles.contWrapper}>
                 <div className={styles.categoryDetail}>
                     <span>Family Adventures Await: Explore Andaman with Beyond Oceans!</span>

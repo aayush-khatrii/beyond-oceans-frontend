@@ -29,9 +29,8 @@ export default function SingleTrip() {
 
     const travelDateTS = travelDate ? Math.floor(new Date(travelDate).getTime() / 1000) : ""
 
-    const queryString = `triptype=st&dept=${selectedFrom && islandCodes[selectedFrom]}&dest=${selectedTo && islandCodes[selectedTo]}&td=${travelDateTS}&tra=${adult && adult}&tri=${infant && infant    }`
+    const queryString = `triptype=st&dept=${selectedFrom && islandCodes[selectedFrom]}&dest=${selectedTo && islandCodes[selectedTo]}&td=${travelDateTS}&tra=${adult && adult}&tri=${infant && infant}`
 
-    console.log(queryString)
 
     function handlefromData(data){
         setSelectedFrom(data)

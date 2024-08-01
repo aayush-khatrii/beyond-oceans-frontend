@@ -15,6 +15,7 @@ import AsideInfo from './Components/AsideInfo/AsideInfo'
 import Policy from './Components/Policy/Policy'
 import { useState } from 'react'
 import InqPopup from './Components/InqPopup/InqPopup'
+import PackageBreadcrumb from '@/app/packages/PackageBreadcrumb'
 
 
 
@@ -35,6 +36,7 @@ export default function PackageLayout({data, params}) {
 
     return (
         <div className={styles.mainWrapper}>
+            <PackageBreadcrumb />
             {isInq && <InqPopup onPopupClose={handleIsInquiry} packageId={packageData.Package_Id} packageOptionId={selectedOPT} />}
             <div className={styles.subWrapper}>
                 <TitleContainer data={packageData} params={params}/>
