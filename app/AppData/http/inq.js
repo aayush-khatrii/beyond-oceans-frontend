@@ -4,7 +4,7 @@ const aws = "https://rrucc6gtnvp7ldakroqqedhcae0hguqh.lambda-url.ap-south-1.on.a
 
 
 const api = axios.create({
-    baseURL: aws,
+    baseURL: local,
     withCredentials: true,
     headers: {
         'Content-type': 'application/json',
