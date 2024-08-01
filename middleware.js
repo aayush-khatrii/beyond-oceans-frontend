@@ -30,7 +30,7 @@ export async function middleware(request) {
     let data
 
     try {
-        data = await fetch(url2, {
+        data = await fetch(url, {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
