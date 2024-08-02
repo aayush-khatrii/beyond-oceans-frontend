@@ -26,30 +26,30 @@ export async function middleware(request) {
     //     return NextResponse.redirect(new URL(prevURLPath, request.url))
     // }
 
-    let data
+    // let data
 
-    try {
-        data = await fetch(url, {
-            method: 'POST', 
-            'credentials': "include",
-            headers: {
-                'Content-Type': 'application/json',
-                'referer': 'https://www.beyondoceans.in/'
-            },
-          });
+    // try {
+    //     data = await fetch(url, {
+    //         method: 'POST', 
+    //         'credentials': "include",
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'referer': 'https://www.beyondoceans.in/'
+    //         },
+    //       });
 
-    } catch (error) {
-        if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
-            return NextResponse.redirect(new URL('/', request.url))
-        }
-        return NextResponse.redirect(new URL(prevURLPath, request.url))
-    }
+    // } catch (error) {
+    //     if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
+    //         return NextResponse.redirect(new URL('/', request.url))
+    //     }
+    //     return NextResponse.redirect(new URL(prevURLPath, request.url))
+    // }
 
-    const isAuth = await data.json()
+    // const isAuth = await data.json()
 
     //   if(!true){ change true to isAuth
     // console.log(isAuth)
-    if(!isAuth.auth){
+    if(!true){
         if(fullPrevURL === `${origin}/` || fullPrevURL === null || request.url === fullPrevURL){
             return NextResponse.redirect(new URL('/', request.url))
         }
