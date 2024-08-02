@@ -3,15 +3,17 @@ import styles from './Category.module.css'
 import PackageBreadcrumb from '../PackageBreadcrumb'
 
 export default function page({params}) {
-    if(params.category !== "family-packages"){
+
+    const categorys = ["family-package", "honeymoon", "budget-tours", "best-sellers", "offbeat"]
+
+    if(!categorys.includes(params.category)){
         notFound()
     }
-
 
     return (
         <div>
             <PackageBreadcrumb />
-            Hello
+            Loading...
         </div>
     )
 }

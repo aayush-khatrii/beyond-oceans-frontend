@@ -6,8 +6,55 @@ import DevMode from "./DevMode/DevMode";
 
 const DMSans = DM_Sans({ subsets: ["latin"] });
 
+const seoTitle = "Beyond Oceans | Book Andaman Tour Package At The Best Price"
+const seoDesc = "Beyond Oceans, The specialized andaman tour experts, offering unforgettable travel experiences in the stunning andaman islands"
+const seoSiteURL = "https://www.beyondoceans.in"
+const ogImageURL = "https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/seo/bo_seo_og.webp"
+const seoKeywords = [
+    "beyond oceans",
+    "andaman",
+    "andaman tour packages",
+    "andaman travel",
+    "andaman beaches",
+    "andaman adventure",
+    "andaman marine life",
+    "andaman vacation",
+    "beyond oceans",
+    "andaman islands",
+    "andaman tour",
+    "andaman travel",
+    "beyond oceans",
+    "beach",
+    "rainforest",
+    "marine life",
+    "water sports",
+    "andaman tour company"
+];
+
+
 export const metadata = {
-    title: 'Beyond Oceans'
+        title: seoTitle,
+        description: seoDesc,
+        keywords: seoKeywords,
+        url: seoSiteURL,
+        openGraph: {    
+            url: seoSiteURL,
+            title: seoTitle,
+            description: seoDesc,
+            images: [
+                {
+                    url: ogImageURL,
+                    width: 800,
+                    height: 600,
+                }
+            ]
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: seoTitle,
+            description: seoDesc,
+            image: ogImageURL
+        }
 }
 
 export default function RootLayout({ children }) {

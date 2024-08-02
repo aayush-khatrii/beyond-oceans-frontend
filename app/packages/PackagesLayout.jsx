@@ -45,8 +45,8 @@ export default function page({data}) {
             <PackageBreadcrumb />
             <div className={styles.contWrapper}>
                 <div className={styles.categoryDetail}>
-                    <span>Family Adventures Await: Explore Andaman with Beyond Oceans!</span>
-                    <p>Discover unforgettable family adventures in the pristine beauty of Andaman and Nicobar Islands with Beyond Oceans. Explore our curated selection of family tour packages, designed to immerse you in the natural wonders and cultural delights of this exotic destination. Let us create cherished memories for you and your loved ones amidst the turquoise waters, white sandy beaches, and lush greenery of Andaman. Book your family getaway today and embark on a journey of joy, laughter, and togetherness with Beyond Oceans, the leading tour and travel company in Andaman and Nicobar.</p>
+                    <span>Andaman Adventures Await: Explore Andaman with Beyond Oceans!</span>
+                    {/* <p>Discover unforgettable family adventures in the pristine beauty of Andaman and Nicobar Islands with Beyond Oceans. Explore our curated selection of family tour packages, designed to immerse you in the natural wonders and cultural delights of this exotic destination. Let us create cherished memories for you and your loved ones amidst the turquoise waters, white sandy beaches, and lush greenery of Andaman. Book your family getaway today and embark on a journey of joy, laughter, and togetherness with Beyond Oceans, the leading tour and travel company in Andaman and Nicobar.</p> */}
                 </div>
                 <div className={styles.filter}>
                     <div className={styles.sortbyOpts}>

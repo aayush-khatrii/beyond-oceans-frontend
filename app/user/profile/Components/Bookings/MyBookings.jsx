@@ -18,8 +18,8 @@ export default function MyBookings({title, desc}) {
         </div>
 
         <div className={styles.dataContainer}>
-            <BookingCard />
-            <BookingCard />
+            {/* <BookingCard />
+            <BookingCard /> */}
         </div>
     </div>
   )

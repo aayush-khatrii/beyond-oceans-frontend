@@ -5,6 +5,8 @@
 
 .tags{
     display: flex;
+    flex-wrap: wrap;
+    width: auto;
     align-items: center;
     gap: 20px;
 }
