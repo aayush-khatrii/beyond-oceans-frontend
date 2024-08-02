@@ -4,6 +4,12 @@ import IconList from '@/app/AppData/components/IconComponent/IconList'
 
 export default function TitleContainer({data, params}) {
 
+    const tagPriority = {
+        1: {br: "C1E7DA", bg: "EBF7F3", tx: "38B089"},
+        2: {br: "FFE6B3", bg: "FFF7E6", tx: "FFAD01"},
+        3: {br: "B9BED3", bg: "E9EAF1", tx: "1E2C70"},
+    }
+
     function handleShare(){
         if(navigator.share){
             navigator.share({
@@ -25,8 +31,20 @@ export default function TitleContainer({data, params}) {
         <div className={styles.titleCont}>
             <div className={styles.titlePart}>
                 <div className={styles.tags}>
-                    <div className={styles.innerTag}>Best Seller</div>
-                    <div className={styles.innerTag}>4.5 Star Rated</div>
+                    <div className={styles.innerTag}>{data.Tour_Type.Value}</div>
+                    <div style={{
+                        borderColor: `#${(tagPriority[data.Tags.Card_Tag.Priority]).br}`, 
+                        color: `#${(tagPriority[data.Tags.Card_Tag.Priority]).tx}`, 
+                        backgroundColor: `#${(tagPriority[data.Tags.Card_Tag.Priority]).bg}`
+                    }} 
+                    className={styles.innerTag}>
+                        <span>{data.Tags.Card_Tag.Value}</span>
+                    </div>
+                    {
+                        data.Tags.Pack_Tag.map((item, index) => (
+                            <div key={index} className={styles.innerTag}>{item}</div>
+                        ))
+                    }
                     <div onClick={handleShare} className={styles.shareLink}>Share Trip <IconList Icon="TRArrow"/></div>
                 </div>
                 <div className={styles.title}>

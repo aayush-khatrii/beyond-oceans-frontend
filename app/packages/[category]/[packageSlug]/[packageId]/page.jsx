@@ -11,9 +11,12 @@ async function fetchSinglePackage(params){
 export default async function page({params}) {
 
     const packageData = await fetchSinglePackage(params)
-    const categorys = ["family-package", "couple"]
+    const categorys = ["family-package", "honeymoon", "budget-tours", "best-sellers", "offbeat"]
 
-    if(!categorys.includes(params.category)){
+    const packageCategory = packageData.Tour_Type.URL_Value
+    const packageSlug = packageData.Package_Title.toLowerCase().replace(/\s+/g, '-');
+
+    if(!categorys.includes(params.category) || !categorys.includes(packageCategory) || packageSlug !== params.packageSlug){
         notFound()
     }
 

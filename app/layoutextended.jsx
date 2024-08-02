@@ -11,9 +11,6 @@ import AutoAuth from "./AutoAuth";
 
 export default function layoutextended({ children }) {
 
-
-
-
     const storeRef = useRef()
     if (!storeRef.current) {
         // Create the store instance the first time this renders

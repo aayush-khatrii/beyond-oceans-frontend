@@ -1,6 +1,6 @@
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import styles from './ProfileSetting.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "react-datepicker/dist/react-datepicker.css";
 import { useAppDispatch, useAppSelector } from '@/app/AppData/lib/store/hooks';
 import { setUserData } from '@/app/AppData/lib/store/features/user/userSlice';
@@ -16,15 +16,15 @@ export default function ProfileSetting({title, desc}) {
     const userData = useAppSelector((state) => state.user.userData)
     
     const [isEditing, setIsEditing] = useState(false)
-    const [name, setName] = useState(userData.name)
-    const [DOB, setDOB] = useState(userData.DOB)
-    const [maritalStatus, setMaritalStatus] = useState(userData.maritalStatus)
-    const [address, setAddress] = useState(userData.address.User_Address)
-    const [city, setCity] = useState(userData.address.User_City)
-    const [state, setState] = useState(userData.address.User_State)
-    const [pincode, setPincode] = useState(userData.address.User_Pincode)
-    const country = userData.address.Country
-    const [nationality, setNationality] = useState(userData.address.User_Nationality)
+    const [name, setName] = useState(userData.name ? userData.name : "")
+    const [DOB, setDOB] = useState(userData.DOB ? userData.DOB : "")
+    const [maritalStatus, setMaritalStatus] = useState(userData.maritalStatus ? userData.maritalStatus : "")
+    const [address, setAddress] = useState(userData.address.User_Address ? userData.address.User_Address : "")
+    const [city, setCity] = useState(userData.address.User_City ? userData.address.User_City : "")
+    const [state, setState] = useState(userData.address.User_State ? userData.address.User_State : "")
+    const [pincode, setPincode] = useState(userData.address.User_Pincode ? userData.address.User_Pincode : "")
+    const country = userData.address.Country ? userData.address.Country : ""
+    const [nationality, setNationality] = useState(userData.address.User_Nationality ? userData.address.User_Nationality : "")
 
     const [newName, setNewName] = useState("")
     const [newDOB, setNewDOB] = useState("")
@@ -45,6 +45,18 @@ export default function ProfileSetting({title, desc}) {
     const inpStyle = {
         borderBottom: isEditing ? "1px solid #1e2c702a" : ""
     }
+
+    useEffect(() => {
+
+        setName(userData.name)
+        setDOB(userData.DOB)
+        setMaritalStatus(userData.maritalStatus)
+        setAddress(userData.address.User_Address)
+        setCity(userData.address.User_City)
+        setState(userData.address.User_State)
+        setPincode(userData.address.User_Pincode)
+        setNationality(userData.address.User_Nationality)
+    }, [])
 
 
     function handleEditing(){
