@@ -14,7 +14,9 @@ export default function PackageCard({data}) {
     const iconListMap = {
         "AC Cab": "RoadTransfer",
         "Stay": "Hotel",
+        "Accommodation": "Hotel",
         "Meal": "Meals",
+        "Cruise Ride": "CruiseRides",
         "Sightseeing": "Sightseeing",
         "Water Activity": "WaterActivity",
         "Coordinator": "Coordinator",
