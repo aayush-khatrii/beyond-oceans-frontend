@@ -3,6 +3,8 @@ import { getAllPackages } from '../AppData/http/packages'
 import PackagesLayout from './PackagesLayout'
 import { cookies } from 'next/headers'
 
+// export const revalidate = 1800
+
 async function fetchAllPackages(){
     const {data} = await getAllPackages()
     return data.data

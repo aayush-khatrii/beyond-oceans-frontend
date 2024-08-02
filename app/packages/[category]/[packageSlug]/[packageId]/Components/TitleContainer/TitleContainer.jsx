@@ -26,7 +26,7 @@ export default function TitleContainer({data, params}) {
     }
 
     const increaseAmount = data.Price.MRP - data.Price.BOP;
-    const discountPercent = Math.floor(increaseAmount / data.Price.BOP) * 100;
+    const discountPercent = Math.floor((increaseAmount / data.Price.BOP) * 100);
 
     return (
         <div className={styles.titleCont}>
