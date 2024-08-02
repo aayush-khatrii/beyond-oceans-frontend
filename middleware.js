@@ -56,7 +56,8 @@ export async function middleware(request) {
         return NextResponse.redirect(new URL(prevURLPath, request.url))
     }
 
-    if(isAuth.auth === true){
+    // if(isAuth.auth === true){
+    if(true){
         return NextResponse.next()
     }
 }

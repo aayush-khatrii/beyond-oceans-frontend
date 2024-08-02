@@ -1,14 +1,19 @@
 "use client"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './profile.module.css'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import ProfileSetting from './Components/ProfileSetting/ProfileSetting'
 import LoginDeatil from './Components/LoginDeatil/LoginDeatil'
 import MyBookings from './Components/Bookings/MyBookings'
+import { routeProtector } from '@/app/AppData/http/auth'
+import { useRouter } from 'next/navigation'
 
 export default function page() {
 
+    const router = useRouter()
+
     const [selected, setSelected] = useState("SETTING")
+    const [isAuth, setIsAuth] = useState(false)
 
     const profileComponent = {
         SETTING: <ProfileSetting title="Profile Setting" desc="Basic info, for a faster booking experience" />,
@@ -20,8 +25,19 @@ export default function page() {
         setSelected(data)
     }
 
-    return (
-    <>
+    async function handleRouteProtector(){
+        const {data} = await routeProtector()
+        setIsAuth(data.auth)
+        if(!data.auth){
+            router.push("/")
+        }
+    }
+
+    useEffect(() => {
+        handleRouteProtector()
+    }, [])
+
+    const layoutData = (
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
                 <div>{`Home > My Account`}</div>
@@ -43,6 +59,11 @@ export default function page() {
                 </div>
             </div>
         </div>
+    )
+
+    return (
+    <>
+        {isAuth ? {layoutData} : "Loading..."}
     </>
     )
 }
