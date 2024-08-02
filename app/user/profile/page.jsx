@@ -63,7 +63,7 @@ export default function page() {
 
     return (
     <>
-        {isAuth ? {layoutData} : "Loading..."}
+        { isAuth ? <>{layoutData}</> : "Loading..." }
     </>
     )
 }
