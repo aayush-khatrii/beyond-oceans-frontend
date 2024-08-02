@@ -51,7 +51,7 @@ export default function PackageCard({data}) {
                 </div>
                 <div className={styles.packFeatures}>
                     {
-                        data.Featurs.slice(0, 5).map((item, index) => (
+                        data.Featurs.slice(0, 4).map((item, index) => (
                             <div key={index} className={styles.featureCont}>
                                 <FETIconList Icon={iconListMap[item]}/>
                                 <span>{item}</span>
