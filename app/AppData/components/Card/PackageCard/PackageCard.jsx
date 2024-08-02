@@ -36,7 +36,7 @@ export default function PackageCard({data}) {
         <Link href={`/packages/${data.Tour_Type.URL_Value}/${packageTitleURLFormat}/${data.Package_Id}`} className={styles.mainWrapper}>
             <div className={styles.cardImgWrapper}>
                 <Image
-                    src={data.Img_Path[0] === "img_01.jpg" ? imgURL : data.Img_Path[0]}
+                    src={imgURL}
                     fill={true}
                     sizes='100%'
                     alt={data.Package_Title}
