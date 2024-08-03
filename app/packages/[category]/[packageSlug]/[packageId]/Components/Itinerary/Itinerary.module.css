@@ -96,6 +96,10 @@
     margin-right: 10px;
 }
 
+.listTitleText{
+    width: 445px;
+}
+
 .firstSvg svg{
     height: 20px;
     width: 20px;

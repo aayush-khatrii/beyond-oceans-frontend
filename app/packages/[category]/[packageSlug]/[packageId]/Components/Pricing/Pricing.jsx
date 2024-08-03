@@ -18,7 +18,7 @@ export default function Pricing(props) {
     const [roomSelectBox, setRoomSelectBox] = useState(false)
     const [personSelectBox, setPersonSelectBox] = useState(false)
     const [rooms, setRooms] = useState(1)
-    const [adults, setAdults] = useState(1)
+    const [adults, setAdults] = useState(2)
     const [child, setChild] = useState(0)
     const [infant, setInfant] = useState(0)
     const [adultsMax, setAdultsMax] = useState(0)
@@ -71,7 +71,7 @@ export default function Pricing(props) {
 
     // adult selection function
     function handleAdultMinus(){
-        if(adults > 1){
+        if(adults > 2){
             setAdults(adults - 1)
         }
     }
@@ -235,6 +235,14 @@ export default function Pricing(props) {
         return Intl.NumberFormat('en-IN').format(price)
     }
 
+    function crossIntPrice(priceMrp){
+        const increaseAmount = priceMrp - packageData.Price.BOP;
+        const discountPercent = Math.floor((increaseAmount / packageData.Price.BOP) * 100);
+        const packageOptPrice = filterOptions(selectedVer).Option_Price
+        const crossPrice = (packageOptPrice * (adults + child)) + ((packageOptPrice * (adults + child)) * discountPercent / 100)
+        return Intl.NumberFormat('en-IN').format(crossPrice)
+    }
+
     function awsUrlGen(fileSrc){
         return `https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/${packageData.Package_Id}/options/${fileSrc}`
     }
@@ -275,6 +283,8 @@ export default function Pricing(props) {
         props.handleInquiry()
     }
 
+    const paxCount = `${adults} Adult${adults > 1 ? 's' : ''}${child > 0 ? `, ${child} Child` : ''}`;
+
   return (
     <div className={styles.mainWrapper}>
         <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
@@ -283,11 +293,11 @@ export default function Pricing(props) {
         </div>
         <div className={styles.bookingCont}>
             <div className={styles.priceCont}>
-                <div className={styles.priceInfo}><span>Total price of 1 Adults</span></div>
+                <div className={styles.priceInfo}><span>Total price of {paxCount}</span></div>
                 <div className={styles.mrpCont}>
-                    <span className={styles.bop}>₹{intPrice(filterOptions(selectedVer).Option_Price)}</span>
+                    <span className={styles.bop}>₹{intPrice(filterOptions(selectedVer).Option_Price * (adults + child))}</span>
                     <div className={styles.mrpCut}>
-                        <span className={styles.mrp}>₹{intPrice(packageData.Price.MRP)}</span>
+                        <span className={styles.mrp}>₹{crossIntPrice(packageData.Price.MRP)}</span>
                         <div className={styles.mrpCutline}></div>
                     </div>
                 </div>
@@ -335,7 +345,7 @@ export default function Pricing(props) {
                                 <span>(Age 12 - 100)</span>
                             </div>
                             <div className={styles.personSelectBoxRight}>
-                                <div className={`${adults === 1 ? styles.personMinusLight : ""} ${styles.personMinus}`} onClick={() => {handleAdultMinus()}}><IconList Icon="Minus" /></div>
+                                <div className={`${adults === 2 ? styles.personMinusLight : ""} ${styles.personMinus}`} onClick={() => {handleAdultMinus()}}><IconList Icon="Minus" /></div>
                                 <span className={styles.personValue}>{adults}</span>
                                 <div  className={`${adults === adultsMax ? styles.personPlusLight : ""} ${styles.personPlus}`} onClick={() => {handleAdultPlus()}}><IconList Icon="Plus" /></div>
                             </div>
@@ -376,9 +386,20 @@ export default function Pricing(props) {
                                 <div className={styles.variantDesc}>
                                     <MDXComp source={awsUrlGen(item.Option_Overview)} />
                                 </div>
-                                <div className={styles.variantPrice}>
-                                    <span className={styles.variantPriceTxt}>₹{intPrice(item.Option_Price)}</span>
-                                    <span className={styles.variantPriceDesc}>per person</span>
+                                <div className={styles.variantFoot}>
+                                    <div className={styles.variantPrice}>
+                                        <span className={styles.variantPriceTxt}>₹{intPrice(item.Option_Price)}</span>
+                                        <span className={styles.variantPriceDesc}>per person</span>
+                                    </div>
+                                    <div className={styles.variantMinimum}>
+                                        <span className={styles.variantMinText}>Minimum 2 Pax Required</span>
+                                    </div>
+                                    {/* {   
+                                        item.Min_Pax &&
+                                        <div className={styles.variantMinimum}>
+                                            <span className={styles.variantPriceDesc}>Minimum {item.Min_Pax} Required</span>
+                                        </div>
+                                    } */}
                                 </div>
                             </div>
                         ))

@@ -4,8 +4,12 @@ import { notFound } from 'next/navigation'
 import { getSinglePackage } from '@/app/AppData/http/packages'
 
 async function fetchSinglePackage(params){
-    const {data} = await getSinglePackage({packageId: params.packageId})
-    return data.data
+    try {
+        const {data} = await getSinglePackage({packageId: params.packageId})
+        return data.data
+    } catch (error) {
+        notFound()
+    }
 }
 
 export default async function page({params}) {
