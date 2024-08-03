@@ -1,12 +1,21 @@
 import React from 'react'
 import { getSinglePackage } from '@/app/AppData/http/packages'
+import { notFound } from 'next/navigation'
 
 
 export async function generateMetadata({ params }) {
-    const {data} = await getSinglePackage({packageId: params.packageId})
-    const packageData = data.data
 
-    const OGUrl = packageData && `https://www.beyondoceans.in/packages/${packageData.Tour_Type.URL_Value}/${params.packageSlug}/${packageData.PackageId}`
+    let packageData
+    try {
+        const {data} = await getSinglePackage({packageId: params.packageId})
+        packageData = data.data
+    } catch (error) {
+        notFound()
+    }
+
+    const packageTitleURLFormat = packageData.Package_Title.toLowerCase().replace(/\s+/g, '-');
+
+    const OGUrl = packageData && `https://www.beyondoceans.in/packages/${packageData.Tour_Type.URL_Value}/${packageTitleURLFormat}/${packageData.PackageId}`
     const OGIMGUrl = packageData && `https://beyond-oceans-2024.s3.ap-south-1.amazonaws.com/packages/${packageData.Package_Id}/images/${packageData.Img_Path[0]}`
     const OGdescription = `Explore our ${packageData.Tour_Type.Value}: ${packageData.Package_Title}. Discover unique experiences and make unforgettable memories with our curated tours.`
     

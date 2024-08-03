@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import styles from './profile.module.css'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import ProfileSetting from './Components/ProfileSetting/ProfileSetting'
@@ -26,14 +26,23 @@ export default function page() {
     }
 
     async function handleRouteProtector(){
-        const {data} = await routeProtector()
-        setIsAuth(data.auth)
-        if(!data.auth){
+        let response
+        try {
+            response = await routeProtector()
+            console.log(response)
+            setIsAuth(response.data.auth)
+        } catch (error) {
             router.push("/")
+            return
+        }
+
+        if(!response.data.auth){
+            router.push("/")
+            return
         }
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         handleRouteProtector()
     }, [])
 

@@ -290,8 +290,10 @@
     display: none;
 }
 
-.variantPrice{
+.variantFoot{
     display: none;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .variantDesc ul{
@@ -310,6 +312,10 @@
     margin-left: 9px;
     font-size: 15px;
     color: #4C4C4C;
+}
+
+.variantMinimum{
+    font-size: 14px;
 }
 
 .radioBtnOut{
@@ -353,8 +359,8 @@
     background-color: #1E2C70;
 }
 
-.selectedVariantList .variantDesc, .selectedVariantList .variantPrice{
-    display: block;
+.selectedVariantList .variantDesc, .selectedVariantList .variantFoot{
+    display: flex;
 }
 
 .bookNowBtn{

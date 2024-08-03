@@ -2,7 +2,7 @@
 import styles from './TitleContainer.module.css'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 
-export default function TitleContainer({data, params}) {
+export default function TitleContainer({data}) {
 
     const tagPriority = {
         1: {br: "C1E7DA", bg: "EBF7F3", tx: "38B089"},
@@ -11,10 +11,13 @@ export default function TitleContainer({data, params}) {
     }
 
     function handleShare(){
+
+        const packageTitleURLFormat = data.Package_Title.toLowerCase().replace(/\s+/g, '-');
         if(navigator.share){
             navigator.share({
-                title: params.packageSlug,
-                url:`http://localhost:3000/packages/${data.Tour_Type.URL_Value}/${params.packageSlug}/${data.Package_Id}`
+                title: data.Package_Title,
+                text: `Explore beyond oceans ${data.Tour_Type.Value} category's : ${data.Package_Title}`,
+                url:`https://www.beyondoceans.in/packages/${data.Tour_Type.URL_Value}/${packageTitleURLFormat}/${data.Package_Id}`
             })
         }else{
             alert("web sharing not supported")
