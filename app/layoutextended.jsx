@@ -8,6 +8,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { Provider } from 'react-redux'
 import { makeStore } from './AppData/lib/store/store'
 import AutoAuth from "./AutoAuth";
+import MobHeader from "./AppData/components/Header/MobHeader/MobHeader";
 
 export default function layoutextended({ children }) {
 
@@ -28,6 +29,7 @@ export default function layoutextended({ children }) {
             <div>
                 <AutoAuth>
                     { !nonStickyNavBar.includes(pathName) ? <StickyNavbar /> : <Navbar /> }
+                    <MobHeader />
                     {/* { !nonBreadcrumbPages.includes(pathName) ? <Breadcrumb /> : null } */}
                         {children}
                     <Footer />

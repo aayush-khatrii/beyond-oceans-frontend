@@ -2,7 +2,7 @@ import styles from './BookFerry.module.css'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react'
-import Select from '../../Select/Select';
+import Select from './Select/Select';
 import { useRouter } from 'next/navigation';
 import IconList from '../../IconComponent/IconList';
 
@@ -129,11 +129,11 @@ export default function BookFerry() {
     return (
     <>
         <div className={styles.selectFrame}>
-            <Select isEmpty={eptFrom} datalist={filteredFromList} placeholder="Select From" onData={handlefromData}/>
+            <Select isEmpty={eptFrom} datalist={filteredFromList} placeholder="Select From" iconValue="DepartureFrom" onData={handlefromData}/>
             <span className={`${styles.InputPlace} ${selectedFrom ? styles.InputPlaceValue : ''}`}>Departure Place</span>
         </div>
         <div className={styles.selectFrame}>
-            <Select isEmpty={eptTo} datalist={filteredToList} placeholder="Select To" onData={handletoData}/>
+            <Select isEmpty={eptTo} datalist={filteredToList} placeholder="Select To"  iconValue="DestinationTo" onData={handletoData}/>
             <span className={`${styles.InputPlace} ${selectedTo ? styles.InputPlaceValue : ''}`}>Destination Place</span>
         </div>
         <div className={`${styles.dpINPframe} ${isDPactive ? styles.dpINPActive : ''}`} style={{borderColor: eptDate ? "#e00000" : ""}}>
@@ -149,7 +149,7 @@ export default function BookFerry() {
                 dateFormat="dd-MM-yyyy"
                 minDate={new Date()}
                 icon={ 
-                    <div className={styles.dtPickerICO}><IconList Icon="downArrowThin" /></div>
+                    <div className={styles.dtPickerICO}><IconList Icon="DateCal"/></div>
                 }    
             />
             <span className={`${styles.dpPlaceholder} ${isDPactive ? styles.dpPlacActive : ''}`}>Departure Date</span>

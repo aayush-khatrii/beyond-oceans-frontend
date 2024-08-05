@@ -71,6 +71,10 @@
     margin-top: 3px;
 }
 
+.footSec li a{
+    color: #B9BED3;
+}
+
 .footSec span{
     color: #fff;
     font-size: 18px;
@@ -91,6 +95,10 @@
 }
 
 .footSec ul li:hover{
+    color: #fff;
+}
+
+.footSec ul li:hover > a{
     color: #fff;
 }
 

@@ -10,3 +10,8 @@
   width: 1170px;
 }
 
+@media (max-width: 980px) {
+  .homeWrapper{
+    width: 90%;
+  }
+}
