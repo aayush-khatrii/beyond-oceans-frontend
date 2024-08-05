@@ -10,7 +10,6 @@
     z-index: 1;
 }
 
-
 .headWrapper{
     display: flex;
     justify-content: space-between;
@@ -355,3 +354,8 @@
     color: #1E2C70;
 }
 
+@media (max-width: 980px) {
+    .mainWrapper{
+        display: none;
+    }
+}

@@ -62,7 +62,7 @@ export default function Footer() {
                         <li>Career</li>
                         <li>My Account</li>
                         <li>Plan Your Trip</li>
-                        <li>Content Disclaimer</li>
+                        <li><Link href="/content-disclaimer">Content Disclaimer</Link></li>
                     </ul>
                 </div>
                 <div className={`${styles.footSec} ${styles.footContactSec}`}>
@@ -92,7 +92,7 @@ export default function Footer() {
                         
                         <li><Link href="/cancellation-refund">Cancellation & Refund Policy</Link></li>
                         
-                        <li><Link href="/packages">Payment Policy</Link></li>
+                        <li><Link href="/payment-policy">Payment Policy</Link></li>
                         
                         <li><Link href="/packages">Sitemap</Link></li>
                     </ul>

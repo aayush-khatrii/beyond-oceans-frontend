@@ -38,6 +38,10 @@ input[type=number] {
     overflow: hidden;
 }
 
+.react-datepicker-popper{
+    z-index: 5 !important;
+}
+
 button {
     font-family: 'DM Sans', sans-serif;
 }

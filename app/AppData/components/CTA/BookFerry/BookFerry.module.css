@@ -94,6 +94,7 @@
     border: 1px solid #BABABA;
     border-radius: 9px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .dpINPframe:hover{
@@ -284,4 +285,13 @@
 .SearchFerryButton:hover, .SearchFerryButton:active{
     background-color: #38B089;
     border-color: #A3DBC9;
+}
+
+@media (max-width: 980px) {
+
+    .selectFrame, .dpINPframe{
+        width: 100%;
+        height: 50px;
+    }
+
 }

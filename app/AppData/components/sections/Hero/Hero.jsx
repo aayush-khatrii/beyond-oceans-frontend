@@ -35,6 +35,10 @@ export default function Hero() {
                 Your Dream Getaway To <br />
                 Andaman & Nicobar
             </h1>
+            <h1 className={styles.heroTitleMobile}>
+                Your Dream Getaway <br />
+                To Andaman & Nicobar
+            </h1>
             <h4 className={styles.heroDesc}>
                 Discover the untouched paradise of the Andaman Islands with us
             </h4>

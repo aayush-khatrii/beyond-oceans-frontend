@@ -1,0 +1,60 @@
+@media (min-width: 981px){
+    .mainWrapper {
+        display: none !important;
+    }
+}
+
+.mainWrapper{
+    background-color: #fff;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.subWrapper{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftHead, .rightHead{
+    display: flex;
+    align-items: center;
+}
+
+.menuButton{
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.menuButton span{
+    background-color: #1F1F1F;
+    width: 24px;
+    height: 2px;
+    display: flex;
+}
+
+.brandLogo{
+    width: 90px;
+}
+
+.currency{
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.profile svg{
+    width: 25px;
+    height: auto;
+}
