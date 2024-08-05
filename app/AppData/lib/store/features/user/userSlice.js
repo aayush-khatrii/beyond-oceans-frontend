@@ -31,6 +31,18 @@ export const userSlice = createSlice({
             if(data.DOB) state.userData.DOB = data.DOB
             if(data.googleID) state.userData.googleID = data.googleID
             if(data.authLv) state.userData.authLv = data.authLv
+            if(data.auth === "loggedOut") {
+                state.userData.auth = false
+                state.userData.userId = ""
+                state.userData.name = ""
+                state.userData.email = ""
+                state.userData.phone = ""
+                state.userData.address = {}
+                state.userData.maritalStatus = ""
+                state.userData.DOB = ""
+                state.userData.googleID = ""
+                state.userData.authLv = ""
+            }
         }
     },
 })

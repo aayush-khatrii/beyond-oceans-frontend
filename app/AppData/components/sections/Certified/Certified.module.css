@@ -1,0 +1,77 @@
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.titleNbtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionTitle h2{
+    font-size: 30.8px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.sectionTitle p{
+    font-size: 18.3px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.mainContent{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1px;
+    margin-top: 52px;
+}
+
+.certificateCard{
+    height: 310px;
+    width: 279px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 14px 0px #00000009;
+    overflow: hidden;
+}
+
+.cardImg{
+    background-color: #E9EAF1;
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImgWrapper{
+    height: 125px;
+    width: 220px;
+}
+
+.imgWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cardText{
+    padding: 15px 19px;
+}
+
+.cardTitle{
+    font-size: 17.5px;
+    font-weight: 600;
+    color: #1F1F1F;
+}
+
+.cardDesc{
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #696969;
+}

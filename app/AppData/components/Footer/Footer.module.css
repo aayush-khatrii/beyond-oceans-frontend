@@ -8,7 +8,6 @@
 }
 
 .subWrapper{
-    height: 570px;
     width: 1170px;
 }
 
@@ -119,7 +118,7 @@
     color: #B9BED3;
     font-size: 12.5px;
     font-weight: 300;
-    margin-top: 12px;
+    margin-top: 15px;
     margin-left: -2px;
 }
 
@@ -141,7 +140,7 @@
     color: #B9BED3;
     font-size: 14.5px;
     letter-spacing: .5px;
-    font-weight: 100;
+    font-weight: 300;
     padding: 8.5px 13px;
 }
 
@@ -225,6 +224,70 @@
     border-radius: 25px;
 }
 
+.certificate{
+    display: flex;
+    justify-content: space-between;
+    height: 152px;
+    background-color: #4B568D;
+    border: 1px solid #68729F;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 18px 19px;
+    margin-top: 48px;
+    margin-bottom: 27px;
+}
+
+.certificateTitle{
+    color: #fff;
+    font-size: 18.5px;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.certificateDesc{
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: .2px;
+    font-size: 10.7px;
+    margin-top: 9px;
+    width: 477px;
+    user-select: text;
+}
+
+.images{
+    display: flex;
+    gap: 19px;
+}
+
+.imgCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 100%;
+    width: 142px;
+    border-radius: 8px;
+}
+
+.imgCardWrapper{
+    width: 110px;
+    height: 100px;
+}
+
+.imgCard:nth-child(2) .imgCardWrapper{
+    height: 80px;
+}
+
+.imgCard:nth-child(3) .imgCardWrapper{
+    width: 100%;
+}
+
+.imgWrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 .copyrightWrapper{
     display: flex;
     justify-content: center;
@@ -257,4 +320,14 @@
     display: flex;
     justify-content: space-between;
     width: 579px;
+}
+
+.trustNote{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.secureIcon{
+    margin-bottom: -2px;
 }
