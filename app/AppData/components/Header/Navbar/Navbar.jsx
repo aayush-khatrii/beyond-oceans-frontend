@@ -76,7 +76,7 @@ export default function Navbar() {
   const userAccount = (
     <div className={styles.userAccount}>
         <IconList Icon="User" />
-        <span>{userData.name ? userData.name : `user-${userData.userId}`}</span>
+        <span>{userData.auth === true && userData.name  ? userData.name : `user-${userData.userId}`}</span>
     </div>
   )
 
@@ -105,6 +105,15 @@ export default function Navbar() {
                         <span className={styles.menuLv1} onClick={() => setPackageToggle(!packageToggle)} ref={packageBtnRef}>Packages</span>
                         <div className={`${styles.megaMenuWrapper} ${styles.packageMenuWrapper}`} style={{ display: packageToggle ? 'flex' : 'none' }}>
                             <div className={styles.menuTooltip}></div>
+                            <div className={styles.secMenuCont}>
+                                <ul className={styles.packageSecMenu}>
+                                    <li className={styles.menuContTitle}><IconList Icon="BestSellers" /><span>Best Sellers</span></li>
+                                    <li className={styles.menuContTitle}><IconList Icon="BudgetTours" /><span>Budget Tours</span></li>
+                                    <li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>Recommended</span></li>
+                                    <li className={styles.menuContTitle}><IconList Icon="Offbeat" /><span>Offbeat</span></li>
+                                    <Link href="/packages"><li className={styles.menuContTitle}><IconList Icon="allPackages" /><span>All Packages</span></li></Link>
+                                </ul>
+                            </div>
                             <div className={styles.menuContainer}>
                                 <div className={styles.menuContTitle}><IconList Icon="Honeymoon" /><span>Honeymoon</span></div>
                                 <ul>
@@ -144,15 +153,7 @@ export default function Navbar() {
                                     <ListItem>Best Sellers</ListItem>
                                 </ul>
                             </div>
-                            <div className={styles.secMenuCont}>
-                                <ul className={styles.packageSecMenu}>
-                                    <li className={styles.menuContTitle}><IconList Icon="BudgetTours" /><span>Budget Tours</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="BestSellers" /><span>Best Sellers</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>Recommended</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Offbeat" /><span>Offbeat</span></li>
-                                    <Link href="/packages"><li className={styles.menuContTitle}><IconList Icon="allPackages" /><span>All Packages</span></li></Link>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </li>
                     <Link href="/book-ferry"><li><span className={styles.menuLv1}>Book Ferry</span></li></Link>

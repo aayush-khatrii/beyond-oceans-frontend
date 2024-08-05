@@ -5,10 +5,15 @@ import IconList from '@/app/AppData/components/IconComponent/IconList'
 import ProfileSetting from './Components/ProfileSetting/ProfileSetting'
 import LoginDeatil from './Components/LoginDeatil/LoginDeatil'
 import MyBookings from './Components/Bookings/MyBookings'
-import { routeProtector } from '@/app/AppData/http/auth'
+import { logoutUser, routeProtector } from '@/app/AppData/http/auth'
 import { useRouter } from 'next/navigation'
+import { Toaster, toast } from 'sonner'
+import { setUserData } from '@/app/AppData/lib/store/features/user/userSlice';
+import { useAppDispatch } from '@/app/AppData/lib/store/hooks';
 
 export default function page() {
+
+    const dispatch = useAppDispatch()
 
     const router = useRouter()
 
@@ -29,7 +34,6 @@ export default function page() {
         let response
         try {
             response = await routeProtector()
-            console.log(response)
             setIsAuth(response.data.auth)
         } catch (error) {
             router.push("/")
@@ -46,8 +50,23 @@ export default function page() {
         handleRouteProtector()
     }, [])
 
+
+    async function handleLogout(){
+        try {
+            await logoutUser()
+        } catch (error) {
+            toast.error(error.response?.data.message)
+        }
+
+
+        dispatch(setUserData({auth: "loggedOut"}))
+        toast.success("Logged Out Successfully")
+        router.push("/")
+    }
+
     const layoutData = (
         <div className={styles.mainWrapper}>
+            <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
             <div className={styles.subWrapper}>
                 <div>{`Home > My Account`}</div>
                 <div className={styles.mainContainer}>
@@ -59,7 +78,7 @@ export default function page() {
                             <div className={styles.menuItem} style={{backgroundColor: selected==="SETTING" ? "#E9E9E9" : "", color: selected==="SETTING" ? "#1E2C70" : ""}} onClick={() => {menuList("SETTING")}}><IconList Icon="ProfileSet"/><span>Profile Setting</span></div>
                             <div className={styles.menuItem} style={{backgroundColor: selected==="LOGIN" ? "#E9E9E9" : "", color: selected==="LOGIN" ? "#1E2C70" : ""}} onClick={() => {menuList("LOGIN")}}><IconList Icon="LogDetails"/><span>Login Deatils</span></div>
                             <div className={styles.menuItem} style={{backgroundColor: selected==="BOOKING" ? "#E9E9E9" : "", color: selected==="BOOKING" ? "#1E2C70" : ""}} onClick={() => {menuList("BOOKING")}}><IconList Icon="ProfList"/><span>Your Bookings</span></div>
-                            <div className={styles.menuItem}><IconList Icon="ProfLogout"/><span>Log Out</span></div>
+                            <div className={styles.menuItem} onClick={() => handleLogout()}><IconList Icon="ProfLogout"/><span>Log Out</span></div>
                         </div>
                     </div>
                     <div className={styles.layoutBody}>
