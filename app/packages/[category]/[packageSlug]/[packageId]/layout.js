@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
             product: {
                 price: {
                     amount: packageData.Price.BOP,
-                    currency: 'UINRSD'
+                    currency: 'INR'
                 }
             }
         },

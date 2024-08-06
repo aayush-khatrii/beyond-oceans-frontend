@@ -112,7 +112,7 @@
 }
 
 .menuContainer{
-    box-shadow:  0 0 0 0.4px #B9BED3;
+    box-shadow:  -0.5px 0 0 0 #B9BED3;
 }
 
 .menuContainer, .secMenuCont{
