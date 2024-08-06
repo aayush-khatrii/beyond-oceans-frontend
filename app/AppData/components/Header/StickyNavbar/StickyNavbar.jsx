@@ -226,7 +226,6 @@ export default function Navbar() {
             </div>
             <div className={styles.cta}>
                 <div className={styles.currency}>INR</div>
-                <span>{userData.auth === true && userData.name  ? userData.name : `user-${userData.userId}`}</span>
                 <button onClick={loginPopup} className={styles.account}>{(userData.userId && userData.auth) ? userAccount : "Login or Signup"}</button>
             </div>
         </div>

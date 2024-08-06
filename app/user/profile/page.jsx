@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { Toaster, toast } from 'sonner'
 import { setUserData } from '@/app/AppData/lib/store/features/user/userSlice';
 import { useAppDispatch } from '@/app/AppData/lib/store/hooks';
+import { AxiosError } from 'axios';
 
 export default function page() {
 
@@ -55,9 +56,21 @@ export default function page() {
         try {
             await logoutUser()
         } catch (error) {
-            toast.error(error.response?.data.message)
+            if(error instanceof AxiosError && !error.response){
+                toast.message(error.code, {
+                    description: error.message,
+                })
+                toast.error("Internal Server Error")
+            }
+            if(error.response.data){  
+                toast.message(error.response.data.message, {
+                    description: error.response?.data.errorCode,
+                  })
+                toast.error(error.response.data.message)
+                return
+            }
+            return
         }
-
 
         dispatch(setUserData({auth: "loggedOut"}))
         toast.success("Logged Out Successfully")
