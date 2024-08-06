@@ -5,6 +5,8 @@ import { useState, useRef, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/AppData/lib/store/hooks';
 import { emailLogin } from '@/app/AppData/http/auth';
 import { setUserData } from '@/app/AppData/lib/store/features/user/userSlice';
+import { Toaster, toast } from 'sonner'
+import {toast as rhtToast, Toaster as RhtToast } from 'react-hot-toast';
 
 export default function OTPEmail({email, popupClose}) {
 
@@ -32,8 +34,10 @@ export default function OTPEmail({email, popupClose}) {
         console.log("Login Success", otp)
 
         let responseData
+        let loadingToastId
 
         try {
+            loadingToastId = rhtToast.loading('Logging in ...');
             const reqData = {
                 email: emailAuthData.email, 
                 country: emailAuthData.country, 
@@ -41,14 +45,25 @@ export default function OTPEmail({email, popupClose}) {
                 otp
             }
             const {data} = await emailLogin(reqData)
-            console.log(data)
             responseData = data
+            toast.success("Logged In Successfully")
+            rhtToast.remove(loadingToastId)
 
         } catch (error) {
-            if(error.response){
-                console.log(error.response.data)
+            rhtToast.remove(loadingToastId)
+            if(error instanceof AxiosError && !error.response){
+                toast.message(error.code, {
+                    description: error.message,
+                })
+                toast.error("Internal Server Error")
             }
-            console.log({code :error.code, message:error.message})
+            if(error.response.data){  
+                toast.message(error.response.data.message, {
+                    description: error.response?.data.errorCode,
+                  })
+                toast.error(error.response.data.message)
+                return
+            }
             return
         }
 
@@ -90,6 +105,8 @@ export default function OTPEmail({email, popupClose}) {
 
     return (
         <div className={styles.mainWrapper}>
+            <RhtToast toastOptions={{ style: { marginBottom: '20px', marginRight: '20px', fontFamily: "DM Sans", fontSize: "18px", fontWeight: "500" }}} position="bottom-right" />
+            <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
             <div className={styles.OTPlable}>
                 <span>Enter OTP Sent to Email</span>
                 <span> {email}</span>
