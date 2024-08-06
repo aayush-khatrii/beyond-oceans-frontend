@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "category": "family-package",
+        "title": "Family Adventures Await: Explore Andaman with Beyond Oceans!",
+        "desc": "Discover unforgettable family adventures in the pristine beauty of Andaman and Nicobar Islands with Beyond Oceans. Explore our curated selection of family tour packages, designed to immerse you in the natural wonders and cultural delights of this exotic destination. Let us create cherished memories for you and your loved ones amidst the turquoise waters, white sandy beaches, and lush greenery of Andaman. Book your family getaway today and embark on a journey of joy, laughter, and togetherness with Beyond Oceans, the leading tour and travel company in Andaman and Nicobar."
+    },
+    {
+        "id": 2,
+        "category": "honeymoon",
+        "title": "Unforgettable Andaman Honeymoon Packages",
+        "desc": "Celebrate your love with Beyond Oceans' exclusive Honeymoon Packages in the enchanting Andaman Islands. Discover secluded beaches, romantic sunsets, and luxurious stays tailored for the perfect escape. Let us craft unforgettable memories as you embark on the journey of a lifetime. Book now for an intimate and dreamy getaway!"
+    },
+    {
+        "id": 3,
+        "category": "best-sellers",
+        "title": "Explore Andaman Traveler's Favorites",
+        "desc": "Discover Andaman's most sought-after experiences with Beyond Oceans' best seller packages. From thrilling water sports to relaxing beach escapes, each package is crafted to deliver the essence of the islands. Dive into adventure, unwind in luxury, and create memories that last a lifetime. Book your favorite Andaman experiences today with Beyond Oceans!"
+    },
+    {
+        "id": 4,
+        "category": "budget-tours",
+        "title": "Affordable Andaman Adventures by Beyond Oceans",
+        "desc": "Discover the pristine beauty of the Andaman Islands without breaking the bank! Beyond Oceans offers budget-friendly tour packages that provide an unforgettable island experience. Enjoy serene beaches, crystal-clear waters, and rich cultural heritage on a shoestring budget. Book now and embark on an affordable adventure with Beyond Oceans!"
+    },
+    {
+        "id": 5,
+        "category": "offbeat",
+        "title": "Explore Hidden Gems",
+        "desc": "Uncover Andaman's hidden treasures with Beyond Oceans' offbeat tour packages. Immerse yourself in unique experiences away from the crowds, discovering secluded beaches, local culture, and untouched natural beauty. Embark on a journey less traveled and create memories that defy the ordinary. Book your offbeat adventure today with Beyond Oceans!"
+    }
+]

@@ -107,37 +107,37 @@ export default function Navbar() {
                             <div className={styles.menuTooltip}></div>
                             <div className={styles.secMenuCont}>
                                 <ul className={styles.packageSecMenu}>
-                                    <li className={styles.menuContTitle}><IconList Icon="BestSellers" /><span>Best Sellers</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="BudgetTours" /><span>Budget Tours</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>Recommended</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Offbeat" /><span>Offbeat</span></li>
+                                    <Link href="/best-sellers"><li className={styles.menuContTitle}><IconList Icon="BestSellers" /><span>Best Sellers</span></li></Link>
+                                    <Link href="/budget-tours"><li className={styles.menuContTitle}><IconList Icon="BudgetTours" /><span>Budget Tours</span></li></Link>
+                                    <Link href="/budget-tours"><li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>Recommended</span></li></Link>
+                                    <Link href="/offbeat"><li className={styles.menuContTitle}><IconList Icon="Offbeat" /><span>Offbeat</span></li></Link>
                                     <Link href="/packages"><li className={styles.menuContTitle}><IconList Icon="allPackages" /><span>All Packages</span></li></Link>
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
-                                <div className={styles.menuContTitle}><IconList Icon="Honeymoon" /><span>Honeymoon</span></div>
+                            <Link href="/packages/honeymoon"><div className={styles.menuContTitle}><IconList Icon="Honeymoon" /><span>Honeymoon</span></div></Link>
                                 <ul>
-                                    <ListItem>2 Night 3 Days</ListItem>
-                                    <ListItem>3 Night 4 Days</ListItem>
-                                    <ListItem>4 Night 5 Days</ListItem>
-                                    <ListItem>5 Night 6 Days</ListItem>
-                                    <ListItem>6 Night 7 Days</ListItem>
-                                    <ListItem>7 Night 8 Days</ListItem>
-                                    <ListItem>8 Night 9 Days</ListItem>
-                                    <ListItem>9 Night 10 Days</ListItem>
+                                    <Link href="/packages/honeymoon"><ListItem>2 Night 3 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>3 Night 4 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>4 Night 5 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>5 Night 6 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>6 Night 7 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>7 Night 8 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>8 Night 9 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon"><ListItem>9 Night 10 Days</ListItem></Link>
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
-                                <div className={styles.menuContTitle}><IconList Icon="FamilyPackage" /><span>Family Package</span></div>
+                                <Link href="/packages/family-package"><div className={styles.menuContTitle}><IconList Icon="FamilyPackage" /><span>Family Package</span></div></Link>
                                 <ul>
-                                    <ListItem>2 Night 3 Days</ListItem>
-                                    <ListItem>3 Night 4 Days</ListItem>
-                                    <ListItem>4 Night 5 Days</ListItem>
-                                    <ListItem>5 Night 6 Days</ListItem>
-                                    <ListItem>6 Night 7 Days</ListItem>
-                                    <ListItem>7 Night 8 Days</ListItem>
-                                    <ListItem>8 Night 9 Days</ListItem>
-                                    <ListItem>9 Night 10 Days</ListItem>
+                                    <Link href="/packages/family-package"><ListItem>2 Night 3 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>3 Night 4 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>4 Night 5 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>5 Night 6 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>6 Night 7 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>7 Night 8 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>8 Night 9 Days</ListItem></Link>
+                                    <Link href="/packages/family-package"><ListItem>9 Night 10 Days</ListItem></Link>
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
