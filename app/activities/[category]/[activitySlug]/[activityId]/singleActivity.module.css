@@ -1,0 +1,28 @@
+.mainWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subWrapper{
+    width: 1170px;
+    margin: 47px 0;
+}
+
+.contContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+}
+
+.mainContent{
+    width: 665px;
+}
+
+.aside{
+    width: 466px;
+    height: 100%;
+    position: sticky;
+    top: 120px;
+}

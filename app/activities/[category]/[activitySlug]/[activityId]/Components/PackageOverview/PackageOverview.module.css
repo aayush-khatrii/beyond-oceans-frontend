@@ -1,0 +1,48 @@
+.mainWrapper{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+}
+
+.title{
+    height: 71px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 21.5px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.overviewContent{
+    box-sizing: border-box;
+    padding: 22px 28px;
+    height: 100%;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.mdxContent{
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    transition: all .3s ease;
+}
+
+.gradient{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 40%);
+}
+
+.readmoreBtn{
+    color: #1E2C70;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}

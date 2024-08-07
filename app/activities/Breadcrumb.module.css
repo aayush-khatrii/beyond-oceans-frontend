@@ -1,0 +1,37 @@
+.breadcrumb{
+    height: 96px;
+    width: 100%;
+    background-color: #1E2C70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .1px;
+}
+
+.left svg{
+    margin: 0 17px;
+    height: 12px;
+}
+
+.left svg:last-child{
+    display: none;
+}
+
+.left a{
+    color: #B9BED3;
+    font-size: 15px;
+}
+
+.left a:last-of-type{
+    color: #fff;
+}
