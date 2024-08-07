@@ -143,27 +143,27 @@ export default function Navbar() {
                         <div className={`${styles.megaMenuWrapper} ${styles.actMenuWrapper}`} style={{ display: activityToggle ? 'flex' : 'none' }}>
                             <div className={styles.menuTooltip}></div>
                             <div className={styles.menuContainer} >
-                                <div className={styles.menuContTitle}><IconList Icon="WaterSports" /><span>Water Sports</span></div>
+                                <Link href="/activities/water-sports"><div className={styles.menuContTitle}><IconList Icon="WaterSports" /><span>Water Sports</span></div></Link>
                                 <ul>
-                                    <ListItem>Kayaking</ListItem>
-                                    <ListItem>Scuba Diving</ListItem>
-                                    <ListItem>Glass Bottom Boat</ListItem>
-                                    <ListItem>Sea Walk</ListItem>
-                                    <ListItem>Snorkeling</ListItem>
-                                    <ListItem>Speed Boat Rides</ListItem>
-                                    <ListItem>Game Fishing</ListItem>
-                                    <ListItem>Semi Submarine</ListItem>
+                                    <Link href="/activities/water-sports"><ListItem>Kayaking</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Scuba Diving</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Glass Bottom Boat</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Sea Walk</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Snorkeling</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Speed Boat Rides</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Game Fishing</ListItem></Link>
+                                    <Link href="/activities/water-sports"><ListItem>Semi Submarine</ListItem></Link>
                                 </ul>
                             </div>
                             <div className={styles.secMenuCont}>
                                 <ul className={styles.actSecMenu}>
-                                    <li className={styles.menuContTitle}><IconList Icon="Trekking" /><span>Trekking</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Parasailing" /><span>Parasailing</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Island Hopping</span></li>
+                                    <Link href="/activities/trekking"><li className={styles.menuContTitle}><IconList Icon="Trekking" /><span>Trekking</span></li></Link>
+                                    <Link href="/activities/parasailing"><li className={styles.menuContTitle}><IconList Icon="Parasailing" /><span>Parasailing</span></li></Link>
+                                    <Link href="/activities/island-hopping"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Island Hopping</span></li></Link>
                                     <li className={styles.menuContTitle}><IconList Icon="Boat" /><span>Boat Tickets</span></li>
                                     <li className={styles.menuContTitle}><IconList Icon="Photoshoots" /><span>Photoshoots</span></li>
                                     <li className={styles.menuContTitle}><IconList Icon="Coupons" /><span>Coupons</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>All Activities</span></li>
+                                    <Link href="/activities"><li className={styles.menuContTitle}><IconList Icon="Recommended" /><span>All Activities</span></li></Link>
                                 </ul>
                             </div>
                         </div>

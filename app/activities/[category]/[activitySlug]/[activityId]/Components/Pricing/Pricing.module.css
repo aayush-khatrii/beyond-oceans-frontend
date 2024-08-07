@@ -1,0 +1,420 @@
+.mainWrapper{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.title{
+    height: 71px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 21.5px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.bookingCont{
+    box-sizing: border-box;
+    padding: 25px 27px;
+}
+
+.priceInfo{
+    font-size: 18px;
+}
+
+.mrpCont{
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.bop{
+    font-size: 37.5px;
+    color: #1E2C70;
+    font-weight: 700;
+}
+
+.mrpCut{
+    margin-left: 17px;
+    margin-top: -2px;
+    position: relative;
+}
+
+.mrp{
+    font-size: 26.5px;
+    color: #989898;
+}
+
+.mrpCutline{
+    background-color: #989898;
+    height: 1.99px;
+    width: 105%;
+    position: absolute;
+    top: 18px;
+    left: -2px;
+}
+
+.dataSelection{
+    margin-top: 28px;
+}
+
+.dateSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    color: #696969;
+    height: 52px;
+    cursor: pointer;
+}
+
+
+.dpINPbox{
+    display: flex;
+    height: 100%;
+    width: 140px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    caret-color: transparent;
+}
+
+.topSelect{
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.bottomSelect{
+    position: relative;
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.roomSelect, .personSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    color: #696969;
+    height: 52px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.roomSelect{
+    position: relative;
+    padding: 0;
+}
+
+.roomSelectWrapper{
+    height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.roomSelectWrapper svg{
+    width: 23px;
+}
+
+.roomSelectBox, .personSelectBox{
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    border: 1px solid #E9E9E9;
+    z-index: 1;
+}
+
+.roomSelectBox{
+    bottom: -100px;
+    right: 0;
+    width: 305px;
+    height: 90px;
+    padding: 0 29px;
+}
+
+.roomSelectBoxLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.roomSelectBoxLeft span:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 2px;
+}
+
+.roomSelectBoxLeft span:nth-child(2){
+    font-size: 12.4px;
+    color: #696969;
+    margin-top: 2px;
+}
+
+.roomSelectBoxRight, .personSelectBoxRight{
+    display: flex;
+    align-items: center;
+    margin-right: -1px;
+    gap: 11px;
+}
+
+.personsValue, .personValue{
+    font-size: 19px;
+    font-weight: 600;
+    color: #000;
+    width: 20px;
+    text-align: center;
+}
+
+.roomMinus, .roomPlus, .personMinus, .personPlus{
+    background-color: #38B089;
+    height: 38px;
+    width: 38px;
+    margin-top: 1px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.roomPlusLight, .roomMinusLight, .personPlusLight, .personMinusLight{
+    background-color: #EBF7F3;
+}
+
+.roomPlusLight svg path, .roomMinusLight svg path, .personPlusLight svg path, .personMinusLight svg path{
+    fill: #C1E7DA;
+}
+
+.personSelect svg{
+    height: 23px;
+    width: 23px;
+}
+
+.personSelectBox{
+    flex-direction: column;
+    top: 55px;
+    right: 0;
+    height: fit-content;
+    padding: 22px 0;
+    z-index: 1;
+    gap: 24px;
+}
+
+.adultSelect, .childSelect, .infantSelect{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 303px;
+    padding: 0 29px;
+    box-sizing: border-box;
+}
+
+.personSelectBoxLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.personSelectBoxLeft span:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 2px;
+}
+
+.personSelectBoxLeft span:nth-child(2){
+    font-size: 12.4px;
+    color: #696969;
+    margin-top: 0px;
+}
+
+.dateSelect:hover, .roomSelect:hover, .personSelect:hover{
+    border-color: #1E2C70;
+    color: #1E2C70;
+}
+
+.packOptionsCont{
+    margin-top: 28px;
+}
+
+.packOptionContTitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: #4C4C4C;
+}
+
+.packVariantCont{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.variantList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+.variantTitle{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.variantDesc{
+    display: none;
+}
+
+.variantFoot{
+    display: none;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.variantDesc ul{
+    list-style: disc !important;
+    color: #696969;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.variantPriceTxt{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.variantPriceDesc{
+    margin-left: 9px;
+    font-size: 15px;
+    color: #4C4C4C;
+}
+
+.variantMinimum{
+    font-size: 14px;
+}
+
+.radioBtnOut{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 11px;
+    right: 18px;
+    border-radius: 50px;
+    border: 1px solid #BABABA;
+    padding: 5px;
+}
+
+.radioBtnInn{
+    background-color: transparent;
+    height: 15px;
+    width: 15px;
+    margin: 0 auto;
+    border-radius: 50px;
+    transition: all .2s ease-in-out;
+}
+
+.variantList:hover, .variantList:hover .radioBtnOut{
+    border-color: #1E2C70;
+}
+
+.variantList:hover > .variantTitle{
+    color: #1E2C70;
+}
+
+.variantList:hover .radioBtnOut .radioBtnInn{
+    background-color: #1E2C70;
+}
+
+.selectedVariantList, .selectedVariantList .radioBtnOut{
+    border-color: #1E2C70;
+}
+
+.selectedVariantList .radioBtnOut .radioBtnInn{
+    background-color: #1E2C70;
+}
+
+.selectedVariantList .variantDesc, .selectedVariantList .variantFoot{
+    display: flex;
+}
+
+.bookNowBtn{
+    margin-top: 28.5px;
+    background-color: #1E2C70;
+    border: 2px solid #B9BED3;
+    height: 59.5px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    font-size: 27px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: .1px;
+}
+
+.bookNowBtn:hover{
+    background-color: #38B089;
+    border-color: #A3DBC9;
+}
+
+.inquiryBtnWrp{
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.inquiryBtn{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #696969;
+    cursor: pointer;
+}
+
+.inquiryBtn svg{
+    margin-bottom: -2px;
+}
+
+.inquiryBtn svg path{
+    stroke: #696969;
+}
+
+.inquiryBtn:hover{
+    color: #1E2C70;
+}
+
+.inquiryBtn:hover > svg path{
+    stroke: #38B089;
+}

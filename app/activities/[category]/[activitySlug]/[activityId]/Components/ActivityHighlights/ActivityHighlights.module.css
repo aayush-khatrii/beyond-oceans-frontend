@@ -1,0 +1,24 @@
+.mainWrapper{
+    margin-top: 39px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+}
+
+.title{
+    height: 71px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 21.5px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.mainContent{
+    box-sizing: border-box;
+    padding: 22px 28px;
+    height: 100%;
+}

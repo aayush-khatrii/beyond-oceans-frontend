@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 
 export default function PackageCard({data}) {
+
     const tagPriority = {
         1: {br: "C1E7DA", bg: "EBF7F3", tx: "38B089"},
         2: {br: "FFE6B3", bg: "FFF7E6", tx: "FFAD01"},
@@ -22,6 +23,19 @@ export default function PackageCard({data}) {
         "Coordinator": "Coordinator",
         "Ferry Transfer": "FerryTransfer",
         "Island Tour": "IslandTour"
+    }
+
+    const activityIconListMap = {
+        "Duration": "DurationClock",
+        "Place": "Place",
+        "Person": "Person",
+        "Basic Training": "BasicTraining",
+        "Scuba Diving": "ScubaDiving",
+        "Personal Guide": "PersonalGuide",
+        "Equipments": "Equipments",
+        "Photoshoot": "Photoshoot",
+        "Safety Guarantee": "SafetyGuarantee",
+        "All Includes": "AllIncludes"
     }
     
     const packageTitleURLFormat = data.Package_Title.toLowerCase().replace(/\s+/g, '-');

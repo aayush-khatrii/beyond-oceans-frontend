@@ -1,0 +1,60 @@
+.mainWrapper{
+    margin-top: 40px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+}
+
+.title{
+    height: 76px;
+    box-sizing: border-box;
+    padding: 0 28px;
+    border-bottom: 2px solid #E9E9E9;
+    display: flex;
+    align-items: center;
+    font-size: 21.2px;
+    font-weight: 600;
+}
+
+.mainContetn{
+    box-sizing: border-box;
+    padding: 20px 28px;
+}
+
+.packageTitle{
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F1F1F;
+}
+
+.summaryList{
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summaryItem{
+    display: flex;
+    align-items: center;
+}
+
+.itemIcon svg{
+    width: 23px;
+    margin-right: 13px;
+}
+
+.itemLable{
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F1F1F;
+    margin-top: -4px;
+}
+
+.itemData{
+    font-size: 15px;
+    color: #1F1F1F;
+    margin-top: -4px;
+    margin-left: 13px;
+    letter-spacing: .3px;
+}

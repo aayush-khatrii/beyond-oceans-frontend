@@ -52,13 +52,13 @@ export default function Footer() {
                 <div className={`${styles.footSec} ${styles.packageSec}`}>
                     <span>Best Tour Packages</span>
                     <ul>
-                        <li>Honeymoon</li>
-                        <li>Family Packages</li>
-                        <li>Best Sellers</li>
-                        <li>Explore By Budget</li>
-                        <li>Explore By Islands</li>
-                        <li>Explore By Duration</li>
-                        <li>Activities Package</li>
+                        <li><Link href="/packages/honeymoon">Honeymoon</Link></li>
+                        <li><Link href="/packages/family-package">Family Packages</Link></li>
+                        <li><Link href="/packages/best-sellers">Best Sellers</Link></li>
+                        <li><Link href="/packages/budget-tours">Explore By Budget</Link></li>
+                        <li><Link href="/packages/budget-tours">Explore By Islands</Link></li>
+                        <li><Link href="/packages/budget-tours">Explore By Duration</Link></li>
+                        <li><Link href="/activities">Activities Package</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footSec}>
@@ -69,18 +69,18 @@ export default function Footer() {
                         <li>Cab Booking</li>
                         <li>Personal Guide</li>
                         <li>Bike Rental</li>
-                        <li>Tour Packages</li>
-                        <li>Ferry Booking</li>
+                        <li><Link href="/packages">Tour Packages</Link></li>
+                        <li><Link href="/book-ferry">Ferry Booking</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footSec}>
                     <span>Important Links</span>
                     <ul>
-                        <li>Home</li>
+                        <li><Link href="/">Home</Link></li>
                         <li>About Us</li>
                         <li>Our Blogs</li>
                         <li>Career</li>
-                        <li>My Account</li>
+                        <li><Link href="/user/profile">My Account</Link></li>
                         <li>Plan Your Trip</li>
                         <li><Link href="/content-disclaimer">Content Disclaimer</Link></li>
                     </ul>

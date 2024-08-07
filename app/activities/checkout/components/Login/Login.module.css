@@ -1,0 +1,26 @@
+.mainWrapper{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+}
+
+.title{
+    height: 76px;
+    box-sizing: border-box;
+    padding: 0 28px;
+    border-bottom: 2px solid #E9E9E9;
+    display: flex;
+    align-items: center;
+    font-size: 21.2px;
+    font-weight: 600;
+}
+
+.mainContent{
+    box-sizing: border-box;
+    padding: 28px;
+}
+
+.loginNote{
+    font-size: 15px;
+    color: #696969;
+}

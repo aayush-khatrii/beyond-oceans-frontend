@@ -1,0 +1,76 @@
+.mainWrapper{
+    margin-top: 40px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.title{
+    height: 76px;
+    box-sizing: border-box;
+    padding: 0 28px;
+    border-bottom: 2px solid #E9E9E9;
+    display: flex;
+    align-items: center;
+    font-size: 21.2px;
+    font-weight: 600;
+}
+
+.mainContent{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.inputRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inpCont{
+    display: flex;
+    flex-direction: column;
+}
+
+.inpLable{
+    font-size: 17px;
+    color: #4C4C4C;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.inpBox{
+    height: 50px;
+    width: 307px;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 0 18px;
+}
+
+.inpBox:hover, .inpBox:active, .inpBox:focus{
+    border: 1px solid #1E2C70;
+    outline-color: #1E2C70;
+}
+
+.inpBox::placeholder{
+    color: #BABABA;
+}
+
+.inpBoxArea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 10px 18px;
+}
