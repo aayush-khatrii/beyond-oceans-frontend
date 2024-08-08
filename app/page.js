@@ -11,6 +11,7 @@ import WhyChoose from "./AppData/components/sections/WhyChoose/WhyChoose";
 import Testimonial from "./AppData/components/sections/Testimonial/Testimonial";
 import Certified from "./AppData/components/sections/Certified/Certified";
 import { getFeaturedPackages } from "./AppData/http/packages";
+import { cookies } from 'next/headers'
 
 async function fetchFeaturedPackages(featureCategory){
     try {
@@ -22,7 +23,8 @@ async function fetchFeaturedPackages(featureCategory){
 }
 
 export default async function Home() {
-
+    const cookieStore = cookies()
+    const theme = cookieStore.get('theme')
     const featuredPackages = await fetchFeaturedPackages("Featured")
     
 
