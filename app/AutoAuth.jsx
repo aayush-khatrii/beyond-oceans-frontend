@@ -34,7 +34,6 @@ export default function AutoAuth({children}) {
                 name: user.User_Name || '',
                 address: user.User_Address || {}
             }
-            console.log(userdata)
             dispatch(setUserData(userdata))
 
         }

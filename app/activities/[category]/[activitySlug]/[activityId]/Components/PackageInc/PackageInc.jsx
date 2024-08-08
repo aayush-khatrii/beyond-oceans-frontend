@@ -4,19 +4,6 @@ import FETIconList from '@/app/AppData/components/IconComponent/FETIconList'
 
 export default function PackageInc({featureList}) {
 
-    const iconListMap = {
-        "AC Cab": "RoadTransfer",
-        "Stay": "Hotel",
-        "Accommodation": "Hotel",
-        "Meal": "Meals",
-        "Cruise Ride": "CruiseRides",
-        "Sightseeing": "Sightseeing",
-        "Water Activity": "WaterActivity",
-        "Coordinator": "Coordinator",
-        "Ferry Transfer": "FerryTransfer",
-        "Island Tour": "IslandTour"
-    }
-
     const activityIconListMap = {
         "Duration": "DurationClock",
         "Place": "Place",
@@ -26,7 +13,7 @@ export default function PackageInc({featureList}) {
         "Personal Guide": "PersonalGuide",
         "Equipments": "Equipments",
         "Photoshoot": "Photoshoot",
-        "Safety Guarantee": "SafetyGuarantee",
+        "Safety Briefing": "SafetyGuarantee",
         "All Includes": "AllIncludes"
     }
 
@@ -40,7 +27,7 @@ export default function PackageInc({featureList}) {
                 {
                     featureList.map((item, index) => (
                         <div key={index} className={styles.itemContainer}>
-                            <FETIconList Icon={iconListMap[item]}/>
+                            <FETIconList Icon={activityIconListMap[item]}/>
                             <span>{item}</span>
                         </div>
                     ))

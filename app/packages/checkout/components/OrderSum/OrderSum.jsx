@@ -57,9 +57,9 @@ export default function OrderSum({sessionData, packageData, hotelData}) {
   return (
     <div className={styles.mainWrapper}>
         <div className={styles.title}>Your Order Summary</div>
-        {packageData && sessionData && hotelData &&
+        {sessionData && packageData && hotelData &&
             <div className={styles.mainContetn}>
-                <div className={styles.packageTitle}><span>{packageData.Package_Title}</span></div>
+                <div className={styles.packageTitle}>{packageData ? <span>{packageData.Package_Title}</span> : null}</div>
                 <div className={styles.summaryList}>
                     <div className={styles.summaryItem}>
                         <div className={styles.itemIcon}><IconList Icon="DateTime"/></div>

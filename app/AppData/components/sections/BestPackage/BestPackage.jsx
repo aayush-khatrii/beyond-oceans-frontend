@@ -1,5 +1,5 @@
 "use client";
-import HomeCard from '../../Card/HomeCard/HomeCard'
+import HomeCardACT from '../../Card/HomeCardACT/HomeCardACT'
 import styles from './BestPackage.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef, useState } from 'react'
@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import 'swiper/css';
 
-export default function BestPackage(){
+export default function BestPackage({featuredPackages}){
     const uuid = uuidv4();
     
     const paymentfunc = async() => {
@@ -37,39 +37,6 @@ export default function BestPackage(){
 
     const swiperRef = useRef(null);
 
-    const datas = [
-        {
-            name: 1,
-            image: "Best-seller-img-1.png",
-            title: "Tropical Bliss Getaway",
-            desc: "Starting At ₹20,000/per person"
-
-        },
-        {
-            name: 2,
-            image: "Best-seller-img-4.png",
-            title: "Coastal Charm Tour",
-            desc: "Starting At ₹12,000/per person"
-        },
-        {
-            name: 3,
-            image: "Best-seller-img-3.png",
-            title: "Paradise Found Tour",
-            desc: "Starting At ₹23,000/per person"
-        },
-        {
-            name: 4,
-            image: "Best-seller-img-2.png",
-            title: "Nautical Nirvana",
-            desc: "Starting At ₹30,000/per person"
-        },
-        {
-            name: 5,
-            image: "Best-seller-img-2.png",
-            title: "Nautical Nirvana",
-            desc: "Starting At ₹30,000/per person"
-        }
-    ]
     
     return (
     <>
@@ -96,9 +63,9 @@ export default function BestPackage(){
                 <div className={styles.cardWrapper}>
                     <Swiper ref={swiperRef} spaceBetween={19} slidesPerView={4} loop={true}>
                         {
-                            datas.map((item, index) => (
+                            featuredPackages.map((item, index) => (
                                 <SwiperSlide onClick={paymentfunc} key={index}>
-                                    <HomeCard onClick={paymentfunc} key={index} image={item.image} title={item.title} desc={item.desc} />
+                                    <HomeCardACT key={index} cardData={item} category="packages" />
                                 </SwiperSlide>
                             ))
                         }
