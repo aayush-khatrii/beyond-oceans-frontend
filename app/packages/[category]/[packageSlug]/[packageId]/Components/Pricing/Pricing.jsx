@@ -285,6 +285,9 @@ export default function Pricing(props) {
 
     const paxCount = `${adults} Adult${adults > 1 ? 's' : ''}${child > 0 ? `, ${child} Child` : ''}`;
 
+    const minDate = new Date();
+    minDate.setDate(minDate.getDate() + 7);
+
   return (
     <div className={styles.mainWrapper}>
         <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
@@ -310,7 +313,7 @@ export default function Pricing(props) {
                             onChange={(date) => {handleTravelDate(date)}}
                             className={styles.dpINPbox}
                             dateFormat="dd-MM-yyyy"
-                            minDate={new Date()}
+                            minDate={minDate}
                             placeholderText='Travel Date'
                         />
                         <IconList Icon="DateCal" />

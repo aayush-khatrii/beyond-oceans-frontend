@@ -13,17 +13,27 @@ import ContectComp from './components/ContectComp/ContectComp'
 import Itinerary from './components/Itinerary/Itinerary'
 import Policy from './components/Policy/Policy'
 import PriceBreak from './components/PriceBreak/PriceBreak'
+import PayButton from './components/PayButton/PayButton'
+import AsideInfo from './components/AsideInfo/AsideInfo'
 
 export default function page() {
 
+
+    if(true){
+        notFound()
+    }
+
+    const router = useRouter()
     const userData = useAppSelector((state) => state.user.userData)
+    const [isAuth, setIsAuth] = useState()
+
 
     const [packageCartData, setPackageCartData] = useState()
     const [packageData, setPackageData] = useState()
     const [hotelData, setHotelData] = useState()
 
-    const [isLogedIn, setIsLogedIn] = useState(userData.auth)
     const [isLoginDone, setIsLoginDone] = useState(false)
+    const [totalAmount, setTotalAmount] = useState(0)
     
     async function getCheckoutData(){
         try {
@@ -37,7 +47,6 @@ export default function page() {
 
             const packageOption = packageData.data.data.Package_Options.filter(obj => obj.Option_Id === sessionCheckout.Package_Option_Id)[0]
             const hotelIds = packageOption.Option_Stay.map(obj => obj.Hotel_Id)
-
             const hotelsData = await getHotelsData({hotelIds})
             setHotelData(hotelsData.data.data)
 
@@ -47,7 +56,7 @@ export default function page() {
     }
 
     function handleLogedIn(){
-        setIsLogedIn(true)
+        setIsAuth(true)
         popupTimer()
     }
 
@@ -61,12 +70,15 @@ export default function page() {
     useEffect(() => {
         getCheckoutData()
     }, [])
-    
 
-    const router = useRouter()
-    if(true){
-        notFound()
+    useEffect(() => {
+        setIsAuth(userData.auth)
+    }, [userData])
+
+    function handleTatalAmount(val){
+        setTotalAmount(val)
     }
+    
     
     return (
         <div className={styles.mainWrapper}>
@@ -96,14 +108,16 @@ export default function page() {
             <div className={styles.subWrapper}>
                 <div className={styles.mainContent}>
                     {isLoginDone && <LoginDone />}
-                    {!isLogedIn && <Login handleClose={handleLogedIn}/>}
+                    {!isAuth && <Login handleClose={handleLogedIn}/>}
                     <OrderSum sessionData={packageCartData} packageData={packageData} hotelData={hotelData}/>
                     <ContectComp />
                     <Itinerary scheduleData={packageData?.DW_Itinerary} packageId={packageData?.Package_Id}/>
                     <Policy />
                 </div>
                 <aside className={styles.asideSec}>
-                    <PriceBreak sessionData={packageCartData} packageData={packageData}/>
+                    <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount}/>
+                    <PayButton totalAmount={totalAmount}/>
+                    <AsideInfo />
                 </aside>
             </div>
         </div>

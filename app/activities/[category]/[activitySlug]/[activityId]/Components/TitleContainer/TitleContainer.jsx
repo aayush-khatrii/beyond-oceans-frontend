@@ -29,13 +29,14 @@ export default function TitleContainer({data}) {
             
             const hours = Math.floor(minutes / 60);
             const remainingMinutes = minutes % 60;
-            if(remainingMinutes === 60){
+            if(remainingMinutes === 0){
                 return `${hours} Hour${hours>1 ? "s" : ""}`;
             }
             return `${hours} Hour${hours>1 ? "s" : ""} & ${remainingMinutes.toString()} Minutes`;
         } else {
             return `${minutes} Minutes`;
         }
+
       }
 
     function intPrice(price){

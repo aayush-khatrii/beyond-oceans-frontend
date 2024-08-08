@@ -10,14 +10,28 @@ import Ferry from "./AppData/components/sections/Ferry/Ferry";
 import WhyChoose from "./AppData/components/sections/WhyChoose/WhyChoose";
 import Testimonial from "./AppData/components/sections/Testimonial/Testimonial";
 import Certified from "./AppData/components/sections/Certified/Certified";
+import { getFeaturedPackages } from "./AppData/http/packages";
 
-export default function Home() {
+async function fetchFeaturedPackages(featureCategory){
+    try {
+        const {data} = await getFeaturedPackages({category: featureCategory})
+        return data.data
+    } catch (error) {
+        return null
+    }
+}
+
+export default async function Home() {
+
+    const featuredPackages = await fetchFeaturedPackages("Featured")
+    
+
   return (
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.homeWrapper}>
                 <Hero />
-                <BestPackage />
+                <BestPackage featuredPackages={featuredPackages}/>
                 <Category />
                 <Islands />
                 <Activities />

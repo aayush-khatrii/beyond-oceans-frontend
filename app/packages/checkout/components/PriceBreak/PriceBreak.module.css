@@ -20,9 +20,13 @@
     padding: 20px 28px;
 }
 
-.packagePrice, .traveler{
+.packagePrice, .traveler, .discount, .subTotal, .taxsComp, .taxTitleComp, .utGstBrackDown, .cgstBrackDown, .totalAmt{
     display: flex;
     justify-content: space-between;
+}
+
+.packagePrice{
+    margin-bottom: 20px;
 }
 
 .ppriceLeft, .ppriceRight{
@@ -55,11 +59,124 @@
 }
 
 .traveler{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .travelerLable, .travelerValue{
     font-size: 18px;
     font-weight: 600;
     color: #1F1F1F;
+}
+
+.discount{
+    margin-bottom: 20px;
+}
+
+.contro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 9px;
+    margin-top: 27px;
+    background-color: #F4F4F4;
+    border: 1px solid #E9E9E9;
+    border-radius: 5px;
+    height: 54px;
+    margin-bottom: 27px;
+}
+
+.controTitle{
+    display: flex;
+    align-items: flex-end;
+}
+
+.controTitle svg{
+    margin-bottom: 2px;
+}
+
+.controTitleText{
+    color: #1E2C70;
+    font-weight: 600;
+    font-size: 14.7px;
+    width: 120px;
+    margin-left: 10px;
+}
+
+.controTitletc{
+    color: #696969;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.controPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.controValue{
+    color: #1E2C70;
+    font-weight: 600;
+    font-size: 14.7px;
+}
+
+.controIDW{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #BB2124;
+}
+
+.sepretro{
+    width: 100%;
+    height: 1px;
+    background-color: #E9E9E9;
+}
+
+.subTotal{
+    margin-top: 19px;
+    margin-bottom: 18px;
+}
+
+.totlaLable, .totalValue{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.taxsComp{
+    margin-top: 18px;
+    margin-bottom: 7px;
+    flex-direction: column;
+}
+
+.taxLable, .taxValue{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.utGstLable, .utGstValue, .cgstLable, .cgstValue{
+    font-size: 15px;
+    color: #696969;
+}
+
+.utGstLable, .utGstValue{
+    margin-top: 19px;
+}
+
+.cgstLable, .cgstValue{
+    margin-top: 10px;
+}
+
+.totalAmt{
+    height: 71px;
+    align-items: center;
+}
+
+.totalAmtLable, .totalAmtValue{
+    font-size: 21.5px;
+    box-sizing: border-box;
+    padding: 0 28px;
+    font-weight: 600;
 }

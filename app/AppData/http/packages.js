@@ -19,5 +19,6 @@ export const getAllPackages = () => api.post('/service/package/get-all');
 export const getFilterPackages = (data) => api.get(`/service/package/get-filter/${data.category}`);
 export const getSinglePackage = (data) => api.post('/service/package/get-single', data);
 export const getHotelsData = (data) => api.post('/service/package/get-hotels', data);
+export const getFeaturedPackages = (data) => api.post('/service/package/get-featured', data);
 
 

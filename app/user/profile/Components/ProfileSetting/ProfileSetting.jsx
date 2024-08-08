@@ -84,7 +84,6 @@ export default function ProfileSetting({title, desc}) {
 
         function notEmptyObj(obj){
 
-
             if (!obj) return false;
             for (let key in obj) {
                 if (obj[key] !== '' && obj[key] !== null && obj[key] !== undefined) return true;
