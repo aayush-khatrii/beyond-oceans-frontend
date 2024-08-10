@@ -25,7 +25,7 @@ export default function Hero() {
                 fill={true}
                 sizes="100%"
                 priority={true}
-                alt="Picture of the author"
+                alt="andaman package"
                 style={{zIndex: "-1",objectFit:"cover"}}
             />
             <div className={styles.imageOverlay}></div>

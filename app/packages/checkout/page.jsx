@@ -18,14 +18,10 @@ import AsideInfo from './components/AsideInfo/AsideInfo'
 
 export default function page() {
 
-
-    if(true){
-        notFound()
-    }
-
     const router = useRouter()
     const userData = useAppSelector((state) => state.user.userData)
     const [isAuth, setIsAuth] = useState()
+
 
 
     const [packageCartData, setPackageCartData] = useState()
@@ -34,7 +30,29 @@ export default function page() {
 
     const [isLoginDone, setIsLoginDone] = useState(false)
     const [totalAmount, setTotalAmount] = useState(0)
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phone, setPhone] = useState("")
+    const [city, setCity] = useState("")
+    const [state, setState] = useState("")
+    const [address, setAddress] = useState("")
+    const [textArea, setTextArea] = useState("")
     
+    const [errName, setErrName] = useState(false)
+    const [errEmail, setErrEmail] = useState(false)
+    const [errPhone, setErrPhone] = useState(false)
+    const [errCity, setErrCity] = useState(false)
+    const [errState, setErrState] = useState(false)
+    const [errAddress, setErrAddress] = useState(false)
+    const [errTextArea, setErrTextArea] = useState(false)
+    const [errAuth, setErrAuth] = useState(false)
+    
+    const errorContact = {errName, errEmail, errPhone, errCity, errState, errAddress, errTextArea, errAuth}
+    
+    const [discountCode, setDiscountCode] = useState("")
+    const [contributionAmt, setContributionAmt] = useState()
+
     async function getCheckoutData(){
         try {
             const sessionData = await getPackageCheckout()
@@ -52,6 +70,7 @@ export default function page() {
 
         } catch (error) {
             console.log(error)
+            router.push("/")
         }
     }
 
@@ -78,7 +97,66 @@ export default function page() {
     function handleTatalAmount(val){
         setTotalAmount(val)
     }
-    
+
+    function handleDiscount(value){
+        setDiscountCode(value)
+    }
+
+    function handleContribution(value){
+        setContributionAmt(value)
+    }
+
+    function handleContectData(type, value){
+        if(type === "name"){
+            setName(value)
+        }
+        if(type === "email"){
+            setEmail(value)
+        }
+        if(type === "phone"){
+            setPhone(value)
+        }
+        if(type === "city"){
+            setCity(value)
+        }
+        if(type === "state"){
+            setState(value)
+        }
+        if(type === "address"){
+            setAddress(value)
+        }
+        if(type === "textarea"){
+            setTextArea(value)
+        }
+    }
+
+    function handleDataError(type, value){
+        if(type === "name"){
+            setErrName(value)
+        }
+        if(type === "email"){
+            setErrEmail(value)
+        }
+        if(type === "phone"){
+            setErrPhone(value)
+        }
+        if(type === "city"){
+            setErrCity(value)
+        }
+        if(type === "state"){
+            setErrState(value)
+        }
+        if(type === "address"){
+            setErrAddress(value)
+        }
+        if(type === "textarea"){
+            setErrTextArea(value)
+        }
+        if(type === "auth"){
+            setErrAuth(value)
+        }
+    }
+    const contectDeatils = {name, email, phone, city, state, address, textArea}
     
     return (
         <div className={styles.mainWrapper}>
@@ -108,15 +186,19 @@ export default function page() {
             <div className={styles.subWrapper}>
                 <div className={styles.mainContent}>
                     {isLoginDone && <LoginDone />}
-                    {!isAuth && <Login handleClose={handleLogedIn}/>}
+                    {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
                     <OrderSum sessionData={packageCartData} packageData={packageData} hotelData={hotelData}/>
-                    <ContectComp />
+                    <ContectComp 
+                        contectData={handleContectData}
+                        contectDataError={handleDataError}
+                        errorDeatil={errorContact}
+                    />
                     <Itinerary scheduleData={packageData?.DW_Itinerary} packageId={packageData?.Package_Id}/>
                     <Policy />
                 </div>
                 <aside className={styles.asideSec}>
-                    <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount}/>
-                    <PayButton totalAmount={totalAmount}/>
+                    <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                    <PayButton totalAmount={totalAmount} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
                     <AsideInfo />
                 </aside>
             </div>

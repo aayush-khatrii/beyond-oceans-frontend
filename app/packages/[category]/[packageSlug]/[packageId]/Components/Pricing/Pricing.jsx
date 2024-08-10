@@ -408,7 +408,8 @@ export default function Pricing(props) {
                         ))
                     }
                 </div>
-                <button className={styles.bookNowBtn} onClick={() => {handleInq()}}>Reserve Now</button>
+                <button className={styles.bookNowBtn} onClick={() => {handleBooknowBtn()}}>Reserve Now</button>
+                {/* <button className={styles.bookNowBtn} onClick={() => {handleInq()}}>Reserve Now</button> */}
                 <div className={styles.inquiryBtnWrp}>
                     <button className={styles.inquiryBtn} onClick={() => {handleInq()}}>Inquiry Now <IconList Icon="RightArrow"/></button>
                 </div>
