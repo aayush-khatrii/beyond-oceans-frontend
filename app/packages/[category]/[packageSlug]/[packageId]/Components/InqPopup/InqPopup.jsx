@@ -67,6 +67,16 @@ export default function InqPopup({packageId, packageOptionId, onPopupClose}) {
         }
     }
 
+    function handlePhone(e){
+        const value = e.target.value
+        if(phoneRegex.test(value)){
+            setPhone(value)
+        }
+        if(value.length > 6){
+            setErrPhone(false)
+        }
+    }
+
     function hendleSelectData(data){
         setTripDuration(data)
         setIsSelectEmpty(!data)

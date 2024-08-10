@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './PriceBreak.module.css'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 
-export default function PriceBreak({packageData, sessionData, tatalAmountFunc}) {
+export default function PriceBreak({packageData, sessionData, tatalAmountFunc, onDiscount, onContribution}) {
 
     const packageCheckout = sessionData && sessionData.Package_Checkout
     const [discount, setDiscount] = useState(false)
+    const [discountCode, setDiscountCode] = useState(false)
     const [contro, setContro] = useState(true)
     const [controValue, setControValue] = useState(10)
     const [UTGSTValue, setUTGSTValue] = useState(2.5)
@@ -34,7 +35,24 @@ export default function PriceBreak({packageData, sessionData, tatalAmountFunc}) 
 
     const totalTax = UTGST + CGST
     const totalAmount = subTotalValue + totalTax
-    tatalAmountFunc(totalAmount)
+    useEffect(()=>{
+        tatalAmountFunc(totalAmount)
+    }, [totalAmount])
+
+    useEffect(()=>{
+        if(discount){
+            onDiscount(discountCode)
+        }
+    }, [discount])
+
+    useEffect(()=>{
+        if(contro){
+            onContribution(controValue)
+        }
+        if(!contro){
+            onContribution(0)
+        }
+    }, [contro])
 
   return (
     <div className={styles.mainWrapper}>

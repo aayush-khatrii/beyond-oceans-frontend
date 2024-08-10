@@ -17,22 +17,22 @@ export default function BestPackage({featuredPackages}){
             tId: uuid,
             amt: 1000
         }
-        let formurl
-        try {
-            const {data} = await initiatPayment({userId:paymentDatra.userId, transectionId:paymentDatra.tId, amt:paymentDatra.amt})
-            formurl = data.data.instrumentResponse.redirectInfo.url
-        } catch (error) {
-            console.log(error.response.data)
-            return
-        }
+        // let formurl
+        // try {
+        //     const {data} = await initiatPayment({userId:paymentDatra.userId, transectionId:paymentDatra.tId, amt:paymentDatra.amt})
+        //     formurl = data.data.instrumentResponse.redirectInfo.url
+        // } catch (error) {
+        //     console.log(error.response.data)
+        //     return
+        // }
         
 
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = formurl;
-        form.style.display = 'none'; // Hide the form
-        document.body.appendChild(form);
-        form.submit();
+        // const form = document.createElement('form');
+        // form.method = 'POST';
+        // form.action = formurl;
+        // form.style.display = 'none'; // Hide the form
+        // document.body.appendChild(form);
+        // form.submit();
     }
 
     const swiperRef = useRef(null);

@@ -1,0 +1,9 @@
+.mainWrapper{
+    margin-top: 87px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent{
+    width: 1170px;
+}

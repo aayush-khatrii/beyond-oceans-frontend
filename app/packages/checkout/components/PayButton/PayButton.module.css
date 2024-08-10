@@ -1,15 +1,27 @@
 .mainWrapper{
-    background-color: #fff;
-    border: 1px solid #E9E9E9;
-    border-radius: 15px;
     margin-top: 39px;
     overflow: hidden;
 }
 
-.mainContent{
+.partialComponent{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
+    padding: 27px 28px;
+}
+
+.pgSelector{
+    margin-top: 40px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     box-sizing: border-box;
     padding: 27px 28px;
 }
@@ -21,13 +33,13 @@
 }
 
 
-.radios input[type="radio"]{
+.radios input[type="radio"], .pgRadios input[type="radio"]{
     display: none;
 }
 
-.radios{
+.radios, .pgRadios{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: fit-content;
     height: fit-content;
@@ -36,6 +48,36 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.pgRadios .radiochild{
+    align-items: flex-start;
+}
+
+.pgRadios .radioTitleCont{
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.phonePeIcon svg{
+    width: 124px;
+}
+
+.pgRadios .radioContent .country{
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+
+.pgRadios .radioContent .radioText{
+    margin-bottom: 7px;
+}
+
+.pgRadios .pgNote{
+    width: 300px;
+    font-size: 12.4px;
+    font-weight: 300;
+    color: #989898;
 }
 
 .radiochild{
@@ -73,12 +115,16 @@
     color: #1E2C70;
 }
 
-.radios input:checked ~ .radiochild .radioStyle .radioSelected{
+.radios input:checked ~ .radiochild .radioStyle .radioSelected, .pgRadios input:checked ~ .radiochild .radioStyle .radioSelected{
     background-color: #1E2C70;
 }
 
-.radios input:checked ~ .radiochild .radioStyle{
+.radios input:checked ~ .radiochild .radioStyle, .pgRadios input:checked ~ .radiochild .radioStyle{
     border-color: #1E2C70;
+}
+
+.pgRadios input:disabled ~ .radiochild .radioContent .radioTitleCont , .pgNote{
+    color: #BABABA;
 }
 
 .acceptTerms{
