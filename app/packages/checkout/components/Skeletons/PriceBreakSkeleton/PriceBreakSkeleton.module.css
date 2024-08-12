@@ -1,3 +1,17 @@
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+.SkeletonBox, .packageOption{
+    background: #ffffff;
+    background: linear-gradient(110deg, #ecebeb 8%, #f5f5f5 18%, #ecebeb 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
 .mainWrapper{
     background-color: #fff;
     border: 1px solid #E9E9E9;
@@ -39,14 +53,23 @@
 }
 
 .ppriceLable, .ppriceValue{
+    display: flex;
     font-size: 18px;
     font-weight: 600;
     color: #1F1F1F; 
 }
 
+.ppriceValue .SkeletonBox{
+    width: 70px;
+    height: 24px;
+    margin-left: 5px;
+}
+
 .packageOption{
     margin-top: 3px;
     font-size: 15px;
+    width: 180px;
+    height: 20px;
 }
 
 .packageOption, .ppriceNote{
@@ -66,6 +89,13 @@
     font-size: 18px;
     font-weight: 600;
     color: #1F1F1F;
+    display: flex;
+}
+
+.travelerValue .SkeletonBox{
+    width: 20px;
+    height: 23px;
+    margin-left: 5px;
 }
 
 .discount{
@@ -142,6 +172,13 @@
 .totlaLable, .totalValue{
     font-size: 21px;
     font-weight: 600;
+    display: flex
+}
+
+.totalValue .SkeletonBox{
+    width: 90px;
+    height: 28px;
+    margin-left: 8px;
 }
 
 .taxsComp{
@@ -153,12 +190,26 @@
 .taxLable, .taxValue{
     font-size: 18px;
     font-weight: 600;
+    display: flex;
+}
+
+.taxValue .SkeletonBox{
+    width: 77px;
+    height: 24px;
+    margin-left: 6px;
 }
 
 
 .utGstLable, .utGstValue, .cgstLable, .cgstValue{
     font-size: 15px;
     color: #696969;
+    display: flex;
+}
+
+.utGstValue .SkeletonBox, .cgstValue .SkeletonBox{
+    width: 60px;
+    height: 20px;
+    margin-left: 6px;
 }
 
 .utGstLable, .utGstValue{
@@ -170,6 +221,7 @@
 }
 
 .totalAmt{
+    display: flex;
     height: 71px;
     align-items: center;
     box-sizing: border-box;
@@ -177,10 +229,17 @@
 }
 
 .totalAmtLable{
-    min-width: 180px;
+    min-width: 185px;
 }
 
 .totalAmtLable, .totalAmtValue{
     font-size: 21.5px;
     font-weight: 600;
+    display: flex;
+}
+
+.totalAmtValue .SkeletonBox{
+    width: 120px;
+    height: 28px;
+    margin-left: 7px;
 }

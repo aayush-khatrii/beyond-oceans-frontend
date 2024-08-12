@@ -57,8 +57,8 @@ export default function Login({handleClose, isAuthError}) {
     }
     
   return (
-    <div className={styles.mainWrapper} style={{borderColor: isAuthError ? "#1E2C70": ""}}>
-        <div className={styles.title} style={{borderBottomColor: isAuthError ? "#1E2C70": ""}}>Login or Create an Account</div>
+    <div className={styles.mainWrapper} style={{boxShadow: isAuthError ? "0px 1px 18px 0px #00000017": ""}}>
+        <div className={styles.title}>Login or Create an Account</div>
         <div className={styles.mainContent}>
             {signInOptions[inpType] ? signInOptions[inpType] : null}
             {InputComponent[inpType] ? InputComponent[inpType] : null}

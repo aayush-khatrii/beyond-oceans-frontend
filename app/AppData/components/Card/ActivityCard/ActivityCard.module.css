@@ -10,7 +10,6 @@
     border-radius: 15px;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    cursor: pointer;
     color: #000;
 }
 
@@ -277,7 +276,7 @@
 
 .cross{
     height: 1px;
-    width: 90%;
+    width: 101%;
     background-color: #989898;
     position: absolute;
     top: 12px;
