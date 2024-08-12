@@ -15,6 +15,8 @@ import Policy from './components/Policy/Policy'
 import PriceBreak from './components/PriceBreak/PriceBreak'
 import PayButton from './components/PayButton/PayButton'
 import AsideInfo from './components/AsideInfo/AsideInfo'
+import OrderSumSkeleton from './components/Skeletons/OrderSumSkeleton/OrderSumSkeleton'
+import PriceBreakSkeleton from './components/Skeletons/PriceBreakSkeleton/PriceBreakSkeleton'
 
 export default function page() {
 
@@ -69,8 +71,12 @@ export default function page() {
             setHotelData(hotelsData.data.data)
 
         } catch (error) {
-            console.log(error)
-            router.push("/")
+            if(error.response){
+                if(error.response.data.message === "Package is not in cart!"){
+                    router.push("/packages")
+                }
+            }
+            router.push("/packages")
         }
     }
 
@@ -167,8 +173,8 @@ export default function page() {
                         <span>Search Tour</span>
                     </div>
                     <div className={styles.rightArw}><IconList Icon="RightArrowV2" /></div>
-                    <div className={styles.selectionStep}>
-                        <div className={styles.stepNum}>2</div>
+                    <div className={styles.selectionStep} onClick={() => router.back()}>
+                        <div className={styles.stepNum} >2</div>
                         <span>Package Selection</span>
                     </div>
                     <div className={styles.rightArw}><IconList Icon="RightArrowV2" /></div>
@@ -187,7 +193,11 @@ export default function page() {
                 <div className={styles.mainContent}>
                     {isLoginDone && <LoginDone />}
                     {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
-                    <OrderSum sessionData={packageCartData} packageData={packageData} hotelData={hotelData}/>
+                    {
+                        (packageCartData && packageData && hotelData) ?
+                        <OrderSum sessionData={packageCartData} packageData={packageData} hotelData={hotelData}/> 
+                        : <OrderSumSkeleton />
+                    }
                     <ContectComp 
                         contectData={handleContectData}
                         contectDataError={handleDataError}
@@ -197,7 +207,11 @@ export default function page() {
                     <Policy />
                 </div>
                 <aside className={styles.asideSec}>
-                    <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                    {
+                        (packageCartData && packageData) ?
+                        <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                        : <PriceBreakSkeleton />
+                    }
                     <PayButton totalAmount={totalAmount} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
                     <AsideInfo />
                 </aside>

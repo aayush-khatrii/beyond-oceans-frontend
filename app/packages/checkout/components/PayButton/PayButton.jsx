@@ -238,18 +238,18 @@ export default function PayButton(props) {
         <div className={styles.partialComponent}>
             <div className={styles.partialSelector}>
                 <div className={styles.payPartial}>
-                <label className={styles.radios}>
-                    <input type="radio" name="PAYRadio" value={1} defaultChecked onChange={handlePaymentType}/>
+                    <label className={styles.radios}>
+                        <input type="radio" name="PAYRadio" value={1} defaultChecked onChange={handlePaymentType}/>
                         <div className={styles.radiochild}>
                             <div className={styles.radioStyle}><span className={styles.radioSelected}></span></div>
-                            <span className={styles.radioText}>Pay Total Amount ₹{intPrice(props.totalAmount)}</span>
+                            <div className={styles.radioText}>Pay Total Amount <div className={styles.mrpGap}></div>₹{props.totalAmount ? intPrice(props.totalAmount) : <div className={styles.SkeletonBox}></div>}</div>
                         </div>
                     </label>
                     <label className={styles.radios}>
                         <input type="radio" name="PAYRadio" value={2} onChange={handlePaymentType}/>
                         <div className={styles.radiochild}>
                             <div className={styles.radioStyle}><span className={styles.radioSelected}></span></div>
-                            <span className={styles.radioText}>Pay Partial Amount ₹{intPrice(partialAmount)}</span>
+                            <div className={styles.radioText}>Pay Partial Amount <div className={styles.mrpGap}></div>₹{partialAmount ? intPrice(partialAmount) : <div className={styles.SkeletonBox}></div>}</div>
                         </div>
                     </label>
                 </div>
@@ -302,7 +302,11 @@ export default function PayButton(props) {
                     </p>
                 </div>
             </div>
-            <button className={styles.payNowBTN} onClick={() => {handlePayment()}}>Proceed To Payment</button>
+            {
+                (props.totalAmount && props.contectData ) ?
+                <button className={styles.payNowBTN} onClick={() => {handlePayment()}}>Proceed To Payment</button>
+                : <div className={styles.payNowBTNSkeleton}>Proceed To Payment</div>
+            }
         </div>
     </div>
   )

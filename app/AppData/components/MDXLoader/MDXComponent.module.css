@@ -5,6 +5,14 @@
     letter-spacing: .06px;
 }
 
+.mainMDX ol{
+    color: #696969;
+    font-size: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .mainMDX ul{
     list-style: disc !important;
     color: #696969;

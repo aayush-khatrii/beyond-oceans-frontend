@@ -46,7 +46,7 @@ export default function PackageLayout({data, params}) {
                         <PackageInc featureList={activityData.Featurs} />
                         <ActivityHighlights activityId={activityData.Activity_Id}/>
                         <Incl excl={activityData.Exclusions} incl={activityData.Inclusions} activityId={activityData.Activity_Id}/>
-                        <Faq faqList={activityData.Activity_FAQ}/>
+                        <Faq activityId={activityData.Activity_Id} faqList={activityData.Activity_FAQ}/>
                         <Policy />
                     </div>
                     <aside className={styles.aside}>
