@@ -17,6 +17,7 @@ export default function PayButton(props) {
 
     const discountCode = props.discountCode
     const contributionAmt = props.contributionAmt
+    const subItem = props.subItem
 
     const nameRegexM = /^(?=.*\S)[a-zA-Z\s]{3,16}$/;
     const phoneRegexM = /^(?=(?:[^0-9]*\d[^0-9]*){8,15}$)[\d+-]{8,15}$/;
@@ -195,10 +196,21 @@ export default function PayButton(props) {
                 }, 
                 paymentType: paymentType,
                 PAYGW: PAYGW,
+                ...(subItem && {
+                    Sub_Items: [ 
+                        {
+                            Sub_Item_Type: subItem.itemType,
+                            Sub_Item_Id: subItem.itemId,
+                            Sub_Item_Title: subItem.itemTitel,
+                            Sub_Item_QTY: subItem.itemQty,
+                        }
+                    ]
+                }),
                 ...(discountCode && { discount: {Coupon_Code: discountCode} }),
                 ...(contributionAmt && { contributionAmt: contributionAmt }),
                 isTermsAgree: isAgree
             }
+
             let formDataUrl
             try {
                 const {data} = await initiatPackagePayment(paymentParams)
