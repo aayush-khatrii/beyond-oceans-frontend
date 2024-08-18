@@ -13,4 +13,6 @@ const api = axios.create({
 
 
 // List of all the endpoints
-export const varifyBookingPayment = () => api.post('/payment/varify-booking');
+export const getBookingData = (data) => api.post('/booking/get-booking', data);
+export const getMyBookingData = () => api.post('/booking/user/get-bookings');
+export const getBookingInvocie = (data) => api.post('/booking/user/get-booking/invoice', data);

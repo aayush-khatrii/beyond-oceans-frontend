@@ -4,13 +4,15 @@ import { useState } from 'react'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import { Toaster, toast } from 'sonner'
 import {toast as rhtToast, Toaster as RhtToast } from 'react-hot-toast';
-import { initiatPackagePayment } from '@/app/AppData/http/payment'
+import { initiatPackagePayment } from '@/app/AppData/http/checkout'
 import { AxiosError } from 'axios';
+import RedirectPopup from '../RedirectPopup/RedirectPopup'
 
 export default function PayButton(props) {
 
     const [isAgree, setIsAgree] = useState(false)
     const [paymentType, setPaymentType] = useState(1)
+    const [isRedirect, setIsRedirect] = useState(false)
 
     const [PAYGW, setPaymentGW] = useState(1)
     const acceptRazorpay = false
@@ -183,7 +185,7 @@ export default function PayButton(props) {
         }
 
         if(allConditionChecker){
-
+            setIsRedirect(true)
             const paymentParams = {
                 contactData: {
                     Name: contactData.name,
@@ -245,6 +247,7 @@ export default function PayButton(props) {
 
   return (
     <div className={styles.mainWrapper}>
+        {isRedirect && <RedirectPopup />}
         <RhtToast toastOptions={{ style: { marginBottom: '20px', marginRight: '20px', fontFamily: "DM Sans", fontSize: "18px", fontWeight: "500" }}} position="bottom-right" />
         <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
         <div className={styles.partialComponent}>

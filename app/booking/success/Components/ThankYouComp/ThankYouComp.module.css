@@ -1,0 +1,261 @@
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+.bookingIdValueSkl, .invoiceEmailSkl{
+    background: #ffffff;
+    background: linear-gradient(110deg, #ecebeb 8%, #f5f5f5 18%, #ecebeb 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
+.invoiceEmailSkl{
+    background: #ffffff;
+    background: linear-gradient(110deg, #288165 8%, #4da88b 18%, #288165 33%);
+    border-radius: 15px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
+.mainWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.bookingCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    box-shadow: 0px 4px 16px 0px #00000005;
+    border-radius: 15px;
+    width: 816px;
+    box-sizing: border-box;
+    padding: 45px;
+    z-index: 3;
+}
+
+.leftCrackAni{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+.rightCrackAni{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.CheckMarkICO{
+    position: relative;
+    margin-bottom: -124px;
+    top: -124px;
+}
+
+.CheckMarkICO svg{
+    width: 150px;
+}
+
+.cardMainTitle{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.cardMainDesc{
+    font-size: 18px;
+    color: #4C4C4C;
+}
+
+.bookingId{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-top: 32px;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: text;
+}
+
+.bookingIdValueSkl{
+    width: 192px;
+    height: 24px;
+}
+
+.bookingIdCopy{
+    cursor: pointer;
+}
+
+.bookingIdCopy svg{
+    margin-bottom: -5px;
+    height: 25px;
+}
+
+.orderSum{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.orderSumLeftTitle, .orderSumRightTitle{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.orderSumLeftContent, .orderSumRightContent{
+    border: 1px solid #E9E9E9;
+    border-radius: 12px;
+    background-color: #FAFBFC;
+    margin-top: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 27px;
+}
+
+.orderSumLeft{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+}
+
+.orderSumRight{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 296px;
+}
+
+.orderSumRightContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.reviewIcon{
+    width: 196px;
+    height: 120px;
+}
+
+.gifWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.reviewTitle{
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: 15.5px;
+}
+
+.reviewDesc{
+    margin-top: 4px;
+    text-align: center;
+    font-size: 15.5px;
+    color: #696969;
+}
+
+.writeReviewBTN{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+    width: 133px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #989EBD;
+    background-color: #1E2C70;
+    border-radius: 8px;
+    margin-top: 9px;
+    font-weight: 200;
+}
+
+.writeReviewBTN:hover{
+    background-color: #38B089;
+    border-color: #A3DBC9;
+}
+
+.thankYouInvoice{
+    display: flex;
+    justify-content: center;
+    margin-top: -221px;
+    z-index: 2;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(56,176,137,1) 0%, rgba(51,160,125,1) 100%);
+    height: 615px;
+}
+
+.invoiceNotiSubWrapper{
+    width: 1170px;
+    margin-top: 267px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.invoiceInfoTitle{
+    color: #fff;
+    font-size: 45.5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.invoiceEmailSkl{
+    width: 570px;
+    height: 59px;
+}
+
+.invoiceInfoTitle2{
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.invoiceContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-top: 28px;
+}
+
+.invoiceContactTitle{
+    font-size: 26.5px;
+    font-weight: 300;
+}
+
+.contactBtn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: 28px;
+    height: 49px;
+    width: 172px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.contactBtn:hover{
+    background-color: #fff;
+    color: #1E2C70;
+}

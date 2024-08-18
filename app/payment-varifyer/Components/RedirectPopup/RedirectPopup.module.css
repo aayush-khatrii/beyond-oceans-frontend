@@ -1,0 +1,88 @@
+.popupSubWrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 4px 16px 0px #00000013;
+    border-radius: 15px;
+    width: 616px;
+    height: 330px;
+    box-sizing: border-box;
+    padding: 19px 0;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.popupSubWrapper::after, .popupSubWrapper::before{
+    --angle: 0deg;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle),  #1E2C70, #1E2C70, #1E2C70, #00ffae, #1E2C70, #1E2C70, #1E2C70);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 18px;
+    animation: 3s spin linear infinite;
+}
+
+.popupSubWrapper::before{
+    filter: blur(1.5rem);
+    opacity: 0.2;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.popupSubTop{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 470px;
+}
+
+.redirectAnimation{
+    height: 40px;
+    width: 110px;
+    margin-bottom: 25px;
+}
+
+.gifWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.popupTitle{
+    font-size: 26.5px;
+    font-weight: 600;
+    color: #1E2C70;
+    margin-bottom: 10px;
+}
+
+.popupDesc{
+    text-align: center;
+    font-size: 15px;
+    color: #696969;
+}
+
+.popupNote{
+    font-size: 15px;
+    color: #BABABA;
+}
