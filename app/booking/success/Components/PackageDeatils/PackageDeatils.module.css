@@ -1,0 +1,54 @@
+.packageTitle{
+    font-size: 15.5px;
+    font-weight: 600;
+    margin-bottom: 19px;
+}
+
+.deatilsLists{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.packageOption, .packageDuration, .tripDate, .traveler, .departurePlace, .paidAmt, .totalAmt, .paymentGW{
+    display: flex;
+    gap: 10px;
+    font-size: 15.2px;
+}
+
+.packageOption .lable{
+    min-width: 113px;
+}
+
+.packageOption .value, .packageDuration .value, .tripDate .value, .traveler .value, .departurePlace .value, .paidAmt .value, .totalAmt .value, .paymentGW .value{
+    font-weight: 300;
+    color: #696969;
+}
+
+.packageDuration .lable{
+    min-width: 63px;
+}
+
+.tripDate .lable{
+    min-width: 67px;
+}
+
+.traveler .lable{
+    min-width: 66px;
+}
+
+.departurePlace .lable{
+    min-width: 117px;
+}
+
+.paidAmt .lable{
+    min-width: 93px;
+}
+
+.totalAmt .lable{
+    min-width: 98px;
+}
+
+.paymentGW .lable{
+    min-width: 131px;
+}

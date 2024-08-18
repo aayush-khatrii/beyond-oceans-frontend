@@ -27,7 +27,7 @@ export default function OrderSum({sessionData, packageData, hotelData}) {
     function incressDate(date, inc){
         const newdate = new Date(date);
 
-        newdate.setDate(newdate.getDate() + inc);
+        newdate.setDate(newdate.getDate() + inc - 1);
 
         // Format the new date back to a string
         const newDateString = newdate.toISOString().split('T')[0]; // "2024-08-05"
