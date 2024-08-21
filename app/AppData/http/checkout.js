@@ -14,3 +14,4 @@ const api = axios.create({
 
 // List of all the endpoints
 export const initiatPackagePayment = (data) => api.post('/checkout/initate-package-payment', data);
+export const initiatActivityPayment = (data) => api.post('/checkout/initate-activity-payment', data);
