@@ -55,7 +55,7 @@ export default function ActivityDeatils({bookingData}) {
                 </div>
                 <div className={styles.packageDuration}>
                     <span className={styles.lable}>Activity Duration:</span>
-                    <span className={styles.value}>{convertMinutes(bookingData.Activity_Duration)}</span>
+                    <span className={styles.value}>{convertMinutes(bookingData.Item.Activity_Duration)}</span>
                 </div>
                 <div className={styles.tripDate}>
                     <span className={styles.lable}>Activity Date:</span>
