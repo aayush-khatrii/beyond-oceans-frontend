@@ -93,6 +93,7 @@ export default function ThankYouComp() {
                         {bookingData ? 
                             <>
                                 {bookingData.Booking_Type === "Package" ? <PackageDeatils bookingData={bookingData}/> : ""}
+                                {bookingData.Booking_Type === "Activity" ? <PackageDeatils bookingData={bookingData}/> : ""}
                             </> : <OrderSumSkeleton />
                         }
                     </div>
