@@ -5,15 +5,18 @@ import { useEffect, useState } from 'react'
 import { getMyBookingData } from '@/app/AppData/http/booking'
 import { Toaster, toast } from 'sonner'
 import { AxiosError } from 'axios';
+import NoBookings from './Components/NoBookings/NoBookings'
 
 export default function MyBookings({title, desc}) {
 
-    const [bookingsData, setBookingsData] = useState()
+    const [bookingsData, setBookingsData] = useState()  
 
     async function getMyBookings(){
         try {
             const {data} = await getMyBookingData()
-            setBookingsData(data.data)
+            const filterNull = data.data.filter(item => item !== null);
+            console.log(filterNull)
+            setBookingsData(filterNull)
         } catch (error) {
             if(error.response?.data){  
                 toast.error(error.response?.data.message)
@@ -49,13 +52,14 @@ export default function MyBookings({title, desc}) {
 
         <div className={styles.dataContainer}>
             {
-                bookingsData && (
+                bookingsData ? (
+                    bookingsData.length > 0 ?
                     bookingsData.map((item, index) => (
                         <div key={index}>
                             <BookingCard bookingData={item} />
                         </div>
-                    ))
-                )
+                    )) : <NoBookings />
+                ) : <NoBookings />
             }
         </div>
     </div>

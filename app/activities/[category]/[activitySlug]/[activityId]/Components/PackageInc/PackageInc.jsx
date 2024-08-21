@@ -10,10 +10,16 @@ export default function PackageInc({featureList}) {
         "Person": "Person",
         "Basic Training": "BasicTraining",
         "Scuba Diving": "ScubaDiving",
-        "Personal Guide": "PersonalGuide",
+        "Guide": "PersonalGuide",
         "Equipments": "Equipments",
         "Photoshoot": "Photoshoot",
         "Safety Briefing": "SafetyGuarantee",
+        "Safety Breiefing": "SafetyGuarantee",
+        "Safety": "SafetyGuarantee",
+        "Boat Ride": "CruiseRides",
+        "AC viewing cabin": "ACCabin",
+        "Refreshments": "Refreshments",
+        "Video": "Photoshoot",
         "All Includes": "AllIncludes"
     }
 

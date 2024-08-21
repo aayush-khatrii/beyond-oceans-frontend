@@ -32,12 +32,12 @@ export default function TitleContainer({data}) {
             if(remainingMinutes === 0){
                 return `${hours} Hour${hours>1 ? "s" : ""}`;
             }
-            return `${hours} Hour${hours>1 ? "s" : ""} & ${remainingMinutes.toString()} Minutes`;
+            return `${hours} Hour${hours>1 ? "s" : ""} & ${remainingMinutes.toString()} Minute${remainingMinutes.toString() > 1 ? "s" : ""}`;
         } else {
-            return `${minutes} Minutes`;
+            return `${minutes} Minute${minutes > 1 ? "s" : ""}`;
         }
 
-      }
+    }
 
     function intPrice(price){
         return Intl.NumberFormat('en-IN').format(price)

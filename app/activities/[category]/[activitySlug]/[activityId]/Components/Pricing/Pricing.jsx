@@ -5,7 +5,7 @@ import MDXComp from '@/app/AppData/components/MDXLoader/MDXComp'
 import { useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { storePackageCheckout } from '@/app/AppData/http/session'
+import { storeActivityCheckout } from '@/app/AppData/http/session'
 import { useRouter } from 'next/navigation'
 import { Toaster, toast } from 'sonner'
 
@@ -75,30 +75,27 @@ export default function Pricing(props) {
         if(!travelDate){
             setEmptyDate(true)
             toast.error("Travel Date is Required")
-            window.scrollTo({ top: 2400, left: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 2000, left: 0, behavior: 'smooth' });
             return
         }
 
-        const bookingPriceCalc = (adults + child) * filterOptions(selectedVer).Option_Price
+        const bookingPriceCalc = persons * filterOptions(selectedVer).Option_Price
 
-        const packageBookingParams = {
-            packageId: activityData.Activity_Id,
-            packageOptionId: selectedVer.toString(),
+        const activityBookingParams = {
+            activityId: activityData.Activity_Id,
+            activityOptionId: selectedVer.toString(),
             travelDate: travelDate,
             traveler: {
-                rooms: rooms,
-                adults: adults,
-                child: child,
-                infant: infant
+                persons: persons,
             },
-            packagePrice: filterOptions(selectedVer).Option_Price,
+            activityPrice: filterOptions(selectedVer).Option_Price,
             bookingPrice: bookingPriceCalc
         }
 
-        const {data} = await storePackageCheckout(packageBookingParams)
+        const {data} = await storeActivityCheckout(activityBookingParams)
 
         if(data.ststusCode === "200"){
-            router.push("/packages/checkout")
+            router.push("/activities/checkout")
         }
     }
 
@@ -181,7 +178,7 @@ export default function Pricing(props) {
                         ))
                     }
                 </div>
-                <button className={styles.bookNowBtn} onClick={() => {handleInq()}}>Reserve Now</button>
+                <button className={styles.bookNowBtn} onClick={() => {handleBooknowBtn()}}>Reserve Now</button>
                 <div className={styles.inquiryBtnWrp}>
                     <button className={styles.inquiryBtn} onClick={() => {handleInq()}}>Inquiry Now <IconList Icon="RightArrow"/></button>
                 </div>

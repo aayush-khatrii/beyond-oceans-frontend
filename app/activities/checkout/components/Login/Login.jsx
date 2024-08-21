@@ -11,7 +11,7 @@ import OTPPhone from './OTPPhone/OTPPhone';
 import OTPEmail from './OTPEmail/OTPEmail';
 import OTPIntEmail from './OTPIntEmail/OTPIntEmail';
 
-export default function Login({handleClose}) {
+export default function Login({handleClose, isAuthError}) {
     const [inpType, setInpType] = useState("PHN")
     const [phone, setPhone] = useState()
     const [email, setEmail] = useState()
@@ -57,7 +57,7 @@ export default function Login({handleClose}) {
     }
     
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} style={{boxShadow: isAuthError ? "0px 1px 18px 0px #00000017": ""}}>
         <div className={styles.title}>Login or Create an Account</div>
         <div className={styles.mainContent}>
             {signInOptions[inpType] ? signInOptions[inpType] : null}

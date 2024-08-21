@@ -16,6 +16,8 @@ const api = axios.create({
 
 // List of all the endpoints
 export const storePackageCheckout = (data) => api.post('/user/session/store-package', data);
-export const storeMakFerryCheckout = (data) => api.post('/user/session/store-mak-checkout', data);
+export const storeActivityCheckout = (data) => api.post('/user/session/store-activity', data);
 export const getPackageCheckout = () => api.post('/user/session/get-package-checkout');
+export const getActivityCheckout = () => api.post('/user/session/get-activity-checkout');
+export const storeMakFerryCheckout = (data) => api.post('/user/session/store-mak-checkout', data);
 export const testApi = (data) => api.post('/test/test', data);
