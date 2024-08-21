@@ -11,6 +11,7 @@ import PackageDeatils from '../PackageDeatils/PackageDeatils'
 import OrderSumSkeleton from '../OrderSumSkeleton/OrderSumSkeleton'
 import Image from 'next/image'
 import Link from 'next/link'
+import ActivityDeatils from '../ActivityDeatils/ActivityDeatils'
 
 
 export default function ThankYouComp() {
@@ -93,7 +94,7 @@ export default function ThankYouComp() {
                         {bookingData ? 
                             <>
                                 {bookingData.Booking_Type === "Package" ? <PackageDeatils bookingData={bookingData}/> : ""}
-                                {bookingData.Booking_Type === "Activity" ? <PackageDeatils bookingData={bookingData}/> : ""}
+                                {bookingData.Booking_Type === "Activity" ? <ActivityDeatils bookingData={bookingData}/> : ""}
                             </> : <OrderSumSkeleton />
                         }
                     </div>
