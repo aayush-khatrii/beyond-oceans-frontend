@@ -36,16 +36,15 @@
 }
 
 .packageOption .lable{
-    min-width: 113px;
+    min-width: 110px;
 }
 
-
 .packageDuration .lable{
-    min-width: 63px;
+    min-width: 122px;
 }
 
 .tripDate .lable{
-    min-width: 67px;
+    min-width: 95px;
 }
 
 .traveler .lable{
@@ -53,7 +52,7 @@
 }
 
 .departurePlace .lable{
-    min-width: 117px;
+    min-width: 100px;
 }
 
 .paidAmt .lable{
