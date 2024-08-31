@@ -232,7 +232,7 @@ export default function Navbar() {
                             <div className={styles.menuTooltip}></div>
                             <div className={styles.secMenuCont}>
                                 <ul className={styles.moreSecMenu}>
-                                    <li className={styles.menuContTitle}><span>About Us</span></li>
+                                    <Link href="/about-us"><li className={styles.menuContTitle}><span>About Us</span></li></Link>
                                     <li className={styles.menuContTitle}><span>Blogs</span></li>
                                     <li className={styles.menuContTitle}><span>Career</span></li>
                                     <Link href="/user/profile"><li className={styles.menuContTitle}><span>My Account</span></li></Link>

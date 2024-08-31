@@ -22,9 +22,9 @@ export default function FerryCardMAK({data, tripData}) {
     function parseTimeString(timeString) {
         const [hours, minutes, seconds] = timeString.split(':').map(Number);
         return new Date(0, 0, 0, hours, minutes, seconds);
-      }
+    }
       
-      function getTimeDifference(time1, time2) {
+    function getTimeDifference(time1, time2) {
         const time1Date = parseTimeString(time1);
         const time2Date = parseTimeString(time2);
       
@@ -34,7 +34,7 @@ export default function FerryCardMAK({data, tripData}) {
         const minutes = diffMinutes % 60;
       
         return `${hours}h ${minutes}m`;
-      }
+    }
 
     useEffect(() => {
         lottiFerryRef.current.setSpeed(.6)

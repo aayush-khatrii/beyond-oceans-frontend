@@ -1,0 +1,77 @@
+.mainWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stepWrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 96px;
+    background-color: #F2F2F2;
+}
+
+.stepsHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+}
+
+.searchStep, .selectionStep, .cnfStep, .tnxStep{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.searchStep span, .selectionStep span, .cnfStep span, .tnxStep span{
+    font-size: 18px;
+    color: #696969;
+}
+
+.stepNum{
+    background-color: #989898;
+    color: #fff;
+    width: 39px;
+    height: 39px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.rightArw svg{
+    margin-bottom: -3px;
+}
+
+.searchStep .stepNum, .selectionStep .stepNum, .cnfStep .stepNum{
+    background-color: #1E2C70;
+}
+
+.cnfStep span{
+    font-weight: 600;
+    color: #000;
+}
+
+.searchStep{
+    cursor: pointer;
+}
+
+.subWrapper{
+    margin-top: 47px;
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContent{
+    width: 715px;
+}
+
+.asideSec{
+    width: 415px;
+}
