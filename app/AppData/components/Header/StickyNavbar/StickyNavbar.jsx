@@ -174,16 +174,16 @@ export default function Navbar() {
                             <div className={styles.menuTooltip}></div>
                             <div className={styles.secMenuCont}>
                                 <ul className={styles.destSecMenu}>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Port Blair Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Havelock Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Neil Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Baratang Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Diglipur Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Rangat Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Long Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Little Andaman</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>Barren Island</span></li>
-                                    <li className={styles.menuContTitle}><IconList Icon="Island" /><span>All Destination</span></li>
+                                <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Port Blair Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Havelock Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Neil Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Baratang Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Diglipur Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Rangat Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Long Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Little Andaman</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Barren Island</span></li></Link>
+                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>All Destination</span></li></Link>
                                 </ul>
                             </div>
                         </div>
