@@ -23,7 +23,7 @@ export default function layoutextended({ children }) {
 
     const pathName = usePathname();
     const nonBreadcrumbPages = ["/", "/contact-us", /^\/payment-varifyer\/.*/]
-    const nonStickyNavBar = ["/", "/book-ferry"]
+    const nonStickyNavBar = ["/", "/book-ferry", /^\/destination(\/.*)?$/]
     
 
     return (
@@ -31,7 +31,7 @@ export default function layoutextended({ children }) {
         <Provider store={storeRef.current}>
             <div>
                 <AutoAuth>
-                    { !nonStickyNavBar.includes(pathName) ? <StickyNavbar /> : <Navbar /> }
+                    { !nonStickyNavBar.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) ? <StickyNavbar /> : <Navbar /> }
                     <MobHeader />
                         <Link href="https://wa.me/917908671247" target="_blank" className={styles.wpIcon}>
                         <div className={styles.iconWrapper}>

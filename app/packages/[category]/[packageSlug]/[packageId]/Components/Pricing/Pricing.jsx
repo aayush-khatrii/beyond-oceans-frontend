@@ -226,8 +226,14 @@ export default function Pricing(props) {
     }
 
     function handleTravelDate(date){
-        const newDate = new Date(date).toISOString().slice(0, 10);
-        setTravelDate(newDate)
+
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+
+        const formattedDate = `${year}-${month}-${day}`;
+
+        setTravelDate(formattedDate)
         setEmptyDate(false)
     }
 

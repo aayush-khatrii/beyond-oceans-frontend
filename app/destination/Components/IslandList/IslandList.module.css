@@ -1,0 +1,58 @@
+.islandLists{
+    display: flex;
+    flex-direction: column;
+    gap: 74px;
+}
+
+.islandTitle{
+    margin-top: 9px;
+    font-size: 30.5px;
+    font-weight: 600;
+}
+
+.islandImage{
+    margin-top: 24px;
+    width: 100%;
+    /* height: 427px; */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.imgWrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.islandDesc{
+    margin-top: 25px;
+    font-size: 15px;
+    color: #696969;
+}
+
+.islandBtn{
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #1E2C70;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.islandBtn a{
+    color: #1E2C70;
+}
+
+.islandBtn svg{
+    margin-left: 6px;
+}
+
+.islandBtn svg path{
+    stroke: #38B089
+}
+
+.islandBtn:hover > a{
+    color: #38B089;
+}

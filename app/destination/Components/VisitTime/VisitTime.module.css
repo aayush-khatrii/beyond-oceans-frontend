@@ -1,0 +1,88 @@
+.mainWrapper{
+    /* margin-top: 94px; */
+    margin-top: 85px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+}
+
+.sectionTitle{
+    padding: 22px 28px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 21.5px;
+    font-weight: 600;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    box-sizing: border-box;
+    padding: 28px 28px;
+}
+
+.infoCard{
+    background-color: #FAFBFC;
+    border: 1px solid #E9E9E9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 15px 19px;
+}
+
+.cardTitle{
+    display: flex;
+    align-items: center;
+}
+
+.cardTitle span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cardTag1, .cardTag2, .cardTag3{
+    box-sizing: border-box;
+    padding: 5px 18px;
+    margin-left: 9px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cardTag1{
+    background-color: #EBF7F3;
+    border: 2px solid #C1E7DA;
+    color: #33A07D;
+}
+
+.cardTag2{
+    background-color: #FFF7E6;
+    border: 2px solid #FFE6B3;
+    color: #FFAD01;
+}
+
+.cardTag3{
+    background-color: #F8E9E9;
+    border: 2px solid #F1D3D3;
+    color: #BB2124;
+}
+
+.infoLines{
+    margin-top: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.infoLine1{
+    font-size: 15px;
+}
+
+.infoLine1 span:nth-child(1){
+    font-weight: 600;
+    color: #4C4C4C;
+    margin-right: 9px;
+}
+
+.infoLine1 span:nth-child(2){
+    color: #696969;
+}
