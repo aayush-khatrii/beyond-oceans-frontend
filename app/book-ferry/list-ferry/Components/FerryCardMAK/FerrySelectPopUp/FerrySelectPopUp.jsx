@@ -17,8 +17,7 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
 
     const ferryMidSection = {
         0: <FerrySelectComp ferryData={ferryData} onFerryClass={handleClassSelect} />,
-        // 1: <FerrySelectLoad ferryId={ferryData.id} onSeatChecked={onSeatChecked} tripData={{...tripData, ferryClass: selectedFerryClass}}/>,
-        1: <>loading</>,
+        1: <FerrySelectLoad ferryId={ferryData.id} onSeatChecked={onSeatChecked} tripData={{...tripData, ferryClass: selectedFerryClass}}/>,
     }
 
     const ferryPopUpTitle = {
@@ -35,7 +34,6 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
     }
 
     function handleCheckoutClick(){
-        return
         if(ferrySection === 0){
             setFerrySection(1)
         }
@@ -54,7 +52,8 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
                 </div>
                 <div className={styles.ferrySelectfooter}>
                     <button onClick={() => {handleClose()}} className={styles.backBtn}>Back To Ferries</button>
-                    <button onClick={handleCheckoutClick} className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button>
+                    <button className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button>
+                    {/* <button onClick={handleCheckoutClick} className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button> */}
                 </div>
             </div>
         </div>

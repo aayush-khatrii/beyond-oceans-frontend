@@ -23,7 +23,7 @@ export default function SuspanceCont() {
     const formatDate = (epoch) => {
         const date = new Date(epoch * 1000)
         const day = date.getDate()
-        const monthNum = date.getMonth() + 1
+        const monthNum = (date.getMonth() + 1).toString().padStart(2, '0')
         const month = date.toLocaleString('en-GB', { month: 'long' });
         const year = date.getFullYear()
 
@@ -39,7 +39,7 @@ export default function SuspanceCont() {
         travelDate:{day, month, year},
         travelDateNum:{day, month: monthNum, year},
         travelerAdu,
-        travelerInf
+        travelerInf: travelerInf > 0 ? travelerInf : 0
     }
 
     return (

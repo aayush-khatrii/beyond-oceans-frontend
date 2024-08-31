@@ -1,0 +1,227 @@
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}
+
+.SkeletonBox, .payNowBTNSkeleton{
+    background: #ffffff;
+    background: linear-gradient(110deg, #ecebeb 8%, #f5f5f5 18%, #ecebeb 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+}
+
+.mainWrapper{
+    margin-top: 39px;
+    overflow: hidden;
+}
+
+.partialComponent{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 27px 28px;
+}
+
+.pgSelector{
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+    padding: 27px 28px;
+}
+
+.payPartial{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+
+.radios input[type="radio"], .pgRadios input[type="radio"]{
+    display: none;
+}
+
+.radios, .pgRadios{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pgRadios .radiochild{
+    align-items: flex-start;
+}
+
+.pgRadios .radioTitleCont{
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.phonePeIcon svg{
+    width: 124px;
+}
+
+.pgRadios .radioContent .country{
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+
+.pgRadios .radioContent .radioText{
+    margin-bottom: 7px;
+}
+
+.pgRadios .pgNote{
+    width: 300px;
+    font-size: 12.4px;
+    font-weight: 300;
+    color: #989898;
+}
+
+.radiochild{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.radioStyle{
+    border: 1px solid #BABABA;
+    border-radius: 50%;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.radioSelected{
+    height: 14px;
+    width: 14px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.radioText{
+    font-weight: 600;
+    padding-top: 1px;
+}
+
+.payPartial .radioText{
+    display: flex;
+}
+
+.payPartial .radioText .SkeletonBox{
+    width: 100px;
+    margin-left: 4px;
+}
+
+.mrpGap{
+    width: 10px;
+}
+
+.radiochild:hover{
+    color: #1E2C70;
+}
+
+.radios input:checked ~ .radiochild .radioStyle .radioSelected, .pgRadios input:checked ~ .radiochild .radioStyle .radioSelected{
+    background-color: #1E2C70;
+}
+
+.radios input:checked ~ .radiochild .radioStyle, .pgRadios input:checked ~ .radiochild .radioStyle{
+    border-color: #1E2C70;
+}
+
+.pgRadios input:disabled ~ .radiochild .radioContent .radioTitleCont , .pgNote{
+    color: #BABABA;
+}
+
+.acceptTerms{
+    display: flex;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.checkBox, .checkBoxTrue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.checkBox{
+    border-color: #BABABA;
+    background-color: transparent;
+}
+
+.checkBoxTrue{
+    border-color: #C1E7DA;
+    background-color: #38B089;
+}
+
+.checkBoxTrue svg{
+    margin-top: 2px;
+}
+
+.termsAgree{
+    margin-left: 12px;
+    font-size: 13px;
+    width: fit-content;
+    color: #696969;
+}
+
+.termsAgree a{
+    font-weight: 600;
+    color: #1E2C70;
+}
+
+.payNowBTN{
+    margin-top: 4px;
+    background-color: #28A745;
+    border: 2px solid #BFE5C7;
+    border-radius: 8px;
+    color: #fff;
+    height: 55px;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    cursor: pointer;
+}
+
+.payNowBTN:hover, .payNowBTN:active, .payNowBTN:focus{
+    background-color: #24963E;
+    border-color: #94D3A2;
+}
+
+.payNowBTNSkeleton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    height: 55px;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    color: #BABABA;
+}

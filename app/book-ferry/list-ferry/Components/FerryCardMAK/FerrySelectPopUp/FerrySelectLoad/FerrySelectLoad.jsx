@@ -43,20 +43,20 @@ export default function FerrySelectLoad(props) {
         if(tripData.travelerAdu <= ferryClassData[0].seat){
             
             const makCheckoutParams = {
-                ferryOpr: "MAK",
-                ferryData: {
-                    travelDate: paramsDate,
-                    scheduleId: ferryData.id,
-                    classId: ferryClassData[0].ship_class_id,
-                    dept: ferryData.source_location_id,
-                    dest: ferryData.destination_location_id,
-                    dTime: ferryData.departure_time,
-                    aTime: ferryData.arrival_time,
-                    fare: ferryClassData[0].ship_class_price
+                Ferry_Operator: "MAK",
+                Ferry_Data: {
+                    Travel_Date: paramsDate,
+                    Schedule_Id: ferryData.id,
+                    Class_Id: ferryClassData[0].ship_class_id,
+                    Departure: ferryData.source_location_id,
+                    Destination: ferryData.destination_location_id,
+                    Departure_Time: ferryData.departure_time,
+                    Arrival_Time: ferryData.arrival_time,
+                    Fare: ferryClassData[0].ship_class_price
                 },
-                traveler:{
-                    adult: tripData.travelerAdu,
-                    ...(tripData.travelerInf > 0 && { infant: tripData.travelerInf })
+                Traveler:{
+                    Adults: tripData.travelerAdu,
+                    Infants: tripData.travelerInf
                 }
             }
             const {data} = await storeMakFerryCheckout(makCheckoutParams)
@@ -82,7 +82,6 @@ export default function FerrySelectLoad(props) {
                 <Lottie lottieRef={lottiFerryRef} animationData={FerryAni} />
             </div>
             <div className={styles.loadingText}><span>We are checking real-time seat availability for you. Please wait...</span></div>
-            <div className={styles.loadingText}><span>{singleFerryData && singleFerryData.data.arrival_time}</span></div>
         </div>
     </div>
   )
