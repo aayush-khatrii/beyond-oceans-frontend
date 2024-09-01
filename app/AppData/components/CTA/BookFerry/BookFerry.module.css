@@ -289,9 +289,21 @@
 
 @media (max-width: 980px) {
 
-    .selectFrame, .dpINPframe{
+    .selectFrame, .dpINPframe, .personSelect, .paxSelector, .SearchFerryButton{
         width: 100%;
         height: 50px;
+    }
+
+    .personSelectBox, .adultSelect, .childSelect, .infantSelect{
+        width: 100%;
+    }
+
+    .SearchFerryButton{
+        width: 100%;
+        height: 50px;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 5px;
     }
 
 }

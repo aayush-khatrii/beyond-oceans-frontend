@@ -88,3 +88,78 @@
 .Trust span:nth-child(2){
     color: #1E2C70;
 }
+
+@media (max-width: 980px){
+    .cardWrapper{
+        width: 285px;
+        height: 300px;
+        padding: 22px 25px;
+        box-sizing: border-box;
+    }
+
+    .userImg{
+        height: 50px;
+        width: 50px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    .imgWrapper{
+        width: 100%;
+        height: 100%;
+    }
+
+    .nameCont{
+        justify-content: space-between;
+    }
+
+    .userName{
+        width: 122px;
+        font-size: 20px;
+        padding: 0px;
+    }
+    
+    .userName span{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        margin-bottom: 1px;
+    }
+
+    .starWrapper svg{
+        width: 16px;
+    }
+
+    .starWrapper{
+        width: 110px;
+    }
+
+    .quoteIcon{
+        padding-bottom: 0px;
+    }
+    
+    .quoteIcon svg{
+        height: 26px;
+        width: 26px;
+    }
+
+    .descCont{
+        font-size: 15px;
+        height: 120px;
+        -webkit-line-clamp: 6;
+    }
+
+    .googleCont{
+        margin-bottom: 0px;
+    }
+    
+    .Trust{
+        margin-left: 7px;
+        font-size: 15px;
+    }
+
+    .GoogleIcon{
+        width: 42px;
+        height: 42px;
+    }
+}

@@ -7,6 +7,12 @@ export default function Activities() {
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
+                <div className={styles.titleNbtnMob}>
+                    <div className={styles.sectionTitle}>
+                        <h2>Trending Activities in Andaman</h2>
+                        <p>Dive into thrilling activities and uncover the perfect blend of excitement</p>
+                    </div>
+                </div>
                 <div className={styles.titleNbtn}>
                     <div className={styles.sectionTitle}>
                         <h2>Trending Activities in Andaman and Nicobar</h2>
@@ -25,7 +31,7 @@ export default function Activities() {
                                         src="/assets/scuba-diving-img-1.png"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="Scuba Diving activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
@@ -42,7 +48,7 @@ export default function Activities() {
                                         src="/assets/tracking-img-1.png"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="Trekking activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
@@ -57,7 +63,7 @@ export default function Activities() {
                                         src="/assets/kayking-img-1.png"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="kayaking activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
@@ -76,7 +82,7 @@ export default function Activities() {
                                         src="/assets/parasiling-img-1.png"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="parasiling activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
@@ -93,12 +99,12 @@ export default function Activities() {
                                         src="/assets/seawalk-img-1.png"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="seawalk activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
                                 <div className={styles.cardContent}>
-                                    <span>Scuba Diving</span>
+                                    <span>Sea Walk</span>
                                     <span>Starting At ₹4,500/per person</span>
                                 </div>
                             </div>
@@ -108,7 +114,7 @@ export default function Activities() {
                                         src="/assets/Snorkeling-img-1.webp"
                                         fill={true}
                                         sizes="100%"
-                                        alt="Picture of the author"
+                                        alt="Snorkeling activity"
                                         style={{zIndex: "-1",objectFit:"cover"}}
                                     />
                                 </div>
@@ -120,6 +126,99 @@ export default function Activities() {
                         </div>
                     </div>
                 </div>
+                <div className={styles.categoryLayoutMob}>
+                    <Link href="/activities/water-sports" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/scuba-diving-img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="Scuba Diving activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Scuba Diving</span>
+                            <span>Starting At ₹4,500/per person</span>
+                        </div>
+                    </Link>
+                    <Link href="/activities" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/tracking-img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="Trekking activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Trekking</span>
+                            <span>Starting At ₹2,000/per person</span>
+                        </div>
+                    </Link>
+                    <Link href="/activities" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/kayking-img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="kayaking activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Kayaking</span>
+                            <span>Starting At ₹4,000/per person</span>
+                        </div>
+                    </Link>
+                    <Link href="/activities/parasiling" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/parasiling-img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="parasiling activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Parasiling</span>
+                            <span>Starting At ₹4,500/per person</span>
+                        </div>
+                    </Link>
+                    <Link href="/activities/water-sports" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/seawalk-img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="seawalk activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Sea Walk</span>
+                            <span>Starting At ₹4,500/per person</span>
+                        </div>
+                    </Link>
+                    <Link href="/activities/water-sports" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Snorkeling-img-1.webp"
+                                fill={true}
+                                sizes="100%"
+                                alt="Snorkeling activity"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Snorkeling</span>
+                            <span>Starting At ₹4,500/per person</span>
+                        </div>
+                    </Link>
+                </div>
+                <Link href="/activities" className={styles.mobButton}>Explore All Activities</Link>
             </div>
         </div>
     </>

@@ -14,6 +14,12 @@ export default function Testimonial() {
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
+                <div className={styles.titleNbtnMob}>
+                    <div className={styles.sectionTitle}>
+                        <h2>What Travelers Say About Us</h2>
+                        <p>See what our customers have to say about their experiences with us</p>
+                    </div>
+                </div>
                 <div className={styles.titleNbtn}>
                     <div className={styles.sectionTitle}>
                         <h2>What Travelers Say About Us</h2>
@@ -35,6 +41,17 @@ export default function Testimonial() {
                 <div className={styles.cardWrapper}>
                     <Swiper ref={swiperRef} spaceBetween={19} slidesPerView={3} loop={true} autoplay={{ delay: 2000, disableOnInteraction: false}}>
                         {
+                            testimonialData.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+                <div className={styles.cardWrapperMob}>
+                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.30} loop={true}>
+                    {
                             testimonialData.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />

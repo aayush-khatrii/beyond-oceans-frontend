@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 0;
-
 }
 
 .slider{
@@ -48,7 +47,8 @@
 .leftNav, .rightNav{
     position: absolute;
     display: flex;
-    top: calc(50% - 24px);
+    top: 50%;
+    transform: translateY(-50%);
     justify-content: center;
     align-items: center;
     border: none;
@@ -76,4 +76,48 @@
 
 .leftNav svg path, .rightNav svg path{
     stroke: black;
+}
+
+@media (max-width: 980px) {
+
+    .mainWrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .subWrapper{
+        width: 90%;
+        padding: 40px 0;
+    }
+
+    .slider, .slideWrapper{
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    .slide{
+        width: 90%;
+        height: 200px;
+    }
+
+    .imgWrapper img{
+        object-fit: contain !important;
+    }
+
+    .leftNav svg, .rightNav svg{
+        height: 15px;
+        width: 15px;
+    }
+
+    .leftNav, .rightNav{
+        padding: 8px;
+    }
+
+    .leftNav{
+        left: 15px;
+    }
+    
+    .rightNav{
+        right: 15px;
+    }
 }

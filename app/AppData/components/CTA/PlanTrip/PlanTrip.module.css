@@ -216,6 +216,7 @@
     
     .dpINPframe, .dpINPbox{
         width: 100%;
+        box-sizing: border-box;
     }
     
     .dpINPframe, .customSelect{
