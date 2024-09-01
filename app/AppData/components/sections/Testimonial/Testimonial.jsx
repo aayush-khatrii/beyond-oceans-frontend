@@ -50,7 +50,7 @@ export default function Testimonial() {
                     </Swiper>
                 </div>
                 <div className={styles.cardWrapperMob}>
-                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.30} loop={true}>
+                    <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.30} loop={true}>
                     {
                             testimonialData.map((item, index) => (
                                 <SwiperSlide key={index}>

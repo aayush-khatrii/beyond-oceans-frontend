@@ -174,13 +174,12 @@
     }
 
     .sectionTitle h2{
-        font-size: 22px;
+        font-size: clamp(20px, 5.5vw, 25px);
         margin-bottom: 1px;
     }
     
     .sectionTitle p{
-        font-size: 15px;
-        width: 80%;
+        font-size: clamp(13px, 3.75vw, 18px);
     }
 
     .categoryLayoutMob{
@@ -192,8 +191,8 @@
 
     .cardLayout{
         position: relative;
-        height: 177px;
-        width: 177px;
+        height: clamp(154px, 42.9vw, 177px);
+        width: clamp(154px, 42.9vw, 177px);
         border-radius: 15px;
         overflow: hidden;
     }

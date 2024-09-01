@@ -173,15 +173,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .sectionTitle h2{
-        font-size: 22px;
+        font-size: clamp(20px, 5.5vw, 25px);
         margin-bottom: 1px;
     }
     
     .sectionTitle p{
-        font-size: 15px;
+        font-size: clamp(13px, 3.75vw, 18px);
     }
 
     .categoryLayoutMob{
@@ -193,8 +194,8 @@
 
     .cardLayout{
         position: relative;
-        height: 177px;
-        width: 177px;
+        height: clamp(154px, 42.9vw, 177px);
+        width: clamp(154px, 42.9vw, 177px);
         border-radius: 15px;
         overflow: hidden;
     }
@@ -212,7 +213,7 @@
         bottom: 13px;
         color: #fff;
         font-weight: 600;
-        font-size: 14px;
+        font-size: clamp(12px, 3.35vw, 14px);
     }
 
     .mobButton{

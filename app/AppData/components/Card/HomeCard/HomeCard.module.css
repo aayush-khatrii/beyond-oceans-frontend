@@ -42,14 +42,14 @@
 
 @media (max-width: 980px) {
     .cardWrapper{
-        height: 231px;
-        width: 231px;
+        height: clamp(210px, 58.4vw, 231px);
+        width: clamp(210px, 58.4vw, 231px);
     }
     .cardContent{
-        width: 215px;
+        width: clamp(196px, 54vw, 215px);
     }
     .cardContent span:nth-child(1) {
-        font-size: 16px;
+        font-size: clamp(15px, 4.15vw, 16px);
         text-align: center;
     }
 }
