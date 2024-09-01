@@ -53,7 +53,7 @@ export default function WhyChoose() {
                     </div>
                 </div>
                 <div className={styles.cardWrapperMob}>
-                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.47} loop={true}>
+                    <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.47} loop={true}>
                         <SwiperSlide>
                             <div className={styles.wcuCard}>
                                 <IconList Icon="WCU1" />

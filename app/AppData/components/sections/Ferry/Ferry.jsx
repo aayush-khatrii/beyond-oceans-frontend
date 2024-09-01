@@ -62,7 +62,7 @@ export default function Activities() {
                     }
                 </div>
                 <div className={styles.cardWrapperMob}>
-                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.60} loop={true}>
+                    <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.60} loop={true}>
                         {
                             datas.map((item, index) => (
                                 <SwiperSlide key={index}>

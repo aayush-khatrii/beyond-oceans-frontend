@@ -97,13 +97,12 @@
     }
 
     .sectionTitle h2{
-        font-size: 22px;
+        font-size: clamp(20px, 5.5vw, 25px);
         margin-bottom: 1px;
     }
     
     .sectionTitle p{
-        font-size: 15px;
-        width: 90%;
+        font-size: clamp(13px, 3.75vw, 18px);
     }
 
     .cardWrapperMob{
