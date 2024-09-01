@@ -47,6 +47,12 @@ export default function Sightseeing() {
     <>
     <div className={styles.mainWrapper}>
         <div className={styles.subWrapper}>
+            <div className={styles.titleNbtnMob}>
+                <div className={styles.sectionTitle}>
+                    <h2>Most Famous Island of Andaman</h2>
+                    <p>Explore diverse tour packages tailored to the unique charms of each island paradise</p>
+                </div>
+            </div>
             <div className={styles.titleNbtn}>
                 <div className={styles.sectionTitle}>
                     <h2>Most Famous Islands Of Andaman and Nicobar</h2>
@@ -75,6 +81,17 @@ export default function Sightseeing() {
                         ))
                     }
                 </Swiper>
+            </div>
+            <div className={styles.cardWrapperMob}>
+                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.60} loop={true}>
+                        {
+                            datas.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
             </div>
         </div>
     </div>

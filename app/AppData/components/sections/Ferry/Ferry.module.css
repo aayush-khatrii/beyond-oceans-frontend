@@ -55,3 +55,80 @@
     justify-content: space-between;
     margin-top: 52px;
 }
+
+@media (min-width: 980px) {
+    .titleNbtnMob{
+        display: none;
+    }
+    .cardWrapperMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .subWrapper{
+        padding: 40px 0;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .titleNbtn{
+        display: none;
+    }
+
+    .cardWrapper{
+        display: none;
+    }
+
+    .titleNbtnMob{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle, .mobButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sectionTitle h2{
+        font-size: 22px;
+        margin-bottom: 1px;
+    }
+    
+    .sectionTitle p{
+        font-size: 15px;
+    }
+
+    .cardWrapperMob{
+        margin-left: 4.5%;
+        margin-top: 19px;
+        width: 95%;
+    }
+
+    .mobBtnWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mobButton{
+        margin-top: 25px;
+        background-color: #38B089;
+        color: white;
+        border: 2px solid #A3DBC9;
+        border-radius: 50px;
+        width: 55%;
+        height: 40px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .mobButton:hover, .mobButton:active, .mobButton:focus{
+        background-color: #33A07D;
+        border-color: #7ACAB0;
+    }
+}

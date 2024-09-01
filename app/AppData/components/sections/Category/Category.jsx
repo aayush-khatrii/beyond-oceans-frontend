@@ -7,6 +7,12 @@ export default function Category() {
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
+                <div className={styles.titleNbtnMob}>
+                    <div className={styles.sectionTitle}>
+                        <h2>Discover Packages By Category</h2>
+                        <p>Tailored to suit every traveler's desires and budget</p>
+                    </div>
+                </div>
                 <div className={styles.titleNbtn}>
                     <div className={styles.sectionTitle}>
                         <h2>Discover Tour Packages By Category</h2>
@@ -19,7 +25,7 @@ export default function Category() {
                 <div className={styles.categoryLayout}>
                     <div className={styles.leftLayout}>
                         <div className={styles.subLeft}>
-                            <Link href="/packages" className={styles.imgWrapper}>
+                            <Link href="/packages/family-package" className={styles.imgWrapper}>
                                 <div className={styles.topImg}>
                                     <Image
                                         src="/assets/Category-Img-1.png"
@@ -120,6 +126,111 @@ export default function Category() {
                         </div>
                     </div>
                 </div>
+                <div className={styles.categoryLayoutMob}>
+                    <Link href="/packages/family-package" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-1.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Family Tour</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                    <Link href="/packages/honeymoon" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-2.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Honeymoon Sp.</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                    <Link href="/packages" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-3.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Explore By Island</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                    <Link href="/packages" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-6.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Explore By Budget</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                    <Link href="/packages" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-5.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Explore By Duration</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                    <Link href="/packages/best-sellers" className={styles.cardLayout}>
+                        <div className={styles.imgWrapperMob}>
+                            <Image
+                                src="/assets/Category-Img-4.png"
+                                fill={true}
+                                sizes="100%"
+                                alt="andaman family packages"
+                                style={{zIndex: "-1",objectFit:"cover"}}
+                            />
+                        </div>
+                        <div className={styles.cardContent}>
+                            <span>Best Seller</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.62511 6.82924H17.171V16.3752M16.5081 7.49215L6.82961 17.1707" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </div>
+                    </Link>
+                </div>
+                <Link href="/packages" className={styles.mobButton}>Explore All Packages</Link>
             </div>
         </div>
     </>

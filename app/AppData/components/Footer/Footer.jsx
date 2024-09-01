@@ -30,6 +30,7 @@ export default function Footer() {
                 <div className={styles.ctaLeft}>
                     <IconList Icon="FooterIcon" />
                 </div>
+                <div className={styles.footIconSep}></div>
                 <div className={styles.ctaRight}>
                     <span className={styles.footerCtaTitle}>24/7 Hassle Free Support</span>
                     <address className={styles.contactWrapper}>
@@ -42,7 +43,8 @@ export default function Footer() {
             <div className={styles.contentWrapper}>
                 <div className={styles.footLogoSec}>
                     <IconList Icon="FootLogo"/>
-                    <p>Sign up now to receive exclusive offers, insider tips, and captivating travel tales.</p>
+                    <p className={styles.footLogoSecDesc}>Sign up now to receive exclusive offers, insider tips, and captivating travel tales.</p>
+                    <p className={styles.footLogoSecDescMob}>Join us on a journey beyond the oceans! Sign up now to receive exclusive offers, insider tips, and captivating travel tales straight to your inbox.</p>
                     <div className={styles.footerSubForm}>
                         <input type="text" placeholder="Enter your full name"/>
                         <input type="text" placeholder="Enter your Email ID"/>
@@ -147,6 +149,16 @@ export default function Footer() {
                     <span>100% Secure Payments</span>
                 </div>
 			</div>
+        </div>
+		<div className={styles.copyrightWrapperMob}>
+			<div className={styles.copySubWrapper}>
+				<div className={styles.footNavList}>
+                    <span>
+                        <Link href="/privacy-policy">Privacy Policy</Link> &nbsp;|&nbsp; <Link href="/terms-conditions">Terms & Conditions</Link> &nbsp;|&nbsp; <Link href="/cancellation-refund">Cancellation & Refund Policy</Link> &nbsp;|&nbsp; <Link href="/payment-policy">Payment Policy</Link> &nbsp;|&nbsp; <Link href="/packages">Sitemap</Link>
+                    </span>
+                </div>
+			</div>
+			<div className={styles.copyrightText}><span>copywrite © &nbsp;2024 Beyond Oceans, All rights reserved.</span></div>
         </div>
     </div>
   )

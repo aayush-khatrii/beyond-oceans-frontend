@@ -105,8 +105,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 3px;
     width: 236px;
+    margin-bottom: 70px;
 }
 
 .footLogoSec svg{
@@ -330,4 +330,213 @@
 
 .secureIcon{
     margin-bottom: -2px;
+}
+
+@media (min-width: 980px) {
+    .footIconSep, .footLogoSecDescMob, .copyrightWrapperMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+
+    .footLogoSecDesc, .copyrightWrapper{
+        display: none;
+    }
+
+    .mainWrapper{
+        margin-top: 340px;
+    }
+
+    .subWrapper{
+        width: 90%;
+    }
+
+    .footerCTA{
+        flex-direction: column;
+        align-items: center;
+        top: -260px;
+        margin-bottom: -200px;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .ctaLeft svg{
+        margin: 0px;
+        width: 270px;
+        margin-top: -103px;
+    }
+
+    .footIconSep{
+        margin-top: -48px;
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+    }
+
+    .ctaRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .ctaRight span{
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+
+    .ctaRight address{
+        margin-top: 15px;
+        height: 100%;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        gap: 7px;
+    }
+
+    .contentWrapper{
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footLogoSec{
+        width: 100%;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .footLogoSec svg{
+        height: auto;
+        width: 250px;
+    }
+
+    .footLogoSec p{
+        color: #B9BED3;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 17px;
+        margin-left: 0px;
+    }
+
+    .footerSubForm{
+        width: 100%;
+        height: 100%;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .footerSubForm input{
+        font-size: 16px;
+        height: 50px;
+        box-sizing: border-box;
+        padding: 0 13px;
+    }
+
+    .footerSubForm button{
+        font-size: 20px;
+        height: 50px;
+        margin-top: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .packageSec, .footSec{
+        margin: 0;
+    }
+
+    .footSec span{
+        font-size: 30px;
+    }
+
+    .footSec ul{
+        gap: 8px;
+        margin-top: 12px;
+        font-size: 18px;
+        height: 100%;
+    }
+
+    .footContactSec{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footContactSec address{
+        margin-top: 12px;
+        font-size: 18px;
+        height: 100%;
+        gap: 8px;
+    }
+
+    .socialMedia{
+        margin-top: 15px;
+        width: 51%;
+    }
+
+    .certificate{
+        flex-direction: column;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+        margin-bottom: 27px;
+    }
+
+    .certificateDesc{
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .certificateTitle{
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+
+    .images{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .imgCard{
+        height: 158px;
+        width: 158px;
+    }
+
+    .copyrightWrapperMob{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copySubWrapper{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        border: 1px solid #4B568D;
+        border-left: 0;
+        border-right: 0;
+        padding: 10px 0;
+    }
+
+    .footNavList{
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .footNavList span a{
+        color: #B9BED3;
+    }
+
+    .copyrightText{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 25px 0;
+        color: #989EBD;
+        font-size: 13px;
+    }
 }

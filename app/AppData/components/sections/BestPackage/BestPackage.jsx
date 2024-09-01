@@ -3,45 +3,23 @@ import HomeCardACT from '../../Card/HomeCardACT/HomeCardACT'
 import styles from './BestPackage.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef, useState } from 'react'
-import { initiatPayment } from '@/app/AppData/http/payment.js';
-import { v4 as uuidv4 } from 'uuid';
 
 import 'swiper/css';
 
 export default function BestPackage({featuredPackages}){
-    const uuid = uuidv4();
-    
-    const paymentfunc = async() => {
-        const paymentDatra = {
-            userId: uuid,
-            tId: uuid,
-            amt: 1000
-        }
-        // let formurl
-        // try {
-        //     const {data} = await initiatPayment({userId:paymentDatra.userId, transectionId:paymentDatra.tId, amt:paymentDatra.amt})
-        //     formurl = data.data.instrumentResponse.redirectInfo.url
-        // } catch (error) {
-        //     console.log(error.response.data)
-        //     return
-        // }
-        
-
-        // const form = document.createElement('form');
-        // form.method = 'POST';
-        // form.action = formurl;
-        // form.style.display = 'none'; // Hide the form
-        // document.body.appendChild(form);
-        // form.submit();
-    }
 
     const swiperRef = useRef(null);
 
-    
     return (
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
+                <div className={styles.titleNbtnMob}>
+                    <div className={styles.sectionTitle}>
+                        <h2>Best Seller Packages</h2>
+                        <p>Tailored to suit every traveler's desires and budget</p>
+                    </div>
+                </div>
                 <div className={styles.titleNbtn}>
                     <div className={styles.sectionTitle}>
                         <h2>Andaman and Nicobar Best Seller Packages</h2>
@@ -64,7 +42,18 @@ export default function BestPackage({featuredPackages}){
                     <Swiper ref={swiperRef} spaceBetween={19} slidesPerView={4} loop={true}>
                         {
                             featuredPackages.map((item, index) => (
-                                <SwiperSlide onClick={paymentfunc} key={index}>
+                                <SwiperSlide key={index}>
+                                    <HomeCardACT key={index} cardData={item} category="packages" />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+                <div className={styles.cardWrapperMob}>
+                    <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.60} loop={true}>
+                        {
+                            featuredPackages.map((item, index) => (
+                                <SwiperSlide key={index}>
                                     <HomeCardACT key={index} cardData={item} category="packages" />
                                 </SwiperSlide>
                             ))
