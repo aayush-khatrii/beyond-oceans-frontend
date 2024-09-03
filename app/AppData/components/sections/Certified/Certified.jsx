@@ -102,8 +102,8 @@ export default function Certified() {
                 </div>
             </div>
             <div className={styles.cardWrapperMob}>
-                <Swiper ref={swiperRef} spaceBetween={0} slidesPerView={1.30} loop={true}>
-                    <SwiperSlide>
+                <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.30} loop={true}>
+                    <SwiperSlide className={styles.swiperSlides}>
                         <div className={`${styles.card1} ${styles.certificateCard}`}>
                             <div className={styles.cardImg}>
                                 <div className={styles.cardImgWrapper}>
@@ -124,7 +124,7 @@ export default function Certified() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlides}>
                         <div className={`${styles.card2} ${styles.certificateCard}`}>
                             <div className={styles.cardImg}>
                                 <div className={styles.cardImgWrapper}>
@@ -145,7 +145,7 @@ export default function Certified() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlides}>
                         <div className={`${styles.card3} ${styles.certificateCard}`}>
                             <div className={styles.cardImg}>
                                 <div className={styles.cardImgWrapper}>
@@ -166,7 +166,7 @@ export default function Certified() {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className={styles.swiperSlides}>
                         <div className={`${styles.card4} ${styles.certificateCard}`}>
                             <div className={styles.cardImg}>
                                 <div className={styles.cardImgWrapper}>

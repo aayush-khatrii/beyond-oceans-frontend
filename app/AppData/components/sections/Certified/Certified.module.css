@@ -10,14 +10,14 @@
     justify-content: space-between;
 }
 
-.sectionTitle h2{
+.sectionTitle h2, .sectionTitleWrapper h2{
     font-size: 30.8px;
     font-weight: 600;
     margin-bottom: 6px;
     cursor: default;
 }
 
-.sectionTitle p{
+.sectionTitle p, .sectionTitleWrapper p{
     font-size: 18.3px;
     font-weight: 300;
     color: #696969;
@@ -110,16 +110,12 @@
     }
 
     .sectionTitleWrapper h2{
-        font-size: clamp(20px, 5.5vw, 25px);
+        font-size: clamp(19px, 5.51vw, 25px);
         margin-bottom: 1px;
-        font-weight: 600;
-        cursor: default;
     }
 
     .sectionTitleWrapper p{
-        font-size: clamp(12px, 3.33vw, 13px);
-        font-weight: 300;
-        color: #696969;
+        font-size: clamp(12px, 3.49vw, 18px);
     }
 
     .cardWrapperMob{
@@ -130,16 +126,23 @@
         display: flex;
     }
 
-    .certificateCard{
-        border: 1px solid #e9e9e9;
-        height: 100%;
-        width: 94%;
-        box-shadow: none;
+    .certificateCard{   
+        flex: 1 1 100%;
         box-sizing: border-box;
+        height: auto;
+        border: 1px solid #e9e9e9;
+        /* height: 100%; */
+        /* width: 94%; */
+        box-shadow: none;
+        /* box-sizing: border-box; */
     }
 
     .cardImg{
+        flex: 1 1 100%;
+        aspect-ratio: 3 / 1;
+        box-sizing: border-box;
         height: 110px;
+        max-height: 110px;
     }
 
     .card1 .cardImg .cardImgWrapper{
@@ -161,5 +164,9 @@
 
     .cardDesc{
         font-size: 13px;
+    }
+
+    .swiperSlides{
+        display: flex;
     }
 }

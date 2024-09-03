@@ -42,8 +42,13 @@
 
 @media (max-width: 980px) {
     .cardWrapper{
-        height: clamp(210px, 58.4vw, 231px);
-        width: clamp(210px, 58.4vw, 231px);
+        flex: 1 1 100%;
+        aspect-ratio: 1 / 1;
+        box-sizing: border-box;
+        height: auto;
+        max-height: 231px;
+        /* height: clamp(200px, 58.2vw, 231px); */
+        /* width: clamp(200px, 58.2vw, 231px); */
     }
     .cardContent{
         width: clamp(196px, 54vw, 215px);
@@ -51,6 +56,9 @@
     .cardContent span:nth-child(1) {
         font-size: clamp(15px, 4.15vw, 16px);
         text-align: center;
+    }
+    .cardContent span:nth-child(2) {
+        font-size: clamp(11px, 3.16vw, 12.5px);
     }
 }
 

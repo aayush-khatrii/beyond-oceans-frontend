@@ -86,7 +86,7 @@ export default function Sightseeing() {
                 <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.60} loop={true}>
                     {
                         datas.map((item, index) => (
-                            <SwiperSlide key={index}>
+                            <SwiperSlide key={index} className={styles.swiperSlides}>
                                 <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
                             </SwiperSlide>
                         ))
