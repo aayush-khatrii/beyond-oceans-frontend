@@ -109,17 +109,21 @@
     }
 
     .sectionTitle h2{
-        font-size: clamp(20px, 5.5vw, 25px);
+        font-size: clamp(19px, 5.51vw, 25px);
         margin-bottom: 1px;
     }
     
     .sectionTitle p{
-        font-size: clamp(13px, 3.75vw, 18px);
+        font-size: clamp(12.5px, 3.65vw, 18px);
     }
 
     .cardWrapperMob{
+        display: flex;
         margin-left: 4.5%;
         margin-top: 19px;
         width: 95%;
+    }
+    .swiperSlides{
+        display: flex;
     }
 }

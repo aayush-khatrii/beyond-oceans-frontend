@@ -124,12 +124,12 @@
     }
 
     .sectionTitle h2{
-        font-size: 22px;
+        font-size: clamp(19px, 5.51vw, 25px);
         margin-bottom: 1px;
     }
-    
+
     .sectionTitle p{
-        font-size: 15px;
+        font-size: clamp(12.5px, 3.65vw, 18px);
         width: 85%;
     }
 
@@ -140,25 +140,32 @@
     }
 
     .wcuCard{
+        flex: 1 1 100%;
+        aspect-ratio: 1 / 1;
+        box-sizing: border-box;
+        height: auto;
+        max-height: 200px;
         align-items: center;
         padding: 21px;
         box-sizing: border-box;
-        width: clamp(230px, 61.5vw, 250px);
-        height: clamp(200px, 55.4vw, 220px);
+        /* width: clamp(230px, 61.5vw, 250px);
+        height: clamp(200px, 55.4vw, 220px); */
         text-align: center;
         box-shadow: none;
         border: 1px solid #e9e9e9;
     }
 
     .wcuCard span{
-        font-size: clamp(17px, 4.5vw, 19px);
+        font-size: clamp(16.5px, 4.79vw, 19px);
         font-weight: 600;
         margin-top: 0px;
     }
     
     .wcuCard p{
-        font-size: clamp(14px, 3.75vw, 16px);
-        font-weight: 300;
-        color: #696969;
+        font-size: clamp(13.9px, 4.05vw, 16px);
+    }
+    
+    .swiperSlides{
+        display: flex;
     }
 }

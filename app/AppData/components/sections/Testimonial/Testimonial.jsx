@@ -53,7 +53,7 @@ export default function Testimonial() {
                     <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.30} loop={true}>
                     {
                             testimonialData.map((item, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={index} className={styles.swiperSlides}>
                                     <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />
                                 </SwiperSlide>
                             ))

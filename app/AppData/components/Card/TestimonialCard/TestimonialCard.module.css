@@ -61,11 +61,12 @@
 .descCont{
     font-size: 18px;
     color: #696969;
-    margin-top: 13px;
+    margin: 13px 0;
     width: 100%;
     height: 125px;
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -92,8 +93,13 @@
 @media (max-width: 980px){
 
     .cardWrapper{
-        width: clamp(255px, 71vw, 285px);
-        height: clamp(270px, 75vw, 300px);
+        flex: 1 1 100%;
+        aspect-ratio: 5 / 2;
+        box-sizing: border-box;
+        height: auto;
+        /* max-height: 300px; */
+        /* width: clamp(255px, 71vw, 285px);
+        height: clamp(270px, 75vw, 300px); */
         padding: 22px 25px;
         box-sizing: border-box;
     }
@@ -111,6 +117,7 @@
     }
 
     .nameCont{
+        width: 100%;
         justify-content: space-between;
     }
 
@@ -118,6 +125,8 @@
         width: clamp(115px, 32vw, 122px);
         font-size: clamp(17px, 4.7vw, 20px);
         padding: 0px;
+        margin-left: clamp(14px, 3.9vw, 16px);
+        margin-right: auto;
     }
     
     .userName span{
@@ -145,10 +154,16 @@
     }
 
     .descCont{
-        margin: 0;
+        /* margin: 0; */
+        /* height: ; */
         font-size: clamp(13px, 3.6vw, 15px);
-        height: clamp(105px, 29.4vw, 120px);
+        height: clamp(105px, 29.4vw, fit-content);
+        height: fit-content;
         -webkit-line-clamp: 6;
+    }
+
+    .descCont p{
+        text-overflow: ellipsis;
     }
 
     .googleCont{

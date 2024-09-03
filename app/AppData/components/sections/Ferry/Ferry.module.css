@@ -95,12 +95,12 @@
     }
 
     .sectionTitle h2{
-        font-size: clamp(20px, 5.5vw, 25px);
+        font-size: clamp(19px, 5.51vw, 25px);
         margin-bottom: 1px;
     }
     
     .sectionTitle p{
-        font-size: clamp(13px, 3.75vw, 18px);
+        font-size: clamp(12.5px, 3.65vw, 18px);
     }
 
     .cardWrapperMob{
@@ -122,13 +122,17 @@
         border: 2px solid #A3DBC9;
         border-radius: 50px;
         width: 55%;
-        height: 40px;
-        font-size: 18px;
+        height: clamp(30px, 8.7vw, 40px);
+        font-size: clamp(16px, 4.65vw, 18px);
         font-weight: 600;
     }
 
     .mobButton:hover, .mobButton:active, .mobButton:focus{
         background-color: #33A07D;
         border-color: #7ACAB0;
+    }
+    
+    .swiperSlides{
+        display: flex;
     }
 }

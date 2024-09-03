@@ -53,7 +53,7 @@ export default function BestPackage({featuredPackages}){
                     <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.60} loop={true}>
                         {
                             featuredPackages.map((item, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={index} className={styles.swiperSlides}>
                                     <HomeCardACT key={index} cardData={item} category="packages" />
                                 </SwiperSlide>
                             ))

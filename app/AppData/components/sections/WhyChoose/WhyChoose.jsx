@@ -54,28 +54,28 @@ export default function WhyChoose() {
                 </div>
                 <div className={styles.cardWrapperMob}>
                     <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.47} loop={true}>
-                        <SwiperSlide>
+                        <SwiperSlide className={styles.swiperSlides}>
                             <div className={styles.wcuCard}>
                                 <IconList Icon="WCU1" />
                                 <span>Exploring Made Easy</span>
                                 <p>Seamless exploration with our tailored tours & hassle-free booking services.</p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={styles.swiperSlides}>
                             <div className={styles.wcuCard}>
                                 <IconList Icon="WCU2" />
                                 <span>Trustworthy Partner</span>
                                 <p>Rely on us as your trusted travel, ensuring peace of mind journey.</p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={styles.swiperSlides}>
                             <div className={styles.wcuCard}>
                                 <IconList Icon="WCU3" />
                                 <span>Native & Experienced</span>
                                 <p>Benefit from our native insights and seasoned expertise for an authentic.</p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        <SwiperSlide className={styles.swiperSlides}>
                             <div className={styles.wcuCard}>
                                 <IconList Icon="WCU4" />
                                 <span>Lowest Price</span>
