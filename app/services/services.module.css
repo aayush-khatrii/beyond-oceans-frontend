@@ -1,0 +1,19 @@
+.mainWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+}
+
+.mainContent{
+    width: 741px;
+}
+
+.aside{
+    width: 390px;
+}

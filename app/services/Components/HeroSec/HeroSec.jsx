@@ -80,16 +80,16 @@ export default function HeroSec() {
         <div className={styles.imageOverlay}></div>
         <div className={styles.heroCont}>
             <h1 className={styles.heroTitle}>
-                Popular Destinations <br />
+                Popular Services <br />
                 in Andaman and Nicobar
             </h1>
             <h4 className={styles.heroDesc}>
-                Explore deals, travel guide and thing to do in Andaman and Nicobar
+                Take advantage of our timely, professional services while unwinding
             </h4>
         </div>
         <div className={styles.heroCTAComp}>
             <div className={styles.ctaTitle}>
-                <span>Get the Best Vacation Planned by Experts!</span>
+                <span>Get the Best Professional Services by Experts!</span>
             </div>
             <div className={styles.ctaFields}>
                 <div className={styles.inpWrapper}>
