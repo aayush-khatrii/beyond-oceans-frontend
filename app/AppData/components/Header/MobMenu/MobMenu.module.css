@@ -1,0 +1,91 @@
+.mainWrapper{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px 40px 0 0;
+    z-index: 12;
+    touch-action: none;
+}
+
+.dragIconWrapper{
+    padding: 20px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.dragIcon{
+    height: 6px;
+    width: 40%;
+    background-color: #E9E9E9;
+    border-radius: 5px;
+}
+
+.linkSliderWrapper{
+    display: inline-block;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 2px solid #E9E9E9;
+
+    /* overflow-y: noscroll; */
+    /* padding: 0; */
+}
+
+.linkSliderWrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.linksList{
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.linkSlider{
+    overflow-x: scroll;
+}
+
+.linkSlider::-webkit-scrollbar{
+    display: none;
+}
+
+.linksList li{
+    position: relative;
+    display: flex;
+    text-wrap: nowrap;
+    font-size: 17px;
+    font-weight: 600;
+    /* height: 100%; */
+    padding-bottom: 10px;
+}
+
+.linksList li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.selectedItem::before{
+    background-color: #1E2C70;
+}
+
+.menuContent{
+    height: 100%;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+.menuContent::-webkit-scrollbar{
+    display: none;
+}
