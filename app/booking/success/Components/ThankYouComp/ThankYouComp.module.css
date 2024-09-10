@@ -259,3 +259,90 @@
     background-color: #fff;
     color: #1E2C70;
 }
+@media (min-width: 980px) {
+    .invoiceInfoTitleMob{
+        display: none;
+    }
+}
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 90px;
+    }
+    .CheckMarkICO{
+        position: relative;
+        margin-bottom: -124px;
+        top: -100px;
+    }
+    .CheckMarkICO svg{
+        width: 110px;
+    }
+    .bookingCard{
+        width: 90%;
+        padding: 20px;
+    }
+    .cardMainTitle{
+        margin-top: 0px;
+        font-size: 40px;
+    }
+    .cardMainDesc{
+        text-align: center;
+    }
+    .bookingId{
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 25px;
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .bookingIdValueSkl{
+        width: 100%;
+    }
+    .orderSum{
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 40px;
+    }
+    .orderSumLeft, .orderSumRight{
+        width: 100%;
+    }
+    .orderSumLeftContent, .orderSumRightContent{
+        padding: 20px;
+    }
+    .thankYouInvoice{
+        margin-top: -500px;
+        height: fit-content;
+    }
+    .invoiceNotiSubWrapper{
+        width: 90%;
+        margin-top: 540px;
+    }
+    .invoiceInfoTitle{
+        display: none;
+    }
+    .invoiceInfoTitleMob{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .invoiceEmailSkl{
+        width: 100%;
+        height: 30px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    .invoiceContact{
+        margin-top: 30px;
+    }
+    .invoiceContactTitle{
+        font-size: 18px;
+    }
+    .contactBtn{
+        margin: 20px;
+        height: 40px;
+        width: fit-content;
+        padding: 0 20px;
+        font-size: 18px;
+    }
+}

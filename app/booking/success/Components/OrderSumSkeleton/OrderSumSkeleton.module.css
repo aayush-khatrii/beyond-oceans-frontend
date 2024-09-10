@@ -28,3 +28,9 @@
     width: 250px;
     height: 20px;
 }
+
+@media (max-width: 980px){
+    .deatilsList{
+        width: 100%;
+    }
+}

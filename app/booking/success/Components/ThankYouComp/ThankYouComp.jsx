@@ -131,6 +131,10 @@ export default function ThankYouComp() {
                         {bookingData ? <span className={styles.invoiceEmail}>{bookingData.Booking_Email}</span> : <div className={styles.invoiceEmailSkl}></div>}
                     </div>
                 </div>
+                <div className={styles.invoiceInfoTitleMob}>
+                    <span>Your order confirmation mail and invoice sent to</span>
+                    {bookingData ? <span className={styles.invoiceEmail}>{bookingData.Booking_Email}</span> : <div className={styles.invoiceEmailSkl}></div>}
+                </div>
                 <div className={styles.invoiceContact}>
                     <span className={styles.invoiceContactTitle}>Have any question or concerns?</span>
                     <button className={styles.contactBtn} onClick={() => {router.push("/contact-us")}}>Contact Us</button>

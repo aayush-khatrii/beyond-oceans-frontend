@@ -12,6 +12,9 @@ export default function DiscountComp() {
                 <div className={styles.desc}>
                     <span>You did it! To show our thanks, here's a special gift: <br/><strong>30%</strong> off on your next purchase. Just use code <span className={styles.offerCode}>THANKYOU30</span> at checkout. Happy shopping!</span>
                 </div>
+                <div className={styles.descMob}>
+                    <span>You did it! To show our thanks, here's a special gift: <strong>30%</strong> off on your next purchase. Just use code <span className={styles.offerCode}>THANKYOU30</span> at checkout. Happy shopping!</span>
+                </div>
             </div>
             <div className={styles.dicountRight}>
                 <div className={styles.gifWrapper}>

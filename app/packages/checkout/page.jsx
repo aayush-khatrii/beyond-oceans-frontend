@@ -218,7 +218,6 @@ export default function page() {
             </div>
             <div className={styles.mobSubWrapper}>
                 {isLoginDone && <LoginDone />}
-                {/* <LoginDone /> */}
                 {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
                 {
                     (packageCartData && packageData && hotelData) ?
