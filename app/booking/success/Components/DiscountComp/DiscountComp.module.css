@@ -50,3 +50,40 @@
     height: 100%;
 }
 
+@media (min-width: 980px) {
+    .descMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 50px;
+    }
+    .subWrapper{
+        width: 90%;
+        padding: 20px;
+        flex-direction: column-reverse;
+    }
+    .dicountRight{
+        height: 250px;
+        width: 100%;
+    }
+    .dicountLeft{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 30px;
+        width: 100%;
+        gap: 15px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .desc{
+        display: none;
+    }
+    .descMob{
+        font-size: 17px;
+    }
+}

@@ -63,3 +63,26 @@
     font-size: 15px;
     color: #989898;
 }
+
+@media (max-width: 980px){
+    .popupSubWrapper{
+        width: 90%;
+        padding: 15px;
+        height: fit-content;
+    }
+    .popupSubTop{
+        width: 100%;
+    }
+    .popupTitle{
+        font-size: 20px;
+    }
+    .popupDesc{
+        width: 100%;
+        font-size: 12px;
+        margin-top: 11px;
+    }
+    .popupNote{
+        margin-top: 13px;
+        font-size: 11px;
+    }
+}

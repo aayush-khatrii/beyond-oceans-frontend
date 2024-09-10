@@ -79,8 +79,6 @@
     z-index: 1;
 }
 
-
-
 .leftCrackAni{
     position: absolute;
     top: 50px;
@@ -222,4 +220,66 @@
 .contactBtn:hover{
     background-color: #fff;
     color: #1E2C70;
+}
+
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 90px;
+    }
+    .CheckMarkICO{
+        position: relative;
+        margin-bottom: -124px;
+        top: -100px;
+    }
+    .CheckMarkICO svg{
+        width: 110px;
+    }
+    .bookingCard{
+        width: 90%;
+        padding: 20px;
+    }
+    .cardMainTitle{
+        margin-top: 0px;
+        font-size: 40px;
+    }
+    .bookingId{
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 25px;
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .bookingIdValueSkl{
+        width: 100%;
+    }
+    .bookingCard::before, .bookingCard::after, .bookingCardleft, .bookingCardright, .desedSep{
+        display: none;
+    }
+    .failedContWrapper{
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .cancleContent{
+        margin-top: -260px;
+        height: fit-content;
+    }
+    .cancleSubWrapper{
+        width: 90%;
+    }
+    .cancleInfoTitle{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    .invoiceContactTitle{
+        font-size: 18px;
+    }
+    .contactBtn{
+        margin: 28px;
+        height: 40px;
+        width: fit-content;
+        padding: 0 20px;
+        font-size: 18px;
+    }
 }

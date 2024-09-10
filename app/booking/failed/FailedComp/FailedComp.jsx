@@ -30,11 +30,11 @@ export default function ThankYouComp() {
                 router.push("/booking/success")
                 return
             }
-            // if(bookingData.Payment_Status !== "COMPLETED" || bookingData.Payment_Status !== "FAILED"){
-            //     if(bookingData.Booking_Type === "Package"){
-            //         router.push("/packages")
-            //     }
-            // }
+            if(bookingData.Payment_Status !== "COMPLETED" || bookingData.Payment_Status !== "FAILED"){
+                if(bookingData.Booking_Type === "Package"){
+                    router.push("/packages")
+                }
+            }
             
         } catch (error) {
             console.log(error)

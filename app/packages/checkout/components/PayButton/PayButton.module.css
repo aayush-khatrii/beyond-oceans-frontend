@@ -256,8 +256,25 @@
     }
     .pgRadios .radioTitleCont{
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 0px;
+    }
+    .country{
+        width: 200px;
+    }
+    .radioText{
+        margin-right: 7px;
+    }
+    .payNowBTN{
+        height: 45px;
+        font-size: 22px;
+    }
+    .payNowBTNSkeleton{
+        height: 45px;
+    }
+    .payPartial .radioText .SkeletonBox{
+        width: 102px;
+        height: 25px;
+        margin-left: 4px;
     }
 }
