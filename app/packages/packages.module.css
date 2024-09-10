@@ -5,40 +5,6 @@
     align-items: center;
 }
 
-.breadcrumb{
-    height: 96px;
-    width: 100%;
-    background-color: #1E2C70;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.breadWrap{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1170px;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: .1px;
-}
-
-.left svg{
-    margin: 0 17px;
-    height: 12px;
-}
-
-.left a{
-    color: #B9BED3;
-    font-size: 15px;
-}
-
-.left a:last-of-type{
-    color: #fff;
-}
-
 .contWrapper{
     width: 1170px;
     margin: 54px 0;
@@ -130,4 +96,27 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+@media (max-width: 980px){
+    .contWrapper{
+        width: 90%;
+        margin: 25px 0;
+    }
+
+    .categoryDetail span{
+        font-size: clamp(17px, 4.95vw, 20px);
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .filter{
+        display: none;
+    }
+
+    .packageCardGrid{
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

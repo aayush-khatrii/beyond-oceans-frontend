@@ -216,6 +216,27 @@ export default function page() {
                     <AsideInfo />
                 </aside>
             </div>
+            <div className={styles.mobSubWrapper}>
+                {isLoginDone && <LoginDone />}
+                {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
+                {
+                    (packageCartData && packageData && hotelData) ?
+                    <OrderSum sessionData={packageCartData} packageData={packageData} hotelData={hotelData}/> 
+                    : <OrderSumSkeleton />
+                }
+                <ContectComp 
+                    contectData={handleContectData}
+                    contectDataError={handleDataError}
+                    errorDeatil={errorContact}
+                />
+                {
+                    (packageCartData && packageData) ?
+                    <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                    : <PriceBreakSkeleton />
+                }
+                <AsideInfo />
+                <Policy />
+            </div>
         </div>
     )
 }

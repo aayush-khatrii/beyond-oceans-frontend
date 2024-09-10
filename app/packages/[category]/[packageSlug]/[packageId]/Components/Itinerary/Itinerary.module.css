@@ -138,3 +138,49 @@
     padding-left: 20px;
 }
 
+@media (max-width: 980px){
+    .title{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+    .contentSubWrapper{
+        padding: 20px;
+    }
+
+    .listTitlewrp{
+        padding-left: 12px;
+    }
+
+    .listTitle{
+        align-items: flex-start;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .listTitleCont{
+        display: flex;
+        width: fit-content;
+    }
+    
+    .listTitleDay{
+        width: fit-content;
+        text-wrap: nowrap;
+        font-size: 16px;
+    }
+    
+    .listTitleText{
+        width: fit-content;
+    }
+
+    .drpArrow{
+        margin-left: 10px;
+    }
+    .dotedBorder{
+        left: 37px;
+    }
+
+    .itineraryListMDX{
+        padding-right: 0px !important;
+    }
+}

@@ -149,3 +149,81 @@
     font-size: 18px;
     color: #4C4C4C;
 }
+
+@media (min-width: 980px) {
+    .tagsWrapper{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+
+    .tags{
+        display: none;
+    }
+    
+    .titlePart{
+        width: 100%;
+    }
+
+    .tagsWrapper{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .mobTags{
+        overflow-x: scroll;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .mobTags::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .innerTag{
+        font-size: clamp(13px, 3.8vw, 15px);
+        text-wrap: nowrap;
+    }
+
+    .shareLink{
+        text-wrap: nowrap;
+    }
+
+    .pricePart{
+        display: none;
+    }
+
+    .title{
+        font-size: clamp(14px, 4.07vw, 16px);
+    }
+
+    .lable, .infoSecValue, .scheduleList{
+        font-size: clamp(14px, 4.06vw, 16px);
+    }
+
+    .duration svg{
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
+
+    .ptv svg{
+        min-width: 25px;
+        height: 28px;
+        margin-right: 13px;
+    }
+
+    .ptv .lable{
+        text-wrap: nowrap;
+    }
+
+    .ptv .infoSecValue{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
