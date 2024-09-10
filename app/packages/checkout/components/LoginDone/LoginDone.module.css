@@ -80,3 +80,7 @@
     background-color: #38B089;
     animation: loading 3s infinite;
 }
+
+@media (max-width: 980px){
+    
+}

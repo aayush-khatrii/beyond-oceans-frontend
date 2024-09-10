@@ -226,3 +226,38 @@
     letter-spacing: .3px;
     color: #BABABA;
 }
+
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 30px;
+    }
+    .partialComponent{
+        padding: 20px;
+    }
+    .radioText{
+        flex-direction: column;
+    }
+    .pgRadios .pgNote{
+        width: 100%;
+        font-size: 12.4px;
+        font-weight: 300;
+        color: #989898;
+    }
+    .radiochild{
+        font-size: 18px;
+    }
+    .payPartial{
+        gap: 20px;
+    }
+    .pgSelector{
+        margin-top: 30px;
+        gap: 20px;
+        padding: 20px;
+    }
+    .pgRadios .radioTitleCont{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+}

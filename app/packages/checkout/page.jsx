@@ -218,6 +218,7 @@ export default function page() {
             </div>
             <div className={styles.mobSubWrapper}>
                 {isLoginDone && <LoginDone />}
+                {/* <LoginDone /> */}
                 {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
                 {
                     (packageCartData && packageData && hotelData) ?
@@ -234,6 +235,7 @@ export default function page() {
                     <PriceBreak sessionData={packageCartData} packageData={packageData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
                     : <PriceBreakSkeleton />
                 }
+                <PayButton totalAmount={totalAmount} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
                 <AsideInfo />
                 <Policy />
             </div>
