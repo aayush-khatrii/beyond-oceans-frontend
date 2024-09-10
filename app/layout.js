@@ -2,6 +2,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Layoutextended from "./layoutextended";
 import DevMode from "./DevMode/DevMode";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 const DMSans = DM_Sans({ subsets: ["latin"] });
@@ -79,6 +80,7 @@ export default function RootLayout({ children }) {
                 <Layoutextended>{children}</Layoutextended> : ""
             }
         </body>
+        <GoogleAnalytics gaId="G-92BW0V2HBT" />
     </html>
   );
 }

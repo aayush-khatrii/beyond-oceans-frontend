@@ -62,28 +62,38 @@ export default function OrderSum({sessionData, packageData, hotelData}) {
                 <div className={styles.packageTitle}>{packageData ? <span>{packageData.Package_Title}</span> : null}</div>
                 <div className={styles.summaryList}>
                     <div className={styles.summaryItem}>
-                        <div className={styles.itemIcon}><IconList Icon="DateTime"/></div>
-                        <div className={styles.itemLable}>Duration:</div>
+                        <div className={styles.sumIconLable}>
+                            <div className={styles.itemIcon}><IconList Icon="DateTime"/></div>
+                            <div className={styles.itemLable}>Duration:</div>
+                        </div>
                         <div className={styles.itemData}><span>{packageData.Pack_Duration.Day} Days and {packageData.Pack_Duration.Night} Nights</span></div>
                     </div>
                     <div className={styles.summaryItem}>
-                        <div className={styles.itemIcon}><IconList Icon="DateCal"/></div>
-                        <div className={styles.itemLable}>Trip Date:</div>
+                        <div className={styles.sumIconLable}>
+                            <div className={styles.itemIcon}><IconList Icon="DateCal"/></div>
+                            <div className={styles.itemLable}>Trip Date:</div>
+                        </div>
                         <div className={styles.itemData}><span>{datetoString(packageCheckout.Travel_Date)} to {incressDate(packageCheckout.Travel_Date, packageData.Pack_Duration.Day)}</span></div>
                     </div>
                     <div className={styles.summaryItem}>
-                        <div className={styles.itemIcon}><IconList Icon="BestSellers" /></div>
-                        <div className={styles.itemLable}>Package Option:</div>
+                        <div className={styles.sumIconLable}>
+                            <div className={styles.itemIcon}><IconList Icon="BestSellers" /></div>
+                            <div className={styles.itemLable}>Package Option:</div>
+                        </div>
                         <div className={styles.itemData}><span>{packageOptionfilter(packageCheckout.Package_Option_Id).Option_Title}</span></div>
                     </div>
                     <div className={styles.summaryItem}>
-                        <div className={styles.itemIcon}><FETIconList Icon="Hotel"/></div>
-                        <div className={styles.itemLable}>Hotel or Resort:</div>
+                        <div className={styles.sumIconLable}>
+                            <div className={styles.itemIcon}><FETIconList Icon="Hotel"/></div>
+                            <div className={styles.itemLable}>Hotel or Resort:</div>
+                        </div>
                         <div className={styles.itemData}><span>{packageOptionfilterHotel(packageCheckout.Package_Option_Id)}</span></div>
                     </div>
                     <div className={styles.summaryItem}>
-                        <div className={styles.itemIcon}><IconList Icon="FamilyPackage"/></div>
-                        <div className={styles.itemLable}>Travellers:</div>
+                        <div className={styles.sumIconLable}>
+                            <div className={styles.itemIcon}><IconList Icon="FamilyPackage"/></div>
+                            <div className={styles.itemLable}>Travellers:</div>
+                        </div>
                         <div className={styles.itemData}><span>{TravelerComp}</span></div>
                     </div>
                 </div>

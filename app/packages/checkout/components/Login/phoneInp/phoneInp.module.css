@@ -282,38 +282,56 @@
         display: none;
     }
 
-    .mobInputCont{}
+    .mobInputCont{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 
     .PhoneInp{
+        height: 40px;
         width: 100%;
+        padding-left: 110px;
     }
 
     .ctrCodeCont{
-        width: 115px;
-        padding: 0 12px;
+        padding: 0 5px;
         padding-top: 2px;
         box-sizing: border-box;
         cursor: pointer;
+        width: 100px;
     }
-/* 
+
     .ctrCodeCont div:nth-child(1) svg{
-        height: 5px !important;
-    } */
+        height: 15px !important;
+    }
+
+    .drpIco{
+        margin-left: 4px;
+    }
+
+    .ctrCodeCont .ctryCode{
+        font-size: 12px;
+        margin-left: 4px;
+    }
 
     .signInBtn{
-        height: 48px;
-        width: 170px;
-        margin-left: 30px;
-        background-color: #E9E9E9;
-        border: 2px solid #BABABA;
-        outline: none;
-        border-radius: 8px;
-        color: #4C4C4C;
-        cursor: pointer;
-        font-size: 20px;
-        letter-spacing: .4px;
-        background-color: #1E2C70;
-        border-color: #989EBD;
-        color: #fff;
+        margin-left: 0;
+        height: 40px;
+        width: 100%;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+
+    .wrongNoteCont{
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .wrongnote{
+        font-size: 12px;
+    }
+
+    .optionsList{
+        width: 100%;
     }
 }
