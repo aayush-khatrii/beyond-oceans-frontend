@@ -35,9 +35,6 @@
 }
 
 .hotelTitle{
-    font-size: 17.8px;
-    font-weight: 600;
-    margin-bottom: 8px;
     height: 24px;
     width: 350px;
 }
@@ -66,4 +63,41 @@
     width: 138px;
     overflow: hidden;
     border-radius: 8px;
+}
+
+@media (max-width: 980px){
+    .hotelIcon{
+        padding: 7px;
+        box-sizing: border-box;
+        min-height: 42px;
+        min-width: 42px;
+        max-height: 42px;
+        max-width: 42px;
+    }
+    .hotelInfoCont{
+        width: 100%;
+    }
+    .hotelList{
+        width: 100%;
+    }
+    .hotelTitle{
+        height: 23px;
+        width: 100%;
+    }
+    .hotelDetail{
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px 10px;
+    }
+    .featureList{
+        flex: 1 40%;
+    }
+    .hotelImages{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .imageList{
+        width: 100px;
+        flex-grow: 1;
+    }
 }

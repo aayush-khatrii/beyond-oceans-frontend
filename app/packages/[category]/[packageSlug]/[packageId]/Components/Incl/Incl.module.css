@@ -46,5 +46,26 @@
 .mdxContent{
     color: #696969;
     box-sizing: border-box;
-    padding: 20px 20px;
+    padding: 20px;
+}
+
+@media (max-width: 980px){
+    .mainWrapper{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .inclusions, .Exclusions{
+        width: 100%;
+    }
+
+    .incTitle, .excTitle{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+
+    .mdxContent{
+        padding: 20px 16px;
+    }
 }

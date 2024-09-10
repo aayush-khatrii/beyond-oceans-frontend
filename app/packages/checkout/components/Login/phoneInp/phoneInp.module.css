@@ -259,3 +259,61 @@
 .authOptionBtnwrp button:hover > svg path{
     fill: #1E2C70;
 }
+
+@media (min-width: 980px) {
+    .mobInputCont{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .authOptionBtnwrp button{
+        height: 100%;
+        font-size: clamp(14px, 4.05vw, 17px);
+        padding-top: 1px;
+        padding: 0 10px;
+    }
+
+    .btnIcon{
+        margin-right: 10px;
+    }
+
+    .inputCont{
+        display: none;
+    }
+
+    .mobInputCont{}
+
+    .PhoneInp{
+        width: 100%;
+    }
+
+    .ctrCodeCont{
+        width: 115px;
+        padding: 0 12px;
+        padding-top: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+/* 
+    .ctrCodeCont div:nth-child(1) svg{
+        height: 5px !important;
+    } */
+
+    .signInBtn{
+        height: 48px;
+        width: 170px;
+        margin-left: 30px;
+        background-color: #E9E9E9;
+        border: 2px solid #BABABA;
+        outline: none;
+        border-radius: 8px;
+        color: #4C4C4C;
+        cursor: pointer;
+        font-size: 20px;
+        letter-spacing: .4px;
+        background-color: #1E2C70;
+        border-color: #989EBD;
+        color: #fff;
+    }
+}

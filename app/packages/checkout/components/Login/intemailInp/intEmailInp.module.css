@@ -283,3 +283,21 @@
 .authOptionBtnwrp button:hover > svg path{
     fill: #1E2C70;
 }
+
+@media (max-width: 980px){
+
+    .authOptionBtnwrp{
+        gap: 10px;
+    }
+
+    .authOptionBtnwrp button{
+        height: 100%;
+        font-size: clamp(14px, 4.05vw, 17px);
+        padding-top: 1px;
+        padding: 0 10px;
+    }
+
+    .btnIcon{
+        margin-right: 10px;
+    }
+}

@@ -258,7 +258,12 @@ export default function Pricing(props) {
         if(!travelDate){
             setEmptyDate(true)
             toast.error("Travel Date is Required")
-            window.scrollTo({ top: 2400, left: 0, behavior: 'smooth' });
+            if(window.innerWidth < 980){
+                window.scrollTo({ top: window.innerHeight * 1.1, left: 0, behavior: 'smooth' });
+            }
+            if(window.innerWidth > 980){
+                window.scrollTo({ top: 2400, left: 0, behavior: 'smooth' });
+            }
             return
         }
 
@@ -401,7 +406,7 @@ export default function Pricing(props) {
                                         <span className={styles.variantPriceDesc}>per person</span>
                                     </div>
                                     <div className={styles.variantMinimum}>
-                                        <span className={styles.variantMinText}>Minimum 2 Pax Required</span>
+                                        <span className={styles.variantMinText}>Min. 2 Pax Required</span>
                                     </div>
                                     {/* {   
                                         item.Min_Pax &&
@@ -415,7 +420,6 @@ export default function Pricing(props) {
                     }
                 </div>
                 <button className={styles.bookNowBtn} onClick={() => {handleBooknowBtn()}}>Reserve Now</button>
-                {/* <button className={styles.bookNowBtn} onClick={() => {handleInq()}}>Reserve Now</button> */}
                 <div className={styles.inquiryBtnWrp}>
                     <button className={styles.inquiryBtn} onClick={() => {handleInq()}}>Inquiry Now <IconList Icon="RightArrow"/></button>
                 </div>
