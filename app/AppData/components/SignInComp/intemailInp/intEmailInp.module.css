@@ -270,3 +270,45 @@
     background-color: #dddff1;
 }
 
+@media (max-width: 980px){
+    .PhoneInp{
+        height: 50px;
+        width: 100%;
+        padding-left: 110px;
+    }
+    .EmailInp{
+        height: 50px;
+        width: 100%;
+    }
+    .ctrCodeCont{
+        padding: 0 5px;
+        padding-top: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+        width: 100px;
+    }
+    .ctrCodeCont div:nth-child(1) svg{
+        height: 15px !important;
+    }
+    .EMLinputCont .inputBox{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrongnote{
+        position: relative;
+        padding-left: 0px;
+        top: 4px;
+        left: 0;
+    }
+    .signInBtn{
+        margin-top: 15px;
+        height: 50px;
+    }
+    .signinOptions{
+        margin-top: 30px;
+    }
+    .signinOptions span{
+        text-wrap: nowrap;
+        padding: 0 10px;
+    }
+}

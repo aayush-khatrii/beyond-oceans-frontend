@@ -87,6 +87,7 @@ export default function SignInComp({handleClose}) {
                 </div>
             </div>
             <div className={styles.right}>
+                <button className={styles.closeBTNMob} onClick={handleClose}><IconList Icon="Close" /></button>
                 <div className={styles.rightTitle}><span>{ComponentTitle[inpType]}</span></div>
                 {InputComponent[inpType] ? InputComponent[inpType] : null}
                 {signInOptions[inpType] ? signInOptions[inpType] : null}

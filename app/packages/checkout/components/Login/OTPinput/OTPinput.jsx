@@ -66,7 +66,7 @@ export default function OTPinput({length = 6, onOtpSubmit = () => {}}) {
                     return (
                         <input 
                             key={index}
-                            type='text'
+                            type='tel'
                             ref={(input) => (inputRefs.current[index] = input)}
                             value={value}
                             onChange={(e) => handleChange(index, e)}

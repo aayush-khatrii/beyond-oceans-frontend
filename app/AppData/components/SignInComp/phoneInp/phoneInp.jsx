@@ -181,7 +181,7 @@ export default function phoneInp(props) {
             <span className={styles.mobilePlace}>Enter Mobile Number to Continue</span>
 
             <div className={styles.inputBox}>
-                <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder='Enter your phone number' autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
+                <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder='Your phone number' autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
                 <div className={styles.ctrCodeCont} onClick={toggleContry}>
                     <div>
                         <Icon icon={`flag:${countryObj.code.toLowerCase()}-4x3`} />
@@ -212,6 +212,7 @@ export default function phoneInp(props) {
                 </ol>
             </div>
             </div>
+            {isFalsePhone && <div className={styles.mobWrongPhonenote}><p>* Phone Number is Invalid</p></div>}
         </div>
     </div>
     <button style={btnStyle} disabled={disableBtn} className={styles.signInBtn} onClick={handelSignUp} >Continue To Verification</button>

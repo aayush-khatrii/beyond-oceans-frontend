@@ -26,3 +26,19 @@
     outline: auto;
     outline-color: #A3DBC9 !important;
 }
+
+
+@media (max-width: 980px){
+    .OtpInpContainer{
+        width: 100%;
+        height: 40px;
+        gap: 1px;
+    }
+    .otpInput{
+        display: flex;
+        aspect-ratio: 1/1;
+        width: auto;
+        height: auto;
+        font-size: 20px;
+    }
+}
