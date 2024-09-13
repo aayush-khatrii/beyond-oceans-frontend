@@ -182,7 +182,7 @@ export default function IntEmailInp(props) {
         <div className={styles.PHNinputCont}>
             <div className={styles.inputBox}>
             
-                <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder="Enter your phone number" autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
+                <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder="Your phone number" autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
                 <div className={styles.ctrCodeCont} onClick={toggleContry}>
                     <div>
                         <Icon icon={`flag:${countryObj.code.toLowerCase()}-4x3`} />
@@ -216,7 +216,7 @@ export default function IntEmailInp(props) {
         </div>
         <div className={styles.EMLinputCont}>
             <div className={styles.inputBox}>
-                <input className={styles.EmailInp} style={{borderColor: isFalseEmail ? '#ff0000' : ''}} type="tel" placeholder='Enter your Email Address' autoComplete='on' onChange={(e) => handleEmailChange(e)}/>
+                <input className={styles.EmailInp} style={{borderColor: isFalseEmail ? '#ff0000' : ''}} type="text" placeholder='Enter your Email Address' autoComplete='on' onChange={(e) => handleEmailChange(e)}/>
                 {isFalseEmail && <div className={styles.wrongnote}><p>* Email Address is Invalid</p></div>}
                 {isFalsePhone && <div className={`${styles.invalidPhn} ${styles.wrongnote}`}><p>* Phone Number is Invalid</p></div>}
             </div>

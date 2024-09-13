@@ -3,9 +3,15 @@ import IconList from '../../IconComponent/IconList'
 import styles from './MobHeader.module.css'
 import { useEffect, useRef, useState } from 'react'
 import MobMenu from '../MobMenu/MobMenu'
+import SignInComp from '../../SignInComp/SignInComp'
+import { useAppSelector } from '@/app/AppData/lib/store/hooks';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function MobHeader() {
 
+    const router = useRouter()
+    const userData = useAppSelector((state) => state.user.userData)
+    const [loginPop, setLoginPop] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false)
     const [sheetPosition, setSheetPosition] = useState(100)
     const sheetRef = useRef(null);
@@ -15,6 +21,16 @@ export default function MobHeader() {
         setToggleMenu(false)
         setSheetPosition(100)
     }, [])
+
+    function loginPopup(){
+        if(userData.userId && userData.auth){
+            router.push("/user/profile")
+            return
+        }
+        
+        if(usePathname === "/user/profile") return
+        setLoginPop(!loginPop)
+    }
 
     const handleMenuToggle = () => {
         setToggleMenu(!toggleMenu)
@@ -50,7 +66,7 @@ export default function MobHeader() {
 
     return (
         <div className={styles.mainWrapper}>
-
+        {loginPop && <SignInComp handleClose={loginPopup} />}
             <div className={styles.subWrapper}>
             <div className={`${styles.overlay} ${toggleMenu ? styles.overlayShow : ""}`}></div>
             <div className={`${styles.menuWrapper} ${toggleMenu ? styles.menuWrapperShow : ""}`} ref={sheetRef}
@@ -78,7 +94,10 @@ export default function MobHeader() {
                 </div>
                 <div className={styles.rightHead}>
                     <div className={styles.currency}>INR</div>
-                    <div className={styles.profile}><IconList Icon="ProfileSet"/></div>
+                    <div className={styles.profile} onClick={loginPopup}>
+                        <IconList Icon="ProfileSet"/>
+
+                    </div>
                 </div>
             </div>
         </div>

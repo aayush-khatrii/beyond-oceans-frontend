@@ -160,7 +160,7 @@ export default function emailInp(props) {
   
         <div className={styles.emailinputCont}>
             <div className={styles.inputBox}>
-                <input autoFocus className={styles.EmailInp} style={{borderColor: isFalseEmail ? '#ff0000' : ''}} type="tel" placeholder='Enter your Email Address' autoComplete='on' onChange={(e) => handleEmailChange(e)}/>
+                <input autoFocus className={styles.EmailInp} style={{borderColor: isFalseEmail ? '#ff0000' : ''}} type="text" placeholder='Enter your Email Address' autoComplete='on' onChange={(e) => handleEmailChange(e)}/>
                 {isFalseEmail && <div className={styles.wrongnote}><p>* Email Address is Invalid</p></div>}
                 {isEmptCtrySelect && <div className={`${styles.wrongnote} ${styles.emptCtry}`}><p>* Please Select Country</p></div>}
             </div>

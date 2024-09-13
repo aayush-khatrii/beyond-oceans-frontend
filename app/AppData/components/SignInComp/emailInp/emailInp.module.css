@@ -289,3 +289,29 @@
     background-color: #dddff1;
 }
 
+@media (max-width: 980px){
+    .contrySlctCont, .EmailInp{
+        height: 50px;
+    }
+    .signInBtn{
+        margin-top: 15px;
+        height: 50px;
+    }
+    .emailinputCont .inputBox{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrongnote{
+        position: relative;
+        padding-left: 0px;
+        top: 4px;
+        left: 0;
+    }
+    .signinOptions{
+        margin-top: 30px;
+    }
+    .signinOptions span{
+        text-wrap: nowrap;
+        padding: 0 10px;
+    }
+}
