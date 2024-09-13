@@ -283,3 +283,75 @@
 .authOptionBtnwrp button:hover > svg path{
     fill: #1E2C70;
 }
+
+@media (max-width: 980px){
+
+    .authOptionBtnwrp{
+        gap: 10px;
+    }
+
+    .authOptionBtnwrp button{
+        height: 100%;
+        font-size: clamp(14px, 4.05vw, 17px);
+        padding-top: 1px;
+        padding: 0 10px;
+    }
+
+    .btnIcon{
+        margin-right: 10px;
+    }
+
+    .PhoneInp, .EmailInp{
+        height: 40px;
+        width: 100%;
+        padding-left: 110px;
+    }
+
+    .EmailInp{
+        padding-left: 15px;
+    }
+
+    .ctrCodeCont{
+        padding: 0 5px;
+        padding-top: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+        width: 100px;
+    }
+
+    .ctrCodeCont div:nth-child(1) svg{
+        height: 15px !important;
+    }
+
+    .drpIco{
+        margin-left: 4px;
+    }
+
+    .ctrCodeCont .ctryCode{
+        margin-left: 4px;
+        font-size: 12px;
+    }
+
+    .mainWrapper{
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .signInBtn{
+        height: 40px;
+        width: 100%;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+
+    .wrongNoteCont{
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .wrongnote{
+        font-size: 12px;
+    }
+
+}

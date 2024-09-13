@@ -167,7 +167,7 @@ export default function page() {
                     <div className={styles.rightArw}><IconList Icon="RightArrowV2" /></div>
                     <div className={styles.selectionStep} onClick={() => router.back()}>
                         <div className={styles.stepNum} >2</div>
-                        <span>Package Selection</span>
+                        <span>Activity Selection</span>
                     </div>
                     <div className={styles.rightArw}><IconList Icon="RightArrowV2" /></div>
                     <div className={styles.cnfStep}>
@@ -207,6 +207,28 @@ export default function page() {
                     <PayButton totalAmount={totalAmount} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
                     <AsideInfo />
                 </aside>
+            </div>
+            <div className={styles.mobSubWrapper}>
+                {isLoginDone && <LoginDone />}
+                {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
+                {
+                    (activityCartData && activityData) ?
+                    <OrderSum sessionData={activityCartData} activityData={activityData}/> 
+                    : <OrderSumSkeleton />
+                }
+                <ContectComp 
+                    contectData={handleContectData}
+                    contectDataError={handleDataError}
+                    errorDeatil={errorContact}
+                />
+                {
+                    (activityCartData && activityData) ?
+                    <PriceBreak sessionData={activityCartData} activityData={activityData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                    : <PriceBreakSkeleton />
+                }
+                <PayButton totalAmount={totalAmount} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
+                <AsideInfo />
+                <Policy />
             </div>
         </div>
     )
