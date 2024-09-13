@@ -68,3 +68,17 @@
     width: 28px;
     border-radius: 50px;
 }
+
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 40px;
+        gap: 30px;
+    }
+    .policyTitle{
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+    .policyList{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}

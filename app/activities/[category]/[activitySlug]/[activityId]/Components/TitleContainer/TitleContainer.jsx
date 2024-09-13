@@ -49,6 +49,25 @@ export default function TitleContainer({data}) {
     return (
         <div className={styles.titleCont}>
             <div className={styles.titlePart}>
+                <div className={styles.tagsWrapper}>
+                    <div className={styles.mobTags}>
+                        <div className={styles.innerTag}>{data.Activity_Type.Value}</div>
+                        <div style={{
+                            borderColor: `#${(tagPriority[data.Tags.Card_Tag.Priority]).br}`, 
+                            color: `#${(tagPriority[data.Tags.Card_Tag.Priority]).tx}`, 
+                            backgroundColor: `#${(tagPriority[data.Tags.Card_Tag.Priority]).bg}`
+                        }} 
+                        className={styles.innerTag}>
+                            <span>{data.Tags.Card_Tag.Value}</span>
+                        </div>
+                        {
+                            data.Tags.Pack_Tag.map((item, index) => (
+                                <div key={index} className={styles.innerTag}>{item}</div>
+                            ))
+                        }
+                    </div>
+                    <div onClick={handleShare} className={styles.shareLink}>Share Trip <IconList Icon="TRArrow"/></div>
+                </div>
                 <div className={styles.tags}>
                     <div className={styles.innerTag}>{data.Activity_Type.Value}</div>
                     <div style={{

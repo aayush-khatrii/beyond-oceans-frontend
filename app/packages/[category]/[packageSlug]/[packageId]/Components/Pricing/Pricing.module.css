@@ -467,4 +467,24 @@
         padding: 11px 0;
         font-size: 22px;
     }
+    .roomSelectBox, .personSelectBox{
+        width: 100%;
+        bottom: -90px;
+        height: fit-content;
+        padding: 20px;
+    }
+    .roomSelectBoxLeft span:nth-child(1), .personSelectBoxLeft span:nth-child(1){
+        font-size: 16px;
+    }
+    .roomSelectBoxLeft span:nth-child(2), .personSelectBoxLeft span:nth-child(2){
+        font-size: 10px;
+    }
+    .roomMinus, .roomPlus, .personMinus, .personPlus{
+        height: 30px;
+        width: 30px;
+    }
+    .adultSelect, .childSelect, .infantSelect{
+        width: 100%;
+        padding: 0px;
+    }
 }

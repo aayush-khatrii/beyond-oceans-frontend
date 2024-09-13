@@ -184,3 +184,77 @@
     font-size: 21.5px;
     font-weight: 600;
 }
+
+@media (max-width: 980px){
+    .mainWrapper{
+        margin-top: 30px;
+    }
+    .title{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+    .mainContent{
+        padding: 20px;
+    }
+    .ppriceLable, .ppriceValue, .travelerLable, .travelerValue, .taxLable, .taxValue{
+        font-size: 16px;
+    }
+    .packageOption{
+        font-size: 12px;
+    }
+    .ppriceNote{
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .contro{
+        margin: 22px 0;
+        padding: 0 7px;
+    }
+    .controTitleText{
+        font-size: 12px;
+        width: 100px;
+        margin: auto auto;
+        margin-left: 7px;
+    }
+    .controTitle svg{
+        height: 27px;
+        width: 27px;
+        margin-bottom: 2px;
+    }
+    .controTitletc{
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+    .controIDW{
+        font-size: 11px;
+    }
+    .subTotal{
+        margin: 15px 0;
+    }
+    .totlaLable, .totalValue{
+        font-size: 18px;
+    }
+    .utGstLable, .utGstValue, .cgstLable, .cgstValue{
+        font-size: 13px;
+    }
+    .utGstLable, .utGstValue{
+        margin-top: 14px;
+    }
+    .cgstLable, .cgstValue{
+        margin-top: 7px;
+    }
+    .taxsComp{
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+    .totalAmtLable, .totalAmtValue{
+        font-size: 20px;
+    }
+    .totalAmt{
+        height: 100%;
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

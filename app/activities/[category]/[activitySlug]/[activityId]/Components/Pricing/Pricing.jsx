@@ -81,7 +81,12 @@ export default function Pricing(props) {
         if(!travelDate){
             setEmptyDate(true)
             toast.error("Travel Date is Required")
-            window.scrollTo({ top: 2000, left: 0, behavior: 'smooth' });
+            if(window.innerWidth < 980){
+                window.scrollTo({ top: window.innerHeight, left: 0, behavior: 'smooth' });
+            }
+            if(window.innerWidth > 980){
+                window.scrollTo({ top: 2400, left: 0, behavior: 'smooth' });
+            }
             return
         }
 

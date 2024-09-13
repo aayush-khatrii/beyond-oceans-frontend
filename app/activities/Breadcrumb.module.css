@@ -35,3 +35,27 @@
 .left a:last-of-type{
     color: #fff;
 }
+
+@media (max-width: 980px){
+    .breadcrumb{
+        height: 60px;
+    }
+
+    .breadWrap{
+        width: 90%;
+        overflow-x: scroll;
+    }
+
+    .breadWrap::-webkit-scrollbar{
+        display: none;
+    }
+
+    .left{
+        text-wrap: nowrap;
+    }
+
+    .left svg{
+        margin: 0 12px;
+    }
+
+}
