@@ -86,3 +86,24 @@
 .infoLine1 span:nth-child(2){
     color: #696969;
 }
+
+@media (max-width: 980px){
+    .sectionTitle{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+    .mainContent{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .infoLines{
+        margin-top: 15px;
+    }
+    .infoLine1{
+        font-size: 14px;
+    }
+    .infoLine1 span:nth-child(1){
+        margin-right: 5px;
+    }
+}
