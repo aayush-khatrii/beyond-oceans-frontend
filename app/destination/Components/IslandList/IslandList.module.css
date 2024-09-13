@@ -56,3 +56,15 @@
 .islandBtn:hover > a{
     color: #38B089;
 }
+
+@media (max-width: 980px){
+    .islandTitle{
+        margin-top: 0px;
+        font-size: 22px;
+    }
+    .islandImage{
+        margin-top: 15px;
+        height: 210px;
+        border-radius: 10px;
+    }
+}

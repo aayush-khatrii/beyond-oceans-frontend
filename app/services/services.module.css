@@ -17,3 +17,14 @@
 .aside{
     width: 390px;
 }
+
+@media (max-width: 980px){
+    .subWrapper{
+        width: 90%;
+        flex-direction: column;
+    }
+    .mainContent, .aside{
+        width: 100%;
+    }
+
+}

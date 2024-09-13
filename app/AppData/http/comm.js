@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { API_ENV } from './provider.js'
 const local = "http://localhost:3300/devstag/v1/api";
 const aws = "https://rrucc6gtnvp7ldakroqqedhcae0hguqh.lambda-url.ap-south-1.on.aws/devstag/v1/api";
 
 // axios.defaults.withCredentials = true;
 const api = axios.create({
-    baseURL: aws,
+    baseURL: API_ENV === "PROD" ? aws : local,
     withCredentials: true,
     headers: {
         'Content-type': 'application/json',
