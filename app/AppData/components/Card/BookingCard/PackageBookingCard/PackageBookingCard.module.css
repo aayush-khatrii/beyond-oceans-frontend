@@ -100,8 +100,6 @@
 .bookingDetails{
     margin-top: 1px;
     font-size: 15px;
-
-
 }
 
 .bookingDetails span:nth-child(1){
@@ -135,4 +133,66 @@
     border-color: #7ACAB0;
     background-color: #38B089;
     color: #fff;
+}
+
+@media (max-width: 980px){
+    .top{
+        flex-direction: column-reverse;
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+    .imageWrapper{
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    .bookingDesc{
+        height: 100%;
+        gap: 10px;
+    }
+    .bookContList{
+        align-items: flex-start;
+    }
+    .bookContList svg{
+        margin-right: 10px;
+    }
+    .descTitle{
+        margin-top: 3px;
+        text-wrap: nowrap;
+        font-size: 13px;
+    }
+    .descValue{
+        margin-top: 3px;
+        margin-left: 6px;
+        font-size: 13px;
+    }
+    .bookingTags{
+        margin-top: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .cnfSts{
+        height: fit-content;
+        width: fit-content;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .foot{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+    .footRight{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footRight button{
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+    .downBtn{
+        margin-right: 0px;
+    }
 }

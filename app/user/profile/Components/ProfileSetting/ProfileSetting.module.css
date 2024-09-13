@@ -124,3 +124,36 @@
     height: 1px;
     background-color: #F4F4F4;
 }
+
+@media (max-width: 980px){
+    .decorative{
+        height: auto;
+        margin-right: 15px;
+    }
+    .headContent span{
+        font-size: 20px;
+    }
+    .headContent p{
+        font-size: 12px;
+    }
+    .dataContainer{
+        margin-top: 25px;
+        border-radius: 12px;
+    }
+    .dataField{
+        height: 50px;
+        padding: 0 15px;
+    }
+    .dataField span{
+        width: 142px;
+        text-wrap: nowrap;
+        font-size: 14px;
+    }
+    .dataField input{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -29,11 +29,11 @@ export default function Navbar() {
 
     function loginPopup(){
         if(userData.userId && userData.auth){
-            router.push("/user/profile")
+            router.push("/user/profile?menu=setting")
             return
         }
         
-        if(usePathname === "/user/profile") return
+        if(usePathname === "/user/profile?menu=setting") return
         setLoginPop(!loginPop)
     }
 

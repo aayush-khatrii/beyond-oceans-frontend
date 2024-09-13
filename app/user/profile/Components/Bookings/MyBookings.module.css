@@ -40,4 +40,19 @@
     margin-top: 30px;
 }
 
-
+@media (max-width: 980px){
+    .decorative{
+        height: auto;
+        margin-right: 15px;
+    }
+    .headContent span{
+        font-size: 20px;
+    }
+    .headContent p{
+        font-size: 12px;
+    }
+    .dataContainer{
+        margin-top: 25px;
+        border-radius: 12px;
+    }
+}

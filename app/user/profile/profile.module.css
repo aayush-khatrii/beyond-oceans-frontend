@@ -93,28 +93,32 @@
         display: none;
     }
     .menuList{
+        flex-wrap: wrap;
         flex-direction: row;
         border-radius: 18px;
         width: 100%;
-        height: 100%;
+        height: fit-content;
         padding: 15px;
+        border-radius: 8px;
+        gap: 5px;
     }
     .menuItem{
+        flex: 1;
         width: fit-content;
-        height: 50px;
+        height: fit-content;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        border-radius: 8px;
-        box-sizing: border-box;
-        padding: 10px;
+        flex-direction: column;
+        padding: 7px;
+        border-radius: 5px;
+        gap: 5px;
         cursor: pointer;
     }
     .menuItem span{
-        display: none;
+        text-wrap: nowrap;
+        font-size: 13px;
     }
     .menuItem svg{
-        height: 25px;
+        min-height: 25px;
         width: auto;
         margin-right: 0px;
     }
