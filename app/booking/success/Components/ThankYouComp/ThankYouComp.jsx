@@ -34,6 +34,23 @@ export default function ThankYouComp() {
             }
             if(bookingData.Payment_Status === "COMPLETED"){
                 setBookingData(bookingData)
+                if (typeof window !== 'undefined' && window.dataLayer) {
+                    window.dataLayer.push({
+                      event: 'Dynamic purchase',
+                      transaction_id: bookingData.Booking_Id,
+                      value: bookingData.Paid_Amount,
+                      currency: 'INR',
+                      user_id: bookingData.User_Id,
+                      email: bookingData.Booking_Email, 
+                      conversion_type: 'Success Payment',
+                      product: {
+                        id: Booking_Type === "Package" ? bookingData.Item.Package_Id : bookingData.Item.Activity_Id,
+                        name: Booking_Type === "Package" ? bookingData.Item.Package_Title :bookingData.Item. Activity_Title,
+                        category: Booking_Type,
+                      },
+                      timestamp: new Date().toISOString(),
+                    });
+                }
                 return
             }
             if(bookingData.Payment_Status !== "COMPLETED" || bookingData.Payment_Status !== "FAILED"){

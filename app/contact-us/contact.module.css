@@ -299,3 +299,16 @@
     width: 100%;
     height: 476px;
 }
+
+@media (max-width: 980px){
+    .heroImgSec, .heroImg{
+        width: 100%;
+        height: 380px;
+    }
+    .heroImgSec{
+        position: relative;
+    }
+    .heroImg{
+        top: 0px;
+    }
+}
