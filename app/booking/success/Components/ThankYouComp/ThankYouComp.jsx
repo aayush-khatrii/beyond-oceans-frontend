@@ -36,7 +36,7 @@ export default function ThankYouComp() {
                 setBookingData(bookingData)
                 if (typeof window !== 'undefined' && window.dataLayer) {
                     window.dataLayer.push({
-                      event: 'Dynamic purchase',
+                      event: 'dynamic_purchase_suc',
                       transaction_id: bookingData.Booking_Id,
                       value: bookingData.Paid_Amount,
                       currency: 'INR',
