@@ -268,23 +268,6 @@ export default function Pricing(props) {
         }
 
         const bookingPriceCalc = (adults + child) * filterOptions(selectedVer).Option_Price
-        if (typeof window !== 'undefined' && window.dataLayer) {
-            window.dataLayer.push({
-              event: 'dynamic_purchase_suc',
-              transaction_id: "Booking_Id",
-              value: 100000,
-              currency_code: 'INR',
-              user_id: "User_Id",
-              email: "Booking_Email", 
-              conversion_type: 'Success Payment',
-              product: {
-                id: "Package_Id",
-                name: "Package_Title",
-                category: "Booking_Type",
-              },
-              timestamp: new Date().toISOString(),
-            });
-        }
         const packageBookingParams = {
             packageId: packageData.Package_Id,
             packageOptionId: selectedVer.toString(),
