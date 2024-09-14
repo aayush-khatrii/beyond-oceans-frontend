@@ -44,9 +44,9 @@ export default function ThankYouComp() {
                       email: bookingData.Booking_Email, 
                       conversion_type: 'Success Payment',
                       product: {
-                        id: Booking_Type === "Package" ? bookingData.Item.Package_Id : bookingData.Item.Activity_Id,
-                        name: Booking_Type === "Package" ? bookingData.Item.Package_Title :bookingData.Item. Activity_Title,
-                        category: Booking_Type,
+                        id: bookingData.Booking_Type === "Package" ? bookingData.Item.Package_Id : bookingData.Item.Activity_Id,
+                        name: bookingData.Booking_Type === "Package" ? bookingData.Item.Package_Title :bookingData.Item. Activity_Title,
+                        category: bookingData.Booking_Type,
                       },
                       timestamp: new Date().toISOString(),
                     });
