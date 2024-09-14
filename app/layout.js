@@ -3,7 +3,7 @@ import "./globals.css";
 import Layoutextended from "./layoutextended";
 import DevMode from "./DevMode/DevMode";
 import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const DMSans = DM_Sans({ subsets: ["latin"] });
 
@@ -64,6 +64,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
         <head>
+            <GoogleTagManager gtmId="GTM-558H87X3" />
+            <GoogleAnalytics gaId="G-92BW0V2HBT" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -80,7 +82,6 @@ export default function RootLayout({ children }) {
                 <Layoutextended>{children}</Layoutextended> : ""
             }
         </body>
-        <GoogleAnalytics gaId="G-92BW0V2HBT" />
     </html>
   );
 }
