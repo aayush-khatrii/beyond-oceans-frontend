@@ -8,6 +8,10 @@ export default function AboutStatic() {
                 <span>We Are The Most Popular</span>
                 <span>Andaman and Nicobar Travel Agency</span>
             </div>
+            <div className={styles.sectionTitleMob}>
+                <span>We Are The Most Loved Andaman </span>
+                <span>Destination Management Company</span>
+            </div>
             <div className={styles.cardLists}>
                 <div className={styles.card}>
                     <span>120+</span>

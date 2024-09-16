@@ -1,10 +1,10 @@
 'use client'
 import styles from './Testimonial.module.css'
 import TestimonialData from '../../../AppData/Data/Testimonial.json'
+import TestimonialCard from '../../../AppData/components/Card/TestimonialCard/TestimonialCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import 'swiper/css';
-import TestimonialCard from '@/app/AppData/components/Card/TestimonialCard/TestimonialCard';
 
 export default function Testimonial() {
 
@@ -14,6 +14,12 @@ export default function Testimonial() {
     <>
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
+                <div className={styles.titleNbtnMob}>
+                    <div className={styles.sectionTitle}>
+                        <h2>What Travelers Say About Us</h2>
+                        <p>See what our customers have to say about their experiences with us</p>
+                    </div>
+                </div>
                 <div className={styles.titleNbtn}>
                     <div className={styles.sectionTitle}>
                         <h2>What Travelers Say About Us</h2>
@@ -37,6 +43,17 @@ export default function Testimonial() {
                         {
                             testimonialData.map((item, index) => (
                                 <SwiperSlide key={index}>
+                                    <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+                <div className={styles.cardWrapperMob}>
+                    <Swiper spaceBetween={10} slidesPerView={1.30} loop={true}>
+                    {
+                            testimonialData.map((item, index) => (
+                                <SwiperSlide key={index} className={styles.swiperSlides}>
                                     <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />
                                 </SwiperSlide>
                             ))

@@ -50,7 +50,7 @@ export default function BestPackage({featuredPackages}){
                     </Swiper>
                 </div>
                 <div className={styles.cardWrapperMob}>
-                    <Swiper ref={swiperRef} spaceBetween={10} slidesPerView={1.60} loop={true}>
+                    <Swiper spaceBetween={10} slidesPerView={1.60} loop={true}>
                         {
                             featuredPackages.map((item, index) => (
                                 <SwiperSlide key={index} className={styles.swiperSlides}>

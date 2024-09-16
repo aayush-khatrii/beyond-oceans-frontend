@@ -1,14 +1,10 @@
 .mainWrapper{
-    margin-top: 51px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
 
 .subWrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 0;
     width: 1170px;
 }
 
@@ -68,3 +64,61 @@
     margin-top: 52px;
 }
 
+@media (min-width: 980px) {
+    .titleNbtnMob{
+        display: none;
+    }
+    .cardWrapperMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .subWrapper{
+        padding: 40px 0;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .titleNbtn{
+        display: none;
+    }
+
+    .cardWrapper{
+        display: none;
+    }
+
+    .titleNbtnMob{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sectionTitle h2{
+        font-size: clamp(19px, 5.51vw, 25px);
+        margin-bottom: 1px;
+    }
+    
+    .sectionTitle p{
+        font-size: clamp(12.5px, 3.65vw, 18px);
+    }
+
+    .cardWrapperMob{
+        display: flex;
+        margin-left: 4.5%;
+        margin-top: 19px;
+        width: 95%;
+    }
+    
+    .swiperSlides{
+        display: flex;
+    }
+}

@@ -50,3 +50,45 @@
     font-size: 26px;
     margin-top: 5px;
 }
+
+@media (min-width: 981px){
+    .sectionTitleMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .sectionTitle{
+        display: none;
+    }
+    .mainWrapper{
+        margin-top: 60px;
+    }
+    .subWrapper{
+        width: 90%;
+    }  
+    .sectionTitleMob{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: clamp(18px, 5.24vw, 21px);
+        font-weight: 600;
+    }
+    .cardLists{
+        gap: 20px;
+        margin-top: 25px;
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: fit-content;
+        padding: 20px 0;
+    }
+    .card span:nth-child(1){
+        font-size: 25px;
+    }
+    .card span:nth-child(2){
+        font-size: 20px;
+        margin-top: 5px;
+    }
+}
