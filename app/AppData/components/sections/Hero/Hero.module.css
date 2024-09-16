@@ -141,6 +141,7 @@
     .heroTitleMobile{
         display: none;
     }
+
 }
 
 @media (max-width: 980px) {

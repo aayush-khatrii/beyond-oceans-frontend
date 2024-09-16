@@ -39,6 +39,9 @@ export default function page() {
                         <p className={styles.descGIT}>
                             Reach out via phone, email, visit our office, or connect with us on social media. <br/>Our dedicated team is here to assist you every step of the way, ensuring a <br />seamless and unforgettable travel experience.
                         </p>
+                        <p className={styles.descGITMob}>
+                            Reach out via phone, email, visit our office, or connect with us on social media. Our dedicated team is here to assist you every step of the way, ensuring a seamless and unforgettable travel experience.
+                        </p>
                         <div className={styles.addressGIT}>
                             <address className={styles.callComp}>
                                 <div className={styles.compIcon}>
@@ -69,7 +72,8 @@ export default function page() {
                                 <div className={styles.compContent}>
                                     <span>Head Office</span>
                                     <div style={{height: '7px'}}></div>
-                                    <p><Link href="https://maps.app.goo.gl/sYbxEDSWdS9V7hKt5">No.1637/2, Ground Floor, Phoenix Bay, <br />Port Blair - 744102</Link></p>
+                                    <p className={styles.addressP}><Link href="https://maps.app.goo.gl/sYbxEDSWdS9V7hKt5">No.1637/2, Ground Floor, Phoenix Bay, <br />Port Blair - 744102</Link></p>
+                                    <p className={styles.addressMob}><Link href="https://maps.app.goo.gl/sYbxEDSWdS9V7hKt5">No.1637/2, Ground Floor, Phoenix Bay, Port Blair - 744102</Link></p>
                                 </div>
                             </address>
                         </div>
@@ -86,7 +90,7 @@ export default function page() {
                     </div>
                     <div className={styles.right}>
                         <h3 className={styles.contactContTitle}>Send Us A Message</h3>
-                        <form action="/cont" className={styles.ContactForm}>
+                        <form className={styles.ContactForm}>
                             <div className={styles.formRow}>
                                 <div className={styles.InputFrame}>
                                     <input className={styles.InputBox} placeholder="" type="text" required/>
