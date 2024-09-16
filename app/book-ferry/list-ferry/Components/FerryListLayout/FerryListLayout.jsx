@@ -43,21 +43,21 @@ export default function FerryListLayout({tripData}) {
         handleListFerry();
     }, [])
 
-    // function convertToMinutes(timeString) {
-    //     if (typeof timeString === 'string') {
-    //         const [hour, minute] = timeString.split(':').map(Number);
-    //         return hour * 60 + minute;
-    //     } else if (typeof timeString === 'object') {
-    //         return timeString.hour * 60 + timeString.minute;
-    //     }
-    //     return 0;
-    // }
+    function convertToMinutes(timeString) {
+        if (typeof timeString === 'string') {
+            const [hour, minute] = timeString.split(':').map(Number);
+            return hour * 60 + minute;
+        } else if (typeof timeString === 'object') {
+            return timeString.hour * 60 + timeString.minute;
+        }
+        return 0;
+    }
 
-    // ferryListData && ferryListData.sort((a, b) => {
-    //     const timeA = convertToMinutes(a.dTime || a.departure_time);
-    //     const timeB = convertToMinutes(b.dTime || b.departure_time);
-    //     return timeA - timeB;
-    // });
+    ferryListData && ferryListData.sort((a, b) => {
+        const timeA = convertToMinutes(a.dTime || a.departure_time);
+        const timeB = convertToMinutes(b.dTime || b.departure_time);
+        return timeA - timeB;
+    });
 
   return (
     <div className={styles.mainWrapper}>
@@ -67,7 +67,7 @@ export default function FerryListLayout({tripData}) {
                 ferryListData.map((item, index) => (
                     <React.Fragment key={index}>
                         {item.ferryOPR === "MAK" ? <FerryCardMAK key={index} data={item} tripData={tripData} /> : ""}
-                        {/* {item.ferryOPR === "NTK" ? <FerryCardNTK key={index} data={item} /> : ""} */}
+                        {item.ferryOPR === "NTK" ? <FerryCardNTK key={index} data={item} /> : ""}
                     </React.Fragment>
                 )) :
                 Array(3).fill().map((item, index) => (

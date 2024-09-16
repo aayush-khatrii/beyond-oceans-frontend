@@ -325,7 +325,8 @@ export default function PayButton(props) {
                 </div>
             </div>
             {
-                (props.totalAmount && props.contectData ) ?
+                // (props.totalAmount && props.contectData ) ?
+                false ?
                 <button className={styles.payNowBTN} onClick={() => {handlePayment()}}>Proceed To Payment</button>
                 : <div className={styles.payNowBTNSkeleton}>Proceed To Payment</div>
             }

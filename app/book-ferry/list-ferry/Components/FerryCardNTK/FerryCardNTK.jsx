@@ -112,7 +112,8 @@ export default function FerryCardNTK({data}) {
                         <div className={styles.tripPrice}><span>₹ {data && ticketStartingPrice}</span></div>
                         <div className={styles.tripPriceNote}><span>per ticket</span></div>
                     </div>
-                    <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button>
+                    {/* <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button> */}
+                    <button className={styles.bookingBTN}>Select Seats</button>
                 </div>
             </div>
         </div>
