@@ -52,8 +52,8 @@ export default function MAKFerrySelectPopUp({handleClose, ferryData, tripData}) 
                 </div>
                 <div className={styles.ferrySelectfooter}>
                     <button onClick={() => {handleClose()}} className={styles.backBtn}>Back To Ferries</button>
-                    <button className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button>
-                    {/* <button onClick={handleCheckoutClick} className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button> */}
+                    {/* <button className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button> */}
+                    <button onClick={handleCheckoutClick} className={styles.processBtn} disabled={ferrySection === 1 ? true : ""}>Processed To Checkout</button>
                 </div>
             </div>
         </div>

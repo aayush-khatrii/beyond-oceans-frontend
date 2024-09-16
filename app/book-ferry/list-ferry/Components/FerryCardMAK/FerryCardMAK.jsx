@@ -23,11 +23,11 @@ export default function FerryCardMAK({data, tripData}) {
         const [hours, minutes, seconds] = timeString.split(':').map(Number);
         return new Date(0, 0, 0, hours, minutes, seconds);
     }
-      
+    
     function getTimeDifference(time1, time2) {
         const time1Date = parseTimeString(time1);
         const time2Date = parseTimeString(time2);
-      
+        
         const diffMilliseconds = time2Date - time1Date;
         const diffMinutes = Math.floor(diffMilliseconds / 1000 / 60);
         const hours = Math.floor(diffMinutes / 60);
