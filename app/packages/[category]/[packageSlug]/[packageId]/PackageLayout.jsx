@@ -23,11 +23,16 @@ export default function PackageLayout({data, params}) {
     
     const packageData = data
     const [selectedOPT, setSelectedOPT] = useState(packageData.Package_Options[0].Option_Id)
+    const [bookingTotal, setBookingTotal] = useState((packageData.Package_Options[0].Option_Price)*2)
     const packageOptions = packageData.Package_Options
     const [isInq, setIsInq] = useState(false)
 
     function handleOptionChange(id){
         setSelectedOPT(id)
+    }
+
+    function handlebookingTotalValue(value){
+        setBookingTotal(value)
     }
 
     function handleIsInquiry(){
@@ -37,7 +42,7 @@ export default function PackageLayout({data, params}) {
     return (
         <div className={styles.mainWrapper}>
             <PackageBreadcrumb />
-            {isInq && <InqPopup onPopupClose={handleIsInquiry} packageId={packageData.Package_Id} packageOptionId={selectedOPT} />}
+            {isInq && <InqPopup onPopupClose={handleIsInquiry} packageId={packageData.Package_Id} bookingPrice={bookingTotal} packageName={packageData.Package_Title} packageOptionId={selectedOPT} />}
             <div className={styles.subWrapper}>
                 <TitleContainer data={packageData} params={params}/>
                 <ImageGallery data={packageData}/>
@@ -52,7 +57,7 @@ export default function PackageLayout({data, params}) {
                         <Policy />
                     </div>
                     <aside className={styles.aside}>
-                        <Pricing optionChange={handleOptionChange} data={packageData} handleInquiry={handleIsInquiry}/>
+                        <Pricing optionChange={handleOptionChange} data={packageData} handleTotal={handlebookingTotalValue} handleInquiry={handleIsInquiry}/>
                         <AsideInfo />
                     </aside>
                 </div>
