@@ -11,7 +11,7 @@ import {toast as rhtToast, Toaster as RhtToast } from 'react-hot-toast';
 import { AxiosError } from 'axios';
 import Sended from './Sended/Sended';
 
-export default function InqPopup({packageId, packageOptionId, onPopupClose}) {
+export default function InqPopup({packageId, bookingPrice, packageName, packageOptionId, onPopupClose}) {
 
     const DurationDL = ["2 Day and 3 Night", "3 Day and 4 Night", "4 Day and 5 Night", "5 Day and 6 Night", "6 Day and 7 Night", "7 Day and 8 Night", "8 Day and 9 Night", "9 Day and 10 Night", ]
     const [name, setName] = useState("")
@@ -181,6 +181,25 @@ export default function InqPopup({packageId, packageOptionId, onPopupClose}) {
                 setIsSuccess(true)
                 rhtToast.remove(loadingToastId)
                 setDisableBtn(false)
+
+                if (typeof window !== 'undefined' && window.dataLayer) {
+                    window.dataLayer.push({
+                      event: 'booking_inquiry_form',
+                      transaction_id: "n/a",
+                      value: bookingPrice,
+                      currency: 'INR',
+                      user_phone: phonenumber,
+                      email: email, 
+                      conversion_type: 'booking inquiry',
+                      product: {
+                        id: packageId,
+                        name: packageName,
+                        category: "Package",
+                      },
+                      timestamp: new Date().toISOString(),
+                    });
+                }
+
             } catch (error) {
                 rhtToast.remove(loadingToastId)
                 setDisableBtn(false)

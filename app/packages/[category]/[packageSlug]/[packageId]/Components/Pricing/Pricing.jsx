@@ -223,6 +223,7 @@ export default function Pricing(props) {
     function handleVariantSelect(index){
         setSelectedVer(index)
         props.optionChange(index)
+        props.handleTotal(filterOptions(selectedVer).Option_Price * (adults + child))
     }
 
     function handleTravelDate(date){
