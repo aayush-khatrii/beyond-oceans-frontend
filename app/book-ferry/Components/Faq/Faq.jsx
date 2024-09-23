@@ -31,11 +31,13 @@ export default function Faq() {
         </div>
         <div className={styles.faqContent}>
             <div className={styles.faqTabList}>
+                <div className={styles.faqTabListScroll}>
                 {
                     faqCategoryList.map((item, index) => (
                         <div onClick={() => {handleCategoryClick(index)}} key={index} className={`${styles.faqCategoryTab} ${selectedCategory === index ? styles.selectedFaqCat : ""}`}>{item}</div>
                     ))
                 }
+                </div>
             </div>
             <div className={styles.faqDataList}>
                 {

@@ -147,3 +147,40 @@
     background-color: #F6F6F6;
     color: #1E2C70;
 }
+
+@media (min-width: 981px){
+    .personSelectMob .adultSelect, .personSelectMob .infantSelect{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .mainWrapper{
+        width: 100%;
+    }
+    .inpFields{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .adultSelect, .infantSelect, .addTripBtn{
+        display: none;
+    }
+    .personSelectMob{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .personSelectMob .adultSelect, .personSelectMob .infantSelect{
+        display: block;
+    }
+    .buttons{
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 28px;
+    }
+    .selectBox, .dateSelectBox, .searchFerryBtn{
+        height: 50px;
+        width: 100%;
+    }
+}

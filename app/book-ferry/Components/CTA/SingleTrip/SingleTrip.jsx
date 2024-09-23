@@ -137,6 +137,24 @@ export default function SingleTrip() {
                     <div className={styles.personPlus} onClick={() => {handleInfantPlus()}}><IconList Icon="Plus"/></div>
                 </div>
             </div>
+            <div className={styles.personSelectMob}>
+                <div className={styles.adultSelect}>
+                    <div className={styles.fieldLabel}><span>Adults (2+ years)</span></div>
+                    <div className={styles.adultSelectBox}>
+                        <div className={styles.personMinus} onClick={() => {handleAdultMinus()}}><IconList Icon="Minus"/></div>
+                        <div className={styles.personValue}>{adult}</div>
+                        <div className={styles.personPlus}  onClick={() => {handleAdultPlus()}}><IconList Icon="Plus"/></div>
+                    </div>
+                </div>
+                <div className={styles.infantSelect}>
+                    <div className={styles.fieldLabel}><span>Infants (0-2 years)</span></div>
+                    <div className={styles.infantSelectBox}>
+                        <div className={styles.personMinus} onClick={() => {handleInfantMinus()}}><IconList Icon="Minus"/></div>
+                        <div className={styles.personValue}>{infant}</div>
+                        <div className={styles.personPlus} onClick={() => {handleInfantPlus()}}><IconList Icon="Plus"/></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className={styles.buttons}>
             <button className={styles.addTripBtn}><IconList Icon="Plus" />Add Another Trip</button>

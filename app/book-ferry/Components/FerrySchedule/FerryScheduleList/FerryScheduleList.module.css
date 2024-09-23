@@ -93,3 +93,47 @@
 .ferryArrivalTimeID, .ferryArrivalTime{
     width: 250px;
 }
+
+@media (max-width: 980px){
+    .subWrapper{
+        width: 90%;
+        padding: 15px;
+        touch-action: none;
+    }
+    .middleColIdentifier{
+        padding: 5px;
+        margin-top: 15px;
+        height: fit-content;
+        font-size: 12px;
+        text-align: center;
+        gap: 5px;
+        justify-content: space-between;
+    }
+    .schedulelistItem{
+        height: fit-content;
+        background-color: #E9E9E9;
+        padding: 5px;
+        font-size: 12px;
+        text-align: center;
+        justify-content: space-between;
+    }
+    .ferryOperatorID, .ferryOperator{
+        width: 70px;
+        overflow: hidden;
+    }
+    .ferryDPTimeID, .ferryDPTime{
+        width: 70px;
+        overflow: hidden;
+    }
+    .ferryArrivalTimeID, .ferryArrivalTime{
+        width: 70px;
+        overflow: hidden;
+    }
+    .ferryBookWindowID, .ferryBookWindow{
+        width: 90px;
+        overflow: hidden;
+    }
+    .scheduleList{
+        touch-action: auto;
+    }
+}

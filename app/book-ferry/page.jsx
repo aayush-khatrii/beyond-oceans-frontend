@@ -24,6 +24,7 @@ export default function FerryHero() {
                         sizes="100%"
                         priority={true}
                         alt="Picture of the author"
+                        unoptimized
                         style={{zIndex: "-1",objectFit:"cover"}}
                     />
                     <div className={styles.imageOverlay}></div>
@@ -31,6 +32,9 @@ export default function FerryHero() {
                 <div className={styles.heroCont}>
                     <h1 className={styles.heroTitle}>
                         The Fastest Way To <span style={{marginRight: "15px"}}></span><br/> Book Ferry In Andaman
+                    </h1>
+                    <h1 className={styles.heroTitleMob}>
+                        The Fastest Way To Book Ferry In Andaman
                     </h1>
                     <h4 className={styles.heroDesc}>
                         <div className={styles.ticketDesc}>

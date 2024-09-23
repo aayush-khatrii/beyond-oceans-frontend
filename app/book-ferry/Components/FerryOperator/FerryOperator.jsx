@@ -22,6 +22,7 @@ export default function FerryOperator() {
                 <div className={styles.cardContent}>
                     <span>Nautika & Lite</span>
                     <span>Luxury Class &nbsp;|&nbsp; Royal Class</span>
+                    <span>Luxury &nbsp;|&nbsp; Royal</span>
                 </div>
             </div>
             <div className={styles.ferryOprCard}>
@@ -37,6 +38,7 @@ export default function FerryOperator() {
                 <div className={`${styles.cardContent} ${styles.cardContentMak}`}>
                     <span>Makruzz</span>
                     <span>Premium Class &nbsp;|&nbsp; Deluxe Class &nbsp;|&nbsp; Royal Class</span>
+                    <span>Premium &nbsp;|&nbsp; Deluxe &nbsp;|&nbsp; Royal</span>
                 </div>
             </div>
             <div className={styles.ferryOprCard}>
@@ -52,6 +54,7 @@ export default function FerryOperator() {
                 <div className={styles.cardContent}>
                     <span>ITT Majestic</span>
                     <span>Silver Class &nbsp;|&nbsp; Majesty Class</span>
+                    <span>Silver &nbsp;|&nbsp; Majesty</span>
                 </div>
             </div>
             <div className={styles.ferryOprCard}>
@@ -67,6 +70,7 @@ export default function FerryOperator() {
                 <div className={styles.cardContent}>
                     <span>Green Ocean 1</span>
                     <span>Premium Class &nbsp;|&nbsp; Royal Class</span>
+                    <span>Premium &nbsp;|&nbsp; Royal</span>
                 </div>
             </div>
         </div>
