@@ -84,3 +84,41 @@
     height: 218px;
     margin-bottom: -55px;
 }
+
+@media (min-width: 981px){
+    .cardListMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .mainWrapper{
+        padding-top: 70px;
+    }
+    .secTitle{
+        width: 90%;
+    }
+    .mainTitle h2{
+        font-size: clamp(19px, 5.51vw, 25px);
+    }
+    .secondTitle h3{
+        font-size: clamp(12.5px, 3.65vw, 18px);
+    }
+    .cardList{
+        display: none;
+    }
+    .cardListMob{
+        margin-left: 4.5%;
+        margin-top: 10px;
+        width: 95%;
+    }
+    .guideCard{
+        flex: 1;
+        padding: 20px 15px;
+        margin-top: 40px;
+    }
+    .swiperSlides{
+        display: flex;
+        height: auto;
+    }
+}

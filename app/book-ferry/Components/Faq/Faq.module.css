@@ -33,6 +33,12 @@
     gap: 40px;
 }
 
+.faqTabListScroll{
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+}
+
 .faqCategoryTab{
     background-color: #E9E9E9;
     color: #1C1C1C;
@@ -104,7 +110,6 @@
     display: none;
 }
 
-
 .faqCardOppen{
     background-color: #fff;
     box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.02);
@@ -126,4 +131,53 @@
     transform: rotate(180deg);
     transform-origin: center;
 }
- 
+
+@media (max-width: 980px){
+    .mainWrapper{
+        padding-top: 70px;
+    }
+    .faqTabList{
+        width: 90%;
+    }
+    .faqTabListScroll{
+        display: flex;
+        overflow-x: scroll;
+        gap: 10px;
+    }
+    .faqContent{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .faqDataList{
+        width: 90%;
+        margin: 20px 0;
+    }
+    .faqCategoryTab{
+        text-wrap: nowrap;
+        font-size: 15px;
+    }
+    .mainTitle h2{
+        font-size: clamp(19px, 5.51vw, 25px);
+        margin-bottom: 1px;
+    }
+    .secondTitle h3{
+        font-size: clamp(12.5px, 3.65vw, 18px);
+    }
+    .downArrowSvg{
+        min-width: 28px;
+        min-height: 28px;
+    }
+    .faqCardTitle{
+        font-size: 15px;
+    }
+    .faqCard{
+        padding: 15px;
+    }
+    .faqCardContent{
+        margin-left: 0px;
+        font-size: 14px;
+        width: 99%;
+    }
+}

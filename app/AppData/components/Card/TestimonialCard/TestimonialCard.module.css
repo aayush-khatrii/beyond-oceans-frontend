@@ -94,10 +94,10 @@
 
     .cardWrapper{
         flex: 1 1 100%;
-        aspect-ratio: 5 / 2;
+        aspect-ratio: 6 / 2;
         box-sizing: border-box;
-        height: auto;
-        /* max-height: 300px; */
+        height: fit-content;
+        max-height: 300px;
         /* width: clamp(255px, 71vw, 285px);
         height: clamp(270px, 75vw, 300px); */
         padding: 22px 25px;

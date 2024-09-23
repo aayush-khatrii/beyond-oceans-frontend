@@ -19,7 +19,13 @@ export default function GroupBooking() {
                     <span>Planning a Group Trip? Save Up <br/> To 40% With Exclusive Offers!</span>
                 </div>
                 <div className={styles.lightContent}>
-                    <span>Get an unforgettable adventure with our specially <br/> customized deals for your group. Request a call back now. </span>
+                    <span>Get an unforgettable adventure with our specially <br/> customized deals for your group. Request a call back now.</span>
+                </div>
+                <div className={styles.boldContentMob}>
+                    <span>Planning a Group Trip? Save Up To 40% With Exclusive Offers!</span>
+                </div>
+                <div className={styles.lightContentMob}>
+                    <span>Get an unforgettable adventure with our specially customized deals for your group. Request a call back now.</span>
                 </div>
                 <button className={styles.callBackBtn}>Get A Callback</button>
             </div>

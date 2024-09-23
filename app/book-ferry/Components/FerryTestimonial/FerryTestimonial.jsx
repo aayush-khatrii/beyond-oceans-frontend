@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import styles from './FerryTestimonial.module.css'
 import TestimonialCard from '@/app/AppData/components/Card/TestimonialCard/TestimonialCard'
-import TestimonialData from '../../../AppData/Data/FerryTestimonial.json'
+import TestimonialData from '../../../AppData/Data/Testimonial.json'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -45,6 +45,17 @@ export default function Testimonial() {
                     </svg>
                 </button>
             </div>
+        </div>
+        <div className={styles.cardWrapperMob}>
+            <Swiper spaceBetween={10} slidesPerView={1.30} loop={true}>
+            {
+                    testimonialData.map((item, index) => (
+                        <SwiperSlide key={index} className={styles.swiperSlides}>
+                            <TestimonialCard key={index} name={item.name} img={item.img} rating={item.rating} desc={item.desc} />
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
         </div>
     </div>
   )
