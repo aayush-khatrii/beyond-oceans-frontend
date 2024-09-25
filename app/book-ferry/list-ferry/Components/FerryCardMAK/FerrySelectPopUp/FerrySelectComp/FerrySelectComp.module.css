@@ -215,3 +215,63 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 980px){
+    .ferrySelectSection{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        margin-top: 23px;
+        width: 100%;
+    }
+    .ferryClassList{
+        width: 100%;
+        height: 185px;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 7px;
+    }
+    .ferryImagesSlider, .slideWrapper{
+        width: 100%;
+        height: 180px;
+    }
+    .leftIcon, .rightIcon{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .radioBGWrapper{
+        padding: 10px;
+    }
+    .ferryClassContentWrapper{
+        font-size: 14px;
+        flex-wrap: wrap;
+        gap: 5px 0;
+    }
+    .ferryClassName{
+        margin-left: 6px;
+    }
+    .TextHyp{
+       margin: 0 4px;
+    }
+    .radioBorder{
+        padding: 4px;
+    }
+    .radioSelected{
+        height: 7px;
+        width: 7px;
+    }
+    .priceNote{
+        margin-left: 2px;
+        margin-bottom: -4px;
+        font-size: 8px;
+        text-wrap: nowrap;
+    }
+    .downArrowICO svg{
+        width: 13px;
+    }
+    .classDescContent{
+        margin-top: 10px;
+        gap: 5px;
+        margin-left: 40px;
+    }
+}

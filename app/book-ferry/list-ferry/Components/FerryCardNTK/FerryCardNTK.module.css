@@ -262,3 +262,145 @@
     background-color: #38B089;
     border-color: #A3DBC9;
 }
+
+
+@media (min-width: 980px) {
+    .ferryCardRightMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .ferryCardRight{
+        display: none;
+    }
+    .ferryListCard{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+    .ferryCardWrapper{
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .ferryCardLeft{
+        height: 100%;
+    }
+    .middleSep{
+        height: 1px;
+        width: 100%;
+        border-left: none;
+        border-top: 2px dashed #e9e9e9a9 ;
+    }
+    .mainTitle{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .opratorInfo{
+        margin-left: 12px;
+        font-size: 11px;
+    }
+    .ferryDetaildSec{
+        padding: 0 15px;
+        width: 100%;
+        height: 100%;
+        background-color: #EBF7F3;
+        border: 1px solid #C1E7DA;
+        border-radius: 8px;
+    }
+    .fromTimeing, .toTimeing{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .fromLocation, .toLocation{
+        font-size: 12px;
+    }
+    .leftDot, .rightDot{
+        z-index: 1;
+    }
+    .ferryAnimationICO{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 70px;
+        padding-top: 8px;
+    }
+    .ferryAnimationCont{
+        width: 50px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .tripDuration{
+        position: relative;
+        font-size: 10px;
+        left: 0;
+    }
+    .ferryFeatures{
+        margin: 16px 0;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+    }
+    .featureList svg{
+        width: 15px !important;
+        height: 15px !important;
+    }
+    .featureText{
+        margin-top: -5px;
+        margin-left: 6px;
+        font-size: 12px;
+    }
+    .middleIconSec{
+        width: 145px;
+        height: 80px;
+    }
+    .ferryCardRightMob{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px 0;
+    }
+    .ratting{
+        align-items: center;
+        margin-top: 0px;
+    }
+    .starsList svg{
+        width: 13px;
+        height: 13px;
+    }
+    .rattingCount{
+        margin-left: 7px;
+        font-size: 11px;
+    }
+    .pricingCont{
+        text-align: start;
+        margin-top: 5px;
+    }
+    .tripPrice{
+        font-size: 25px;
+    }
+    .tripPriceNote{
+        margin-top: -4px;
+        font-size: 15px;
+        color: #1F1F1F;
+    }
+    .bookingBTN{
+        height: fit-content;
+        width: fit-content;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 8px 22px;
+    }
+    .ferryListCard::after, .ferryListCard::before{
+        top: calc(67% - 26px / 2);
+    }
+    .left, .right{
+        top: calc(67% - 28px / 2);
+    }
+}

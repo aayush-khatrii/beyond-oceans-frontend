@@ -3,3 +3,9 @@
     flex-direction: column;
     gap: 39px;
 }
+
+@media (max-width: 980px){
+    .ferryListCont{
+        gap: 20px;
+    }
+}
