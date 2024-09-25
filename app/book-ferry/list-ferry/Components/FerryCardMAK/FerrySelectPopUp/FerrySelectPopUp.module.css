@@ -8,7 +8,7 @@
     z-index: 5;
     display: flex;
     justify-content: center;
-    padding-top: 59px;
+    align-items: center;
 }
 
 .subWrapper{
@@ -292,4 +292,46 @@
     background-color: #e9e9e9;
     color: #4c4c4c;
     cursor: not-allowed;
+}
+
+@media (max-width: 980px){
+    .subWrapper{
+        height: fit-content;
+        width: 90%;
+    }
+    .ferryContent{
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .titleBar{
+        gap: 10px;
+    }
+    .title{
+        font-size: 17px;
+    }
+    .closeIcon{
+        min-width: 25px;
+        min-height: 25px;
+    }
+    .closeIcon svg{
+        width: 11px;
+        height: 11px;
+    }
+    .ferrySelectfooter{
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+        height: fit-content;
+    }
+    .processBtn{
+        height: 47px;
+        width: 100%;
+        font-size: 17px;
+    }
+    .backBtn{
+        font-size: 13px;
+        font-weight: 500;
+    }
 }

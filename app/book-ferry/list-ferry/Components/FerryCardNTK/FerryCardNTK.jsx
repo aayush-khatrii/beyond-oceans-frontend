@@ -115,6 +115,25 @@ export default function FerryCardNTK({data}) {
                     {/* <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button> */}
                     <button className={styles.bookingBTN}>Select Seats</button>
                 </div>
+                <div className={styles.ferryCardRightMob}>
+                    <div className={styles.awdawdawdawd}>
+                        <div className={styles.ratting}>
+                            <div className={styles.starsList}>
+                            {
+                                Array(5).fill().map((item, index) => (
+                                    <IconList key={index} Icon="Star" />
+                                ))
+                            }
+                            </div>
+                            <div className={styles.rattingCount}><span>(1024)</span></div>
+                        </div>
+                        <div className={styles.pricingCont}>
+                            <div className={styles.tripPrice}><span>₹ {data && ticketStartingPrice}</span></div>
+                            <div className={styles.tripPriceNote}><span>per ticket</span></div>
+                        </div>
+                    </div>
+                    <button className={styles.bookingBTN}>Select Seats</button>
+                </div>
             </div>
         </div>
     </div>

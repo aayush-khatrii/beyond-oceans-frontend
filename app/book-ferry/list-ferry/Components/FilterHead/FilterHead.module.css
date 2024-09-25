@@ -59,3 +59,47 @@
     border-color: #1E2C70;
     color: #fff;
 }
+
+@media (max-width: 980px){
+    .mainWrapper{
+        height: auto;
+        align-items: normal;
+        gap: 10px;
+    }
+    .filterLeft{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .infoNote{
+        margin-left: 0px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .filterRight{
+        flex-direction: column;
+        gap: 0px;
+        justify-content: space-between;
+    }
+    .dept, .dest{
+        font-size: 13.2px;
+        text-wrap: nowrap;
+    }
+    .locationBox{
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 10px;
+        gap: 10px;
+    }
+    .arrowIconLOC svg{
+        height: 12px;
+        padding-top: 5px;
+    }
+    .filterBtn, .editTripBtn{
+        width: fit-content;
+        height: fit-content;
+        font-size: 13px;
+        border-radius: 6px;
+        padding: 5px 10px;
+        text-wrap: nowrap;
+    }
+}
