@@ -25,6 +25,9 @@ export default function FerrySelectComp({ferryData, onFerryClass}) {
 
     function handleRadioChange(e){
         setSelectedFerryClass({ferryClassId: e.target.value, ferryClassName: getShipClassTitle(e.target.value)})
+        if(e.target.value === selectedFerryClass.ferryClassId){
+            setSelectedFerryClass("")
+        }
         onFerryClass({ferryClassId: e.target.value, ferryClassName: getShipClassTitle(e.target.value)})
     }
 
@@ -55,7 +58,7 @@ export default function FerrySelectComp({ferryData, onFerryClass}) {
                         const IntPricing = Intl.NumberFormat('en-IN').format(item.ship_class_price)
                         return (
                         <label key={index} className={styles.ferryClass}>
-                            <input onChange={(e) => {handleRadioChange(e)}} type="radio" name="CTARadio" value={item.ship_class_id} defaultChecked={index === 0 ? true : false} disabled={item.seat == 0 ? true : false}/>
+                            <input onClick={(e) => {handleRadioChange(e)}} type="radio" name="CTARadio" value={item.ship_class_id} defaultChecked={index === 0 ? true : false} disabled={item.seat == 0 ? true : false}/>
                             <div className={styles.radioBGWrapper}>
                                 <div className={styles.ferryClassContent}>
                                     <div className={styles.ferryClassContentWrapper}>

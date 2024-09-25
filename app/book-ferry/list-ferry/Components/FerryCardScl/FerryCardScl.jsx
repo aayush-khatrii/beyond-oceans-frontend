@@ -30,6 +30,16 @@ export default function FerryCard() {
                     </div>
                     <button className={styles.bookingBTN} disabled></button>
                 </div>
+                <div className={styles.ferryCardRightMob}>
+                    <div className={styles.awdawdwad}>
+                        <div className={styles.ratting}></div>
+                        <div className={styles.pricingCont}>
+                            <div className={styles.tripPrice}><span>₹</span><div className={styles.tripPriceScl}></div></div>
+                            <div className={styles.tripPriceNote}><span>per ticket</span></div>
+                        </div>
+                    </div>
+                    <button className={styles.bookingBTN} disabled></button>
+                </div>
             </div>
         </div>
     </div>
