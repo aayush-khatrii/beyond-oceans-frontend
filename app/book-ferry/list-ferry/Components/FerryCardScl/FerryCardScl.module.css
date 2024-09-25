@@ -175,3 +175,96 @@
     font-weight: 500;
     border: 2px solid transparent;
 }
+
+@media (min-width: 980px) {
+    .ferryCardRightMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .ferryCardRight{
+        display: none;
+    }
+    .ferryListCard{
+        width: 100%;
+        height: 100%;
+    }
+    .ferryCardWrapper{
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .ferryCardLeft{
+        height: 100%;
+        width: 100%;
+    }
+    .mainTitle{
+        height: 22px;
+        width: 110px;
+    }
+    .opratorInfo{
+        margin-top: 0px;
+        margin-left: 12px;
+        border-radius: 3px;
+        height: 11px;
+        width: 130px;
+    }
+    .ferryDetaildSec{
+        width: 100%;
+        height: 80px;
+        margin-top: 13px;
+    }
+    .ferryFeatures{
+        margin: 16px 0;
+        display: flex;
+        gap: 8px;
+    }
+    .featureList{
+        width: 135px;
+        height: 20px;
+    }
+    .middleSep{
+        height: 1px;
+        width: 100%;
+        border-left: none;
+        border-top: 2px dashed #e9e9e9a9 ;
+    }
+    .ferryCardRightMob{
+        display: flex;
+        align-items: center;
+        margin: 16px 0;
+        justify-content: space-between;
+    }
+    .ratting{
+        margin-top: 0px;
+        height: 15px;
+        width: 115px;
+    }
+    .pricingCont{
+        text-align: start;
+        margin-top: 8px;
+    }
+    .tripPrice{
+        font-size: 25px;
+    }
+    .tripPriceScl{
+        width: 60px;
+        height: 25px;
+        margin-left: 5px;
+    }
+    .tripPriceNote{
+        margin-top: -2px;
+        font-size: 15px;
+    }
+    .bookingBTN{
+        margin-top: 0px;
+        height: 35px;
+        width: 125px;
+    }
+    .ferryListCard::after, .ferryListCard::before{
+        top: calc(63% - 26px / 2);
+    }
+    .left, .right{
+        top: calc(63% - 28px / 2);
+    }
+}
