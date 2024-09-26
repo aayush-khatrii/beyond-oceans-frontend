@@ -90,25 +90,20 @@
         margin: 30px 0;
         width: 90%;
     }
-
     .stepWrapper{
         height: 100%;
     }
-
     .stepsHeader{
         width: 90%;
     }
-
     .searchStep, .selectionStep, .cnfStep, .tnxStep{
         flex-direction: column;
         gap: 10px;
         padding: 15px 0;
     }
-
     .searchStep span, .selectionStep span, .cnfStep span, .tnxStep span{
         font-size: clamp(8px, 2.33vw, 10px);
     }
-
     .stepNum{
         width: 30px;
         height: 30px;

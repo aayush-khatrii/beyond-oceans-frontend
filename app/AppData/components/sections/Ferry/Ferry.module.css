@@ -57,10 +57,7 @@
 }
 
 @media (min-width: 980px) {
-    .titleNbtnMob{
-        display: none;
-    }
-    .cardWrapperMob{
+    .titleNbtnMob, .cardWrapperMob, .mobBtnWrapper{
         display: none;
     }
 }
