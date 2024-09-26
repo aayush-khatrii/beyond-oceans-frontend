@@ -38,6 +38,12 @@
     align-items: center;
 }
 
+.sumIconLable{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
 .itemIcon svg{
     width: 23px;
     margin-right: 13px;
