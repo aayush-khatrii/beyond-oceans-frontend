@@ -37,11 +37,11 @@ export default function PayButton(props) {
     const partialAmount = props.totalAmount * (partialPercentage / 100)
 
     function handlePaymentType(e){
+
         if(e.target.value === "1"){
             setPaymentType(1)
         }
         if(e.target.value === "2"){
-            console.log(e.target.value)
             setPaymentType(2)
         }
     }
@@ -272,7 +272,7 @@ export default function PayButton(props) {
         </div>
         <div className={styles.pgSelector}>
             <label className={styles.pgRadios}>
-                <input type="radio" name="PGSelect" value={1} defaultChecked onChange={handlePG}/>
+                <input type="radio" name="PGSelect" defaultChecked value={1} onChange={handlePG}/>
                 <div className={styles.radiochild}>
                     <div className={styles.radioStyle}><span className={styles.radioSelected}></span></div>
                     <div className={styles.radioContent}>

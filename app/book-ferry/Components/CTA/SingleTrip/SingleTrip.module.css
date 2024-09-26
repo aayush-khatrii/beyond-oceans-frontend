@@ -149,7 +149,7 @@
 }
 
 @media (min-width: 981px){
-    .personSelectMob .adultSelect, .personSelectMob .infantSelect{
+    .personSelectMob, .personSelectMob .adultSelect, .personSelectMob .infantSelect{
         display: none;
     }
 }
