@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react'
 
 import 'swiper/css';
+import Link from 'next/link';
 
 export default function Sightseeing() {
 
@@ -76,7 +77,9 @@ export default function Sightseeing() {
                     {
                         datas.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                                <Link href="/destination">
+                                    <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                                </Link>
                             </SwiperSlide>
                         ))
                     }
@@ -87,7 +90,9 @@ export default function Sightseeing() {
                         {
                             datas.map((item, index) => (
                                 <SwiperSlide key={index} className={styles.swiperSlides}>
-                                    <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                                    <Link href="/destination">
+                                        <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
+                                    </Link>
                                 </SwiperSlide>
                             ))
                         }

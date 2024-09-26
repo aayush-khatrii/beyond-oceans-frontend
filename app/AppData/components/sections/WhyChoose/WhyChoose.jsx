@@ -27,7 +27,7 @@ export default function WhyChoose() {
                         <p>Beyond Oceans encapsulates the essence of exploration and adventure in the Andaman and Nicobar Islands.</p>
                     </div>
                     <div className={styles.navButton}>
-                        <Link href="/about" className={styles.accentBtn}>Know More</Link>
+                        <Link href="/about-us" className={styles.accentBtn}>Know More</Link>
                     </div>
                 </div>
                 <div className={styles.cardWrapper}>

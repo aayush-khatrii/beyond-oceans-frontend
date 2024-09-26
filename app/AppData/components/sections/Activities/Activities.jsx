@@ -24,105 +24,117 @@ export default function Activities() {
                 </div>
                 <div className={styles.categoryLayout}>
                     <div className={styles.leftLayout}>
-                        <div className={styles.top}>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.horizontelImg}>
-                                    <Image
-                                        src="/assets/scuba-diving-img-1.png"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="Scuba Diving activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <span>Scuba Diving</span>
-                                    <span>Starting At ₹4,500/per person</span>
+                        <Link href="/activities/water-sports">
+                            <div className={styles.top}>
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.horizontelImg}>
+                                        <Image
+                                            src="/assets/scuba-diving-img-1.png"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="Scuba Diving activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Scuba Diving</span>
+                                        <span>Starting At ₹4,500/per person</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                         <div className={styles.bottom}>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.bottomLeftImg}>
-                                    <Image
-                                        src="/assets/tracking-img-1.png"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="Trekking activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
+                            <Link href="/activities/trekking">
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.bottomLeftImg}>
+                                        <Image
+                                            src="/assets/tracking-img-1.png"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="Trekking activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Trekking</span>
+                                        <span>Starting At ₹2,000/per person</span>
+                                    </div>
                                 </div>
-                                <div className={styles.cardContent}>
-                                    <span>Trekking</span>
-                                    <span>Starting At ₹2,000/per person</span>
+                            </Link>
+                            <Link href="/activities/water-sports">
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.bottomRightImg}>
+                                        <Image
+                                            src="/assets/kayking-img-1.png"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="kayaking activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Kayaking</span>
+                                        <span>Starting At ₹4,000/per person</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.bottomRightImg}>
-                                    <Image
-                                        src="/assets/kayking-img-1.png"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="kayaking activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <span>Kayaking</span>
-                                    <span>Starting At ₹4,000/per person</span>
-                                </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className={styles.rightLayout}>
-                        <div className={styles.subLeft}>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.VerticalImg}>
-                                    <Image
-                                        src="/assets/parasiling-img-1.png"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="parasiling activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <span>Scuba Diving</span>
-                                    <span>Starting At ₹4,500/per person</span>
+                        <Link href="/activities/parasailing">
+                            <div className={styles.subLeft}>
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.VerticalImg}>
+                                        <Image
+                                            src="/assets/parasiling-img-1.png"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="parasiling activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Parasailing</span>
+                                        <span>Starting At ₹4,500/per person</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                         <div className={styles.subRight}>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.topImg}>
-                                    <Image
-                                        src="/assets/seawalk-img-1.png"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="seawalk activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
+                            <Link href="/activities/water-sports">
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.topImg}>
+                                        <Image
+                                            src="/assets/seawalk-img-1.png"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="seawalk activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Sea Walk</span>
+                                        <span>Starting At ₹4,500/per person</span>
+                                    </div>
                                 </div>
-                                <div className={styles.cardContent}>
-                                    <span>Sea Walk</span>
-                                    <span>Starting At ₹4,500/per person</span>
+                            </Link>
+                            <Link href="/activities/water-sports">
+                                <div className={styles.imgWrapper}>
+                                    <div className={styles.bottomImg}>
+                                        <Image
+                                            src="/assets/Snorkeling-img-1.webp"
+                                            fill={true}
+                                            sizes="100%"
+                                            alt="Snorkeling activity"
+                                            style={{zIndex: "-1",objectFit:"cover"}}
+                                        />
+                                    </div>
+                                    <div className={styles.cardContent}>
+                                        <span>Snorkelling</span>
+                                        <span>Starting At ₹4,500/per person</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.imgWrapper}>
-                                <div className={styles.bottomImg}>
-                                    <Image
-                                        src="/assets/Snorkeling-img-1.webp"
-                                        fill={true}
-                                        sizes="100%"
-                                        alt="Snorkeling activity"
-                                        style={{zIndex: "-1",objectFit:"cover"}}
-                                    />
-                                </div>
-                                <div className={styles.cardContent}>
-                                    <span>Scuba Diving</span>
-                                    <span>Starting At ₹4,500/per person</span>
-                                </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
