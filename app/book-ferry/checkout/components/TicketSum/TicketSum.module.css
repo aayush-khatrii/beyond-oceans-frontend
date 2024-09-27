@@ -136,7 +136,7 @@
 
 .subTotal{
     margin-top: 19px;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
 }
 
 .totlaLable, .totalValue{
@@ -303,8 +303,14 @@
     margin-bottom: 25px;
 }
 
-.infantContainer, .adultContainer{
+.paxTypeList{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-bottom: 30px;
+}
+
+.infantContainer, .adultContainer{
     border-radius:  0 0 8px 8px;
     border: 1px solid #E9EAF1;
     box-sizing: border-box;

@@ -218,13 +218,11 @@ export default function page() {
     }
 
     function handleTravelersDataError(index, type, field, value){
-        console.log("before the set", ...travelersDataError[type])
         const updatedTravelers = [...travelersDataError[type]];
         updatedTravelers[index] = {
           ...updatedTravelers[index],
           [field]: value,    
         };
-        console.log("after set", updatedTravelers)
         setTravelerDataError((prevState) => ({
           ...prevState,
           [type]: updatedTravelers,

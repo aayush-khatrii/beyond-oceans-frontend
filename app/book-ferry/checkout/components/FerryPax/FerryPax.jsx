@@ -103,7 +103,7 @@ export default function FerryPax(props) {
               ...prevState,
               [type]: updatedTravelers,
             }));
-            props.paxData(index, type, "country", ctryName)
+            props.paxData(index, type, "country", contrydata[selectedIndex].name)
             setIsEmptCtrySelect(false)
             setSearchQuery('')
             setCountryList(contriesData)
@@ -194,7 +194,6 @@ export default function FerryPax(props) {
         props.paxData(index, type, "passportExpiryDate", value)
         props.travelersDataErrorHandle(index, type, "passportExpiryDate", false)
     }
-    console.log(paxErrorData.adults)
     
   return (
     <div className={styles.mainWrapper}>
@@ -215,10 +214,10 @@ export default function FerryPax(props) {
                                     <Select datalist={adultTitles} placeholder="Title" onData={(dataVal) => {travelerTitleHandler("adults", adultIndex, dataVal)}} isEmpty={paxErrorData.adults[adultIndex]?.title} />   
                                 </div>
                                 <div className={styles.paxNameField}>
-                                    <input className={styles.inpBox} type="text" value={item.name} style={{borderColor: paxErrorData.adults[adultIndex]?.name ? "#ff0000" : ""}} placeholder='Full Name' onChange={(e) => {travelerNameHandler("adults", adultIndex, e.target.value)}} />
+                                    <input className={styles.inpBox} type="text" defaultValue={item.name} style={{borderColor: paxErrorData.adults[adultIndex]?.name ? "#ff0000" : ""}} placeholder='Full Name' onBlur={(e) => {travelerNameHandler("adults", adultIndex, e.target.value)}} />
                                 </div>
                                 <div className={styles.paxAgeField}>
-                                    <input className={styles.inpBox} type="number" value={item.age} style={{borderColor: paxErrorData.adults[adultIndex]?.age ? "#ff0000" : ""}} placeholder='Age' onChange={(e) => {travelerAgeHandler("adults", adultIndex, e.target.value)}} />
+                                    <input className={styles.inpBox} type="number" defaultValue={item.age} style={{borderColor: paxErrorData.adults[adultIndex]?.age ? "#ff0000" : ""}} placeholder='Age' onChange={(e) => {travelerAgeHandler("adults", adultIndex, e.target.value)}} />
                                 </div>
                                 <div className={styles.paxCountryField}>
                                     <div className={styles.countryListBox}>

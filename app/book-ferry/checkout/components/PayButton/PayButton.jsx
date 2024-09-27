@@ -66,45 +66,101 @@ export default function PayButton(props) {
         function validateTraveler(type, traveler, index){
             if (!traveler.title) {
                 props.paxDataError(index, type, 'title', true)
-                return "error"
+                window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
+                return { field:"title", code:"error" }
             }
 
             if (!traveler.name) {
                 props.paxDataError(index, type, 'name', true)
-                return "error"
+                window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
+                return { field:"name", code:"error" }
             }
                 
-            if (!traveler.age || traveler.age <= 0) {
+            if (!traveler.age || traveler.age <= 0 || (type === 'adults' && traveler.age <= 1) || (type === 'infants' && traveler.age !== 1)) {
                 props.paxDataError(index, type, 'age', true)
-                return "error"
+                window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
+                return { field:"age", code:"error" }
             }
           
             if (traveler.country !== 'India') {
                 if (!traveler.passportNumber) {
                     props.paxDataError(index, type, 'passportNumber', true)
-                    return "error"
+                    window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
+                    return { field:"passportNumber", code:"error" }
                 }
         
                 if (!traveler.passportExpiryDate) {
                     props.paxDataError(index, type, 'passportExpiryDate', true)
-                    return "error"
+                    return { field:"passportExpiryDate", code:"error" }
                 }
             }
         }
+        let hasError = false;
 
-        paxData.adults.some((traveler, index) => {
-            const errorDeatil = validateTraveler('adults', traveler, index);
-            if(errorDeatil){
-                return true
+            if (paxData) {
+                hasError = paxData.adults.some((traveler, index) => {
+                    const errorDetail = validateTraveler('adults', traveler, index);
+                    if (errorDetail?.code === "error") {
+                        if(errorDetail.field === "title"){
+                            toast.error(`Title of adult ${index+1} is not selected!`)
+                        }
+                        if(errorDetail.field === "name"){
+                            toast.error(`Name of adult ${index+1} is invalid or empty!`)
+                        }
+                        if(errorDetail.field === "age"){
+                            toast.error(`Age of adult ${index+1} is invalid or empty!`, {
+                                description: "Age need to be grater than 1 for adult",
+                            })
+                        }
+                        if(errorDetail.field === "passportNumber"){
+                            toast.message(`Passport Number of adult ${index+1} is invalid or empty!`, {
+                                description: "Passport Number required for pax outside India",
+                            })
+                            toast.error(`Passport Number of adult ${index+1} is invalid or empty!`)
+                        }
+                        if(errorDetail.field === "passportExpiryDate"){
+                            toast.error(`Passport Expiry date of adult ${index+1} is invalid or empty!`)
+                        }
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                        return true;  // Stop further iteration
+                    }
+                });
+
+                if (!hasError) {  // Only check infants if adults are valid
+                    hasError = paxData.infants.some((traveler, index) => {
+                        const errorDetail = validateTraveler('infants', traveler, index);
+                        if (errorDetail?.code === "error") {
+                            if(errorDetail.field === "title"){
+                                toast.error(`Title of infant ${index+1} is not selected!`)
+                            }
+                            if(errorDetail.field === "name"){
+                                toast.error(`Name of infant ${index+1} is invalid or empty!`)
+                            }
+                            if(errorDetail.field === "age"){
+                                toast.error(`Age of infant ${index+1} is invalid or empty!`, {
+                                    description: "Age need to be only 1 for infants",
+                                })
+                            }
+                            if(errorDetail.field === "passportNumber"){
+                                toast.message(`Passport Number of infant ${index+1} is invalid or empty!`, {
+                                    description: "Passport Number required for pax outside India",
+                                })
+                                toast.error(`Passport Number of infant ${index+1} is invalid or empty!`)
+                            }
+                            if(errorDetail.field === "passportExpiryDate"){
+                                toast.error(`Passport Expiry date of infant ${index+1} is invalid or empty!`)
+                            }
+                            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                            return true;  // Stop further iteration
+                        }
+                    });
+                }
             }
-        })
-        
-        paxData.infants.some((traveler, index) => {
-            const errorDeatil = validateTraveler('infants', traveler, index);
-            if(errorDeatil){
-                return true
+
+            if (hasError) {
+                return; // Stop execution if there's an error
             }
-        })
+
 
         if(!nameRegexM.test(contactData.name)){
             props.contectDataError("name", true)
@@ -325,8 +381,8 @@ export default function PayButton(props) {
                 </div>
             </div>
             {
-                (props.totalAmount && props.contectData ) ?
-                // false ?
+                // (props.totalAmount && props.contectData ) ?
+                false ?
                 <button className={styles.payNowBTN} onClick={() => {handlePayment()}}>Proceed To Payment</button>
                 : <div className={styles.payNowBTNSkeleton}>Proceed To Payment</div>
             }

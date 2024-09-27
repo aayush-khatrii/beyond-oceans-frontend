@@ -8,7 +8,7 @@ import 'swiper/css';
 
 export default function FerrySelectComp({ferryData, onFerryClass}) {
 
-    const [selectedFerryClass, setSelectedFerryClass] = useState()
+    const [selectedFerryClass, setSelectedFerryClass] = useState({ferryClassId: "", ferryClassName: ""})
     const makferryImg = [
         "mak_ferry_img_1.webp",
         "mak_ferry_img_2.jpg",
@@ -32,7 +32,7 @@ export default function FerrySelectComp({ferryData, onFerryClass}) {
     }
 
     useEffect(() => {
-        if(!selectedFerryClass){
+        if(!selectedFerryClass.ferryClassId || selectedFerryClass.ferryClassName){
             onFerryClass({ferryClassId: ferryData.Classes[0].ship_class_id, ferryClassName: ferryData.Classes[0].class_title})
             return
         }
