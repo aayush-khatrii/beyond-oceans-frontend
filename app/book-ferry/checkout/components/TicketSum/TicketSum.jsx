@@ -8,7 +8,7 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
     const ferryCheckout = sessionData && sessionData.Ferry_Checkout
     const [discount, setDiscount] = useState(false)
     const [discountCode, setDiscountCode] = useState(false)
-    const [contro, setContro] = useState(false)
+    const [contro, setContro] = useState(true)
     const [controValue, setControValue] = useState(10)
     const [UTGSTValue, setUTGSTValue] = useState(9)
     const [CGSTValue, setCGSTValue] = useState(9)
@@ -50,15 +50,16 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
     const selectedFerryClassData = ferryData?.Classes.filter(obj => obj.ship_class_id === ferryCheckout?.Ferry_Data.Class_Id)[0]
     const perPersonPrice = parseInt(selectedFerryClassData.ship_class_price, 10)
     const portFees = ferryCheckout.Ferry_Operator === "MAK" ? selectedFerryClassData.psf : 50
-    const ferryPT_CGST = selectedFerryClassData.cgst_amount
-    const ferryPT_UTGST = selectedFerryClassData.ugst_amount
-    const subTotalValue = (perPersonPrice + portFees - ferryPT_CGST - ferryPT_UTGST) * totalPax + (contro ? controValue : 0)
+    // const ferryPT_CGST = selectedFerryClassData.cgst_amount
+    // const ferryPT_UTGST = selectedFerryClassData.ugst_amount
+    // const subTotalValue = (perPersonPrice + portFees - ferryPT_CGST - ferryPT_UTGST) * totalPax + (contro ? controValue : 0)
+    const subTotalValue = (perPersonPrice + portFees) * totalPax + (contro ? controValue : 0)
 
     const UTGST = (perPersonPrice * totalPax) * (UTGSTValue / 100)
     const CGST = (perPersonPrice * totalPax) * (CGSTValue / 100)
 
     const totalTax = UTGST + CGST
-    const totalAmount = subTotalValue + totalTax
+    const totalAmount = subTotalValue
 
     function convertTo12HourFormat(timeString) {
         let [hours, minutes, seconds] = timeString.split(':');
@@ -153,66 +154,70 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
                 </div>
             </div>
             <div className={styles.ferryNote}><span>Your ferry tickets will be delivered to you right away.</span></div>
-            <div className={styles.adultContTitle}>Adults</div>
-            <div className={styles.adultContainer}>
-                <div className={styles.packagePrice}>
-                    <div className={styles.ppriceLeft}>
-                        <span className={styles.ppriceLable}>Ticket Price</span>
-                        <span className={styles.packageOption}>{`${ferryData.ship_title} (${selectedFerryClassData.class_title} Class)`}</span>
-                    </div>
-                    <div className={styles.ppriceRight}>
-                        <span className={styles.ppriceValue}>₹{intPrice(perPersonPrice - ferryPT_CGST - ferryPT_UTGST)}</span>
-                        <span className={styles.ppriceNote}>Per Adult</span>
+            <div className={styles.paxTypeList}>
+                <div className={styles.adultPaxWrapper}>
+                    <div className={styles.adultContTitle}>Adults</div>
+                    <div className={styles.adultContainer}>
+                        <div className={styles.packagePrice}>
+                            <div className={styles.ppriceLeft}>
+                                <span className={styles.ppriceLable}>Ticket Price</span>
+                                <span className={styles.packageOption}>{`${ferryData.ship_title} (${selectedFerryClassData.class_title} Class)`}</span>
+                            </div>
+                            <div className={styles.ppriceRight}>
+                                <span className={styles.ppriceValue}>₹{intPrice(perPersonPrice)}</span>
+                                <span className={styles.ppriceNote}>Per Adult</span>
+                            </div>
+                        </div>
+                        <div className={styles.packagePrice}>
+                            <div className={styles.ppriceLeft}>
+                                <span className={styles.ppriceLable}>Port Service Fee</span>
+                                {/* <span className={styles.packageOption}>({filterFerryClass(ferryCheckout?.Ferry_Data.Class_Id)?.class_title})</span> */}
+                            </div>
+                            <div className={styles.ppriceRight}>
+                                <span className={styles.ppriceValue}>₹{intPrice(portFees)}</span>
+                                <span className={styles.ppriceNote}>Per Person</span>
+                            </div>
+                        </div>
+                        <div className={styles.traveler}>
+                            <div className={styles.travelerLable}><span>Total Adults</span></div>
+                            <div className={styles.travelerValue}><span>X {ferryCheckout?.Traveler.Adults}</span></div>
+                        </div>
                     </div>
                 </div>
-                <div className={styles.packagePrice}>
-                    <div className={styles.ppriceLeft}>
-                        <span className={styles.ppriceLable}>Port Service Fee</span>
-                        {/* <span className={styles.packageOption}>({filterFerryClass(ferryCheckout?.Ferry_Data.Class_Id)?.class_title})</span> */}
+                {/* Infant Ticket Price */}
+                {   
+                    ferryCheckout?.Traveler.Infants > 0 &&
+                    <div className={styles.infantPaxWrapper}>
+                        <div className={styles.infantContTitle}>Infants</div>
+                        <div className={styles.infantContainer}>
+                        <div className={styles.packagePrice}>
+                            <div className={styles.ppriceLeft}>
+                                <span className={styles.ppriceLable}>Ticket Price</span>
+                                <span className={styles.packageOption}>{`${ferryData.ship_title} (${selectedFerryClassData.class_title} Class)`}</span>
+                            </div>
+                            <div className={styles.ppriceRight}>
+                                <span className={styles.ppriceValue}>₹{intPrice(infantPrice)}</span>
+                                <span className={styles.ppriceNote}>Per Infant</span>
+                            </div>
+                        </div>
+                        <div className={styles.packagePrice}>
+                            <div className={styles.ppriceLeft}>
+                                <span className={styles.ppriceLable}>Port Service Fee</span>
+                                {/* <span className={styles.packageOption}>({filterFerryClass(ferryCheckout?.Ferry_Data.Class_Id)?.class_title})</span> */}
+                            </div>
+                            <div className={styles.ppriceRight}>
+                                <span className={styles.ppriceValue}>₹{intPrice(ferryCheckout.Ferry_Operator === "MAK" ? 0 : portFees)}</span>
+                                <span className={styles.ppriceNote}>Per Person</span>
+                            </div>
+                        </div>
+                        <div className={styles.traveler}>
+                            <div className={styles.travelerLable}><span>Total Infants</span></div>
+                            <div className={styles.travelerValue}><span>X {ferryCheckout?.Traveler.Infants}</span></div>
+                        </div>
+                        </div>
                     </div>
-                    <div className={styles.ppriceRight}>
-                        <span className={styles.ppriceValue}>₹{intPrice(portFees)}</span>
-                        <span className={styles.ppriceNote}>Per Person</span>
-                    </div>
-                </div>
-                <div className={styles.traveler}>
-                    <div className={styles.travelerLable}><span>Total Adults</span></div>
-                    <div className={styles.travelerValue}><span>X {ferryCheckout?.Traveler.Adults}</span></div>
-                </div>
+                }
             </div>
-            {/* Infant Ticket Price */}
-            {   
-                ferryCheckout?.Traveler.Infants > 0 &&
-                <>
-                    <div className={styles.infantContTitle}>Infants</div>
-                    <div className={styles.infantContainer}>
-                    <div className={styles.packagePrice}>
-                        <div className={styles.ppriceLeft}>
-                            <span className={styles.ppriceLable}>Ticket Price</span>
-                            <span className={styles.packageOption}>{`${ferryData.ship_title} (${selectedFerryClassData.class_title} Class)`}</span>
-                        </div>
-                        <div className={styles.ppriceRight}>
-                            <span className={styles.ppriceValue}>₹{intPrice(infantPrice)}</span>
-                            <span className={styles.ppriceNote}>Per Infant</span>
-                        </div>
-                    </div>
-                    <div className={styles.packagePrice}>
-                        <div className={styles.ppriceLeft}>
-                            <span className={styles.ppriceLable}>Port Service Fee</span>
-                            {/* <span className={styles.packageOption}>({filterFerryClass(ferryCheckout?.Ferry_Data.Class_Id)?.class_title})</span> */}
-                        </div>
-                        <div className={styles.ppriceRight}>
-                            <span className={styles.ppriceValue}>₹{intPrice(ferryCheckout.Ferry_Operator === "MAK" ? 0 : portFees)}</span>
-                            <span className={styles.ppriceNote}>Per Person</span>
-                        </div>
-                    </div>
-                    <div className={styles.traveler}>
-                        <div className={styles.travelerLable}><span>Total Infants</span></div>
-                        <div className={styles.travelerValue}><span>X {ferryCheckout?.Traveler.Infants}</span></div>
-                    </div>
-                    </div>
-                </>
-            }
             {   discount &&
                 <div className={styles.discount}>
                     <div className={styles.travelerLable}><span>Total Discount</span></div>
@@ -236,16 +241,12 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
                 <div className={styles.totlaLable}><span>Sub Total</span></div>
                 <div className={styles.totalValue}><span>₹ {intPrice(subTotalValue)}</span></div>
             </div>
-            <div className={styles.sepretro}></div>
-            <div className={styles.taxsComp}>
+            {/* <div className={styles.sepretro}></div> */}
+            {/* <div className={styles.taxsComp}>
                 <div className={styles.taxTitleComp}>
                     <div className={styles.taxLable}><span>Taxes and Fees</span></div>
                     <div className={styles.taxValue}><span>₹ {intPrice(totalTax)}</span></div>
                 </div>
-                {/* <div className={styles.utGstBrackDown}>
-                    <div className={styles.utGstLable}><span>Port Service Fee (₹{portFees} X {totalPax})</span></div>
-                    <div className={styles.utGstValue}><span>₹ {intPrice(portFees * totalPax)}</span></div>
-                </div> */}
                 <div className={styles.utGstBrackDown}>
                     <div className={styles.utGstLable}><span>UTGST @ 9%</span></div>
                     <div className={styles.utGstValue}><span>₹ {intPrice(UTGST)}</span></div>
@@ -255,7 +256,7 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
                     <div className={styles.cgstValue}><span>₹ {intPrice(CGST)}</span></div>
                 </div>
             </div>
-            <div className={styles.taxNote}>*All taxes and fees are collected by the ferry operator</div>
+            <div className={styles.taxNote}>*All taxes and fees are collected by the ferry operator</div> */}
         </div>
         <div className={styles.sepretro}></div>
         <div className={styles.totalAmt}>
