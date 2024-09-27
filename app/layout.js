@@ -34,28 +34,29 @@ const seoKeywords = [
 
 
 export const metadata = {
+    manifest: "/manifest.json",
+    title: seoTitle,
+    description: seoDesc,
+    keywords: seoKeywords,
+    url: seoSiteURL,
+    openGraph: {    
+        url: seoSiteURL,
         title: seoTitle,
         description: seoDesc,
-        keywords: seoKeywords,
-        url: seoSiteURL,
-        openGraph: {    
-            url: seoSiteURL,
-            title: seoTitle,
-            description: seoDesc,
-            images: [
-                {
-                    url: ogImageURL,
-                    width: 800,
-                    height: 600,
-                }
-            ]
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title: seoTitle,
-            description: seoDesc,
-            image: ogImageURL
-        }
+        images: [
+            {
+                url: ogImageURL,
+                width: 800,
+                height: 600,
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: seoTitle,
+        description: seoDesc,
+        image: ogImageURL
+    }
 }
 
 export default function RootLayout({ children }) {

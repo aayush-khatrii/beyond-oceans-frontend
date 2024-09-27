@@ -1,0 +1,29 @@
+{
+    "id": "1",
+    "name": "Beyond Oceans Andaman",
+    "short_name": "Beyond Oceans Andaman",
+    "descreption": "Beyond oceans app helps you to book tour packages, activity and ferry ticket for andaman",
+    "icons": [
+      {
+        "src": "/assets/pwa/pwa-ico-192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/assets/pwa/pwa-ico-384.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/pwa/pwa-ico-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#FFFFFF",
+    "background_color": "#FAFBFC",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
