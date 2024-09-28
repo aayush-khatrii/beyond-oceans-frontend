@@ -5,7 +5,7 @@ import Navbar from "./AppData/components/Header/Navbar/Navbar";
 import StickyNavbar from './AppData/components/Header/StickyNavbar/StickyNavbar'
 import Breadcrumb from "./AppData/components/Header/Breadcrumb/Breadcrumb";
 import Footer from "./AppData/components/Footer/Footer";
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Provider } from 'react-redux'
 import { makeStore } from './AppData/lib/store/store'
 import AutoAuth from "./AutoAuth";
@@ -14,7 +14,34 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function layoutextended({ children }) {
-
+    useEffect(() => {
+        let deferredPrompt;
+    
+        // Only run this on the client side
+        if (typeof window !== 'undefined') {
+            console.log('PWA install started');
+          window.addEventListener('beforeinstallprompt', (event) => {
+            console.log('addEventListener= beforeinstallprompt');
+            // Prevent the mini-infobar from appearing
+            event.preventDefault();
+            // Save the event so it can be triggered later
+            deferredPrompt = event;
+    
+            // Automatically show the native install prompt
+            deferredPrompt.prompt();
+    
+            // Handle the user's response to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the PWA install');
+              } else {
+                console.log('User dismissed the PWA install');
+              }
+              deferredPrompt = null;
+            });
+          });
+        }
+      }, []);
     const storeRef = useRef()
     if (!storeRef.current) {
         // Create the store instance the first time this renders

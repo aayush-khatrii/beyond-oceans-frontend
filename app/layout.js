@@ -59,6 +59,7 @@ export const metadata = {
     }
 }
 
+
 export default function RootLayout({ children }) {
     //To activate site change from DEV to PROD
     const mode = "PROD"
