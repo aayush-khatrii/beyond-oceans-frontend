@@ -2,11 +2,39 @@
 
 import Image from "next/image";
 import styles from "./Hero.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PlanTrip from "../../CTA/PlanTrip/PlanTrip";
 import BookFerry from "../../CTA/BookFerry/BookFerry";
 
 export default function Hero() {
+    useEffect(() => {
+        let deferredPrompt;
+    
+        // Only run this on the client side
+        if (typeof window !== 'undefined') {
+            console.log('PWA install started');
+          window.addEventListener('beforeinstallprompt', (event) => {
+            console.log('addEventListener= beforeinstallprompt');
+            // Prevent the mini-infobar from appearing
+            event.preventDefault();
+            // Save the event so it can be triggered later
+            deferredPrompt = event;
+    
+            // Automatically show the native install prompt
+            deferredPrompt.prompt();
+    
+            // Handle the user's response to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the PWA install');
+              } else {
+                console.log('User dismissed the PWA install');
+              }
+              deferredPrompt = null;
+            });
+          });
+        }
+      }, []);
     const [ctaType, setCtaType] = useState("PYT")
     function handleCTAtypeRadio(e){
         setCtaType(e.target.value)

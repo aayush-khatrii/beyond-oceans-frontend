@@ -46,7 +46,9 @@ export default function OTPinput({length = 6, onOtpSubmit = () => {}}) {
     const handlePaste = (e) => {
         e.preventDefault();
         const pasteData = e.clipboardData.getData('text').slice(0, length);
-        console.log(pasteData)
+        window.alert(e.clipboardData.types[0])
+        window.alert(pasteData)
+
         if (/^[0-9]+$/.test(pasteData)) {
             const newOtp = [...otp];
             pasteData.split('').forEach((char, idx) => {

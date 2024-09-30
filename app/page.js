@@ -26,6 +26,7 @@ export default async function Home() {
     const cookieStore = cookies()
     const theme = cookieStore.get('theme')
     const featuredPackages = await fetchFeaturedPackages("Featured")
+
     
 
   return (
