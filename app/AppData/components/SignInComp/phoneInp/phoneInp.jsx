@@ -171,10 +171,6 @@ export default function phoneInp(props) {
 
         props.onPhoneOTP("OTPPHN", phoneNumber)
     }
-    const [otp, setOtp] = useState("");
-    const onGetOtp = (otp) => {
-        setOtp(otp)
-    }
 
     return (
     <>
@@ -183,7 +179,7 @@ export default function phoneInp(props) {
         <Toaster richColors toastOptions={{ style: { fontFamily: "DM Sans",fontSize: "16px"}}}/>
         <div className={styles.inputCont}>
             <span className={styles.mobilePlace}>Enter Mobile Number to Continue</span>
-            <OTPinput onOtpSubmit={onGetOtp} />
+
             <div className={styles.inputBox}>
                 <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder='Your phone number' autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
                 <div className={styles.ctrCodeCont} onClick={toggleContry}>
