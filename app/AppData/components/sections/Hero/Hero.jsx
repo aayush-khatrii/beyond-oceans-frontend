@@ -7,52 +7,7 @@ import PlanTrip from "../../CTA/PlanTrip/PlanTrip";
 import BookFerry from "../../CTA/BookFerry/BookFerry";
 
 export default function Hero() {
-    useEffect(() => {
-        let deferredPrompt;
-    
-        // Function to check if the prompt was shown within the last 24 hours
-        const shouldShowPrompt = () => {
-          const lastPromptTime = localStorage.getItem('lastPromptTime');
-          if (!lastPromptTime) return true; // Show if there's no previous prompt time
-          const currentTime = new Date().getTime();
-          const oneDay = 24 * 60 * 60 * 1000; // 1 day in milliseconds
-          return currentTime - lastPromptTime > oneDay; // True if more than 1 day has passed
-        };
-    
-        // Only run this on the client side
-        if (typeof window !== 'undefined') {
-          console.log('PWA install check started');
-          
-          window.addEventListener('beforeinstallprompt', (event) => {
-            console.log('addEventListener= beforeinstallprompt');
-            
-            // Prevent the mini-infobar from appearing
-            event.preventDefault();
-            
-            // Save the event so it can be triggered later
-            deferredPrompt = event;
-    
-            // Check if the prompt should be shown
-            if (shouldShowPrompt()) {
-              // Automatically show the native install prompt
-              deferredPrompt.prompt();
-              
-              // Handle the user's response to the prompt
-              deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User accepted the PWA install');
-                } else {
-                  console.log('User dismissed the PWA install');
-                }
-                deferredPrompt = null;
-    
-                // Store the time when the prompt was shown
-                localStorage.setItem('lastPromptTime', new Date().getTime());
-              });
-            }
-          });
-        }
-      }, []);
+
     const [ctaType, setCtaType] = useState("PYT")
     function handleCTAtypeRadio(e){
         setCtaType(e.target.value)
