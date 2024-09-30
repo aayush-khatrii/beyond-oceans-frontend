@@ -45,6 +45,7 @@ export default function OTPinput({length = 6, onOtpSubmit = () => {}}) {
 
     const handlePaste = (e) => {
         e.preventDefault();
+        window.alert("awd")
         const pasteData = e.clipboardData.getData('text').slice(0, length);
         window.alert(e.clipboardData.types[0])
         window.alert(pasteData)
