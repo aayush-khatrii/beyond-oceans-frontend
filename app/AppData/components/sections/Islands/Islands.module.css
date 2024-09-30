@@ -114,4 +114,9 @@
     .swiperSlides{
         display: flex;
     }
+
+    .swiperSlides a{
+        flex: 1;
+        display: flex;
+    }
 }
