@@ -13,6 +13,19 @@ export default function OTPinput({length = 6, onOtpSubmit = () => {}}) {
 
     const handleChange = (index, e) => {
         const value = e.target.value;
+        if(value.length === 6){
+            const otpValue = value.slice(0, length)
+            if (/^[0-9]+$/.test(otpValue)) {
+                const newOtp = [...otp];
+                otpValue.split('').forEach((char, idx) => {
+                  newOtp[idx] = char;
+                });
+                setOtp(newOtp);
+                const combinedOtp = newOtp.join("")
+                onOtpSubmit(combinedOtp)
+                return
+            }
+        }
         if(isNaN(value))return
         const newOtp = [...otp]
 
@@ -45,16 +58,15 @@ export default function OTPinput({length = 6, onOtpSubmit = () => {}}) {
 
     const handlePaste = (e) => {
         e.preventDefault();
-        window.alert("awd")
         const pasteData = e.clipboardData.getData('text').slice(0, length);
-        window.alert(e.clipboardData.types[0])
-        window.alert(pasteData)
+        console.log(e.clipboardData.getData('text'))
 
         if (/^[0-9]+$/.test(pasteData)) {
             const newOtp = [...otp];
             pasteData.split('').forEach((char, idx) => {
               newOtp[idx] = char;
             });
+
             setOtp(newOtp);
             const combinedOtp = newOtp.join("")
             onOtpSubmit(combinedOtp)
