@@ -19,3 +19,4 @@ const api = axios.create({
 export const fetchAllFerry = (data) => api.post('/service/ferry/search-all', data);
 export const fetchSingleFerryMak = (data) => api.post('/service/ferry/search-single-mak', data);
 
+

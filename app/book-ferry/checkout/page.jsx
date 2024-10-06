@@ -12,10 +12,11 @@ import Policy from './components/Policy/Policy'
 import TicketSum from './components/TicketSum/TicketSum'
 import PayButton from './components/PayButton/PayButton'
 import AsideInfo from './components/AsideInfo/AsideInfo'
-import PriceBreakSkeleton from './components/Skeletons/PriceBreakSkeleton/PriceBreakSkeleton'
+import PriceBreakSkeleton from './components/Skeletons/TicketSumSkeleton/TicketSumSkeleton'
 import { fetchSingleFerryMak } from '@/app/AppData/http/ferry'
 import FerryPax from './components/FerryPax/FerryPax'
-import OrderSumSkeleton from './components/Skeletons/OrderSumSkeleton/OrderSumSkeleton'
+import FerryPaxSkeleton from './components/Skeletons/FerryPaxSkeleton/FerryPaxSkeleton'
+import TicketSumSkeleton from './components/Skeletons/TicketSumSkeleton/TicketSumSkeleton'
 
 export default function page() {
 
@@ -269,7 +270,7 @@ export default function page() {
                             travelersDataError={travelersDataError}
                             travelersDataErrorHandle={handleTravelersDataError}
                         /> 
-                        : <OrderSumSkeleton />
+                        : <FerryPaxSkeleton />
                     }
                     <ContectComp 
                         contectData={handleContectData}
@@ -282,7 +283,8 @@ export default function page() {
                     {
                         (ferryCartData && ferryData) ?
                         <TicketSum sessionData={ferryCartData} ferryData={ferryData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
-                        : <>Loading</>
+                        : <TicketSumSkeleton />
+                        // : <>Loading</>
                     }
                     <PayButton totalAmount={totalAmount} travelersData={travelersData} paxDataError={handleTravelersDataError} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
                     <AsideInfo />

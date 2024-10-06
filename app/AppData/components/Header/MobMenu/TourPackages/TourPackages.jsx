@@ -16,14 +16,14 @@ export default function TourPackages({handleMenuToggle}) {
                     </Link>
                     <div className={styles.categoryItems}>
                         <ul>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>2 Night 3 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>3 Night 4 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>4 Night 5 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>5 Night 6 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>6 Night 7 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>7 Night 8 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>8 Night 9 Days</ListItem></Link>
-                            <Link href="/packages/honeymoon" onClick={handleMenuToggle}><ListItem>9 Night 10 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=0" onClick={handleMenuToggle}><ListItem>2 Night 3 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=1" onClick={handleMenuToggle}><ListItem>3 Night 4 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=2" onClick={handleMenuToggle}><ListItem>4 Night 5 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=3" onClick={handleMenuToggle}><ListItem>5 Night 6 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=4" onClick={handleMenuToggle}><ListItem>6 Night 7 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=5" onClick={handleMenuToggle}><ListItem>7 Night 8 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=6" onClick={handleMenuToggle}><ListItem>8 Night 9 Days</ListItem></Link>
+                            <Link href="/packages/honeymoon?time=7" onClick={handleMenuToggle}><ListItem>9 Night 10 Days</ListItem></Link>
                         </ul>
                     </div>
                 </div>
@@ -36,14 +36,14 @@ export default function TourPackages({handleMenuToggle}) {
                     </Link>
                     <div className={styles.categoryItems}>
                         <ul>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>2 Night 3 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>3 Night 4 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>4 Night 5 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>5 Night 6 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>6 Night 7 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>7 Night 8 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>8 Night 9 Days</ListItem></Link>
-                            <Link href="/packages/family-package" onClick={handleMenuToggle}><ListItem>9 Night 10 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=0" onClick={handleMenuToggle}><ListItem>2 Night 3 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=1" onClick={handleMenuToggle}><ListItem>3 Night 4 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=2" onClick={handleMenuToggle}><ListItem>4 Night 5 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=3" onClick={handleMenuToggle}><ListItem>5 Night 6 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=4" onClick={handleMenuToggle}><ListItem>6 Night 7 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=5" onClick={handleMenuToggle}><ListItem>7 Night 8 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=6" onClick={handleMenuToggle}><ListItem>8 Night 9 Days</ListItem></Link>
+                            <Link href="/packages/family-package?time=7" onClick={handleMenuToggle}><ListItem>9 Night 10 Days</ListItem></Link>
                         </ul>
                     </div>
                 </div>

@@ -14,16 +14,16 @@ export default function Company({handleMenuToggle}) {
                         </div>
                     </Link>
                     {/* <Link href="/destination" onClick={handleMenuToggle}> */}
-                        <div onClick={handleMenuToggle} className={styles.categoryTitle}>
+                        {/* <div onClick={handleMenuToggle} className={styles.categoryTitle}>
                             <IconList Icon="RightArrow"/>
                             <span>Blogs</span>
-                        </div>
+                        </div> */}
                     {/* </Link> */}
                     {/* <Link href="/destination" onClick={handleMenuToggle}> */}
-                        <div onClick={handleMenuToggle} className={styles.categoryTitle}>
+                        {/* <div onClick={handleMenuToggle} className={styles.categoryTitle}>
                             <IconList Icon="RightArrow"/>
                             <span>Career</span>
-                        </div>
+                        </div> */}
                     {/* </Link> */}
                     <Link href="/contact-us" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
