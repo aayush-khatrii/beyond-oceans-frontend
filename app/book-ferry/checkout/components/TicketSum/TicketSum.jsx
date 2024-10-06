@@ -8,7 +8,7 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
     const ferryCheckout = sessionData && sessionData.Ferry_Checkout
     const [discount, setDiscount] = useState(false)
     const [discountCode, setDiscountCode] = useState(false)
-    const [contro, setContro] = useState(true)
+    const [contro, setContro] = useState(false)
     const [controValue, setControValue] = useState(10)
     const [UTGSTValue, setUTGSTValue] = useState(9)
     const [CGSTValue, setCGSTValue] = useState(9)

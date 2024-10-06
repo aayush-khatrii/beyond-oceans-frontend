@@ -3,11 +3,12 @@ import { useState, useEffect, useRef } from 'react'
 import IconList from '../IconComponent/IconList'
 import styles from './Select.module.css'
 
-export default function Select({datalist, placeholder, onData, isEmpty = false}) {
+export default function Select({datalist, placeholder, onData, isEmpty = false, blankValue = false}) {
 
     const selectBtnRef = useRef()
     const [selected, setSelected] = useState(placeholder ? placeholder : "")
     const [isDropdown, setIsDropdown] = useState(false)
+    const [dropDownList, setDropDownList] = useState(datalist)
 
     const dropIconStyle = { 
         transform: isDropdown ? 'rotate(180deg)' : '', 
@@ -19,6 +20,11 @@ export default function Select({datalist, placeholder, onData, isEmpty = false})
     }
 
     const handleItemSelect = (index) => {
+        if(blankValue){
+            setSelected(placeholder)
+            onData("")
+            return
+        }
         setSelected(datalist[index])
         onData(datalist[index])
     }
@@ -47,7 +53,7 @@ export default function Select({datalist, placeholder, onData, isEmpty = false})
             </div>
             <ul style={{display: isDropdown ? "block" : ""}} className={styles.optionMenu}>
                 {
-                    datalist.map((list, index) => (
+                    (blankValue ? [placeholder, ...dropDownList] : dropDownList).map((list, index) => (
                         <li key={index} onClick={() => handleItemSelect(index)} className={styles.listItems}>{list}</li>
                     ))
                 }

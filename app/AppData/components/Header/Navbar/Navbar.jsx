@@ -117,27 +117,27 @@ export default function Navbar() {
                             <div className={styles.menuContainer}>
                             <Link href="/packages/honeymoon"><div className={styles.menuContTitle}><IconList Icon="Honeymoon" /><span>Honeymoon</span></div></Link>
                                 <ul>
-                                    <Link href="/packages/honeymoon"><ListItem>2 Night 3 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>3 Night 4 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>4 Night 5 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>5 Night 6 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>6 Night 7 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>7 Night 8 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>8 Night 9 Days</ListItem></Link>
-                                    <Link href="/packages/honeymoon"><ListItem>9 Night 10 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=0"><ListItem>2 Night 3 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=1"><ListItem>3 Night 4 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=2"><ListItem>4 Night 5 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=3"><ListItem>5 Night 6 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=4"><ListItem>6 Night 7 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=5"><ListItem>7 Night 8 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=6"><ListItem>8 Night 9 Days</ListItem></Link>
+                                    <Link href="/packages/honeymoon?time=7"><ListItem>9 Night 10 Days</ListItem></Link>
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
                                 <Link href="/packages/family-package"><div className={styles.menuContTitle}><IconList Icon="FamilyPackage" /><span>Family Package</span></div></Link>
                                 <ul>
-                                    <Link href="/packages/family-package"><ListItem>2 Night 3 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>3 Night 4 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>4 Night 5 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>5 Night 6 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>6 Night 7 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>7 Night 8 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>8 Night 9 Days</ListItem></Link>
-                                    <Link href="/packages/family-package"><ListItem>9 Night 10 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=0"><ListItem>2 Night 3 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=1"><ListItem>3 Night 4 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=2"><ListItem>4 Night 5 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=3"><ListItem>5 Night 6 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=4"><ListItem>6 Night 7 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=5"><ListItem>7 Night 8 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=6"><ListItem>8 Night 9 Days</ListItem></Link>
+                                    <Link href="/packages/family-package?time=7"><ListItem>9 Night 10 Days</ListItem></Link>
                                 </ul>
                             </div>
                             <div className={styles.menuContainer}>
@@ -233,8 +233,8 @@ export default function Navbar() {
                             <div className={styles.secMenuCont}>
                                 <ul className={styles.moreSecMenu}>
                                     <Link href="/about-us"><li className={styles.menuContTitle}><span>About Us</span></li></Link>
-                                    <li className={styles.menuContTitle}><span>Blogs</span></li>
-                                    <li className={styles.menuContTitle}><span>Career</span></li>
+                                    {/* <li className={styles.menuContTitle}><span>Blogs</span></li> */}
+                                    {/* <li className={styles.menuContTitle}><span>Career</span></li> */}
                                     <Link href="/user/profile"><li className={styles.menuContTitle}><span>My Account</span></li></Link>
                                     <Link href="/contact-us"><li className={styles.menuContTitle}><span>Contact Us</span></li></Link>
                                 </ul>

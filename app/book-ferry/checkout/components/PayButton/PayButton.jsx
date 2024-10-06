@@ -26,6 +26,7 @@ export default function PayButton(props) {
     const cityRegexM = /^(?=.*\S)[a-zA-Z\s,]{3,40}$/;
     const addressRegex = /^[a-zA-Z0-9\s,\/\-]{10,100}$/;
     const textareaRegex = /^[a-zA-Z0-9\s,\/\.\-\n]{10,400}$/;
+    const passportRegex = /^[A-Za-z0-9]{6,20}$/;
 
 
     function handlePG(e){
@@ -70,7 +71,7 @@ export default function PayButton(props) {
                 return { field:"title", code:"error" }
             }
 
-            if (!traveler.name) {
+            if (!traveler.name || !nameRegexM.test(traveler.name)) {
                 props.paxDataError(index, type, 'name', true)
                 window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
                 return { field:"name", code:"error" }
@@ -83,7 +84,7 @@ export default function PayButton(props) {
             }
           
             if (traveler.country !== 'India') {
-                if (!traveler.passportNumber) {
+                if (!traveler.passportNumber || !passportRegex.test(traveler.passportNumber)) {
                     props.paxDataError(index, type, 'passportNumber', true)
                     window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
                     return { field:"passportNumber", code:"error" }
@@ -269,7 +270,7 @@ export default function PayButton(props) {
         }
 
         if(allConditionChecker){
-            setIsRedirect(true)
+            // setIsRedirect(true)
             const paymentParams = {
                 contactData: {
                     Name: contactData.name,
@@ -279,7 +280,8 @@ export default function PayButton(props) {
                     State: contactData.state,
                     Address: contactData.address,
                     ...(contactData.textArea && { Request: contactData.textArea })
-                }, 
+                },
+                PaxData: paxData,
                 PAYGW: PAYGW,
                 ...(subItem && {
                     Sub_Items: [ 
@@ -295,10 +297,9 @@ export default function PayButton(props) {
                 ...(contributionAmt && { contributionAmt: contributionAmt }),
                 isTermsAgree: isAgree
             }
-
             let formDataUrl
             try {
-                const {data} = await initiatActivityPayment(paymentParams)
+                const {data} = await initiatFerryPayment(paymentParams)
                 console.log(data)
                 formDataUrl = data
             } catch (error) {
@@ -381,8 +382,8 @@ export default function PayButton(props) {
                 </div>
             </div>
             {
-                // (props.totalAmount && props.contectData ) ?
-                false ?
+                (props.totalAmount && props.contectData ) ?
+                // false ?
                 <button className={styles.payNowBTN} onClick={() => {handlePayment()}}>Proceed To Payment</button>
                 : <div className={styles.payNowBTNSkeleton}>Proceed To Payment</div>
             }
