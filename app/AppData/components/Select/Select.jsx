@@ -20,9 +20,14 @@ export default function Select({datalist, placeholder, onData, isEmpty = false, 
     }
 
     const handleItemSelect = (index) => {
-        if(blankValue){
+        if(blankValue && index === 0){
             setSelected(placeholder)
             onData("")
+            return
+        }
+        if(blankValue){
+            setSelected(datalist[index-1])
+            onData(datalist[index-1])
             return
         }
         setSelected(datalist[index])

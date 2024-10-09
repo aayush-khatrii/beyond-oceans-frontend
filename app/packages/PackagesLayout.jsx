@@ -148,25 +148,25 @@ export default function page({data}) {
                     <div className={styles.sortbyOpts}>
                         <span className={styles.selectTitle}>Sort By</span>
                         <div className={styles.selectCont}>
-                            <Select datalist={sortbyDL} placeholder={sortBy ? sortBy : "Sort By"} onData={handleSortBy} />
+                        <Select datalist={sortbyDL} placeholder={paramFilter ? sortbyDL[paramFilter] : "Sort By"} onData={handleSortBy} blankValue={true} />
                         </div>
                     </div>
                     <div className={styles.budgetOpts}>
                         <span className={styles.selectTitle}>Select Budget</span>
                         <div className={styles.selectCont}>
-                            <Select datalist={BudgetDL} placeholder={filterBudget ? filterBudget : "Select Budget"} onData={handlebudget} />
+                            <Select datalist={BudgetDL} placeholder={paramBudget ? BudgetDL[paramBudget] : "Select Budget"} onData={handlebudget} blankValue={true} />
                         </div>
                     </div>
                     <div className={styles.durationOpts}>
                         <span className={styles.selectTitle}>Select Duration</span>
                         <div className={styles.selectCont}>
-                            <Select datalist={DurationDL} placeholder={filterDuration ? filterDuration : "Duration"} onData={handleDuration} blankValue={true} />
+                            <Select datalist={DurationDL} placeholder={paramDuration ? DurationDL[paramDuration] : "Duration"} onData={handleDuration} blankValue={true} />
                         </div>
                     </div>
                     <div className={styles.tourTypeOpts}>
                         <span className={styles.selectTitle}>Tour Type</span>
                         <div className={styles.selectCont}>
-                            <Select datalist={TourTypeDL} placeholder={filterTourType ? filterTourType : "Tour Type"} onData={handleTourType} />
+                            <Select datalist={TourTypeDL} placeholder={paramTourType ? TourTypeDL[paramTourType] : "Tour Type"} onData={handleTourType} blankValue={true} />
                         </div>
                     </div>
                     <div>
