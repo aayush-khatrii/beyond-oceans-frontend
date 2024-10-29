@@ -24,7 +24,7 @@ export default function ContectComp(props) {
 
     const nameRegex = /^[a-zA-Z\s]*$/;
     const addressRegex = /^[a-zA-Z0-9\s,\/\-]*$/;
-    const phoneRegex = /^[\d+-]{0,15}$/;
+    const phoneRegex = /^\d{0,15}$/;
 
     useEffect(() => {
         setName(userData.name ? userData.name : "")
@@ -136,7 +136,7 @@ export default function ContectComp(props) {
             <div className={styles.inputRow}>
                 <div className={styles.inpCont}>
                     <span className={styles.inpLable}>Alternate Phone Number</span>
-                    <input className={styles.inpBox} style={{borderColor: errPhone ? "#ff0000" : ""}} value={phone} onChange={(e) => handlePhone(e)} type="text" placeholder='Eg. +91-1234567890'/>
+                    <input className={styles.inpBox} style={{borderColor: errPhone ? "#ff0000" : ""}} value={phone} onChange={(e) => handlePhone(e)} type="text" placeholder='Eg. 911234567890'/>
                 </div>
                 <div className={styles.inpCont}>
                     <span className={styles.inpLable}>City</span>

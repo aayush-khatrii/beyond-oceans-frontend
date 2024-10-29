@@ -12,6 +12,7 @@ import AutoAuth from "./AutoAuth";
 import MobHeader from "./AppData/components/Header/MobHeader/MobHeader";
 import Link from "next/link";
 import Image from "next/image";
+import InqPopup from "./AppData/components/InqPopup/InqPopup";
 
 export default function layoutextended({ children }) {
 
@@ -80,7 +81,7 @@ export default function layoutextended({ children }) {
                 <AutoAuth>
                     { !nonStickyNavBar.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) ? <StickyNavbar /> : <Navbar /> }
                     <MobHeader />
-                        <Link href="https://wa.me/917908671247" target="_blank" className={styles.wpIcon}>
+                    <Link href="https://wa.me/917908671247" target="_blank" className={styles.wpIcon}>
                         <div className={styles.iconWrapper}>
                             <div className={styles.imgWrapper}>
                                 <Image
@@ -94,6 +95,7 @@ export default function layoutextended({ children }) {
                         </div>
                         <div className={styles.iconTitle}><span>WhatsApp Chat</span></div>
                     </Link>
+                    {/* <InqPopup /> */}
                     {/* { !nonBreadcrumbPages.includes(pathName) ? <Breadcrumb /> : null } */}
                         {children}
                     <Footer />

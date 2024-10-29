@@ -23,18 +23,18 @@ export default function FerrySelectLoad(props) {
 
 
         const ferryFetchParams = {
-            scheduleID: ferryId,
+            scheduleID: ferryId.toString(),
             dept: tripData.dept,
             dest: tripData.dest,
             date: paramsDate,
             trav: tripData.travelerAdu
         }
-
+        console.log(ferryFetchParams)
         const {data} = await fetchSingleFerryMak(ferryFetchParams)
         setSingleFerryData(data)
         await checkSeatsinList(data.data)
     }
-    console.log("ferrrySelect Load", tripData.ferryClass)
+
     async function checkSeatsinList(ferryData){
 
         
@@ -47,8 +47,8 @@ export default function FerrySelectLoad(props) {
                 Ferry_Operator: "MAK",
                 Ferry_Data: {
                     Travel_Date: paramsDate,
-                    Schedule_Id: ferryData.id,
-                    Class_Id: ferryClassData[0].ship_class_id,
+                    Schedule_Id: ferryData.id.toString(),
+                    Class_Id: ferryClassData[0].ship_class_id.toString(),
                     Departure: ferryData.source_location_id,
                     Destination: ferryData.destination_location_id,
                     Departure_Time: ferryData.departure_time,
@@ -60,8 +60,8 @@ export default function FerrySelectLoad(props) {
                     Infants: tripData.travelerInf
                 }
             }
+            console.log(makCheckoutParams)
             const {data} = await storeMakFerryCheckout(makCheckoutParams)
-            console.log(data)
             router.push("/book-ferry/checkout")
             return
         }
