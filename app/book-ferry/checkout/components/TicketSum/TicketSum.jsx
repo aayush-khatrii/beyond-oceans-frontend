@@ -47,7 +47,7 @@ export default function PriceBreak({ferryData, sessionData, tatalAmountFunc, onD
 
     const totalPax = ferryCheckout?.Traveler.Adults + (ferryCheckout.Ferry_Operator === "NTK" ? ferryCheckout?.Traveler.Infants : 0)
     const infantPrice = ferryCheckout.Ferry_Operator === "NTK" ? ferryData.fares.infantFare : 0
-    const selectedFerryClassData = ferryData?.Classes.filter(obj => obj.ship_class_id === ferryCheckout?.Ferry_Data.Class_Id)[0]
+    const selectedFerryClassData = ferryData?.Classes.filter(obj => obj.ship_class_id.toString() === ferryCheckout?.Ferry_Data.Class_Id)[0]
     const perPersonPrice = parseInt(selectedFerryClassData.ship_class_price, 10)
     const portFees = ferryCheckout.Ferry_Operator === "MAK" ? selectedFerryClassData.psf : 50
     // const ferryPT_CGST = selectedFerryClassData.cgst_amount

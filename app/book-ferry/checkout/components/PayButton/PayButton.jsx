@@ -4,7 +4,7 @@ import { useState } from 'react'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import { Toaster, toast } from 'sonner'
 import {toast as rhtToast, Toaster as RhtToast } from 'react-hot-toast';
-import { initiatActivityPayment } from '@/app/AppData/http/checkout'
+import { initiatFerryPayment } from '@/app/AppData/http/checkout'
 import { AxiosError } from 'axios';
 import RedirectPopup from '../RedirectPopup/RedirectPopup'
 
@@ -21,7 +21,7 @@ export default function PayButton(props) {
     const subItem = props.subItem
 
     const nameRegexM = /^(?=.*\S)[a-zA-Z\s]{3,16}$/;
-    const phoneRegexM = /^(?=(?:[^0-9]*\d[^0-9]*){8,15}$)[\d+-]{8,15}$/;
+    const phoneRegexM = /^(?=(?:\D*\d){8,15}$)\d{8,15}$/;
     const emailRegexM = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const cityRegexM = /^(?=.*\S)[a-zA-Z\s,]{3,40}$/;
     const addressRegex = /^[a-zA-Z0-9\s,\/\-]{10,100}$/;
@@ -183,7 +183,7 @@ export default function PayButton(props) {
         if(!phoneRegexM.test(contactData.phone)){
             props.contectDataError("phone", true)
             toast.message("Invalid Phone", {
-                description: "Ex: +919999999999, 9999999999, 99999-99999",
+                description: "Ex: 919999999999, 9999999999",
             })
             toast.error("Invalid Phone number. Check Here")
             window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
@@ -270,7 +270,7 @@ export default function PayButton(props) {
         }
 
         if(allConditionChecker){
-            // setIsRedirect(true)
+            setIsRedirect(true)
             const paymentParams = {
                 contactData: {
                     Name: contactData.name,
@@ -297,12 +297,14 @@ export default function PayButton(props) {
                 ...(contributionAmt && { contributionAmt: contributionAmt }),
                 isTermsAgree: isAgree
             }
+            
             let formDataUrl
             try {
                 const {data} = await initiatFerryPayment(paymentParams)
-                console.log(data)
+                console.log("daasd:", data)
                 formDataUrl = data
             } catch (error) {
+                setIsRedirect(false)
                 if(error.response?.data){  
                     toast.error(error.response?.data.message)
                     return

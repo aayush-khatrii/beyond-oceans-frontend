@@ -96,7 +96,7 @@ export default function Footer() {
                     </address>
                     <div className={styles.socialMedia}>
                         <div><Link href="https://www.instagram.com/beyondoceansandaman/" target='_blank'><IconList Icon="Insta" /></Link></div>
-                        <div><Link href="https://www.facebook.com/profile.php?id=61561083504785" target='_blank'><IconList Icon="FB" /></Link></div>
+                        <div><Link href="https://www.facebook.com/people/Beyond-Oceans-Andaman/61565654367734/" target='_blank'><IconList Icon="FB" /></Link></div>
                         <div><Link href="https://www.youtube.com/@beyondoceansandaman" target='_blank'><IconList Icon="YT" /></Link></div>
                         <div><Link href="https://wa.me/917908671247" target='_blank'><IconList Icon="WP" /></Link></div>
                     </div>
