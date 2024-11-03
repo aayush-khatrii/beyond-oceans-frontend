@@ -1,5 +1,5 @@
 "use client"
-import Select from '@/app/AppData/components/Select/Select'
+import Select from '../Select/Select'
 import styles from './SingleTrip.module.css'
 import { useState } from 'react'
 import DatePicker from "react-datepicker";
@@ -90,8 +90,8 @@ export default function SingleTrip() {
     const filteredFromList = destinationList.filter(location => location !== selectedTo);
     const filteredToList = destinationList.filter(location => location !== selectedFrom);
 
-
     return (
+    <>
     <div className={styles.mainWrapper}>
         <div className={styles.inpFields}>
             <div className={styles.fromSelect}>
@@ -103,7 +103,7 @@ export default function SingleTrip() {
             <div className={styles.toSelect}>
                 <div className={styles.fieldLabel}><span>Select To</span></div>
                 <div className={styles.selectBox}>
-                    <Select isEmpty={eptTo} datalist={filteredToList} placeholder="Select To" onData={handletoData}/>
+                    <Select isEmpty={eptTo} datalist={filteredToList} blankValue={false} placeholder="Select To" onData={handletoData}/>
                 </div>
             </div>
             <div className={styles.travelDateSelect}>
@@ -161,5 +161,6 @@ export default function SingleTrip() {
             <button className={styles.searchFerryBtn} onClick={() => {handleSearch()}}>Search Ferry</button>
         </div>
     </div>
+    </>
   )
 }

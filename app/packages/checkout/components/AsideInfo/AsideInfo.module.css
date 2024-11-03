@@ -42,4 +42,7 @@
         font-size: 13px;
         width: fit-content;
     }
+    .infoList{
+        justify-content: flex-start;
+    }
 }
