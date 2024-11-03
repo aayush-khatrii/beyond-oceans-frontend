@@ -53,3 +53,18 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 980px){
+    .subWrapper{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actionBTN{
+        margin-left: 0;
+        height: 40px;
+        width: 100%;
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+}

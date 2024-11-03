@@ -290,6 +290,34 @@ export default function page() {
                     <AsideInfo />
                 </aside>
             </div>
+            <div className={styles.mobSubWrapper}>
+                {isLoginDone && <LoginDone />}
+                {!isAuth && <Login isAuthError={errAuth} handleClose={handleLogedIn}/>}
+                {
+                    (ferryCartData && ferryData) ?
+                    <TicketSum sessionData={ferryCartData} ferryData={ferryData} tatalAmountFunc={handleTatalAmount} onDiscount={handleDiscount} onContribution={handleContribution}/>
+                    : <TicketSumSkeleton />
+                    // : <>Loading</>
+                }
+                {
+                    (ferryCartData && ferryData) ?
+                    <FerryPax 
+                        sessionData={ferryCartData}
+                        paxData={handleTravelersData}
+                        travelersDataError={travelersDataError}
+                        travelersDataErrorHandle={handleTravelersDataError}
+                    /> 
+                    : <FerryPaxSkeleton />
+                }
+                <ContectComp 
+                    contectData={handleContectData}
+                    contectDataError={handleDataError}
+                    errorDeatil={errorContact}
+                />
+                <PayButton totalAmount={totalAmount} travelersData={travelersData} paxDataError={handleTravelersDataError} contectData={contectDeatils} contectDataError={handleDataError} isAuth={isAuth} discountCode={discountCode} contributionAmt={contributionAmt}/>
+                <AsideInfo />
+                <Policy />
+            </div>
         </div>
     )
 }

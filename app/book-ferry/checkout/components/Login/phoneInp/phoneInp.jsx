@@ -213,6 +213,42 @@ export default function phoneInp(props) {
             </div>
             </div>
         </div>
+        <div className={styles.mobInputCont}>
+            <div className={styles.inputBox}>
+                <input autoFocus className={styles.PhoneInp} style={{borderColor: isFalsePhone ? '#ff0000' : ''}} type="tel" placeholder='Phone Number' autoComplete='on' onClick={phnToggleContry} onChange={(e) => handlePhoneChange(e)}/>
+                <div className={styles.ctrCodeCont} onClick={toggleContry}>
+                    <div>
+                        <Icon icon={`flag:${countryObj.code.toLowerCase()}-4x3`} />
+                        <div className={styles.drpIco} style={{ transform: isContryList ? 'rotate(180deg)' : '' }}><IconList Icon="downArrow" /></div>
+                    </div>
+                    <span className={styles.ctryCode}>{`+${countryObj.phone}`}</span>
+                </div>
+                
+                <div className={styles.optionsList} style={{display: isContryList ? 'block' : ''}}>
+                    <div className={styles.srchInpCont}>
+                        <input type="text" value={searchQuery} onKeyDown={(e) => handleKeyDown(e)} placeholder='Country Name or Code' className={styles.ctrySearch} onChange={(e) => handleCtrySearch(e)}/>
+                        <div className={styles.srchIcon}><IconList Icon="searchIcon" /></div>
+                    </div>
+                <ol>
+                    
+                    {
+                        contrydata.map((country, index) => (
+                            <li key={index} className={styles.listItem} >
+                                <div className={`${styles.contryListCont} ${selectedIndex === index ? styles.SlctcontryListCont : ''}`} onClick={() => handleCtrySelect(country.name, country.code, country.phone) }>
+                                    <div className={`${styles.ctryIconName} listFlags`}>
+                                        <Icon icon={`flag:${country.code.toLowerCase()}-4x3`} />
+                                        <span className={styles.countryListName}>{`${country.name} (+${country.phone})`}</span>
+                                    </div>
+                                    <span className={styles.countryListCode}>{country.code}</span>
+                                </div>
+                            </li>
+                        ))
+                    }
+                </ol>
+            </div>
+            </div>
+            <button style={btnStyle} disabled={disableBtn} className={styles.signInBtn} onClick={handelSignUp}>Send OTP</button>
+        </div>
         <div className={styles.wrongNoteCont}>
         {isFalsePhone && <div className={styles.wrongPhonenote}><p>* Phone Number is Invalid</p></div>}
         </div>
