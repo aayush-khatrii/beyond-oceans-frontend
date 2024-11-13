@@ -64,6 +64,18 @@ export default function MobHeader() {
         }
       };
 
+      useEffect(() => {
+        if (loginPop || toggleMenu) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+    
+        return () => {
+          document.body.style.overflow = ''; // Cleanup on component unmount
+        };
+      }, [loginPop, toggleMenu]);
+
     return (
         <div className={styles.mainWrapper}>
         {loginPop && <SignInComp handleClose={loginPopup} />}

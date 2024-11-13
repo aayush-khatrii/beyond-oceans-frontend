@@ -8,21 +8,29 @@
     z-index: 5;
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
+}
+
+.mainWrapper::-webkit-scrollbar{
+    display: none;
+    height: 0;
+    padding: 0;
 }
 
 .closeIcon{
     position: absolute;
-    top: 36px;
-    right: 38px;
+    top: 0px;
+    right: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25px;
     height: 25px;
-    margin-top: 1px;
+    margin-top: 34px;
     border-radius: 50px;
     background-color: #E9E9E9;
     cursor: pointer;
+    z-index: 3;
 }
 
 .closeIcon svg{
@@ -37,8 +45,11 @@
 }
 
 .subWrapper{
-    width: 100%;
+    position: relative;
+    width: 1290px;
     height: fit-content;
-    padding: 34px 38px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 

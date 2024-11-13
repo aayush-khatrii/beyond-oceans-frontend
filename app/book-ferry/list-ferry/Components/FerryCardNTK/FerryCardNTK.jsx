@@ -1,11 +1,11 @@
-import React, { useEffect, useRef,useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Lottie from 'lottie-react'
 import styles from './FerryCardNTK.module.css'
 import FerryAni from '../../../../AppData/ani/ferry_ani.json'
 import IconList from '@/app/AppData/components/IconComponent/IconList'
 import NTKPopup from './NTKPopup/NTKPopup'
 
-export default function FerryCardNTK({data}) {
+export default function FerryCardNTK({data, tripData}) {
 
     const lottiFerryRef = useRef(null)
     const [ferrySelectPop, setFerrySelectPop] = useState(false)
@@ -22,6 +22,18 @@ export default function FerryCardNTK({data}) {
     function convertToMinutes(timeString) {
         return timeString.hour * 60 + timeString.minute;
     }
+
+    useEffect(() => {
+        if (ferrySelectPop) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+    
+        return () => {
+          document.body.style.overflow = ''; // Cleanup on component unmount
+        };
+      }, [ferrySelectPop]);
     
     function getTimeDifference(time1, time2) {
         const minutes1 = convertToMinutes(time1);
@@ -49,8 +61,8 @@ export default function FerryCardNTK({data}) {
 
     return (
     <div className={styles.mainWrapper}>
-        {ferrySelectPop && data && <NTKPopup handleClose={handleFerrySelectPopup} ferryData={data}/>}
-        {/* {ferrySelectPop && data && <NTKPopup ferryData={data} tripData={tripData} handleClose={handleFerrySelectPopup} />} */}
+        {/* {ferrySelectPop && data && <NTKPopup handleClose={handleFerrySelectPopup} ferryData={data}/>} */}
+        {ferrySelectPop && data && <NTKPopup ferryData={data} tripData={tripData} handleClose={handleFerrySelectPopup} />}
         <div className={styles.ferryListCard}>
             <div className={styles.left}></div>
             <div className={styles.right}></div>
@@ -112,8 +124,8 @@ export default function FerryCardNTK({data}) {
                         <div className={styles.tripPrice}><span>₹ {data && ticketStartingPrice}</span></div>
                         <div className={styles.tripPriceNote}><span>per ticket</span></div>
                     </div>
-                    {/* <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button> */}
-                    <button className={styles.bookingBTN}>Select Seats</button>
+                    <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button>
+                    {/* <button className={styles.bookingBTN}>Select Seats</button> */}
                 </div>
                 <div className={styles.ferryCardRightMob}>
                     <div className={styles.awdawdawdawd}>

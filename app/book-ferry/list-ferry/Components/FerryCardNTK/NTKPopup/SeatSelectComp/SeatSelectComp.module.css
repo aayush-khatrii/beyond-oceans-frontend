@@ -1,0 +1,54 @@
+.mainWrapper{
+    display: flex;
+    flex-grow: 1;
+    max-width: 780px;
+}
+
+.secTitle span:nth-child(1){
+    color: #1E2C70;
+}
+
+.secTitle{
+    position: sticky;
+    top: 0px;
+    font-size: 21.7px;
+    font-weight: 700;
+    color: #1F1F1F;
+    padding-top: 34px;
+    margin-bottom: 38px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.ferrySeatLayout{
+    width: 780px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.zoomInBtn, .zoomOutBtn{
+    border: 1px solid #1E2C70;
+    color: #1E2C70;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.zoomOutBtn{
+    margin-left: 5px;
+}
+
+.zoomInBtn:hover, .zoomOutBtn:hover{
+    border: 1px solid #B9BED3;
+    color: #fff;
+    background-color: #1E2C70;
+}
+
+.zoomInBtn svg, .zoomOutBtn svg{
+    padding-top: 5px;
+    width: 20px;
+}

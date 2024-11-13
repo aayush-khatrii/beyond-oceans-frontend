@@ -40,6 +40,18 @@ export default function FerryCardMAK({data, tripData}) {
         lottiFerryRef.current.setSpeed(.6)
     },[])
 
+    useEffect(() => {
+        if (ferrySelectPop) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+    
+        return () => {
+          document.body.style.overflow = ''; // Cleanup on component unmount
+        };
+      }, [ferrySelectPop]);
+
     const ticketStartingPrice = Intl.NumberFormat('en-IN').format(data && data.Classes[0].ship_class_price)
     
     const IslandName = {
@@ -51,7 +63,7 @@ export default function FerryCardMAK({data, tripData}) {
     function handleFerrySelectPopup(){
         setFerrySelectPop(!ferrySelectPop)
     }
-
+    
     return (
     <div className={styles.mainWrapper}>
         {ferrySelectPop && data && <FerrySelectPopUp ferryData={data} tripData={tripData} handleClose={handleFerrySelectPopup} />}
@@ -62,7 +74,7 @@ export default function FerryCardMAK({data, tripData}) {
                 <div className={styles.ferryCardLeft}>
                     <div className={styles.cardTitle}>
                         <div className={styles.mainTitle}><span>{data && data.ship_title}</span></div>
-                        <div className={styles.opratorInfo}><span>Oprated by Sea Link India</span></div>
+                        <div className={styles.opratorInfo}><span>Oprated by Makruzz</span></div>
                     </div>
                     <div className={styles.ferryDetaildSec}>
                         <div className={styles.cardFromInfo}>
