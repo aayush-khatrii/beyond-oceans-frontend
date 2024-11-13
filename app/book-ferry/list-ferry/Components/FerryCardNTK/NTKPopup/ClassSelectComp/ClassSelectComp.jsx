@@ -6,9 +6,10 @@ import { useEffect, useState, useRef } from 'react'
 
 import 'swiper/css';
 
-export default function ClassSelectComp({ferryData}) {
+export default function ClassSelectComp({ferryData, onFerryClass}) {
 
-    const [selectedFerryClass, setSelectedFerryClass] = useState()
+    const [selectedFerryClass, setSelectedFerryClass] = useState({ class_code: "", class_title: "" })
+    // console.log(ferryData)
 
     const makferryImg = [
         "ntk_ferry_ing1.png",
@@ -42,8 +43,23 @@ export default function ClassSelectComp({ferryData}) {
     };
 
     function handleRadioChange(e){
-        setSelectedFerryClass(e.target.value)
+
+        const NTKSelectedClass = NTKClasses.find(item => item.class_code === e.target.value)
+
+        setSelectedFerryClass({class_code: NTKSelectedClass.class_code, class_title: NTKSelectedClass.class_title})
+        if(e.target.value === selectedFerryClass.class_code){
+            setSelectedFerryClass("")
+        }
+        onFerryClass({class_code: NTKSelectedClass.class_code, class_title: NTKSelectedClass.class_title})
     }
+
+    useEffect(() => {
+        if(!selectedFerryClass.class_code || selectedFerryClass.class_title){
+            onFerryClass({class_code: NTKClasses[0].class_code, class_title: NTKClasses[0].class_title})
+            return
+        }
+        onFerryClass(selectedFerryClass)
+    },[])
     
     const swiperRef = useRef(null);
 
@@ -85,7 +101,7 @@ export default function ClassSelectComp({ferryData}) {
                         const IntPricing = Intl.NumberFormat('en-IN').format(item.class_price)
                         return (
                         <label key={index} className={styles.ferryClass}>
-                            <input onChange={(e) => {handleRadioChange(e)}} type="radio" name="CTARadio" value={item.class_code} defaultChecked={index === 0 ? true : false} />
+                            <input onClick={(e) => {handleRadioChange(e)}} type="radio" name="CTARadio" value={item.class_code} defaultChecked={index === 0 ? true : false} />
                             <div className={styles.radioBGWrapper}>
                                 <div className={styles.ferryClassContent}>
                                     <div className={styles.ferryClassContentWrapper}>
@@ -95,9 +111,9 @@ export default function ClassSelectComp({ferryData}) {
                                         <span className={styles.ferryClassPrice}>₹{IntPricing}</span>
                                         <span className={styles.priceNote}>/per person</span>
                                     </div>
-                                    <div className={styles.downArrowICO} style={{transform: selectedFerryClass && selectedFerryClass === item.class_code ? "rotate(-180deg)" : ""}}><IconList Icon="downArrowThin" /></div>
+                                    <div className={styles.downArrowICO} style={{transform: selectedFerryClass && selectedFerryClass.class_code === item.class_code ? "rotate(-180deg)" : ""}}><IconList Icon="downArrowThin" /></div>
                                 </div>
-                                <div className={styles.classDescContent} style={{display: selectedFerryClass && selectedFerryClass === item.class_code ? "flex" : "none"}}>
+                                <div className={styles.classDescContent} style={{display: selectedFerryClass && selectedFerryClass.class_code === item.class_code ? "flex" : "none"}}>
                                     {
                                         classDescreptions[item.class_title].map((feature, index) => (
                                             <div className={styles.classFeature} key={index}>

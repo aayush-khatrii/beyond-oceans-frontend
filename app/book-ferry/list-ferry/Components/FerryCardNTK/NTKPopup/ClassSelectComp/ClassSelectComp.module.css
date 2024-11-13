@@ -1,16 +1,28 @@
+
+
 .secTitle span:nth-child(1){
     color: #1E2C70;
 }
 
 .secTitle{
-    font-size: 22px;
+    position: sticky;
+    top: 0px;
+    font-size: 21.7px;
     font-weight: 700;
     color: #1F1F1F;
+    padding-top: 34px;
+    margin-bottom: 38px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.ferryImagesSlider{
+    margin-bottom: 37px;
 }
 
 .ferryImagesSlider, .slideWrapper{
     width: 422px;
-    height: 258px;
+    height: 254px;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -66,8 +78,9 @@
     flex-direction: column;
     height: fit-content;
     width: 420px;
-    gap: 27px;
+    gap: 22px;
     padding-right: 10px;
+    overflow: scroll;
 }
 
 .ferryClass{
