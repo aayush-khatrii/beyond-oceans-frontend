@@ -1,4 +1,4 @@
-import NautikaFerryModel from '@/app/AppData/components/IconComponent/nautikaFerryModel'
+import NautikaFerryModel from '@/app/AppData/components/IconComponent/NautikaFerryModel'
 import styles from './SeatSelectComp.module.css'
 import Vid2ClassPremium from '../NautikaFerrySeatMap/Vid2ClassPremium/Vid2ClassPremium'
 import { useState } from 'react'
