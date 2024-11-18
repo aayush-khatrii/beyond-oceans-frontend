@@ -55,7 +55,10 @@ export default function PayButton(props) {
 
     async function handlePayment(){
 
-        // console.log(paxData)
+        const now = new Date();
+        const validDate = new Date();
+        validDate.setFullYear(now.getFullYear() - 2); // Subtract 2 years
+        validDate.setDate(validDate.getDate() - 1);
 
         if(!props.isAuth){
             toast.error("Please Login 🙃💜.")
@@ -64,7 +67,9 @@ export default function PayButton(props) {
             return
         }
 
+
         function validateTraveler(type, traveler, index){
+
             if (!traveler.title) {
                 props.paxDataError(index, type, 'title', true)
                 window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
@@ -76,8 +81,14 @@ export default function PayButton(props) {
                 window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
                 return { field:"name", code:"error" }
             }
-                
-            if (!traveler.age || traveler.age <= 0 || (type === 'adults' && traveler.age <= 1) || (type === 'infants' && traveler.age !== 1)) {
+
+            if (!traveler.age || (type === 'infants' && (new Date(traveler.age) >= now || new Date(traveler.age) < validDate))) {
+                props.paxDataError(index, type, 'age', true)
+                window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
+                return { field:"age", code:"error" }
+            }
+
+            if (!traveler.age || (type === 'adults' && traveler.age <= "1")) {
                 props.paxDataError(index, type, 'age', true)
                 window.scrollTo({ top: 480, left: 0, behavior: 'smooth' })
                 return { field:"age", code:"error" }
@@ -139,7 +150,7 @@ export default function PayButton(props) {
                             }
                             if(errorDetail.field === "age"){
                                 toast.error(`Age of infant ${index+1} is invalid or empty!`, {
-                                    description: "Age need to be only 1 for infants",
+                                    description: "Age need between from 2 years before to current date for infants",
                                 })
                             }
                             if(errorDetail.field === "passportNumber"){

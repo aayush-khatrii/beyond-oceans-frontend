@@ -13,7 +13,7 @@ import TicketSum from './components/TicketSum/TicketSum'
 import PayButton from './components/PayButton/PayButton'
 import AsideInfo from './components/AsideInfo/AsideInfo'
 import PriceBreakSkeleton from './components/Skeletons/TicketSumSkeleton/TicketSumSkeleton'
-import { fetchSingleFerryMak } from '@/app/AppData/http/ferry'
+import { fetchSingleFerryMak, fetchSingleFerryNtk } from '@/app/AppData/http/ferry'
 import FerryPax from './components/FerryPax/FerryPax'
 import FerryPaxSkeleton from './components/Skeletons/FerryPaxSkeleton/FerryPaxSkeleton'
 import TicketSumSkeleton from './components/Skeletons/TicketSumSkeleton/TicketSumSkeleton'
@@ -91,27 +91,69 @@ export default function page() {
         try {
             const sessionData = await getFerryCheckout()
             setFerryCartData(sessionData.data.data)
-            const sessionCheckout = sessionData.data.data.Ferry_Checkout
+            console.log(sessionData.data.data)
+            const sessionCheckout = sessionData.data.data.Ferry_Checkout    
             const traveler = sessionCheckout.Traveler
-            setTravelerData({
-                adults: initialTravelerState(traveler.Adults),
-                infants: initialTravelerState(traveler.Infants),
+
+            const Ferry_Operator = sessionCheckout.Ferry_Operator
+            const selectedSeat = sessionCheckout.Ferry_Data.Selected_Seats
+
+            const combinedSeats = Ferry_Operator === "NTK" ? [...selectedSeat.pClass, ...selectedSeat.bClass] : [];
+
+            setTravelerData((prevState) => {
+                const initialAdults = initialTravelerState(traveler.Adults); // Initialize traveler.adults
+
+                const updatedAdults = initialAdults.map((traveler, index) => ({
+                    ...traveler, // Start with the initialized traveler state
+                    ...prevState.adults[index], // Merge any additional data from the previous state
+                    seat: combinedSeats.length > 0 ? combinedSeats[index] || null : traveler.seat, // Add seat if combinedSeats is not empty
+                }));
+            
+                const infants = initialTravelerState(traveler.Infants); // Initialize traveler.infants
+            
+                return {
+                    ...prevState,
+                    adults: updatedAdults,
+                    infants,
+                };
             });
+
+
             setTravelerDataError({
                 adults: initialTravelerErrState(traveler.Adults),
                 infants: initialTravelerErrState(traveler.Infants),
             });
+            
+            console.log(sessionCheckout.Ferry_Operator)
+            if(sessionCheckout.Ferry_Operator === "MAK"){
 
-            const makFerryParams = {
-                scheduleID: sessionCheckout.Ferry_Data.Schedule_Id,
-                date: sessionCheckout.Ferry_Data.Travel_Date,
-                dest: sessionCheckout.Ferry_Data.Destination,
-                dept: sessionCheckout.Ferry_Data.Departure,
-                trav: sessionCheckout.Traveler.Adults + sessionCheckout.Traveler.Infants
+                const makFerryParams = {
+                    scheduleID: sessionCheckout.Ferry_Data.Schedule_Id,
+                    date: sessionCheckout.Ferry_Data.Travel_Date,
+                    dest: sessionCheckout.Ferry_Data.Destination,
+                    dept: sessionCheckout.Ferry_Data.Departure,
+                    trav: sessionCheckout.Traveler.Adults + sessionCheckout.Traveler.Infants
+                }
+
+                const ferryData = await fetchSingleFerryMak(makFerryParams)
+                console.log(ferryData)
+
+                setFerryData(ferryData.data.data)
+
+            } else if(sessionCheckout.Ferry_Operator === "NTK"){
+
+                const ntkFerryParams = {
+                    ferryId: sessionCheckout.Ferry_Data.Ferry_Id,
+                    tripId: sessionCheckout.Ferry_Data.Trip_Id.toString(),
+                    dept: sessionCheckout.Ferry_Data.Departure,
+                    dest: sessionCheckout.Ferry_Data.Destination,
+                    date: sessionCheckout.Ferry_Data.Travel_Date,
+                    trav: sessionCheckout.Traveler.Adults
+                }
+
+                const ferryData = await fetchSingleFerryNtk(ntkFerryParams)
+                setFerryData(ferryData.data.data)
             }
-
-            const ferryData = await fetchSingleFerryMak(makFerryParams)
-            setFerryData(ferryData.data.data)
 
         } catch (error) {
             if(error.response){
@@ -207,6 +249,7 @@ export default function page() {
     }
 
     function handleTravelersData(index, type, field, value){
+
         const updatedTravelers = [...travelersData[type]];
         updatedTravelers[index] = {
           ...updatedTravelers[index],

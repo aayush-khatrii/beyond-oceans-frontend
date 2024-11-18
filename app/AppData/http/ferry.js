@@ -18,5 +18,6 @@ const api = axios.create({
 // List of all the endpoints
 export const fetchAllFerry = (data) => api.post('/service/ferry/search-all', data);
 export const fetchSingleFerryMak = (data) => api.post('/service/ferry/search-single-mak', data);
+export const fetchSingleFerryNtk = (data) => api.post('/service/ferry/search-single-ntk', data);
 
 

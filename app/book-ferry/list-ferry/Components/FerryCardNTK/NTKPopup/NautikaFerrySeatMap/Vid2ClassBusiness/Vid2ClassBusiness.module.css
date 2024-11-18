@@ -1,0 +1,90 @@
+.subWrapper{
+    width: 780px;
+    height: 295px;
+    overflow: scroll;
+}
+
+.subWrapper::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+    border-radius: 10px;
+}
+
+.subWrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.subWrapper::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.ferryLayoutZoomWrapper{
+    position: relative;
+    transform-origin: 0 0;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.ferryLayoutZoomWrapper svg{
+    position: absolute;
+    top: 0;
+    width: 700px;
+    height: 100%;
+}
+
+.seatLayout{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    box-sizing: border-box;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.rowPosition{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3px;
+}
+
+.rowALable, .rowBLable, .rowCLable, .rowDLable, .rowELable, .rowFLable, .rowGLable, .rowHLable, .rowILable, .rowJLable, .rowKLable{
+    margin-left: 125px;
+    width: 8px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #888;
+    display: flex;
+    justify-content: center;
+}
+
+.rowCLable, .rowDLable, .rowELable, .rowFLable, .rowGLable, .rowHLable{
+    margin-top: 2px;
+    margin-left: 145px;
+}
+
+.rowA, .rowC, .rowI{
+    display: flex;
+    align-items: center;
+}
+
+.rowB, .rowD, .rowE, .rowF, .rowG, .rowH, .rowJ, .rowK{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.AfirstPosition, .BfirstPosition, .CfirstPosition, .DfirstPosition, .EfirstPosition, .FfirstPosition, .GfirstPosition, .HfirstPosition, .JfirstPosition, .KfirstPosition{
+    margin-left: 5px;
+}
+
+.IfirstPosition{
+    margin-left: 205px;
+}
+
+.rowGrooup3{
+    margin-top: -15px;
+}

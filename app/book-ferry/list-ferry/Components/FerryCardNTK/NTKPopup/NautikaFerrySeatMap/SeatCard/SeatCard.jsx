@@ -13,7 +13,7 @@ export default function SeatCard({specialSeat, singleSeatData, selectSeatFunc, s
     <div className={styles.mainWrapper}>
         <div 
             onClick={() => selectSeatFunc(singleSeatData)} 
-            className={`${styles.seats} ${singleSeatData.isBooked ? styles.bookedSeat : ""} ${specialSeat ? styles.specialSeatLable : ""} ${selectedSeats.some(seat => seat.number === singleSeatData.number) ? styles.selectedSeat : ""}`} 
+            className={`${styles.seats} ${singleSeatData.isBooked ? styles.bookedSeat : ""} ${specialSeat ? styles.specialSeatLable : ""} ${selectedSeats.some(seat => seat.number === singleSeatData.number && seat.tier === singleSeatData.tier) ? styles.selectedSeat : ""}`} 
             key={itemKeyUID}
         >
             {specialSeat ? `${getSeatNumber(singleSeatData.number)} ${getSeatLetter(singleSeatData.number)}` : getSeatNumber(singleSeatData.number)}
