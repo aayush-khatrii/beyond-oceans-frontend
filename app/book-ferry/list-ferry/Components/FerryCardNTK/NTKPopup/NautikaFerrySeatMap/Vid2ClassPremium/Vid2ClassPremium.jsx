@@ -4,12 +4,9 @@ import { useState } from 'react'
 import SeatCard from '../SeatCard/SeatCard'
 import { useEffect } from 'react'
 
-export default function Vid2ClassPremium({zoom, ferryData, tripData, onFerrySeatSelect}) {
+export default function Vid2ClassPremium({zoom, ferryData, tripData, selectedSeats, onFerrySeatSelect}) {
 
     const ferrySelectedClassSeats = ferryData[tripData.ferryClass.class_code]
-    const [selectedSeats, setSelectedSeats] = useState([])
-
-    const totalSeatAllowd = tripData.travelerAdu
 
     const getSeatNumber = (seat) => parseInt(seat.number.match(/\d+/)[0])
 
@@ -297,29 +294,8 @@ export default function Vid2ClassPremium({zoom, ferryData, tripData, onFerrySeat
     // })
 
     function selectSeat(seatItem){
-        if(seatItem.isBooked){
-            return
-        }
-        setSelectedSeats((prevSeats) => {
-            if (prevSeats.some(s => s.number === seatItem.number)) {
-                return prevSeats.filter(s => s.number !== seatItem.number);
-            }
-
-            if (prevSeats.length < totalSeatAllowd) {
-                return [...prevSeats, seatItem];
-            }
-
-            return prevSeats;
-        });
+        onFerrySeatSelect(seatItem)
     }
-
-
-    useEffect(() => {
-      
-        onFerrySeatSelect(selectedSeats)
-
-    }, [selectedSeats])
-    
 
 
   return (
@@ -608,7 +584,7 @@ export default function Vid2ClassPremium({zoom, ferryData, tripData, onFerrySeat
                         </div>
                     </div>
                 </div>
-                <NautikaFerryModel Icon="NautikaVID2ClassPL" />
+                <NautikaFerryModel Icon="NautikaVID2ClassPremium" />
             </div>
         </div>
     </div>

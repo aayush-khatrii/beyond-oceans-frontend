@@ -29,7 +29,7 @@ export default function FerrySelectLoad(props) {
             date: paramsDate,
             trav: tripData.travelerAdu
         }
-        console.log(ferryFetchParams)
+
         const {data} = await fetchSingleFerryMak(ferryFetchParams)
         setSingleFerryData(data)
         await checkSeatsinList(data.data)
@@ -37,7 +37,6 @@ export default function FerrySelectLoad(props) {
 
     async function checkSeatsinList(ferryData){
 
-        
         const ferryClassData = ferryData.Classes.filter(obj => obj.ship_class_id === tripData.ferryClass.ferryClassId)
         console.log("ferrrySelect Load", tripData)
         console.log("ferrrySelect Load", ferryData)

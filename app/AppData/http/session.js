@@ -21,5 +21,6 @@ export const storeActivityCheckout = (data) => api.post('/user/session/store-act
 export const getPackageCheckout = () => api.post('/user/session/get-package-checkout');
 export const getActivityCheckout = () => api.post('/user/session/get-activity-checkout');
 export const storeMakFerryCheckout = (data) => api.post('/user/session/store-mak-checkout', data);
+export const storeNtkFerryCheckout = (data) => api.post('/user/session/store-ntk-checkout', data);
 export const getFerryCheckout = () => api.post('/user/session/get-ferry-checkout');
 export const testApi = (data) => api.post('/test/test', data);

@@ -9,7 +9,9 @@ import "react-datepicker/dist/react-datepicker.css";
 
 export default function FerryPax(props) {
 
+    const Ferry_Operator = props.sessionData.Ferry_Checkout.Ferry_Operator
     const traveler = props.sessionData.Ferry_Checkout.Traveler
+    const selectedSeat = props.sessionData.Ferry_Checkout.Ferry_Data.Selected_Seats
     // const countryNames = contrydata.map(country => country.name);
 
     const adultTitles = ["Mr", "Master", "Mrs", "Miss"]
@@ -18,17 +20,30 @@ export default function FerryPax(props) {
     const initialTravelerState = (count) => (
         Array(count).fill({
             title: '',
-            name: '',
             age: '',
+            name: '',
             country: 'India',
             passportNumber: '',
             passportExpiryDate: '',
         })
     );
 
-    const [travelersData, setTravelerData] = useState({
-        adults: initialTravelerState(traveler.Adults),
-        infants: initialTravelerState(traveler.Infants),
+    const combinedSeats = Ferry_Operator === "NTK" ? [...selectedSeat.pClass, ...selectedSeat.bClass] : [];
+
+    // Initialize state
+    const [travelersData, setTravelerData] = useState(() => {
+        const adultsWithSeats = initialTravelerState(traveler.Adults).map((traveler, index) => (
+            combinedSeats.length > 0
+            ? { ...traveler, seat: combinedSeats[index] || null } // Add seat if combinedSeats is not empty
+            : traveler
+        ))
+
+        const infants = initialTravelerState(traveler.Infants) 
+
+        return {
+            adults: adultsWithSeats,
+            infants,
+        };
     });
 
     const paxErrorData = props.travelersDataError
@@ -147,7 +162,23 @@ export default function FerryPax(props) {
     }
 
     function travelerAgeHandler(type, index, value){
-        if(value > 0 && value < 151){
+        if(type === "infants"){
+            const date = new Date(value);
+            const formattedDate = date.toLocaleDateString('en-CA');
+
+            const updatedTravelers = [...travelersData[type]];
+            updatedTravelers[index] = {
+            ...updatedTravelers[index],
+            ["age"]: formattedDate,
+            };
+            setTravelerData((prevState) => ({
+            ...prevState,
+            [type]: updatedTravelers,
+            }));
+            props.paxData(index, type, "age", formattedDate)
+            props.travelersDataErrorHandle(index, type, "age", false)
+        }
+        if(value >= 2 && value < 151){
             const updatedTravelers = [...travelersData[type]];
             updatedTravelers[index] = {
             ...updatedTravelers[index],
@@ -208,6 +239,7 @@ export default function FerryPax(props) {
                         <div className={styles.paxList} key={adultIndex} >
                             <div className={styles.paxLable}>
                                 <span>Adult {adultIndex + 1}</span>
+                                {item.seat && <span className={styles.seatInfo}>(Seat No. {item.seat.number} in {item.seat.tier === "P" ? "Luxury Class" : item.seat.tier === "B" ? "Royal Class" : ""})</span>}
                             </div>
                             <div className={styles.paxDeatilFields}>
                                 <div className={styles.paxTitleField}>
@@ -291,8 +323,31 @@ export default function FerryPax(props) {
                                 <div className={styles.paxNameField}>
                                     <input className={styles.inpBox} type="text" style={{borderColor: paxErrorData.infants[infantIndex]?.name ? "#ff0000" : ""}} value={item.name} placeholder='Full Name' onChange={(e) => {travelerNameHandler("infants", infantIndex, e.target.value)}} />
                                 </div>
-                                <div className={styles.paxAgeField}>
-                                    <input className={styles.inpBox} type="number" style={{borderColor: paxErrorData.infants[infantIndex]?.age ? "#ff0000" : ""}} value={item.age} placeholder='Age' min="0" max="150" onChange={(e) => {travelerAgeHandler("infants", infantIndex, e.target.value)}} />
+                                <div className={styles.Infantdob}>
+                                    <DatePicker
+                                        selected={item.age}
+                                        onChange={(date) => {travelerAgeHandler("infants", infantIndex, date)}}
+                                        className={`${styles.dpINPbox} ${styles.dpINPboxInfDOB} ${paxErrorData.infants[infantIndex]?.age ? styles.emptyDateBox : ""}`}
+                                        dateFormat="dd-MM-yyyy"
+                                        peekNextMonth
+                                        showMonthDropdown
+                                        showYearDropdown
+                                        dropdownMode="select"
+                                        minDate={(function() {
+                                            const date = new Date();
+                                            if(Ferry_Operator === "MAK"){
+                                                date.setFullYear(date.getFullYear() - 2);
+                                                date.setDate(date.getDate() + 1);
+                                            }
+                                            if(Ferry_Operator === "NTK"){
+                                                date.setFullYear(date.getFullYear() - 2);
+                                            }
+
+                                            return date;
+                                        })()}
+                                        maxDate={new Date()}
+                                        placeholderText='DOB'
+                                    />
                                 </div>
                                 <div className={styles.paxCountryField}>
                                     <div className={styles.countryListBox}>

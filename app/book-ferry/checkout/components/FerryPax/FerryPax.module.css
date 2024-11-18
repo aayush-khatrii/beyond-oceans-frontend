@@ -98,6 +98,12 @@
     font-weight: 600;
 }
 
+.paxLable{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .inpBox{
     border: 1px solid #BABABA;
     height: 100%;
@@ -311,6 +317,11 @@
     width: 200px;
 }
 
+.Infantdob{
+    height: 100%;
+    width: 135px;
+}
+
 .dpINPbox{
     border: 1px solid #BABABA;
     border-radius: 8px;
@@ -320,6 +331,10 @@
     padding: 0 18px;
     font-size: 16px;
     outline: none;
+}
+
+.dpINPboxInfDOB{
+    width: 135px;
 }
 
 .dpINPbox::placeholder{

@@ -7,17 +7,17 @@
     /* border: 2px solid #38B089; */
     height: 15px;
     width: 15px;
-    border: 1px solid #C1E7DA;
+    border: 1px solid #B9BED3;
     border-radius: 3px;
     font-size: 7px;
     font-weight: 500;
-    color: #38B089;
+    color: #1E2C70;
     cursor: pointer;
 }
 
 .seats:hover{
-    background-color: #1E2C70;
-    border-color: #1E2C70;
+    background-color: #38B089;
+    border-color: #38B089;
     color: white;
 }
 
@@ -36,8 +36,8 @@
 }
 
 .selectedSeat{
-    background-color: #1E2C70;
-    border-color: #1E2C70;
+    background-color: #38B089;
+    border-color: #38B089;
     color: white;
     cursor: pointer;
 }

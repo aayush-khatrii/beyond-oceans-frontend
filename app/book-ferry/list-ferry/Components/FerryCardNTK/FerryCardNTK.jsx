@@ -144,7 +144,7 @@ export default function FerryCardNTK({data, tripData}) {
                             <div className={styles.tripPriceNote}><span>per ticket</span></div>
                         </div>
                     </div>
-                    <button className={styles.bookingBTN}>Select Seats</button>
+                    <button onClick={() => {handleFerrySelectPopup()}}  className={styles.bookingBTN}>Select Seats</button>
                 </div>
             </div>
         </div>
