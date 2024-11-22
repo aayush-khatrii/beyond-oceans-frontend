@@ -150,8 +150,9 @@ export default function page({data, params}) {
             router.push(`/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
-        setPackDatafilterd(filteredData)
+        setPackDatafilterd(data.data)
     }
+    console.log(typeof packDatafilterd)
 
     return (
     <>
@@ -191,8 +192,8 @@ export default function page({data, params}) {
                     </div>
                 </div>
                 <div className={styles.packageCardGrid}>
-                {
-                        packDatafilterd.length !== 0 ? 
+                    {
+                        Array.isArray(packDatafilterd) && packDatafilterd.length !== 0  ? 
                         packDatafilterd.map((item, index) => (
                             <PackageCard key={index} data={item}/>
                         )) : <>No Packages! Sorry</>
