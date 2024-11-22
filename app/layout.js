@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
             <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet" />
             <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
         </head>
-        <body className={DMSans.className}>
+        <body className={DMSans.className} style={{height: "100%", width: "100%"}}>
             {
                 mode === "DEV" ?
                 <DevMode /> : ""
