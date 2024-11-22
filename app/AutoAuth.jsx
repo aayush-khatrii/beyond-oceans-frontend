@@ -42,6 +42,6 @@ export default function AutoAuth({children}) {
     }, [])
     
     return (
-        <div>{children}</div>
+        <div style={{height: "100%", width: "100%"}}>{children}</div>
     )
 }

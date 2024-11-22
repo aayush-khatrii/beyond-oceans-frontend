@@ -13,6 +13,8 @@ import MobHeader from "./AppData/components/Header/MobHeader/MobHeader";
 import Link from "next/link";
 import Image from "next/image";
 import InqPopup from "./AppData/components/InqPopup/InqPopup";
+import Lottie from 'lottie-react'
+import TripCalculatorAni from './AppData/ani/trip_calc.json'
 
 export default function layoutextended({ children }) {
 
@@ -72,33 +74,49 @@ export default function layoutextended({ children }) {
     const pathName = usePathname();
     const nonBreadcrumbPages = ["/", "/contact-us", /^\/payment-varifyer\/.*/]
     const nonStickyNavBar = ["/", "/book-ferry", /^\/destination(\/.*)?$/, /^\/services(\/.*)?$/]
+    const noNavFooterPages = [/^\/trip-calculator(\/.*)?$/]
     
 
     return (
         <>
         <Provider store={storeRef.current}>
-            <div>
+            <div style={{height: "100%", width: "100%"}}>
                 <AutoAuth>
-                    { !nonStickyNavBar.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) ? <StickyNavbar /> : <Navbar /> }
-                    <MobHeader />
-                    <Link href="https://wa.me/917908671247" target="_blank" className={styles.wpIcon}>
-                        <div className={styles.iconWrapper}>
-                            <div className={styles.imgWrapper}>
-                                <Image
-                                    src="/assets/wp_icon.webp"
-                                    fill={true}
-                                    sizes="100%"
-                                    alt="Whatsapp Chat"
-                                    style={{objectFit:"contain"}}
-                                />
+                    { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
+                    (!nonStickyNavBar.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) ? <StickyNavbar /> : <Navbar />) }
+                    { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) && <MobHeader />}
+                    { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
+                        <Link href="https://wa.me/917908671247" target="_blank" className={styles.wpIcon}>
+                            <div className={styles.iconWrapper}>
+                                <div className={styles.imgWrapper}>
+                                    <Image
+                                        src="/assets/wp_icon.webp"
+                                        fill={true}
+                                        sizes="100%"
+                                        alt="Whatsapp Chat"
+                                        style={{objectFit:"contain"}}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className={styles.iconTitle}><span>WhatsApp Chat</span></div>
-                    </Link>
+                            <div className={styles.iconTitle}><span>WhatsApp Chat</span></div>
+                        </Link>
+                    }
+                    { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
+                        <Link href="/trip-calculator" className={styles.tripCalcIcon}>
+                            <div className={styles.iconTitle}><span>Trip Budget Calculator</span></div> 
+                            <div className={styles.aniIconWrapper}>
+                                <Lottie animationData={TripCalculatorAni} />
+                            </div>
+                        </Link>
+                    }
+                      
                     {/* <InqPopup /> */}
                     {/* { !nonBreadcrumbPages.includes(pathName) ? <Breadcrumb /> : null } */}
                         {children}
-                    <Footer />
+                    { 
+                      !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) && 
+                      <Footer />
+                    }
                 </AutoAuth>
             </div>
         </Provider>
