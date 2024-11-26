@@ -5,7 +5,6 @@
 
 .subWrapper{
     display: flex;
-
 }
 
 .leftCont{
@@ -14,7 +13,7 @@
     width: 47.5%;
     border-radius: 0 20px 20px 0;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 1%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0, 0, 0, 0.712) 100%);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -25,7 +24,8 @@
     width: 650px;
     display: flex;
     flex-direction: column;
-    gap: 260px;
+    justify-content: space-between;
+    /* gap: 260px; */
     padding: 29px 38px;
     box-sizing: border-box;
     z-index: 1;
@@ -46,6 +46,12 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+}
+
+.imgWrapper img{
+    object-position: 90% 100%;
+    transform: scale(1.3);
+    transform-origin: bottom right;
 }
 
 .leftBottomText{
@@ -70,12 +76,14 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    background-color: transparent;
     font-size: 22px;
     border: 1px solid #fff;
     border-radius: 50px;
     width: 211px;
     height: 45px;
     margin-bottom: 9px;
+    cursor: pointer;
 }
 
 .getStartBtn:hover{
@@ -85,7 +93,13 @@
 
 .rightCont{
     display: flex;
-    width: 720px;
+    width: 52.5%;
+    max-width: 720px;
+    overflow-y: auto;
+}
+
+.rightCont::-webkit-scrollbar{
+    display: none;
 }
 
 .rightContWrapper{

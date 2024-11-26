@@ -9,7 +9,7 @@ import IconList from '../../IconComponent/IconList';
 export default function BookFerry() {
 
     const router = useRouter()
-    const destinationList = ["Port Blair", "Swaraj Dweep (Havelock)", "Shaheed Dweep (Neil Island)"]
+    const destinationList = ["Sri Vijaya Puram (Port Blair)", "Swaraj Dweep (Havelock)", "Shaheed Dweep (Neil Island)"]
 
     const [selectedFrom, setSelectedFrom] = useState('');
     const [selectedTo, setSelectedTo] = useState('');
@@ -26,7 +26,7 @@ export default function BookFerry() {
     const [isDPactive, setDPactive] = useState(false)
 
     const islandCodes = {
-        "Port Blair": 1,
+        "Sri Vijaya Puram (Port Blair)": 1,
         "Swaraj Dweep (Havelock)": 2,
         "Shaheed Dweep (Neil Island)": 3
     }

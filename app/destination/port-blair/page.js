@@ -1,14 +1,11 @@
 import React from 'react'
-import TripCalculatorLayout from './TripCalculatorLayout'
-import styles from './TripCalculator.module.css'
+import PortBlairLayout from './PortBlairLayout';
 
 const seoKeywords = [
-    "beyond oceans",
-    "trip calculator",
-    "andaman trip calculator",
-    "budget trip calculatro",
-    "andaman",
     "sri vijaya puram",
+    "port blair",
+    "beyond oceans",
+    "andaman",
     "andaman tour company",
     "andaman tour packages",
     "andaman travel",
@@ -27,8 +24,8 @@ const seoKeywords = [
     "water sports",
     "andaman tour company"
 ];
-const seoTitle = "Trip Calculator | Andaman trip calculator"
-const seoDesc = "Plan your Andaman trip with Beyond Oceans' exclusive trip calculator! Customize your budget by selecting duration, hotels, tour type, transport, sightseeing, activities, taxis, ferries, and more. Create your perfect Andaman adventure today!"
+const seoTitle = "Sri Vijaya Puram (Port Blair) Travel Guide: Top Attractions & Island Facts"
+const seoDesc = "Explore Sri Vijaya Puram (formerly Port Blair), the heart of the Andaman & Nicobar Islands. Discover top attractions, must-visit places, island facts, travel tips, FAQs, and more in this ultimate guide to your tropical getaway."
 
 
 export const metadata = {
@@ -38,10 +35,9 @@ export const metadata = {
 }
 
 export default function page() {
-
   return (
-    <div style={{height: "100%", width: "100%"}}>
-        <TripCalculatorLayout />
+    <div>
+        <PortBlairLayout />
     </div>
   )
 }

@@ -1,0 +1,143 @@
+.pageWrapper, .mainWrapper, .subWrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.subWrapper{
+    display: flex;
+}
+
+.leftCont{
+    position: relative;
+    height: 100%;
+    width: 47.5%;
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0, 0, 0, 0.712) 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.leftContWrapper{
+    height: 100%;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 260px; */
+    padding: 29px 38px;
+    box-sizing: border-box;
+    z-index: 1;
+    color: #fff;
+}
+
+.leftTopIcon{
+    height: 60px;
+    width: 100%;
+}
+
+.brandIcon{
+    width: 125px;
+}
+
+.imgWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.imgWrapper img{
+    object-position: 50% 80%;
+}
+
+.leftBottom{
+    margin-bottom: 9px;
+}
+
+.paginations{
+    display: flex;
+    gap: 13px;
+    margin-bottom: 27px;
+}
+
+.paginationBox{
+    height: 6px;
+    width: 39px;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    background-color: #ffffff3f;
+}
+
+.activePagination{
+    background-color: #fff;
+}
+
+.paginationText{
+    font-size: 22px;
+}
+
+.rightCont{
+    display: flex;
+    width: 52.5%;
+    max-width: 720px;
+    overflow-y: auto;
+}
+
+.rightCont::-webkit-scrollbar{
+    display: none;
+}
+
+.rightContWrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 29px 38px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.rightTop{
+    width: 100%;
+    /* margin-bottom: 24px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.homeBtnCircle{
+    background-color: #E9E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33px;
+    width: 33px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.homeBtnCircle svg{
+    width: 22px;
+    height: 22px;
+}
+
+.TbcMainTitle{
+    font-size: 21.7px;
+    margin-bottom: 8px;
+}
+
+.TbcMainTitle span:nth-child(1){
+    font-weight: 700;
+}
+
+.TbcMainTitle span:nth-child(2){
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.TbcSubTitle{
+    color: #696969;
+    font-size: 18px;
+}
