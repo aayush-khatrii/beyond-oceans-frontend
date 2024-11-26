@@ -58,6 +58,14 @@ export default function FerryCardNTK({data, tripData}) {
         setFerrySelectPop(!ferrySelectPop)
     }
 
+    const IslandName = {
+        1: "Sri Vijaya Puram",
+        2: "Swaraj Dweep",
+        3: "Shaheed Dweep"
+    }
+
+    console.log(data)
+
 
     return (
     <div className={styles.mainWrapper}>
@@ -75,7 +83,7 @@ export default function FerryCardNTK({data, tripData}) {
                     <div className={styles.ferryDetaildSec}>
                         <div className={styles.cardFromInfo}>
                             <div className={styles.fromTimeing}>{data && convertTo12HourFormat(data.dTime)}</div>
-                            <div className={styles.fromLocation}>{data && data.from}</div>
+                            <div className={styles.fromLocation}>{data && IslandName[data.dept_code]}</div>
                         </div>
                         <div className={styles.middleIconSec}>
                             <div className={styles.leftDot}></div>
@@ -90,7 +98,7 @@ export default function FerryCardNTK({data, tripData}) {
                         </div>
                         <div className={styles.cardToInfo}>
                             <div className={styles.toTimeing}>{data && convertTo12HourFormat(data.aTime)}</div>
-                            <div className={styles.toLocation}>{data && data.to}</div>
+                            <div className={styles.toLocation}>{data && IslandName[data.dest_code]}</div>
                         </div>
                     </div>
                     <div className={styles.ferryFeatures}>

@@ -59,11 +59,19 @@ export default function FerryListLayout({tripData}) {
         return timeA - timeB;
     });
 
+    console.log(ferryListData)
+
+    const islandCodes = {
+        "1": "Sri Vijaya Puram (Port Blair)",
+        "2": "Swaraj Dweep (Havelock)",
+        "3": "Shaheed Dweep (Neil Island)"
+    }
+
   return (
     <div className={styles.mainWrapper}>
         <div className={styles.ferryListCont}>
             {   
-                ferryListData ? 
+                Array.isArray(ferryListData) && ferryListData ? 
                 ferryListData.map((item, index) => (
                     <React.Fragment key={index}>
                         {item.ferryOPR === "MAK" ? <FerryCardMAK key={index} data={item} tripData={tripData} /> : ""}
@@ -73,6 +81,12 @@ export default function FerryListLayout({tripData}) {
                 Array(3).fill().map((item, index) => (
                     <FerryCardScl key={index} />
                 ))
+            }
+            {
+                Array.isArray(ferryListData) && ferryListData.length === 0 && 
+                <div>
+                    <p>No ferry avalible from <strong><u>{islandCodes[tripData.dept]}</u></strong> to <strong><u>{islandCodes[tripData.dest]}</u></strong></p>
+                </div>
             }
         </div>
     </div>

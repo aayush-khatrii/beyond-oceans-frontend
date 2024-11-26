@@ -5,7 +5,7 @@ import styles from './FilterHead.module.css'
 export default function FilterHead({tripData}) {
 
     const IslandName = {
-        1: "Port Blair",
+        1: "Sri Vijaya Puram",
         2: "Swaraj Dweep",
         3: "Shaheed Dweep"
     }

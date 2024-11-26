@@ -55,7 +55,7 @@ export default function FerryCardMAK({data, tripData}) {
     const ticketStartingPrice = Intl.NumberFormat('en-IN').format(data && data.Classes[0].ship_class_price)
     
     const IslandName = {
-        1: "Port Blair",
+        1: "Sri Vijaya Puram",
         2: "Swaraj Dweep",
         3: "Shaheed Dweep"
     }

@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 export default function SingleTrip() {
 
     const router = useRouter()
-    const destinationList = ["Port Blair", "Swaraj Dweep (Havelock)", "Shaheed Dweep (Neil Island)"]
+    const destinationList = ["Sri Vijaya Puram (Port Blair)", "Swaraj Dweep (Havelock)", "Shaheed Dweep (Neil Island)"]
 
     const [selectedFrom, setSelectedFrom] = useState('');
     const [selectedTo, setSelectedTo] = useState('');
@@ -22,7 +22,7 @@ export default function SingleTrip() {
     const [eptDate, setEptDate] = useState(false)
 
     const islandCodes = {
-        "Port Blair": 1,
+        "Sri Vijaya Puram (Port Blair)": 1,
         "Swaraj Dweep (Havelock)": 2,
         "Shaheed Dweep (Neil Island)": 3
     }
