@@ -7,7 +7,7 @@ export default function Destinations({handleMenuToggle}) {
         <div className={styles.mainWrapper}>
             <div className={styles.subWrapper}>
                 <div className={styles.categoryCard}>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/sri-vijaya-puram" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Port Blair Island</span>

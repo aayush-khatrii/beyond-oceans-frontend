@@ -1,0 +1,53 @@
+.mainWrapper{
+    background-color: #fff;
+    box-shadow: 0 2px 14px 0 #00000009;
+    border-radius: 15px;
+    margin-top: 42px;
+}
+
+.titleCont{
+    padding: 24px 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.titleCont h3{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.mainContent{
+    padding: 23px 29px;
+    color: #696969;
+    font-size: 15px;
+    letter-spacing: .07px;
+}
+
+.mainContent ul{
+    list-style-type: disc;
+    margin-left: 18px;
+    font-size: 15.4px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 9.5px;
+    color: #4C4C4C;
+}
+
+.questionList{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.queTitle{
+    margin-bottom: 10px;
+}
+
+.queTitle ul li{
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.faqAns p{
+    color: #696969;
+}

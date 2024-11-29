@@ -1,0 +1,33 @@
+.mainWrapper{
+    background-color: #fff;
+    box-shadow: 0 2px 14px 0 #00000009;
+    border-radius: 15px;
+    margin-top: 42px;
+}
+
+.titleCont{
+    padding: 24px 29px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.titleCont h3{
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.mainContent{
+    padding: 23px 29px;
+    color: #696969;
+    font-size: 15px;
+    letter-spacing: .07px;
+}
+
+.paragraph p span{
+    font-weight: 500;
+    margin-right: 4px;
+    color: #1F1F1F;
+}
+
+.secondPara, .thiredPara, .forthPara{
+    margin-top: 20px;   
+}

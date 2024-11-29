@@ -59,7 +59,6 @@ export default function FerryListLayout({tripData}) {
         return timeA - timeB;
     });
 
-    console.log(ferryListData)
 
     const islandCodes = {
         "1": "Sri Vijaya Puram (Port Blair)",
