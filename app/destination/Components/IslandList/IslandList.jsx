@@ -25,7 +25,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Port Blair, the capital of the Andaman and Nicobar Islands, is a vibrant blend of history, culture, and natural beauty. Visit the Cellular Jail National Memorial to delve into the region's colonial past and pay homage to India's freedom fighters. Enjoy panoramic views of the Andaman Sea from Corbyn's Cove Beach or take a stroll through the lush greenery of Mount Harriet National Park. Don't miss the chance to explore the bustling Aberdeen Bazaar for local souvenirs and delicious street food.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/sri-vijaya-puram">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
