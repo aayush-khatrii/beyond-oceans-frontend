@@ -8,10 +8,16 @@
 .subWrapper{
     width: 1170px;
     margin-top: 94px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .leftContent{
     width: 740px;
+}
+
+.asideContent{
+    width: 390px;
 }
 
 .heroImage{
@@ -88,4 +94,46 @@
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+@media (min-width: 980px){
+    .mobTitle{
+        display: none;
+    }
+}
+
+@media (max-width: 980px){
+    .title{
+        display: none;
+    }
+    .heroImage{
+        height: 280px;
+    }
+    .heroTextSec{
+        padding-bottom: 0;
+    }
+    .titleSec h1:nth-child(2){
+        display: block;
+        font-size: clamp(26px, 7.5vw, 32px);
+        line-height: normal;
+    }
+    .titleSec h2{
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 15px;
+    }
+    .breadcrumbSec a{
+        font-size: 14px;
+    }
+    .titleSec{
+        margin-bottom: 40px;
+    }
+    .subWrapper{
+        flex-direction: column;
+        width: 90%;
+        gap: 42px;
+    }
+    .leftContent, .asideContent{
+        width: 100%;
+    }
 }

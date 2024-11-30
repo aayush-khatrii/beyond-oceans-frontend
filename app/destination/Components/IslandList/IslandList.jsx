@@ -14,7 +14,7 @@ export default function IslandList() {
                 <div className={styles.islandImage}>
                     <div className={styles.imgWrapper}>
                         <Image
-                            src="/assets/destination/island/port_blair_island.webp"
+                            src="/assets/destination/island/sri_vijaya_puram_island.webp"
                             fill={true}
                             sizes="100%"
                             priority={true}
@@ -34,18 +34,18 @@ export default function IslandList() {
                 <div className={styles.islandImage}>
                     <div className={styles.imgWrapper}>
                         <Image
-                            src="/assets/destination/island/havelock_island.webp"
+                            src="/assets/destination/island/swaraj_dweep.webp"
                             fill={true}
                             sizes="100%"
                             priority={true}
-                            style={{zIndex: "-1", objectFit:"cover"}}
+                            style={{zIndex: "-1", objectFit:"cover", objectPosition: "100% 30%"}}
                         />
                     </div>
                 </div>
                 <div className={styles.islandDesc}>
                     <p>Renowned for its pristine beaches and crystal-clear waters, Havelock Island is a paradise for beach lovers and adventure seekers alike. Spend your days lounging on the white sands of Radhanagar Beach, often hailed as one of Asia's best beaches, or embark on thrilling water activities such as scuba diving and snorkeling to discover the vibrant marine life of the Andaman Sea. Trek through the dense forests of Havelock to reach Elephant Beach, where you can enjoy snorkeling amidst colorful coral reefs.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/swaraj-dweep">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>

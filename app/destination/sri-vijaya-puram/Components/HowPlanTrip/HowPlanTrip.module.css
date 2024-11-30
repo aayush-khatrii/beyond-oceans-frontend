@@ -34,3 +34,16 @@
     color: #1F1F1F;
     margin-bottom: 13px;
 }
+
+@media (max-width: 980px){
+    .titleCont{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+
+    .mainContent{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}

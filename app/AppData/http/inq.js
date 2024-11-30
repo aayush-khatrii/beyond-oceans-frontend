@@ -17,5 +17,6 @@ const api = axios.create({
 
 // List of all the endpoints
 export const storePackageInq = (data) => api.post('/forms/package-inquiry', data);
+export const storeDestinationInq = (data) => api.post('/forms/destination-inquiry', data);
 
 

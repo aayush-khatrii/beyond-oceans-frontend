@@ -83,15 +83,16 @@ export default function InqPopup({packageId, bookingPrice, packageName, packageO
     }
 
     function handleTravelDate(date){
-
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-
-        const formattedDate = `${year}-${month}-${day}`;
-
-        setTravelDate(formattedDate)
-        setEmptyDate(false)
+        if(date){
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+    
+            const formattedDate = `${year}-${month}-${day}`;
+    
+            setTravelDate(formattedDate)
+            setEmptyDate(false)
+        }
     }
     
     function handleAdultMinus(){
@@ -173,7 +174,7 @@ export default function InqPopup({packageId, bookingPrice, packageName, packageO
             let loadingToastId
             try {
                 setDisableBtn(true)
-                loadingToastId = rhtToast.loading('Sending OTP...');
+                loadingToastId = rhtToast.loading('Sending Data...');
 
                 const {data} = await storePackageInq(packageFormParams)
                 
