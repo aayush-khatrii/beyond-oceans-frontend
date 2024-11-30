@@ -11,6 +11,8 @@ import HowPlanTrip from './Components/HowPlanTrip/HowPlanTrip'
 import Reach from './Components/Reach/Reach'
 import GeneralInfo from './Components/GeneralInfo/GeneralInfo'
 import FAQ from './Components/FAQ/FAQ'
+import DestForm from './Components/DestForm/DestForm'
+import InqComp from './Components/InqComp/InqComp'
 
 export default function PortBlairLayout() {
   return (
@@ -18,7 +20,8 @@ export default function PortBlairLayout() {
         <div className={styles.heroImage}>
             <div className={styles.heroTextSec}>
                 <div className={styles.titleSec}>
-                    <h1>Sri Vijaya Puram (Port Blair)</h1>
+                    <h1 className={styles.title}>Sri Vijaya Puram (Port Blair)</h1>
+                    <h1 className={styles.mobTitle}>Sri Vijaya Puram <br/> (Port Blair)</h1>
                     <h2>Explore deals, travel guide and thing to do in Sri Vijaya Puram (Port Blair)</h2>
                 </div>
                 <div className={styles.breadcrumbSec}>
@@ -50,6 +53,10 @@ export default function PortBlairLayout() {
                 <Reach />
                 <GeneralInfo />
                 <FAQ />
+            </div>
+            <div className={styles.asideContent}>
+                <DestForm />
+                <InqComp />
             </div>
         </div>
     </div>

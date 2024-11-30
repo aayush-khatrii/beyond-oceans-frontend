@@ -13,7 +13,7 @@ export default function Destinations({handleMenuToggle}) {
                             <span>Port Blair Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/swaraj-dweep" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Havelock Island</span>

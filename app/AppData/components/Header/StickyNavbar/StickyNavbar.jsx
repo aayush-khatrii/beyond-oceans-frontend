@@ -176,7 +176,7 @@ export default function Navbar() {
                                 <ul className={styles.destSecMenu}>
                                 <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Port Blair Island</span></li></Link>
                                     <Link href="/destination/sri-vijaya-puram"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Havelock Island</span></li></Link>
-                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Neil Island</span></li></Link>
+                                    <Link href="/destination/swaraj-dweep"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Neil Island</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Baratang Island</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Diglipur Island</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Rangat Island</span></li></Link>
