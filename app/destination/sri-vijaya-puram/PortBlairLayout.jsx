@@ -22,7 +22,7 @@ export default function PortBlairLayout() {
                 <div className={styles.titleSec}>
                     <h1 className={styles.title}>Sri Vijaya Puram (Port Blair)</h1>
                     <h1 className={styles.mobTitle}>Sri Vijaya Puram <br/> (Port Blair)</h1>
-                    <h2>Explore deals, travel guide and thing to do in Sri Vijaya Puram (Port Blair)</h2>
+                    <h2>Exploring Sri Vijaya Puram (Port Blair): A Guide to the Enchanting Islands of Andaman and Nicobar</h2>
                 </div>
                 <div className={styles.breadcrumbSec}>
                     <div><Link href="/">Home</Link></div>

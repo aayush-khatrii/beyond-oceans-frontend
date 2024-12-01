@@ -22,7 +22,7 @@ export default function HavelockLayout() {
                 <div className={styles.titleSec}>
                     <h1 className={styles.title}>Swaraj Dweep (Havelock)</h1>
                     <h1 className={styles.mobTitle}>Swaraj Dweep <br/> (Havelock)</h1>
-                    <h2>Explore deals, travel guide and thing to do in Swaraj Dweep (Havelock)</h2>
+                    <h2>Discovering Swaraj Dweep (Havelock Island): A Paradise in the Andaman and Nicobar</h2>
                 </div>
                 <div className={styles.breadcrumbSec}>
                     <div><Link href="/">Home</Link></div>

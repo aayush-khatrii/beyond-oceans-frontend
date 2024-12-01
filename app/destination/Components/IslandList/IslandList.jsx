@@ -49,12 +49,12 @@ export default function IslandList() {
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
-                    <span>3. Neil Island</span>
+                    <span>3. Shaheed Dweep (Neil Island)</span>
                 </div>
                 <div className={styles.islandImage}>
                     <div className={styles.imgWrapper}>
                         <Image
-                            src="/assets/destination/island/neil_island.webp"
+                            src="/assets/destination/island/shaheed_dweep.webp"
                             fill={true}
                             sizes="100%"
                             priority={true}
@@ -65,7 +65,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Escape to the tranquil shores of Neil Island, a serene oasis known for its laid-back vibe and unspoiled beauty. Relax on the secluded beaches of Bharatpur and Laxmanpur, where the gentle waves and swaying palms create a picture-perfect setting. Marvel at the natural rock formations of Howrah Bridge during low tide or take a refreshing dip in the emerald waters of natural rock pools at Sitapur Beach. Neil Island offers the perfect retreat for those seeking solitude and natural splendor.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/shaheed-dweep">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -85,7 +85,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Baratang Island beckons adventurers with its untamed wilderness and unique attractions. Journey through dense mangrove forests and limestone caves to reach the iconic limestone formations of the Mud Volcano and the enchanting limestone caves of Parrot Island. Discover the indigenous Jarawa tribe's way of life on a guided excursion through the tribal reserve or cruise along the serene waters of the Baratang Creek amidst towering mangroves and abundant birdlife.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/baratang-island">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -105,7 +105,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Located in the northern part of the Andaman Islands, Diglipur offers a refreshing escape from the crowds with its lush landscapes and hidden treasures. Trek through the verdant forests of Saddle Peak National Park, the highest point in the Andaman Islands, for panoramic views of the surrounding islands and shimmering seas. Explore the twin beaches of Ross and Smith Islands, connected by a mesmerizing sandbar, or visit the serene waters of Kalipur Beach, known for its turtle nesting grounds.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/diglipur-island">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -125,7 +125,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Immerse yourself in the untouched beauty of Rangat Island, a haven for nature lovers and eco-tourists. Wander through the pristine shores of Amkunj Beach and Dhani Nallah Beach, where the azure waters meet verdant mangrove forests teeming with wildlife. Embark on a boat ride along the mangrove-lined creeks of Yerrata Mangrove Park or hike to the secluded waterfalls of Panchavati amidst dense tropical foliage. Rangat Island offers a glimpse into the Andaman's unspoiled wilderness.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/rangat-island">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>

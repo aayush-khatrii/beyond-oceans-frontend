@@ -19,25 +19,25 @@ export default function Destinations({handleMenuToggle}) {
                             <span>Havelock Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/shaheed-dweep" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Neil Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/baratang-island" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Baratang Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/diglipur-island" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Diglipur Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/rangat-island" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Rangat Island</span>
