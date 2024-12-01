@@ -50,6 +50,7 @@
 }
 
 .titleSec h2{
+    margin-top: 2px;
     font-size: 22px;
     font-weight: 300;
 }
@@ -135,6 +136,7 @@
     .subWrapper{
         flex-direction: column;
         width: 90%;
+        margin-top: 50px;
         gap: 42px;
     }
     .leftContent, .asideContent{

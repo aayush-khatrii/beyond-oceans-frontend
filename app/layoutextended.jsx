@@ -80,7 +80,7 @@ export default function layoutextended({ children }) {
     return (
         <>
         <Provider store={storeRef.current}>
-            <div style={{height: "100%", width: "100%"}}>
+            <div className={styles.layoutWrapper}>
                 <AutoAuth>
                     { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
                     (!nonStickyNavBar.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) ? <StickyNavbar /> : <Navbar />) }

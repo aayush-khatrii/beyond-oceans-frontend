@@ -1,0 +1,185 @@
+.mainWrapper{
+    background-color: #fff;
+    box-shadow: 0 2px 14px 0 #00000009;
+    border-radius: 15px;
+    margin-bottom: 42px;
+    overflow: hidden;
+}
+
+.titleCont{
+    padding: 23px 29px;
+    background-color: #1E2C70;
+    border-bottom: 2px solid #B9BED3;
+}
+
+.titleCont h3{
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+}
+
+.mainContent{
+    padding: 23px 29px;
+}
+
+.inputList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.inpBox input{
+    box-sizing: border-box;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    width: 100%;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 15px;
+}
+
+.inpBox input:hover, .inpBox input:active, .inpBox input:focus{
+    outline-color: #1E2C70;
+    color: #1E2C70;
+}
+
+.inpBox{
+    width: 100%;
+    height: 44px;
+}
+
+.dateSelect{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #BABABA;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #BABABA;
+    height: 44px;
+    cursor: pointer;
+}
+
+.dpINPbox{
+    display: flex;
+    height: 100%;
+    width: 320px;
+    padding: 0 18px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    caret-color: transparent;
+}
+
+.paxSelector{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.fieldLabel{
+    color: #4C4C4C;
+    font-size: 14px;
+    letter-spacing: .1px;
+    margin-bottom: 6px;
+}
+
+.adultSelectBox, .infantSelectBox{
+    display: flex;
+    justify-content: space-between;
+    height: 31px;
+    width: 90px;
+    overflow: hidden;
+    margin-left: -1px;
+    border: 1px solid #BABABA;
+    border-radius: 8px;
+}
+
+.personMinus, .personPlus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30px;
+    background-color: #E9E9E9;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.personMinus svg, .personPlus svg{
+    width: 15px;
+    height: 15px;
+}
+
+.personMinus svg path, .personPlus svg path{
+    fill: #989898;
+}
+
+.personValue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: #696969;
+}
+
+.callBtn{
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+    background-color: #28A745;
+    color: #fff;
+    border: 2px solid #BFE5C7;
+    border-radius: 8px;
+    margin-top: 27px;
+    cursor: pointer;
+}
+
+.callBtn:hover{
+    background-color: #24963E;
+    border-color: #94D3A2;
+}
+
+.closeBtn{
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+    border-radius: 50px;
+    background-color: #E9E9E9;
+    cursor: pointer;
+}
+
+.closeBtn svg{
+    margin-top: .7px;
+    margin-left: -1px;
+    width: 11px;
+    height: 11px;
+}
+
+.closeBtn svg path{
+    stroke: #989898;
+}
+
+@media (max-width: 980px){
+    .titleCont{
+        height: 100%;
+        padding: 15px 20px;
+        font-size: clamp(18px, 5.24vw, 22px);
+    }
+
+    .mainContent{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+}
