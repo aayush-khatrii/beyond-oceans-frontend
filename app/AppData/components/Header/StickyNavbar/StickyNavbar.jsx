@@ -180,7 +180,7 @@ export default function Navbar() {
                                     <Link href="/destination/baratang-island"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Baratang Island</span></li></Link>
                                     <Link href="/destination/diglipur-island"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Diglipur Island</span></li></Link>
                                     <Link href="/destination/rangat-island"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Rangat Island</span></li></Link>
-                                    <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Long Island</span></li></Link>
+                                    <Link href="/destination/long-island"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Long Island</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Little Andaman</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>Barren Island</span></li></Link>
                                     <Link href="/destination"><li className={styles.menuContTitle}><IconList Icon="Island" /><span>All Destination</span></li></Link>
