@@ -43,7 +43,7 @@ export default function Destinations({handleMenuToggle}) {
                             <span>Rangat Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/long-island" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Long Island</span>

@@ -145,7 +145,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Long Island entices travelers with its secluded beaches, dense forests, and captivating marine life. Spend your days snorkeling in the vibrant coral reefs of Lalaji Bay or bask in the sun on the pristine sands of Merk Bay Beach. Explore the island's rich biodiversity on a trek through the lush rainforests of Long Island Wildlife Sanctuary, home to a variety of endemic flora and fauna. Experience the serenity of island life as you unwind in this remote paradise.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/long-island">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
