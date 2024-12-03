@@ -165,7 +165,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Little Andaman is a hidden gem waiting to be discovered, boasting expansive beaches, lush forests, and thrilling adventure opportunities. Surfing enthusiasts flock to the renowned surf breaks of Butler Bay and Whisper Wave Beach, while nature lovers can explore the verdant jungles of the island on treks to White Surf Waterfall and the charming lighthouse at the southern tip. Relax amidst the natural beauty of Netaji Nagar Beach or embark on a fishing excursion to reel in the day's catch.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/little-andaman">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -185,7 +185,7 @@ export default function IslandList() {
                 <div className={styles.islandDesc}>
                     <p>Barren Island, an uninhabited volcanic island, offers a glimpse into the raw power of nature with its rugged landscapes and dramatic volcanic activity. Cruise around the island to witness the world's only active volcano in the Andaman Sea, emitting plumes of smoke and lava, creating a surreal backdrop against the azure sky. Dive into the crystalline waters surrounding Barren Island to explore vibrant coral reefs teeming with marine life, including manta rays, sharks, and exotic fish species.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/destination">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/destination/barren-island">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
         </div>
     </div>

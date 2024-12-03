@@ -49,13 +49,13 @@ export default function Destinations({handleMenuToggle}) {
                             <span>Long Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/little-andaman" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Little Island</span>
                         </div>
                     </Link>
-                    <Link href="/destination" onClick={handleMenuToggle}>
+                    <Link href="/destination/barren-island" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Island"/>
                             <span>Barren Island</span>
