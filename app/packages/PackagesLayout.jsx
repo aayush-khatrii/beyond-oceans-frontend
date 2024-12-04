@@ -121,15 +121,15 @@ export default function page({data}) {
         }
 
         if(filterTourType === "Adventure" && pathname !== "/packages/best-sellers"){
-            router.push(`packages/best-sellers?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/best-sellers?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
         if(filterTourType === "Honeymoon" && pathname !== "/packages/honeymoon"){
-            router.push(`packages/honeymoon?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/honeymoon?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
         if(filterTourType === "Family" && pathname !== "/packages/family-package"){
-            router.push(`packages/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
         setPackDatafilterd(filteredData)

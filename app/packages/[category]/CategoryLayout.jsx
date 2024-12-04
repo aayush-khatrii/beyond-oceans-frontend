@@ -36,7 +36,7 @@ export default function page({data, params}) {
     const [packData, setPackData] = useState(data.data)
     const [packDatafilterd, setPackDatafilterd] = useState(data.data)
 
-    useEffect(() => {
+    function paramData(){
         if (paramFilter) {
             setSortBy(sortbyDL[paramFilter]);
         }
@@ -53,8 +53,11 @@ export default function page({data, params}) {
         if(sortBy || filterBudget || filterDuration || filterTourType){
             handleFilterSearch()
         }
+    }
 
-    }, [paramDuration, paramBudget, paramDuration, paramTourType, sortBy, filterBudget, filterDuration, filterTourType])
+    useEffect(() => {
+        paramData()
+    }, [])
     
 
     const handleSortBy = (data) =>{
@@ -139,20 +142,20 @@ export default function page({data, params}) {
         }
         
         if(filterTourType === "Adventure" && pathname !== "/packages/best-sellers"){
-            router.push(`/best-sellers?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/best-sellers?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
         if(filterTourType === "Honeymoon" && pathname !== "/packages/honeymoon"){
-            router.push(`/honeymoon?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/honeymoon?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
 
         if(filterTourType === "Family" && pathname !== "/packages/family-package"){
-            router.push(`/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
+            router.push(`/packages/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
-
-        setPackDatafilterd(data.data)
+        console.log(filteredData)
+        setPackDatafilterd(filteredData)
     }
-    console.log(typeof packDatafilterd)
+
 
     return (
     <>
