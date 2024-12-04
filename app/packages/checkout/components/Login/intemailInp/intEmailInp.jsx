@@ -135,7 +135,7 @@ export default function IntEmailInp(props) {
 
         try {
             const isValidphoneNumber = parsePhoneNumber(`+${countryObj.phone}${phoneNumber}`, countryObj.code);
-            console.log(isValidphoneNumber.isValid() === false || isValidphoneNumber.isPossible() === false)
+            // console.log(isValidphoneNumber.isValid() === false || isValidphoneNumber.isPossible() === false)
             if(isValidphoneNumber?.isValid() === false || isValidphoneNumber?.isPossible() === false){
                 setIsFalsePhn(true)
             }
@@ -158,7 +158,7 @@ export default function IntEmailInp(props) {
         try {
             const {data} = await sendIntEmailOTP({ phone: phoneNumber, email: email, country: countryObj.name.toLowerCase()})
             responseData = data
-            console.log(data)
+            // console.log(data)
         } catch (error) {
             console.log(error.response.data)
         }
@@ -169,7 +169,7 @@ export default function IntEmailInp(props) {
             country: countryObj.name.toLowerCase(),
             hash: responseData?.hash
         }
-        console.log(stateData)
+
         dispatch(addIntEmailAuthData(stateData))
 
         props.onINTEmailOTP("OTPINTEML", email)

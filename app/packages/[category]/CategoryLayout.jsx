@@ -152,7 +152,7 @@ export default function page({data, params}) {
         if(filterTourType === "Family" && pathname !== "/packages/family-package"){
             router.push(`/packages/family-package?filter=${sortBy ? sortbyDL.indexOf(sortBy) : ""}&bud=${filterBudget ? BudgetDL.indexOf(filterBudget) : "" }&time=${filterDuration ? DurationDL.indexOf(filterDuration) : ""}&tt=${filterTourType ? TourTypeDL.indexOf(filterTourType) : ""}`)
         }
-        console.log(filteredData)
+        
         setPackDatafilterd(filteredData)
     }
 

@@ -84,7 +84,6 @@ export default function OTPEmail({email, popupClose, onGoback}) {
         dispatch(setUserData(userdata))
 
         popupClose()
-        console.log(responseData)
     }
 
     const handleKeyDown = (e) => {
