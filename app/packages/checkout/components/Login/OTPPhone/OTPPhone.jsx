@@ -64,7 +64,7 @@ export default function OTPPhone({phone, ctryCode, popupClose, onGoback}) {
 
         const user = responseData.data
         const userAuth = responseData.ststus === 'success' && responseData.ststusCode === "200" && Boolean(user.User_Id)
-        console.log(user)
+
         const userdata = {
             auth: userAuth || false,
             authLv: user.Auth_Lv || '',

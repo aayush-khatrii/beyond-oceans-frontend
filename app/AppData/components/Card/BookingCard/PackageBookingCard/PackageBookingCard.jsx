@@ -7,7 +7,7 @@ import { AxiosError } from 'axios';
 
 
 export default function PackageBookingCard({bookingData}) {
-    console.log(bookingData)
+
 
     const bookingStatusTag = {
         "Booking Confirm": {br: "C1E7DA", bg: "EBF7F3", tx: "38B089"},

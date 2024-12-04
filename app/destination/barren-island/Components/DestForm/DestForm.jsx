@@ -157,7 +157,7 @@ export default function DestForm() {
         if(nameRegexM.test(name) && phoneRegexM.test(phone) && emailRegexM.test(email) && tripDuration && travelDate){
             
             const destinationFormParams = {
-                "destinationId": 6,
+                "destinationId": 9,
                 "name": name,
                 "phonenumber": phone,
                 "email": email,
