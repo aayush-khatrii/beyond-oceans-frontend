@@ -64,9 +64,14 @@
     margin: 44px 0;
     margin-bottom: 46.5px;
     display: flex;
-    gap: 22px;
+    justify-content: space-between;
     padding: 25px 28px;
     border-radius: 8px;
+}
+
+.filterOptions{
+    gap: 22px;
+    display: flex;
 }
 
 .selectTitle{
@@ -105,25 +110,64 @@
     width: 134px;
 }
 
+.filterBtnWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.filterBtnWrapper{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
 .filterSearch{
-    margin-top: 13px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
     background-color: #1E2C70;
     outline: none;
     border: 2px solid #B9BED3;
-    padding: 7.5px 10px;
-    padding-bottom: 6px;
+    padding: 12px 20px;
     border-radius: 10px;
     cursor: pointer;
+    margin-right: -3px;
+}
+
+.filterSearch span{
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    padding-top: 1px;
+    margin-left: 10px;
 }
 
 .filterSearch svg{
-    margin-top: 2px;
-    height: 25px;
+    margin-top: 1px;
+    height: 18px;
+    width: 18px;
+}
+
+.filterSearch svg path{
+    fill: #fff;
 }
 
 .filterSearch:hover{
     background-color: #38B089;
     border-color: #A3DBC9;
+}
+
+.filterClear{
+    margin-top: 13px;
+    outline: none;
+    padding: 7.5px 10px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #BB2124;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .packageCardGrid{

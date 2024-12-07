@@ -156,6 +156,30 @@ export default function page({data, params}) {
         setPackDatafilterd(filteredData)
     }
 
+    function handleFilterClear(){
+
+        setSortBy("")
+        setFilterBudget("")
+        setFilterDuration("")
+        setFilterTourType("")
+        setPackDatafilterd(data.data)
+
+        if(pathname === "/packages"){
+            router.push(`/packages`)
+        }
+
+        if(filterTourType === "Adventure" && pathname !== "/packages/best-sellers"){
+            router.push(`/packages/best-sellers`)
+        }
+
+        if(filterTourType === "Honeymoon" && pathname !== "/packages/honeymoon"){
+            router.push(`/packages/honeymoon`)
+        }
+
+        if(filterTourType === "Family" && pathname !== "/packages/family-package"){
+            router.push(`/packages/family-package`)
+        }
+    }
 
     return (
     <>
@@ -166,32 +190,35 @@ export default function page({data, params}) {
                     <p>{categoryPageContent.desc}</p>
                 </div>
                 <div className={styles.filter}>
-                    <div className={styles.sortbyOpts}>
-                        <span className={styles.selectTitle}>Sort By</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={sortbyDL} placeholder={sortBy ? sortBy : "Sort By"} onData={handleSortBy} blankValue={true}/>
+                    <div className={styles.filterOptions}>
+                        <div className={styles.sortbyOpts}>
+                            <span className={styles.selectTitle}>Sort By</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={sortbyDL} placeholder={sortBy ? sortBy : "Sort By"} onData={handleSortBy} blankValue={true}/>
+                            </div>
+                        </div>
+                        <div className={styles.budgetOpts}>
+                            <span className={styles.selectTitle}>Select Budget</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={BudgetDL} placeholder={filterBudget ? filterBudget : "Select Budget"} onData={handlebudget} blankValue={true} />
+                            </div>
+                        </div>
+                        <div className={styles.durationOpts}>
+                            <span className={styles.selectTitle}>Select Duration</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={DurationDL} placeholder={filterDuration ? filterDuration : "Duration"} onData={handleDuration} blankValue={true} />
+                            </div>
+                        </div>
+                        <div className={styles.tourTypeOpts}>
+                            <span className={styles.selectTitle}>Tour Type</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={TourTypeDL} placeholder={filterTourType ? filterTourType : "Tour Type"} onData={handleTourType} blankValue={true} />
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.budgetOpts}>
-                        <span className={styles.selectTitle}>Select Budget</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={BudgetDL} placeholder={filterBudget ? filterBudget : "Select Budget"} onData={handlebudget} blankValue={true} />
-                        </div>
-                    </div>
-                    <div className={styles.durationOpts}>
-                        <span className={styles.selectTitle}>Select Duration</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={DurationDL} placeholder={filterDuration ? filterDuration : "Duration"} onData={handleDuration} blankValue={true} />
-                        </div>
-                    </div>
-                    <div className={styles.tourTypeOpts}>
-                        <span className={styles.selectTitle}>Tour Type</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={TourTypeDL} placeholder={filterTourType ? filterTourType : "Tour Type"} onData={handleTourType} blankValue={true} />
-                        </div>
-                    </div>
-                    <div>
-                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="SearchIcon2" /></button>
+                    <div className={styles.filterBtnWrapper}>
+                        <button onClick={() => {handleFilterClear()}} className={styles.filterClear}><span>Clear Filter</span></button>
+                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="searchIcon" /><span>Search</span></button>
                     </div>
                 </div>
                 <div className={styles.packageCardGrid}>
