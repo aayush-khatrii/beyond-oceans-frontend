@@ -124,6 +124,34 @@ export default function page({data, params}) {
         setActivityDatafilterd(filteredData)
     }
 
+    function handleFilterClear(){
+
+        setSortBy("")
+        setFilterBudget("")
+        setFilterActivityType("")
+        setActivityDatafilterd(data.data)
+
+        if(pathname === "/activities"){
+            router.push(`/activities`)
+        }
+
+        if(filterActivityType === "Water Sports" && pathname !== "/activities/water-sports"){
+            router.push(`/activities/water-sports`)
+        }
+
+        if(filterActivityType === "Trekking" && pathname !== "/activities/trekking"){
+            router.push(`/activities/trekking`)
+        }
+
+        if(filterActivityType === "Parasailing" && pathname !== "/activities/parasailing"){
+            router.push(`/activities/parasailing`)
+        }
+
+        if(filterActivityType === "Island Hopping" && pathname !== "/activities/island-hopping"){
+            router.push(`/activities/island-hopping`)
+        }
+    }
+
 
     return (
     <>
@@ -134,32 +162,35 @@ export default function page({data, params}) {
                     <p>Dive into a world of adventure and discovery as you explore our curated selection of thrilling activities in the breathtaking Andaman and Nicobar Islands. From mesmerizing scuba diving excursions in pristine waters to exhilarating snorkeling adventures amidst vibrant coral reefs, our platform offers an array of experiences to suit every traveler's taste. Whether you seek adrenaline-pumping water sports or serene nature walks through lush forests, Beyond Oceans is your gateway to unforgettable moments in this tropical paradise.</p>
                 </div>
                 <div className={styles.filter}>
-                <div className={styles.sortbyOpts}>
-                        <span className={styles.selectTitle}>Sort By</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={sortbyDL} placeholder={sortBy ? sortBy : "Sort By"} onData={handleSortBy} blankValue={true}/>
+                    <div className={styles.filterOptions}>
+                        <div className={styles.sortbyOpts}>
+                            <span className={styles.selectTitle}>Sort By</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={sortbyDL} placeholder={sortBy ? sortBy : "Sort By"} onData={handleSortBy} blankValue={true}/>
+                            </div>
+                        </div>
+                        <div className={styles.budgetOpts}>
+                            <span className={styles.selectTitle}>Select Budget</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={BudgetDL} placeholder={filterBudget ? filterBudget : "Select Budget"} onData={handlebudget} blankValue={true}/>
+                            </div>
+                        </div>
+                        <div className={styles.tourTypeOpts}>
+                            <span className={styles.selectTitle}>Tour Type</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={ActivityTypeDL} placeholder={filterActivityType ? filterActivityType : "Activity Type"} onData={handleActivityType} blankValue={true}/>
+                            </div>
+                        </div>
+                        <div className={styles.tourTypeOpts}>
+                            <span className={styles.selectTitle}>By Island</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={islandList} placeholder="By Island" onData={handleSortBy} blankValue={true}/>
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.budgetOpts}>
-                        <span className={styles.selectTitle}>Select Budget</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={BudgetDL} placeholder={filterBudget ? filterBudget : "Select Budget"} onData={handlebudget} blankValue={true}/>
-                        </div>
-                    </div>
-                    <div className={styles.tourTypeOpts}>
-                        <span className={styles.selectTitle}>Tour Type</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={ActivityTypeDL} placeholder={filterActivityType ? filterActivityType : "Activity Type"} onData={handleActivityType} blankValue={true}/>
-                        </div>
-                    </div>
-                    <div className={styles.tourTypeOpts}>
-                        <span className={styles.selectTitle}>By Island</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={islandList} placeholder="By Island" onData={handleSortBy} blankValue={true}/>
-                        </div>
-                    </div>
-                    <div>
-                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="SearchIcon2" /></button>
+                    <div className={styles.filterBtnWrapper}>
+                        <button onClick={() => {handleFilterClear()}} className={styles.filterClear}><span>Clear Filter</span></button>
+                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="searchIcon" /><span>Search</span></button>
                     </div>
                 </div>
                 <div className={styles.packageCardGrid}>

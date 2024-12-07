@@ -135,6 +135,31 @@ export default function page({data}) {
         setPackDatafilterd(filteredData)
     }
 
+    function handleFilterClear(){
+
+        setSortBy("")
+        setFilterBudget("")
+        setFilterDuration("")
+        setFilterTourType("")
+        setPackDatafilterd(data)
+
+        if(pathname === "/packages"){
+            router.push(`/packages`)
+        }
+
+        if(filterTourType === "Adventure" && pathname !== "/packages/best-sellers"){
+            router.push(`/packages/best-sellers`)
+        }
+
+        if(filterTourType === "Honeymoon" && pathname !== "/packages/honeymoon"){
+            router.push(`/packages/honeymoon`)
+        }
+
+        if(filterTourType === "Family" && pathname !== "/packages/family-package"){
+            router.push(`/packages/family-package`)
+        }
+    }
+
     return (
     <>
         <div className={styles.mainWrapper}>
@@ -145,32 +170,35 @@ export default function page({data}) {
                     {/* <p>Discover unforgettable family adventures in the pristine beauty of Andaman and Nicobar Islands with Beyond Oceans. Explore our curated selection of family tour packages, designed to immerse you in the natural wonders and cultural delights of this exotic destination. Let us create cherished memories for you and your loved ones amidst the turquoise waters, white sandy beaches, and lush greenery of Andaman. Book your family getaway today and embark on a journey of joy, laughter, and togetherness with Beyond Oceans, the leading tour and travel company in Andaman and Nicobar.</p> */}
                 </div>
                 <div className={styles.filter}>
-                    <div className={styles.sortbyOpts}>
-                        <span className={styles.selectTitle}>Sort By</span>
-                        <div className={styles.selectCont}>
-                        <Select datalist={sortbyDL} placeholder={paramFilter ? sortbyDL[paramFilter] : "Sort By"} onData={handleSortBy} blankValue={true} />
+                    <div className={styles.filterOptions}>
+                        <div className={styles.sortbyOpts}>
+                            <span className={styles.selectTitle}>Sort By</span>
+                            <div className={styles.selectCont}>
+                            <Select datalist={sortbyDL} placeholder={paramFilter ? sortbyDL[paramFilter] : "Sort By"} onData={handleSortBy} blankValue={true} />
+                            </div>
+                        </div>
+                        <div className={styles.budgetOpts}>
+                            <span className={styles.selectTitle}>Select Budget</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={BudgetDL} placeholder={paramBudget ? BudgetDL[paramBudget] : "Select Budget"} onData={handlebudget} blankValue={true} />
+                            </div>
+                        </div>
+                        <div className={styles.durationOpts}>
+                            <span className={styles.selectTitle}>Select Duration</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={DurationDL} placeholder={paramDuration ? DurationDL[paramDuration] : "Duration"} onData={handleDuration} blankValue={true} />
+                            </div>
+                        </div>
+                        <div className={styles.tourTypeOpts}>
+                            <span className={styles.selectTitle}>Tour Type</span>
+                            <div className={styles.selectCont}>
+                                <Select datalist={TourTypeDL} placeholder={paramTourType ? TourTypeDL[paramTourType] : "Tour Type"} onData={handleTourType} blankValue={true} />
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.budgetOpts}>
-                        <span className={styles.selectTitle}>Select Budget</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={BudgetDL} placeholder={paramBudget ? BudgetDL[paramBudget] : "Select Budget"} onData={handlebudget} blankValue={true} />
-                        </div>
-                    </div>
-                    <div className={styles.durationOpts}>
-                        <span className={styles.selectTitle}>Select Duration</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={DurationDL} placeholder={paramDuration ? DurationDL[paramDuration] : "Duration"} onData={handleDuration} blankValue={true} />
-                        </div>
-                    </div>
-                    <div className={styles.tourTypeOpts}>
-                        <span className={styles.selectTitle}>Tour Type</span>
-                        <div className={styles.selectCont}>
-                            <Select datalist={TourTypeDL} placeholder={paramTourType ? TourTypeDL[paramTourType] : "Tour Type"} onData={handleTourType} blankValue={true} />
-                        </div>
-                    </div>
-                    <div>
-                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="SearchIcon2" /></button>
+                    <div className={styles.filterBtnWrapper}>
+                        <button onClick={() => {handleFilterClear()}} className={styles.filterClear}><span>Clear Filter</span></button>
+                        <button onClick={() => {handleFilterSearch()}} className={styles.filterSearch}><IconList Icon="searchIcon" /><span>Search</span></button>
                     </div>
                 </div>
                 <div className={styles.packageCardGrid}>
