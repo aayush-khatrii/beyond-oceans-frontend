@@ -43,7 +43,7 @@ export default function ServicesMenu({handleMenuToggle}) {
                             <span>Tour Packages</span>
                         </div>
                     </Link>
-                    <Link href="/services" onClick={handleMenuToggle}>
+                    <Link href="/book-ferry" onClick={handleMenuToggle}>
                         <div className={styles.categoryTitle}>
                             <IconList Icon="Boat"/>
                             <span>Ferry Booking</span>
