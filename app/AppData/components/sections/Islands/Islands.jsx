@@ -14,34 +14,66 @@ export default function Sightseeing() {
     const datas = [
         {
             name: 1,
-            image: "port-blair-img-1.png",
-            title: "Port Blair Island",
-            desc: "Starting At ₹30,000/per person"
-
+            image: "destination/island/sri_vijaya_puram_island.webp",
+            title: "Sri Vijaya Puram (Port Blair)",
+            desc: "Starting At ₹10,000/per person",
+            link: "sri-vijaya-puram"
         },
         {
             name: 2,
-            image: "Neil-island-img-3.png",
-            title: "Neil Island",
-            desc: "Starting At ₹30,000/per person"
+            image: "destination/island/swaraj_dweep.webp",
+            title: "Swaraj Dweep (Havelock Island)",
+            desc: "Starting At ₹30,000/per person",
+            link: "swaraj-dweep"
         },
         {
             name: 3,
-            image: "haveloack-island-img-2.png",
-            title: "Havelock Island",
-            desc: "Starting At ₹30,000/per person"
+            image: "destination/island/shaheed_dweep.webp",
+            title: "Shaheed Dweep (Neil Island)",
+            desc: "Starting At ₹30,000/per person",
+            link: "shaheed-dweep"
         },
         {
             name: 4,
-            image: "baratang-island-img-4.png",
+            image: "destination/island/baratang_island.webp",
             title: "Baratang Island",
-            desc: "Starting At ₹30,000/per person"
+            desc: "Starting At ₹30,000/per person",
+            link: "baratang-island"
         },
         {
             name: 5,
-            image: "baratang-island-img-4.png",
-            title: "Baratang Island",
-            desc: "Starting At ₹30,000/per person"
+            image: "destination/island/diglipur_island.webp",
+            title: "Diglipur Island",
+            desc: "Starting At ₹30,000/per person",
+            link: "diglipur-island"
+        },
+        {
+            name: 6,
+            image: "destination/island/rangat_island.webp",
+            title: "Rangat Island",
+            desc: "Starting At ₹30,000/per person",
+            link: "rangat-island"
+        },
+        {
+            name: 7,
+            image: "destination/island/long_island.webp",
+            title: "Long Island",
+            desc: "Starting At ₹30,000/per person",
+            link: "long-island"
+        },
+        {
+            name: 8,
+            image: "destination/island/little_andaman.webp",
+            title: "Little Andaman",
+            desc: "Starting At ₹30,000/per person",
+            link: "little-andaman"
+        },
+        {
+            name: 9,
+            image: "destination/island/barren_island.webp",
+            title: "Barren Island",
+            desc: "Starting At ₹30,000/per person",
+            link: "barren-island"
         }
     ]
   return (
@@ -77,7 +109,7 @@ export default function Sightseeing() {
                     {
                         datas.map((item, index) => (
                             <SwiperSlide key={index}>
-                                <Link href="/destination">
+                                <Link href={`/destination/${item.link}`}>
                                     <HomeCard key={index} image={item.image} title={item.title} desc={item.desc} />
                                 </Link>
                             </SwiperSlide>

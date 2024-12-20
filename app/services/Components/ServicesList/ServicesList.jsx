@@ -125,7 +125,7 @@ export default function ServicesList() {
                 <div className={styles.islandDesc}>
                     <p>Embark on a curated journey of discovery with Beyond Oceans' tour packages for Andaman and Nicobar Islands. From thrilling water sports to tranquil beach retreats, our meticulously crafted itineraries cater to every traveler's desires, ensuring a seamless and unforgettable island experience from start to finish.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/services">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/packages">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -145,7 +145,7 @@ export default function ServicesList() {
                 <div className={styles.islandDesc}>
                     <p>Sail effortlessly between the captivating islands of Andaman and Nicobar with Beyond Oceans' hassle-free ferry booking services. Streamlined and reliable, our booking process ensures smooth transitions, allowing you to focus on embracing the natural beauty and serenity of this idyllic archipelago.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/services">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/book-ferry">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>
@@ -165,7 +165,7 @@ export default function ServicesList() {
                 <div className={styles.islandDesc}>
                     <p>From exhilarating scuba dives to immersive rainforest treks, Beyond Oceans offers a diverse range of activities to elevate your Andaman and Nicobar experience. Let us ignite your sense of adventure as we guide you through thrilling experiences and unforgettable moments on these pristine and enchanting islands.</p>
                 </div>
-                <div className={styles.islandBtn}><Link href="/services">Know More <IconList Icon="TRArrow" /></Link></div>
+                <div className={styles.islandBtn}><Link href="/activities">Know More <IconList Icon="TRArrow" /></Link></div>
             </div>
             <div className={styles.islandListCard}>
                 <div className={styles.islandTitle}>

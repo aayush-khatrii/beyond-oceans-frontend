@@ -218,9 +218,9 @@ export default function Navbar() {
                                     <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Cab" /><span>Cab Booking</span></li></Link>
                                     <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Guide" /><span>Personal Guide</span></li></Link>
                                     <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Bike" /><span>Bike Rental</span></li></Link>
-                                    <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="TourPackages" /><span>Tour Packages</span></li></Link>
-                                    <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Boat" /><span>Ferry Booking</span></li></Link>
-                                    <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Trekking" /><span>Activities</span></li></Link>
+                                    <Link href="/packages"><li className={styles.menuContTitle}><IconList Icon="TourPackages" /><span>Tour Packages</span></li></Link>
+                                    <Link href="/book-ferry"><li className={styles.menuContTitle}><IconList Icon="Boat" /><span>Ferry Booking</span></li></Link>
+                                    <Link href="/activities"><li className={styles.menuContTitle}><IconList Icon="Trekking" /><span>Activities</span></li></Link>
                                     <Link href="/services"><li className={styles.menuContTitle}><IconList Icon="Offbeat" /><span>All Services</span></li></Link>
                                 </ul>
                             </div>

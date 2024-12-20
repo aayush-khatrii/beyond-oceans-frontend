@@ -1,0 +1,123 @@
+.subWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.titleNbtn{
+    display: flex;
+    justify-content: center;
+}
+
+.sectionTitle{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sectionTitle h2{
+    font-size: 30.8px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    cursor: default;
+}
+
+.sectionTitle p{
+    font-size: 18.3px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.navButton{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    width: 98px;
+}
+
+.leftNavBtn, .rightNavBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: 1px solid #696969;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.leftNavBtn:hover, .rightNavBtn:hover{
+    background-color: #1E2C70;
+    border-color: #1E2C70;
+}
+
+.leftNavBtn:hover > svg path, .rightNavBtn:hover > svg path{
+    stroke: white;
+}
+
+.promoVideo{
+    height: 500px;
+    background-color: #1E2C70;
+    border-radius: 15px;
+    margin-top: 52px;
+    overflow: hidden;
+}
+
+
+
+@media (min-width: 980px) {
+    .titleNbtnMob{
+        display: none;
+    }
+    .cardWrapperMob{
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .mainWrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    .subWrapper{
+        padding: 30px 0;
+        width: 90%;
+    }
+
+    .titleNbtn{
+        display: none;
+    }
+
+    .titleNbtnMob{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sectionTitle{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sectionTitle h2{
+        font-size: clamp(19px, 5.51vw, 25px);
+        margin-bottom: 1px;
+    }
+    
+    .sectionTitle p{
+        font-size: clamp(12.5px, 3.65vw, 18px);
+    }
+
+    .promoVideo{
+        height: 180px;
+        background-color: #1E2C70;
+        border-radius: 15px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+}

@@ -12,6 +12,7 @@ import Testimonial from "./AppData/components/sections/Testimonial/Testimonial";
 import Certified from "./AppData/components/sections/Certified/Certified";
 import { getFeaturedPackages } from "./AppData/http/packages";
 import { cookies } from 'next/headers'
+import Promo from "./AppData/components/sections/Promo/Promo";
 
 async function fetchFeaturedPackages(featureCategory){
     try {
@@ -43,6 +44,7 @@ export default async function Home() {
                 <Offers />
                 <Ferry />
                 <WhyChoose />
+                <Promo />
                 <Testimonial />
                 <Certified />
             </div>
