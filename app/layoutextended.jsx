@@ -101,14 +101,14 @@ export default function layoutextended({ children }) {
                             <div className={styles.iconTitle}><span>WhatsApp Chat</span></div>
                         </Link>
                     }
-                    { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
+{/*                     { !noNavFooterPages.some((route) => typeof route === "string" ? route === pathName : route.test(pathName)) &&
                         <Link href="/trip-calculator" className={styles.tripCalcIcon}>
                             <div className={styles.iconTitle}><span>Trip Budget Calculator</span></div> 
                             <div className={styles.aniIconWrapper}>
                                 <Lottie animationData={TripCalculatorAni} />
                             </div>
                         </Link>
-                    }
+                    } */}
                       
                     {/* <InqPopup /> */}
                     {/* { !nonBreadcrumbPages.includes(pathName) ? <Breadcrumb /> : null } */}
